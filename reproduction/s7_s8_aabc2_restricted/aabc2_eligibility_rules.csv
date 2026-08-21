@@ -1,0 +1,8 @@
+rule_order,cohort,rule,expected_aggregate_check,row_values_public
+1,all,Use only events belonging to the frozen eligible cohort for the outcome family.,cohort-specific,no
+2,all,Require at least two valid observations per participant.,>=2 observations each,no
+3,all,Require positive within-participant time span.,max(time)-min(time)>0,no
+4,cognition,Retain fluid-cognition scores from 1 through 200 inclusive.,range rule,no
+5,cognition,Require at least 365 days between first and last eligible observation.,span>=365 days,no
+6,ASL,Retain only events passing the frozen joint ASL quality-control rule.,joint_qc_pass=TRUE,no
+7,thickness,Require at least 95% paired parcel completeness for area-weighted thickness.,completeness>=0.95,no

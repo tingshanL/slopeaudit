@@ -1,0 +1,29 @@
+{
+  "fixture_id": "single_observation_zero_direct",
+  "fixture_version": "1.0",
+  "contract_version": "1.1",
+  "reference_class": "analytic_constructed",
+  "tolerance": {
+    "absolute": 1e-12,
+    "relative": 1e-10
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "has_direct_slope_information": false,
+      "direct_error_variance": "Inf",
+      "R_direct": 0.0,
+      "posterior_slope_variance": 0.82,
+      "D_slope_squared": 0.18,
+      "Delta_fit": 0.18
+    }
+  ],
+  "counts": {
+    "participants_with_no_direct_slope_information": 1
+  },
+  "required_assertions": [
+    "R_direct equals zero exactly.",
+    "Delta_fit equals D_slope_squared within tolerance.",
+    "The participant is counted as having no direct slope information."
+  ]
+}

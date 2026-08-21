@@ -1,0 +1,51 @@
+{
+  "version": "q1_four_design_dgp_v10_candidate",
+  "source_notebook": "AABC_parametric_RLRT_anchored_profile_adequacy_operating_simulation.ipynb",
+  "historical_role": "DGP provenance only; historical Python critical-value counts are contextual comparators",
+  "fixed_effect_slope": 0.1,
+  "residual_variance": 1.0,
+  "intercept_slope_covariance": 0.0,
+  "null_cells": [
+    {
+      "cell_id": "null_balanced_q0_0p5",
+      "schedule": "600 participants at t5_mid = [-0.5, 0, 0.5]",
+      "random_intercept_variance": 0.5,
+      "random_slope_variance": 0.0
+    },
+    {
+      "cell_id": "null_balanced_q0_4",
+      "schedule": "600 participants at t5_mid = [-0.5, 0, 0.5]",
+      "random_intercept_variance": 4.0,
+      "random_slope_variance": 0.0
+    },
+    {
+      "cell_id": "null_irregular_q0_0p5",
+      "schedule": "exact 691-participant/1805-observation frozen fluid-cognition t5_mid fixture",
+      "random_intercept_variance": 0.5,
+      "random_slope_variance": 0.0
+    },
+    {
+      "cell_id": "null_irregular_q0_4",
+      "schedule": "exact 691-participant/1805-observation frozen fluid-cognition t5_mid fixture",
+      "random_intercept_variance": 4.0,
+      "random_slope_variance": 0.0
+    }
+  ],
+  "planning_power_validation_cells": [
+    {
+      "cell_id": "power_three_waves_two_years",
+      "schedule": "100 participants at years [0, 1, 2], centered for fitting",
+      "random_intercept_variance": 0.5,
+      "random_slope_variance": 0.01,
+      "residual_model": "independent Gaussian"
+    },
+    {
+      "cell_id": "power_five_waves_five_years",
+      "schedule": "100 participants at five equally spaced waves over five years, centered for fitting",
+      "random_intercept_variance": 0.5,
+      "random_slope_variance": 0.01,
+      "residual_model": "independent Gaussian"
+    }
+  ],
+  "excluded_planning_rows": "The 10-day and 30-day EMA table rows assume AR(1) residuals, which the current lme4 Q1 backend does not fit. They are not used as clean bootstrap-power validation cells."
+}

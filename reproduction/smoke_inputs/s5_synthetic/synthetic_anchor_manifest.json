@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "description": "Fully synthetic four-regime smoke anchors. These values are not AABC2-derived and are nonreportable.",
+  "regimes": {
+    "high_slope_information": {
+      "outcome": "lateral_ventricles",
+      "n_participants": 30,
+      "n_observations": 90,
+      "outcome_sd": 1.0,
+      "fixed_intercept": 0.0,
+      "fixed_time_slope": 0.1,
+      "random_effect_covariance_2x2": [
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.2
+        ]
+      ],
+      "residual_variance": 1.0,
+      "random_intercept_only_variance": 0.5,
+      "random_intercept_only_residual_variance": 1.2,
+      "time_scale": "synthetic time unit",
+      "time_origin": "0",
+      "schedule_input": "high_slope_information_schedule.json"
+    },
+    "intermediate": {
+      "outcome": "hippocampus",
+      "n_participants": 30,
+      "n_observations": 90,
+      "outcome_sd": 1.0,
+      "fixed_intercept": 0.0,
+      "fixed_time_slope": 0.1,
+      "random_effect_covariance_2x2": [
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.08
+        ]
+      ],
+      "residual_variance": 1.0,
+      "random_intercept_only_variance": 0.5,
+      "random_intercept_only_residual_variance": 1.2,
+      "time_scale": "synthetic time unit",
+      "time_origin": "0",
+      "schedule_input": "intermediate_schedule.json"
+    },
+    "near_boundary": {
+      "outcome": "global_cortical_att",
+      "n_participants": 30,
+      "n_observations": 90,
+      "outcome_sd": 1.0,
+      "fixed_intercept": 0.0,
+      "fixed_time_slope": 0.1,
+      "random_effect_covariance_2x2": [
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.01
+        ]
+      ],
+      "residual_variance": 1.0,
+      "random_intercept_only_variance": 0.5,
+      "random_intercept_only_residual_variance": 1.2,
+      "time_scale": "synthetic time unit",
+      "time_origin": "0",
+      "schedule_input": "near_boundary_schedule.json"
+    },
+    "true_zero_slope_variance": {
+      "outcome": "fluid_cognition",
+      "n_participants": 30,
+      "n_observations": 90,
+      "outcome_sd": 1.0,
+      "fixed_intercept": 0.0,
+      "fixed_time_slope": 0.1,
+      "random_effect_covariance_2x2": [
+        [
+          0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "residual_variance": 1.0,
+      "random_intercept_only_variance": 0.5,
+      "random_intercept_only_residual_variance": 1.2,
+      "time_scale": "synthetic time unit",
+      "time_origin": "0",
+      "schedule_input": "true_zero_slope_variance_schedule.json"
+    }
+  }
+}

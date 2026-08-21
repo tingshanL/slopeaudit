@@ -1,0 +1,56 @@
+{
+  "reference_status": "historical_oracles_pending_final_release_verification",
+  "contract_version": "1.1",
+  "notes": [
+    "Observed likelihood-ratio anchors may be compared directly where the fitted model is the same.",
+    "Historical bootstrap p-values came from earlier Python implementations and seed/optimizer conventions.",
+    "Historical oracle values remain contextual until final release verification explicitly freezes the current R-package reference outputs.",
+    "The old AABC four-design calibration used a calibrated restricted-LR/critical-value workflow and is not asserted to be numerically identical to the Contract-v1.1 per-analysis parametric bootstrap."
+  ],
+  "sleepstudy_primary": {
+    "model": "Reaction ~ Days + (1 + Days | Subject)",
+    "null": "Reaction ~ Days + (1 | Subject)",
+    "mode": "REML",
+    "observed_LR_approx": 42.837,
+    "historical_B": 999,
+    "historical_exceedances": 0,
+    "historical_p_plus_one": 0.001,
+    "historical_MC_interval_approx": [
+      0.0,
+      0.00369
+    ],
+    "source": "sleepstudy_primary_audit_and_validity_gate.ipynb"
+  },
+  "btheb_primary_homogeneous": {
+    "fixed_mean": "treatment-by-occasion saturated mean",
+    "full_random": "1 + month_c | subject",
+    "null_random": "1 | subject",
+    "mode": "REML",
+    "observed_LR_approx": 4.072,
+    "historical_p_plus_one": 0.077,
+    "source": "Beat_the_Blues_audit_and_validity_gate_v2.ipynb"
+  },
+  "aabc_four_design_historical_calibration": {
+    "false_support_k_n": [
+      [
+        47,
+        999
+      ],
+      [
+        48,
+        997
+      ],
+      [
+        41,
+        998
+      ],
+      [
+        45,
+        999
+      ]
+    ],
+    "source": "AABC_figure_02_overall.ipynb",
+    "method_note": "historical calibrated restricted-LR evaluation oracle; not a byte-for-byte package-v1.1 bootstrap target"
+  },
+  "release_state_context": "pre_tag_0.1.0_release_candidate"
+}

@@ -1,0 +1,72 @@
+{
+  "fixture_id": "irregular_oracle",
+  "fixture_version": "1.0",
+  "contract_version": "1.1",
+  "reference_class": "analytic_constructed",
+  "fixture_type": "analytic_synthetic",
+  "purpose": [
+    "Validate participant-specific calculations under irregular observation schedules.",
+    "Validate equal-participant aggregation.",
+    "Provide an implementation-independent oracle before empirical fixtures are used."
+  ],
+  "model": {
+    "random_effects": [
+      "intercept",
+      "target_slope"
+    ],
+    "target_random_effect": "target_slope",
+    "G": [
+      [
+        2.25,
+        0.6
+      ],
+      [
+        0.6,
+        0.64
+      ]
+    ],
+    "tau_slope_squared": 0.64,
+    "residual_covariance": "identity",
+    "residual_variance": 1.0
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "time": [
+        -1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "P2",
+      "time": [
+        0.0,
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "id": "P3",
+      "time": [
+        -2.0,
+        -0.5,
+        2.0,
+        4.0
+      ]
+    }
+  ],
+  "direct_definition": {
+    "nuisance_random_effects_are_treated_as": "unknown fixed constants",
+    "constraints": [
+      "H_i^T c_i = 0",
+      "s_i^T c_i = 1"
+    ],
+    "criterion": "minimize c_i^T R_i c_i"
+  },
+  "notes": [
+    "All expected values are determined by the frozen Statistical Contract v1.1 equations.",
+    "No empirical data or Python-fitted model is used.",
+    "The schedules differ across participants by construction."
+  ]
+}

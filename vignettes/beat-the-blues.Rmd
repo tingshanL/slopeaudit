@@ -1,0 +1,146 @@
+---
+title: "Worked example: irregular Beat the Blues schedules"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Worked example: irregular Beat the Blues schedules}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## Why this example matters
+
+The `sleepstudy` design is balanced and dense. Beat the Blues provides the
+contrasting case: 100 randomized participants were scheduled at months
+0, 2, 3, 5, and 8, but the retained public teaching fixture contains 380
+observations because of attrition. Three participants have only one retained
+observation and therefore no direct slope information.
+
+This contrast demonstrates how the diagnostic behaves; it is not evidence
+that one schedule type is always superior.
+
+## Load the frozen teaching fixture
+
+```{r data}
+library(lme4)
+library(slopeaudit)
+
+path <- system.file("extdata", "btheb_primary.csv", package = "slopeaudit")
+btheb <- read.csv(path, stringsAsFactors = FALSE)
+
+btheb$subject <- factor(btheb$subject)
+btheb$occasion <- factor(
+  btheb$occasion,
+  levels = c("0", "2", "3", "5", "8")
+)
+btheb$treatment <- factor(btheb$treatment, levels = c("TAU", "BtheB"))
+
+c(participants = nlevels(btheb$subject), observations = nrow(btheb))
+```
+
+`month_c = month - 4` centers the model's time basis at Month 4. The target
+remains a linear change in BDI score per month over Months 0--8.
+
+```{r models}
+control <- lmerControl(
+  optimizer = "nloptwrap",
+  optCtrl = list(maxeval = 200000),
+  check.conv.singular = "message"
+)
+
+full <- lmer(
+  bdi ~ treatment * occasion + (1 + month_c | subject),
+  data = btheb,
+  REML = TRUE,
+  control = control
+)
+
+null <- lmer(
+  bdi ~ treatment * occasion + (1 | subject),
+  data = btheb,
+  REML = TRUE,
+  control = control
+)
+
+month_target <- list(
+  basis_type = "linear",
+  outcome_units = "BDI score points",
+  time_or_exposure_scale = "1 month",
+  origin_or_reference = "Month 4 (month_c = 0)",
+  reference_window = "Months 0--8",
+  estimand = "participant-specific linear change in BDI score per month"
+)
+```
+
+## Decompose the fitted slope
+
+```{r decomposition}
+sources <- slope_decomposition(full, "month_c", month_target)
+sources
+```
+
+The manuscript-frozen homogeneous-independent-residual reference has 100
+participants, 380 observations, and these equal-participant means:
+
+| Quantity | Mean |
+|---|---:|
+| `R_direct` | 0.19785 |
+| `D_slope2` | 0.21487 |
+| `Delta_fit` | 0.01703 |
+
+The participant table records three `has_direct_slope_information = FALSE`
+rows. Those participants can still receive fitted random-slope predictions
+through the model, but their outcome schedules contain no direct within-person
+slope contrast. That distinction is exactly why `D_slope2` must not be called
+direct evidence of change.
+
+## Run the heterogeneity test
+
+```{r audit, eval=FALSE}
+audit_999 <- slope_audit(
+  full = full,
+  null = null,
+  target = "month_c",
+  target_metadata = month_target,
+  B = 999L,
+  seed = 20260803L,
+  progress = interactive()
+)
+
+audit_999
+```
+
+The observed likelihood-ratio statistic is about 4.072. In the frozen
+manuscript workflow, the `B = 999` Monte Carlo interval crossed `.05`, so the
+run was explicitly escalated. The `B = 4999` result was approximately `.074`
+and Question 1 was **unsupported by these data**.
+
+```{r escalate, eval=FALSE}
+audit_4999 <- slope_audit(
+  full = full,
+  null = null,
+  target = "month_c",
+  target_metadata = month_target,
+  B = 4999L,
+  seed = 20260803L,
+  progress = interactive()
+)
+```
+
+The reader-facing conclusion is therefore **STOP—INDIVIDUAL-SLOPE CLAIM**.
+The returned decomposition may still describe the fitted positive-variance
+model, but only conditionally. Do not write “there is no slope heterogeneity,”
+and do not use fitted individual slopes as though their population variation
+had been established.
+
+## Scope of this worked model
+
+This example deliberately uses the manuscript's homogeneous independent
+residual specification. It does not claim that `lme4` fitted AR(1),
+occasion-specific residual variances, or a nonlinear time effect. Those are
+separate model-sensitivity questions. A defensible correlated-residual model
+fitted elsewhere may be represented by participant-specific `R` matrices in
+the matrix design route, but it must not be mislabeled as an `lme4` fit.

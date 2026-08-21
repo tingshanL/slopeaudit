@@ -1,0 +1,18 @@
+{
+  "description": "Schema only; no AABC2-derived values are included.",
+  "required_fields_per_regime": [
+    "outcome",
+    "n_participants",
+    "n_observations",
+    "outcome_sd",
+    "fixed_intercept",
+    "fixed_time_slope",
+    "random_effect_covariance_2x2",
+    "residual_variance",
+    "random_intercept_only_variance",
+    "random_intercept_only_residual_variance",
+    "time_scale",
+    "time_origin",
+    "schedule_input"
+  ]
+}

@@ -1,0 +1,16 @@
+input_group,source_variable,analysis_role,expected_type,unit_or_levels,validation_rule,public_release_class
+event metadata,id_event,restricted linkage key,string,AABC2 event identifier,unique within event file,never release values
+event metadata,days_from_V1,visit timing,numeric,days,finite where used,schema only; hold exact schedules
+event metadata,age_open,age covariate,numeric,years,document centering/scaling,schema only
+event metadata,sex,fixed-effect covariate,categorical,use official data dictionary,levels match official dictionary,schema only
+event metadata,site,fixed-effect covariate,categorical,collection site,nonmissing where modeled,schema only
+event metadata,scanner,site/scanner adjustment,categorical,scanner label,combine with site as documented,schema only
+cognition,tlbx_cfc_uncorrected_standard_score,fluid-cognition outcome,numeric,official AABC2 score,retain 1 through 200 inclusive,schema only
+structural IDP,FS_L_Lateral-Ventricle; FS_R_Lateral-Ventricle,lateral-ventricle outcome,numeric,official IDP units,"sum bilateral values, then documented transform",schema only
+structural IDP,FS_L_Hippocampus; FS_R_Hippocampus,hippocampal outcome,numeric,official IDP units,sum bilateral values,schema only
+structural IDP,EstimatedTotalIntraCranialVol,baseline ICV covariate,numeric,official IDP units,first valid visit; document standardization,schema only
+structural IDP,360 cortical thickness and area fields,area-weighted global mean thickness,numeric,official IDP units,at least 95% paired parcel completeness,dictionary/schema only
+ASL IDP,PVEc_ASL_CBF cortical fields,global cortical CBF,numeric,official IDP units,360 atlas fields; apply documented transform,dictionary/schema only
+ASL IDP,PVEc_ASL_ATT cortical fields,global cortical ATT,numeric,official IDP units,360 atlas fields,dictionary/schema only
+QC roster,joint_qc_pass,ASL event eligibility,boolean,TRUE/FALSE,retain TRUE,rule only; never release rows
+QC roster,primary_score_joint_ge2_repeated_cognition,cognition cohort eligibility,boolean,TRUE/FALSE,"retain TRUE, then apply time support rule",rule only; never release rows

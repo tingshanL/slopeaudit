@@ -1,0 +1,43 @@
+{
+  "fixture_id": "known_802060",
+  "fixture_version": "1.0",
+  "reference_class": "analytic_constructed",
+  "contract_version": "1.1",
+  "purpose": "Constructed one-participant Gaussian random-intercept/random-slope case for which direct-change reliability is 0.20 and total fitted-slope determinacy is 0.80.",
+  "estimand": {
+    "target": "random slope on centered linear time",
+    "target_random_effect_index_1based": 2,
+    "units": "response units per one time unit",
+    "time_values": [-0.5, 0.5]
+  },
+  "participant": {
+    "id": "analytic_001",
+    "H_i": [
+      [1.0],
+      [1.0]
+    ],
+    "z_s_i": [-0.5, 0.5],
+    "Z_i": [
+      [1.0, -0.5],
+      [1.0, 0.5]
+    ],
+    "R_i": [
+      [2.0, 0.0],
+      [0.0, 2.0]
+    ]
+  },
+  "G": [
+    [18.0, 3.872983346207417],
+    [3.872983346207417, 1.0]
+  ],
+  "G_exact_description": "[[18, sqrt(15)], [sqrt(15), 1]]",
+  "target_slope_variance_tau_s2": 1.0,
+  "construction_notes": [
+    "The nuisance trajectory for the direct estimator is the participant-specific intercept only.",
+    "The direct estimator is the participant-only GLS/BLUE slope contrast that annihilates H_i and does not use G.",
+    "With centered times -0.5 and 0.5 and R_i = 2 I, the direct contrast is [-1, 1] and its residual error variance is 4.",
+    "Because tau_s2 = 1, R_direct = 1 / (1 + 4) = 0.20.",
+    "The full-model conditional covariance is computed independently from (G^{-1} + Z_i' R_i^{-1} Z_i)^{-1}; its target-slope conditional variance is 0.20, giving D_slope2 = 1 - 0.20 / 1 = 0.80.",
+    "Delta_fit is derived only after R_direct and D_slope2 have been computed independently."
+  ]
+}

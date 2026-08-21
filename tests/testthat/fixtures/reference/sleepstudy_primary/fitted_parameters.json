@@ -1,0 +1,42 @@
+{
+  "fixture_id": "sleepstudy_primary",
+  "reference_class": "python_derived_public_data",
+  "source_analysis": "sleepstudy_primary_audit_and_validity_gate.ipynb",
+  "source_file": "08_lme4_parameter_regression_guard.csv",
+  "model": {
+    "formula": "Reaction ~ Days + (1 + Days | Subject)",
+    "estimation": "REML",
+    "residual_model": "homogeneous independent Gaussian",
+    "target_random_effect": "Days",
+    "target_units": "reaction-time milliseconds per day",
+    "time_window": "Days 0--9"
+  },
+  "fixed_effects": {
+    "Intercept": 251.40510484848488,
+    "Days": 10.467285959595964
+  },
+  "random_effects_covariance_G": {
+    "order": [
+      "Intercept",
+      "Days"
+    ],
+    "matrix": [
+      [
+        612.0899049841775,
+        9.604330527988513
+      ],
+      [
+        9.604330527988513,
+        35.07165562378869
+      ]
+    ],
+    "sd_intercept": 24.740450783770644,
+    "sd_slope": 5.922132692180131,
+    "cor_intercept_slope": 0.0655513069800011
+  },
+  "residual": {
+    "sd": 25.59181553352093,
+    "variance": 654.9410223017632
+  },
+  "note": "Values are the frozen Python fit used as a cross-implementation reference. The package must not treat the old *_match booleans as scientific expected outputs."
+}

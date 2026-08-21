@@ -1,0 +1,46 @@
+{
+  "fixture_id": "known_802060",
+  "fixture_version": "1.0",
+  "contract_version": "1.1",
+  "reference_class": "analytic_constructed",
+  "tolerance": {
+    "name": "contract_identity",
+    "absolute": 1.4901161193847656e-08,
+    "definition": "sqrt(.Machine$double.eps) for dimensionless identities"
+  },
+  "expected_intermediate": {
+    "direct_contrast": [
+      -1.0,
+      1.0
+    ],
+    "direct_error_variance": 4.0,
+    "target_slope_variance_tau_s2": 1.0,
+    "conditional_random_effect_covariance": [
+      [
+        0.9375,
+        0.19364916731037085
+      ],
+      [
+        0.19364916731037085,
+        0.2
+      ]
+    ],
+    "conditional_random_effect_covariance_exact_description": "[[15/16, sqrt(15)/20], [sqrt(15)/20, 1/5]]",
+    "conditional_target_slope_variance": 0.2
+  },
+  "expected_primary": {
+    "R_direct_i": 0.2,
+    "D_slope2_i": 0.8,
+    "Delta_fit_i": 0.6,
+    "mean_R_direct": 0.2,
+    "mean_D_slope2": 0.8,
+    "mean_Delta_fit": 0.6,
+    "no_direct_slope_information_count": 0
+  },
+  "required_checks": {
+    "compute_R_direct_and_D_slope2_independently": true,
+    "additivity": "D_slope2_i = R_direct_i + Delta_fit_i",
+    "Delta_fit_nonnegative": true,
+    "bounds": "R_direct_i, D_slope2_i, and Delta_fit_i must satisfy their contract-defined bounds to tolerance"
+  }
+}

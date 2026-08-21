@@ -1,0 +1,55 @@
+{
+  "contract_version": "blocker8_first_submission_verification_v1_2026-08-19",
+  "expected_test_pass_total": 435,
+  "external_check_tools": [
+    "Pandoc",
+    "pdflatex (TinyTeX/TeX Live)",
+    "HTML Tidy"
+  ],
+  "historical_expensive_rerun_required": false,
+  "immutable_commit_tag_verification": "post_first_commit_required",
+  "package_check_acceptance": {
+    "allowed_notes": [
+      "CRAN incoming feasibility: New submission"
+    ],
+    "errors": 0,
+    "warnings": 0
+  },
+  "package_release_commands": [
+    "devtools::document",
+    "devtools::test",
+    "R CMD build",
+    "R CMD check --as-cran"
+  ],
+  "package_version": "0.1.0",
+  "release_state": "pre_tag_0.1.0_release_candidate",
+  "s4": {
+    "compact_smoke_required": true,
+    "deterministic_full_summary_equivalence_required": true,
+    "full_design_cells": 46,
+    "full_replicates": 62000
+  },
+  "s5": {
+    "compact_fixed_seed_smoke_required": true,
+    "deterministic_full_summary_equivalence_required": true,
+    "deterministic_table_equivalence_required": true,
+    "full_tasks": 8000,
+    "regimes": 4,
+    "smoke_tasks": 16,
+    "table_equivalence_policy": {
+      "archival_csv": {
+        "files": 13,
+        "numeric_atol": 1e-12,
+        "numeric_rtol": 1e-12,
+        "numeric_rule": "abs(produced-reference) <= atol + rtol*abs(reference)",
+        "require_nonnumeric_exact": true,
+        "require_structure_identical": true
+      },
+      "publication_tex": {
+        "files": 13,
+        "requirement": "byte_identical"
+      },
+      "rationale": "The recovered frozen 8,000-task S5 run reproduces all analytical summaries exactly. Publication-facing TeX tables reproduce byte-identically. Archival CSV differences are permitted only when confined to machine-precision numeric representation/reduction under the stated strict tolerance; structure and nonnumeric content remain exact."
+    }
+  }
+}

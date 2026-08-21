@@ -1,0 +1,58 @@
+{
+  "fixture_id": "btheb_primary",
+  "reference_class": "python_derived_public_data",
+  "source_analysis": "Beat_the_Blues_audit_and_validity_gate_v2.ipynb",
+  "source_file": "12_residual_sensitivity_parameters.csv",
+  "selected_source_row": "model == 'hom_alternative'",
+  "model": {
+    "fixed_effects": "treatment-by-occasion saturated mean structure",
+    "random_effects": "participant random intercept + centered-month random slope",
+    "grouping_factor": "subject",
+    "estimation": "REML",
+    "residual_model": "homogeneous independent Gaussian",
+    "target_random_effect": "month_c",
+    "time_basis": "month_c = month - 4",
+    "target_estimand": "participant's best linear deviation from the treatment-specific mean trajectory over months 0--8",
+    "target_units": "BDI-II points per month",
+    "reference_window": "months 0--8"
+  },
+  "fit": {
+    "optimizer": "Powell",
+    "reml_nll": 1314.1562188864928
+  },
+  "random_effects_covariance_G": {
+    "order": [
+      "Intercept",
+      "month_c"
+    ],
+    "matrix": [
+      [
+        88.74099253108021,
+        1.7309496978325725
+      ],
+      [
+        1.7309496978325725,
+        0.445742029220415
+      ]
+    ],
+    "var_intercept": 88.74099253108021,
+    "cov_intercept_slope": 1.7309496978325725,
+    "var_slope": 0.445742029220415,
+    "cor_intercept_slope": 0.2752203313873553,
+    "eigenvalues": [
+      0.41182133443933894,
+      88.77491322586128
+    ]
+  },
+  "residual": {
+    "sd": 5.749265048236098,
+    "variance": 33.05404859486922
+  },
+  "note": "This fixture freezes only the a-priori homogeneous independent primary model. Occasion-specific, AR(1), hetero-AR(1), bootstrap, influence, and post-hoc log-time results are intentionally excluded.",
+  "provenance_sha256": {
+    "data/BtheB_long_observed.csv": "ae0a10cfe61a407951c3d437e50d85413828921dc1afbb4030f72663890b9396",
+    "07_participant_source_primary_unrounded.csv": "bf6d4271ec198d1708ffe9e166d08f991187fb37ea9802ef1e07433596534f4d",
+    "11_residual_sensitivity_source_and_lr.csv": "f79c0ad9fd811e722607d87ab34b8bb20c38e6859d9f8e0d68c1e49441b9c527",
+    "12_residual_sensitivity_parameters.csv": "bc445c15e35486307eaa25dc73c34a850e9d67b249b2ddb6f3932019f8abd61d"
+  }
+}

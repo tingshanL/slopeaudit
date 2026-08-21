@@ -1,0 +1,68 @@
+{
+  "fixture_id": "btheb_primary",
+  "reference_class": "python_derived_public_data",
+  "source_file": "11_residual_sensitivity_source_and_lr.csv",
+  "selected_source_row": "model == 'hom'",
+  "balanced_design": false,
+  "participants": 100,
+  "observations": 380,
+  "participants_with_no_direct_slope_information": 3,
+  "mean_participant_R_direct": 0.1978478086950216,
+  "mean_participant_D_slope_squared": 0.2148734602597743,
+  "mean_participant_Delta_fit": 0.0170256515647526,
+  "participant_R_direct_descriptives": {
+    "minimum": 0.0,
+    "q1": 0.0262621908910862,
+    "median": 0.3340663976701639,
+    "q3": 0.3340663976701639,
+    "iqr": 0.3078042067790777,
+    "maximum": 0.3340663976701639
+  },
+  "observations_per_participant_counts": {
+    "1": 3,
+    "2": 24,
+    "3": 15,
+    "4": 6,
+    "5": 52
+  },
+  "single_observation_D_slope_squared": 0.0000527513331882723,
+  "descriptive_participant_medians": {
+    "R_direct": 0.3340663976701639,
+    "D_slope_squared": 0.3600708208853461,
+    "Delta_fit": 0.0260044232151822
+  },
+  "conditional_model_note": "Question 1 was unsupported for the frozen primary linear-slope estimand; these source quantities are therefore conditional descriptions of the fitted random-slope model, not established trait reliability.",
+  "fit_metadata": {
+    "reml_nll_alternative": 1314.1562188864928,
+    "reml_nll_null": 1316.1921365283324,
+    "slope_heterogeneity_LR": 4.07183528367932,
+    "var_intercept": 88.74099253108021,
+    "cov_intercept_slope": 1.7309496978325725,
+    "var_slope": 0.445742029220415,
+    "cor_intercept_slope": 0.2752203313873553
+  },
+  "required_assertions": [
+    "The fixture contains 100 participants and preserves their actual observed schedules.",
+    "The primary residual model is homogeneous independent Gaussian.",
+    "The target slope uses month_c = month - 4 over months 0--8.",
+    "mean_participant_D_slope_squared = mean_participant_R_direct + mean_participant_Delta_fit within tolerance.",
+    "Participant-level D_slope_squared = R_direct + Delta_fit within tolerance.",
+    "Participants with +Inf direct_error_variance are retained as valid zero-direct-information cases with R_direct = 0.",
+    "For every zero-direct-information participant, Delta_fit = D_slope_squared within tolerance.",
+    "Mean, median, quartiles, range, and observation-count strata are frozen because the schedule distribution is strongly uneven.",
+    "Because Question 1 was unsupported, the decomposition is interpreted conditionally on the fitted random-slope model."
+  ],
+  "provenance": {
+    "source_analysis": "Beat_the_Blues_audit_and_validity_gate_v2.ipynb",
+    "analysis_data_source": "data/BtheB_long_observed.csv",
+    "participant_source_source": "07_participant_source_primary_unrounded.csv",
+    "parameter_source": "12_residual_sensitivity_parameters.csv",
+    "summary_source": "11_residual_sensitivity_source_and_lr.csv",
+    "source_sha256": {
+      "data/BtheB_long_observed.csv": "ae0a10cfe61a407951c3d437e50d85413828921dc1afbb4030f72663890b9396",
+      "07_participant_source_primary_unrounded.csv": "bf6d4271ec198d1708ffe9e166d08f991187fb37ea9802ef1e07433596534f4d",
+      "11_residual_sensitivity_source_and_lr.csv": "f79c0ad9fd811e722607d87ab34b8bb20c38e6859d9f8e0d68c1e49441b9c527",
+      "12_residual_sensitivity_parameters.csv": "bc445c15e35486307eaa25dc73c34a850e9d67b249b2ddb6f3932019f8abd61d"
+    }
+  }
+}

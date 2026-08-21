@@ -1,0 +1,5 @@
+design,n,planned_observations,follow_up,time_unit,slope_SD_per_unit,slope_SD_over_window,residual_model,AR1_phi,AR1_interval,schedule
+3 waves / 2 years,100,3,2.0,years,0.1,0.2,independent,0.0,,"baseline, year 1, year 2"
+5 waves / 5 years,100,5,5.0,years,0.1,0.5,independent,0.0,,equally spaced over 5 years
+10 daily observations,100,10,9.0,days,0.05,0.45,ar1,0.3,1.0,one observation/day; AR(1) phi=.30 per day
+30-day EMA burst,100,120,29.75,days,0.01,0.2975,ar1,0.5,0.25,4 prompts/day; AR(1) phi=.50 per adjacent prompt

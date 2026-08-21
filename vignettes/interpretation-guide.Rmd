@@ -1,0 +1,92 @@
+---
+title: "Interpretation guide and reporting boundaries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Interpretation guide and reporting boundaries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## A decision-first workflow
+
+Use the audit in this order:
+
+1. define the physical change target;
+2. verify the full/null model contract;
+3. answer Question 1;
+4. interpret the source decomposition only within the allowed branch;
+5. report numerical and modeling sensitivities.
+
+| Question-1 result | What may be said | What must not be said |
+|---|---|---|
+| `supported` | “The data support population heterogeneity in the declared slope under this model and bootstrap procedure.” | “Every fitted participant slope is a directly observed change rate.” |
+| `unsupported` | “Slope heterogeneity was unsupported by these data.” The decomposition, if returned, is conditional on the fitted positive-variance model. | “There is no heterogeneity.” Do not make individual-slope claims. |
+| `numerically_ambiguous` | “The decision is sensitive to unresolved numerical exclusions.” | Any definitive supported/unsupported claim. |
+| `indeterminate` | Diagnose the model pair or attempt cap before interpreting. | Treating a failed computation as a scientific result. |
+
+The operational label for every non-supported branch is
+**STOP—INDIVIDUAL-SLOPE CLAIM**.
+
+## The three source quantities
+
+`R_direct` is the reliability of the direct within-person slope channel for
+the declared estimand. In the balanced independent-residual special case it
+coincides with the familiar ordinary least-squares growth-rate reliability.
+
+`D_slope2` is how determinate the fitted random slope is under the full joint
+model. It may use the direct slope contrast and other modeled channels.
+
+`Delta_fit = D_slope2 - R_direct` is model-assisted information. It is useful
+for diagnosing why a fitted slope appears precise, but it is not another
+measurement of observed change.
+
+## Participant and aggregate summaries
+
+The package reports participant-level rows and equal-participant aggregates.
+Equal weighting keeps an irregular participant from silently receiving more
+scientific weight merely because more rows were retained. Inspect the median,
+IQR, minimum, and `has_direct_slope_information`, not only the mean.
+
+A participant with fewer than two usable time points can have
+`R_direct = 0` while receiving a model-based slope prediction. Report that as
+no direct slope information, not as a precise observed trajectory.
+
+## Residual and covariance assumptions
+
+All quantities are conditional on the declared design and covariance model.
+Residual independence, heteroscedasticity, and correlation change the direct
+information calculation. The `lmerMod` adapter covers the package's validated
+homogeneous independent-residual route. A matrix `R` supplied from elsewhere
+supports transparent sensitivity calculations, but does not retroactively
+change what `lme4` fitted.
+
+Time recoding does not remove model-assisted information. Under an origin
+shift, the random intercept-slope covariance and the centering point transform
+together. The relevant covariance with the latent level at the participant's
+GLS centering point is invariant.
+
+## Minimum reporting set
+
+Report:
+
+- the six target metadata fields and any `basis_expression`;
+- full and null formulas, REML, retained sample, grouping, and residual model;
+- observed LR, usable `B`, seed, plus-one p-value, and decision;
+- attempt cap, attempts evaluated, target reached, and worst-case decision
+  bounds;
+- equal-participant means plus distributional summaries of `R_direct`,
+  `D_slope2`, and `Delta_fit`;
+- counts with no direct slope information and any covariance/rank warning;
+- any explicit `B = 4999` escalation or residual-model sensitivity.
+
+## Scope limits
+
+Version 0.1 is a plug-in diagnostic for scalar Gaussian random slopes in the
+analysis sample. Parameter-estimation uncertainty is not propagated through
+the source decomposition. The package does not yet validate generalized
+outcomes, nonlinear change, multivariate targets, external prediction, or a
+public participant/bootstrap stability contract.

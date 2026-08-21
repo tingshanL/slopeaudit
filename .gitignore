@@ -1,0 +1,120 @@
+# ============================================================
+# random-slope-audit
+# Repository-local files that should not be committed
+# ============================================================
+
+# ---- macOS / operating-system junk ----
+.DS_Store
+**/.DS_Store
+__MACOSX/
+Thumbs.db
+Desktop.ini
+
+# ---- Microsoft Office temporary/lock files ----
+~$*
+.~*
+*.tmp
+*.temp
+
+# ---- R session state / history ----
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+
+# Local environment variables / secrets
+.Renviron
+.Renviron.*
+!.Renviron.example
+
+# ---- RStudio ----
+.Rproj.user/
+
+# Keep the .Rproj file itself if you create one.
+
+# ---- renv ----
+# Commit: renv.lock, .Rprofile, renv/activate.R, renv/settings.json
+# Do not commit the machine-specific package library/cache.
+renv/library/
+renv/staging/
+renv/python/
+renv/cellar/
+
+# ---- R package build/check artifacts ----
+*.Rcheck/
+*.tar.gz
+*.tgz
+
+# ---- testthat / coverage / profiling artifacts ----
+.Rcov/
+covr-report/
+*.Rprof
+*.Rprofmem
+
+# ---- Python cache / local environments ----
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+
+# ---- Jupyter transient files ----
+.ipynb_checkpoints/
+
+# ---- IDE/editor metadata ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# ---- Logs and miscellaneous local outputs ----
+*.log
+*.bak
+*.orig
+validation/extended/results/
+
+# ============================================================
+# IMPORTANT: intentionally tracked
+# ============================================================
+# Do NOT ignore:
+#   DESCRIPTION
+#   NAMESPACE
+#   README.md
+#   LICENSE
+#   docs/
+#   inst/extdata/
+#   validation/reference/
+#   tests/testthat/
+#   renv.lock
+#   .Rprofile
+#   renv/activate.R
+#   renv/settings.json
+# ============================================================
+
+private_staging/
+data/restricted/*
+!data/restricted/README.md
+reproduction/s7_s8_aabc2_restricted/local_inputs/
+reproduction/s7_s8_aabc2_restricted/local_outputs/
+validation/reference/four_design_dgp/irregular_fluid_cognition_schedule.csv
+validation/reference/four_design_dgp/irregular_fluid_cognition_schedule.provenance.json
+
+# Restricted-derived historical Q1 validation payloads.
+# Public directories retain README provenance stubs only.
+validation/reference/q1_four_design_pilot_v10_optimizer_input/*
+!validation/reference/q1_four_design_pilot_v10_optimizer_input/README.md
+validation/reference/q1_optimizer_rescue_v11_adjudication/*
+!validation/reference/q1_optimizer_rescue_v11_adjudication/README.md
+validation/reference/q1_nested_bootstrap_v12_pilot_input/*
+!validation/reference/q1_nested_bootstrap_v12_pilot_input/README.md
+validation/provenance/q1_freeze_irregular_schedule_fixture.py

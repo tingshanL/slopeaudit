@@ -1,0 +1,28 @@
+{
+  "fixture_id": "sleepstudy_primary",
+  "reference_class": "python_derived_public_data",
+  "source_file": "05_primary_source_summary_unrounded.csv",
+  "balanced_design": true,
+  "participants": 18,
+  "observations": 180,
+  "mean_participant_R_direct": 0.815423918067602,
+  "mean_participant_D_slope_squared": 0.8485308604763783,
+  "mean_participant_Delta_fit": 0.0331069424087763,
+  "required_assertions": [
+    "All 18 participants share the same Days 0--9 schedule.",
+    "Participant-level source quantities therefore coincide in the primary fit.",
+    "mean_participant_D_slope_squared = mean_participant_R_direct + mean_participant_Delta_fit within the contract tolerance."
+  ],
+  "provenance": {
+    "source_analysis": "sleepstudy_primary_audit_and_validity_gate.ipynb",
+    "analysis_data_source": "02_sleepstudy_analysis_data.csv",
+    "participant_source_source": "04_primary_participant_source_unrounded.csv",
+    "parameter_source": "08_lme4_parameter_regression_guard.csv"
+  },
+  "var_intercept": 612.0899049841775,
+  "cov_intercept_slope": 9.604330527988516,
+  "var_slope": 35.071655623788686,
+  "rho_intercept_slope_at_day0": 0.0655513069800011,
+  "residual_sd": 25.59181553352093,
+  "reml_nll": 871.8141359792448
+}

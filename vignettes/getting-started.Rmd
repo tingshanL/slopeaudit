@@ -1,0 +1,153 @@
+---
+title: "Getting started with slopeaudit"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with slopeaudit}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## The two questions
+
+A fitted random slope can look precise for two different reasons:
+
+1. the participant's repeated outcomes directly identify change; and
+2. the joint model helps infer the slope from other modeled features.
+
+`slopeaudit` therefore asks Question 1 before Question 2:
+
+- **Question 1:** Do these data support population heterogeneity in the target
+  slope?
+- **Question 2:** Under the fitted model, how much slope determinacy is direct
+  and how much is model-assisted?
+
+An unsupported Question 1 means **STOP—INDIVIDUAL-SLOPE CLAIM**. It does not
+mean that heterogeneity has been proved absent.
+
+## Declare the change target
+
+This example uses `lme4::sleepstudy`: 18 participants observed on 10
+consecutive days. The target is a participant-specific linear change in
+reaction time per day of sleep restriction.
+
+```{r fits}
+library(lme4)
+library(slopeaudit)
+
+control <- lmerControl(
+  optimizer = "nloptwrap",
+  optCtrl = list(maxeval = 200000),
+  check.conv.singular = "message"
+)
+
+full <- lmer(
+  Reaction ~ Days + (1 + Days | Subject),
+  data = sleepstudy,
+  REML = TRUE,
+  control = control
+)
+
+null <- lmer(
+  Reaction ~ Days + (1 | Subject),
+  data = sleepstudy,
+  REML = TRUE,
+  control = control
+)
+
+days_target <- list(
+  basis_type = "linear",
+  outcome_units = "milliseconds",
+  time_or_exposure_scale = "1 day",
+  origin_or_reference = "Day 0",
+  reference_window = "Days 0--9",
+  estimand = "participant-specific linear change in Reaction per day"
+)
+```
+
+The six fields are substantive, not bookkeeping. A slope per day is not the
+same estimand as a slope per week, and a linear slope over Days 0--9 is not a
+generic label for every notion of change.
+
+## Inspect the fitted information sources
+
+The decomposition is deterministic for a given fitted model and is much
+faster than the bootstrap.
+
+```{r decomposition}
+sources <- slope_decomposition(
+  full = full,
+  target = "Days",
+  target_metadata = days_target
+)
+sources
+```
+
+The frozen equal-participant means are approximately:
+
+| Quantity | Mean | Interpretation |
+|---|---:|---|
+| `R_direct` | 0.8154 | Direct within-person reliability of the declared slope. |
+| `D_slope2` | 0.8485 | Total fitted random-slope determinacy. |
+| `Delta_fit` | 0.0331 | Additional model-assisted information. |
+
+The identity `D_slope2 = R_direct + Delta_fit` holds participant by
+participant. It is a decomposition of fitted information, not a causal or
+measurement claim.
+
+## Run Question 1 and the combined audit
+
+The following chunk is not executed when the vignette is built because it
+runs 999 usable parametric-bootstrap replicates.
+
+```{r audit, eval=FALSE}
+audit <- slope_audit(
+  full = full,
+  null = null,
+  target = "Days",
+  target_metadata = days_target,
+  B = 999L,
+  seed = 20260803L,
+  progress = interactive()
+)
+
+audit
+summary(audit)
+```
+
+For the frozen `sleepstudy` reference, the observed REML likelihood-ratio
+statistic is about 42.837 and Question 1 is supported. With no exceedance at
+`B = 999`, the plus-one p-value is `.001`. A floor-limited manuscript result
+can be explicitly rerun at `B = 4999`; the package never changes `B` silently.
+
+## Inspect before reporting
+
+The compact print method is only the beginning. For a reproducible report,
+retain these components:
+
+```{r inspect, eval=FALSE}
+audit$heterogeneity$observed
+audit$heterogeneity$bootstrap
+audit$heterogeneity$decision_bounds
+audit$source_summary
+audit$participant_table
+audit$target_metadata
+```
+
+Report the target definition, full and null formulas, REML, residual-model
+assumption, `B`, seed, plus-one p-value, decision bounds, and the
+equal-participant source summaries.
+
+## Frequent input errors
+
+- A model fitted with `REML = FALSE` is outside the first public Question-1
+  contract.
+- A null model with a different fixed-effect design is not comparable here.
+- A missing metadata field stops before bootstrap work begins.
+- A transformed, piecewise, interaction, or other non-affine target also
+  requires `basis_expression`.
+- Exact zero fitted target variance withholds the decomposition rather than
+  manufacturing a ratio at the boundary.

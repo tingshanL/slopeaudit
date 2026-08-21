@@ -1,0 +1,9 @@
+cell_id,reference_source,reference_rate,reference_interval_low,reference_interval_high,reference_n,reference_supports,interpretation
+null_balanced_q0_0p5,nominal_alpha,0.05,NA,NA,NA,NA,Null-size target
+null_balanced_q0_4,nominal_alpha,0.05,NA,NA,NA,NA,Null-size target
+null_irregular_q0_0p5,nominal_alpha,0.05,NA,NA,NA,NA,Null-size target
+null_irregular_q0_4,nominal_alpha,0.05,NA,NA,NA,NA,Null-size target
+power_three_waves_two_years_rho0,v13.3.1_extended_unstructured_Q1,0.055,0.041698795079536,0.0709915155420575,1000,55,Statistic-level reference; rho=0
+power_three_waves_two_years_rho0p5,v13.3.1_extended_unstructured_Q1,0.074,0.0585494442606526,0.0920117360142491,1000,74,Statistic-level paired sensitivity; rho=.5
+power_five_waves_five_years_rho0,v13.3.1_extended_unstructured_Q1,0.169,0.146274488693618,0.193692746356444,1000,169,Statistic-level reference; rho=0
+power_five_waves_five_years_rho0p5,v13.3.1_extended_unstructured_Q1,0.425,0.394120321833953,0.456322500891825,1000,425,Statistic-level paired sensitivity; rho=.5

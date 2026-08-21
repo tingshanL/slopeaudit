@@ -1,0 +1,514 @@
+{
+  "policy_version": "2026-08-19",
+  "first_submission_default": "Do not copy AABC2-derived result files outside the authorized environment without written permission. Code, schemas, variable definitions, eligibility rules, and independently synthetic examples are separate public artifacts.",
+  "classifications": {
+    "hold_pending_written_approval": "ID-free AABC2-derived aggregate or replicate-level output. Do not upload for the first submission unless written AABC permission is obtained.",
+    "restricted_never_export": "Participant-linked, participant-level, trajectory, deletion, or other restricted real-data output. Never copied by this router."
+  },
+  "entries": [
+    {
+      "artifact_id": "raw_cohort_summary",
+      "release_filename": "raw_cohort_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "analysis_cohort_summary",
+      "release_filename": "analysis_cohort_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "observed_model_fit_audit",
+      "release_filename": "observed_model_fit_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "population_estimands_lmm_gee",
+      "release_filename": "population_estimands_lmm_gee.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "reliability_model_fit_audit",
+      "release_filename": "reliability_model_fit_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "reliability_summary",
+      "release_filename": "reliability_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "reliability_by_schedule",
+      "release_filename": "reliability_by_schedule.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "exact_posterior_slope_reliability",
+      "release_filename": "exact_posterior_slope_reliability.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-level real-data table."
+    },
+    {
+      "artifact_id": "reliability_gap_bootstrap_replicates",
+      "release_filename": "reliability_gap_bootstrap_replicates.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "one_stage_vs_two_stage_age_effects",
+      "release_filename": "one_stage_vs_two_stage_age_effects.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "gap_source_audit",
+      "release_filename": "gap_source_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "selected_gap_replicates",
+      "release_filename": "selected_gap_replicates.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "gap_optimizer_fit_audit",
+      "release_filename": "gap_optimizer_fit_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "replicate_optimizer_agreement",
+      "release_filename": "replicate_optimizer_agreement.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "gap_regime_summary",
+      "release_filename": "gap_regime_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "gap_prespecified_diagnostic_checks",
+      "release_filename": "gap_prespecified_diagnostic_checks.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_selection_audit",
+      "release_filename": "quadratic_selection_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_selected_gap_replicates",
+      "release_filename": "quadratic_selected_gap_replicates.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "trajectory_formula_preflight",
+      "release_filename": "trajectory_formula_preflight.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_observed_optimizer_fits",
+      "release_filename": "quadratic_observed_optimizer_fits.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_observed_ml_likelihood_comparison",
+      "release_filename": "quadratic_observed_ml_likelihood_comparison.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_observed_reml_covariance_reliability",
+      "release_filename": "quadratic_observed_reml_covariance_reliability.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_bootstrap_optimizer_fits",
+      "release_filename": "quadratic_bootstrap_optimizer_fits.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_bootstrap_panel_denominators",
+      "release_filename": "quadratic_bootstrap_panel_denominators.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_bootstrap_representative_table",
+      "release_filename": "quadratic_bootstrap_representative_table.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "bootstrap_linear_quadratic_pairs",
+      "release_filename": "bootstrap_linear_quadratic_pairs.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_bootstrap_gap_regime_summary",
+      "release_filename": "quadratic_bootstrap_gap_regime_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "quadratic_rank_membership",
+      "release_filename": "quadratic_rank_membership.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "high_gap_branch_audit",
+      "release_filename": "high_gap_branch_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "observed_reference_time_summary",
+      "release_filename": "observed_reference_time_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "observed_reference_time_denominator_change",
+      "release_filename": "observed_reference_time_denominator_change.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "midpoint_reproduction_validation",
+      "release_filename": "midpoint_reproduction_validation.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "bootstrap_covariance_geometry",
+      "release_filename": "bootstrap_covariance_geometry.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "bootstrap_reproduction_audit",
+      "release_filename": "bootstrap_reproduction_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "reference_time_bootstrap_summary",
+      "release_filename": "reference_time_bootstrap_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "reference_time_change_summary",
+      "release_filename": "reference_time_change_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "empirical_singularity_threshold_sweep",
+      "release_filename": "empirical_singularity_threshold_sweep.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "selected_singularity_threshold_sweep",
+      "release_filename": "selected_singularity_threshold_sweep.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "simulation_singularity_threshold_sweep",
+      "release_filename": "simulation_singularity_threshold_sweep.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "selected_schedule_per_replicate",
+      "release_filename": "selected_schedule_per_replicate.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "schedule_by_branch_replicate_weighted",
+      "release_filename": "schedule_by_branch_replicate_weighted.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "schedule_by_branch_draw_level",
+      "release_filename": "schedule_by_branch_draw_level.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "reference_time_reporting_notes",
+      "release_filename": "reference_time_reporting_notes.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "reference_time_completion_checklist",
+      "release_filename": "reference_time_completion_checklist.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "selected_participant_reliability",
+      "release_filename": "selected_participant_reliability.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked real-data table."
+    },
+    {
+      "artifact_id": "bootstrap_representative_participant_reliability",
+      "release_filename": "bootstrap_representative_participant_reliability.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked real-data table."
+    },
+    {
+      "artifact_id": "observed_reference_time_participant",
+      "release_filename": "observed_reference_time_participant.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked real-data table."
+    },
+    {
+      "artifact_id": "anchored_bootstrap_covariance_geometry",
+      "release_filename": "anchored_bootstrap_covariance_geometry.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "profile_selection_manifest",
+      "release_filename": "profile_selection_manifest.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "profile_resample_manifest",
+      "release_filename": "profile_resample_manifest.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "observed_rlrt_optimizer_audit",
+      "release_filename": "observed_rlrt_optimizer_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "parametric_rlrt_summary",
+      "release_filename": "parametric_rlrt_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "ventricular_rlrt_multistart_replicates",
+      "release_filename": "ventricular_rlrt_multistart_replicates.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "ventricular_rlrt_adjudication",
+      "release_filename": "ventricular_rlrt_adjudication.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "parametric_rlrt_replicates",
+      "release_filename": "parametric_rlrt_replicates.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "anchored_d_profile",
+      "release_filename": "anchored_d_profile.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "anchored_d_optimizer_audit",
+      "release_filename": "anchored_d_optimizer_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "boundary_likelihood_drop_table",
+      "release_filename": "boundary_likelihood_drop_table.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "anchored_d_profile_quality",
+      "release_filename": "anchored_d_profile_quality.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "endpoint_covariance_naming_audit",
+      "release_filename": "endpoint_covariance_naming_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "influence_deletion_refits",
+      "release_filename": "influence_deletion_refits.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion output; never export, including after derivative-output approval."
+    },
+    {
+      "artifact_id": "influence_deletion_optimizer_audit",
+      "release_filename": "influence_deletion_optimizer_audit.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion output; never export, including after derivative-output approval."
+    },
+    {
+      "artifact_id": "observed_spline_ml_comparison",
+      "release_filename": "observed_spline_ml_comparison.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "observed_spline_ml_optimizer_audit",
+      "release_filename": "observed_spline_ml_optimizer_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "minimal_adequacy_summary",
+      "release_filename": "minimal_adequacy_summary.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "minimal_adequacy_optimizer_audit",
+      "release_filename": "minimal_adequacy_optimizer_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "retained_quadratic_audit",
+      "release_filename": "retained_quadratic_audit.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "operating_simulation_cell_manifest",
+      "release_filename": "operating_simulation_cell_manifest.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "operating_simulation_replicates",
+      "release_filename": "operating_simulation_replicates.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "targeted_simulation_repairs",
+      "release_filename": "targeted_simulation_repairs.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "simulation_lr_calibration",
+      "release_filename": "simulation_lr_calibration.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "operating_characteristics",
+      "release_filename": "operating_characteristics.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "operating_metric_quantiles",
+      "release_filename": "operating_metric_quantiles.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "true_zero_spurious_predictability",
+      "release_filename": "true_zero_spurious_predictability.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "simulation_cell_validity",
+      "release_filename": "simulation_cell_validity.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "operating_simulation_completion_checklist",
+      "release_filename": "operating_simulation_completion_checklist.csv",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "anchored_d_profiles",
+      "release_filename": "anchored_d_profiles.png",
+      "classification": "hold_pending_written_approval",
+      "note": ""
+    },
+    {
+      "artifact_id": "cluster_covariance_influence",
+      "release_filename": "cluster_covariance_influence.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion/QC output."
+    },
+    {
+      "artifact_id": "individual_deletion_refits",
+      "release_filename": "individual_deletion_refits.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion/QC output."
+    },
+    {
+      "artifact_id": "individual_vs_joint_influence",
+      "release_filename": "individual_vs_joint_influence.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion/QC output."
+    },
+    {
+      "artifact_id": "influential_participant_raw_trajectory_qc",
+      "release_filename": "influential_participant_raw_trajectory_qc.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion/QC output."
+    },
+    {
+      "artifact_id": "influential_participant_qc_summary",
+      "release_filename": "influential_participant_qc_summary.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion/QC output."
+    },
+    {
+      "artifact_id": "individual_deletion_optimizer_audit",
+      "release_filename": "individual_deletion_optimizer_audit.csv",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion/QC output."
+    },
+    {
+      "artifact_id": "influential_participant_raw_trajectories_qc",
+      "release_filename": "influential_participant_raw_trajectories_qc.png",
+      "classification": "restricted_never_export",
+      "note": "Participant-linked influence/deletion/QC output."
+    }
+  ]
+}

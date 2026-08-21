@@ -1,0 +1,55 @@
+{
+  "fixture_id": "near_singular_synthetic",
+  "fixture_version": "1.0",
+  "contract_version": "1.1",
+  "reference_class": "analytic_constructed",
+  "fixture_type": "analytic_synthetic_stress_case",
+  "purpose": [
+    "Stress-test calculations under a positive-definite but near-rank-one random-effects covariance matrix.",
+    "Verify that positive target-slope variance is not confused with an exact zero target-slope boundary.",
+    "Encourage numerically stable conditioning formulas that do not require an explicit inverse of G."
+  ],
+  "model": {
+    "random_effects": [
+      "intercept",
+      "target_slope"
+    ],
+    "target_random_effect": "target_slope",
+    "G": [
+      [
+        1.0,
+        0.999999
+      ],
+      [
+        0.999999,
+        1.0
+      ]
+    ],
+    "tau_slope_squared": 1.0,
+    "residual_covariance": "identity",
+    "residual_variance": 1.0
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "time": [
+        -1.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "numerical_characteristics": {
+    "G_eigenvalues": [
+      1e-06,
+      1.999999
+    ],
+    "min_to_max_eigenvalue_ratio": 5.00000250000125e-07
+  },
+  "recommended_full_determinacy_route": "C_i = G - G Z_i^T (Z_i G Z_i^T + R_i)^(-1) Z_i G",
+  "notes": [
+    "The target slope variance is exactly 1.0 and therefore positive.",
+    "The covariance block is intentionally very close to rank one.",
+    "This fixture is a numerical stress case, not a request to truncate or repair G."
+  ]
+}

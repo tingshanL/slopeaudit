@@ -1,0 +1,2 @@
+cell_order,cell_id,cell_family,schedule,q0,q1,rho,misspecification,requested_reps,source_outcome
+0,synthetic_true_zero,true_zero,balanced_three_wave,1.0,0.0,0.0,none,2,synthetic

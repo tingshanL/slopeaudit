@@ -1,0 +1,31 @@
+{
+  "fixture_id": "near_singular_synthetic",
+  "fixture_version": "1.0",
+  "contract_version": "1.1",
+  "reference_class": "analytic_constructed",
+  "tolerance": {
+    "absolute": 1e-09,
+    "relative": 1e-08
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "direct_contrast": [
+        -0.5,
+        0.0,
+        0.5
+      ],
+      "direct_error_variance": 0.5,
+      "R_direct": 0.6666666666666666,
+      "posterior_slope_variance": 0.16666733333166683,
+      "D_slope_squared": 0.8333326666683332,
+      "Delta_fit": 0.16666600000166654
+    }
+  ],
+  "required_assertions": [
+    "The calculation returns finite values.",
+    "The target-slope variance remains positive and is not treated as an exact zero boundary.",
+    "D_slope_squared = R_direct + Delta_fit within tolerance.",
+    "Delta_fit is nonnegative within tolerance."
+  ]
+}

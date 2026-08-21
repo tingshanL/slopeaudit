@@ -1,0 +1,45 @@
+{
+  "fixture_id": "no_time_variation_zero_direct",
+  "fixture_version": "1.0",
+  "contract_version": "1.1",
+  "reference_class": "analytic_constructed",
+  "fixture_type": "analytic_synthetic_edge_case",
+  "purpose": [
+    "Validate the zero-direct-information branch when multiple observations exist but the target time variable has no within-person variation.",
+    "Ensure repeated observations at one time point are not mistaken for direct information about change."
+  ],
+  "model": {
+    "random_effects": [
+      "intercept",
+      "target_slope"
+    ],
+    "target_random_effect": "target_slope",
+    "G": [
+      [
+        1.0,
+        0.6
+      ],
+      [
+        0.6,
+        1.0
+      ]
+    ],
+    "tau_slope_squared": 1.0,
+    "residual_covariance": "identity",
+    "residual_variance": 1.0
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "time": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "notes": [
+    "There are three repeated observations but zero within-person variation in time.",
+    "Improved information about the random intercept may still predict the slope through G, so D_slope_squared can be positive."
+  ]
+}

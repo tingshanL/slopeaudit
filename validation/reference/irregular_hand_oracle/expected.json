@@ -1,0 +1,62 @@
+{
+  "fixture_id": "irregular_oracle",
+  "fixture_version": "1.0",
+  "contract_version": "1.1",
+  "reference_class": "analytic_constructed",
+  "tolerance": {
+    "absolute": 1e-10,
+    "relative": 1e-08
+  },
+  "participants": [
+    {
+      "id": "P1",
+      "direct_contrast": [
+        -0.5,
+        0.0,
+        0.5
+      ],
+      "direct_error_variance": 0.5,
+      "R_direct": 0.5614035087719298,
+      "posterior_slope_variance": 0.2501611863313991,
+      "D_slope_squared": 0.6091231463571889,
+      "Delta_fit": 0.0477196375852591
+    },
+    {
+      "id": "P2",
+      "direct_contrast": [
+        -0.2857142857142857,
+        -0.07142857142857142,
+        0.35714285714285715
+      ],
+      "direct_error_variance": 0.21428571428571425,
+      "R_direct": 0.7491638795986622,
+      "posterior_slope_variance": 0.11388318168476663,
+      "D_slope_squared": 0.8220575286175521,
+      "Delta_fit": 0.07289364901888995
+    },
+    {
+      "id": "P3",
+      "direct_contrast": [
+        -0.13569321533923304,
+        -0.06489675516224189,
+        0.05309734513274336,
+        0.14749262536873156
+      ],
+      "direct_error_variance": 0.0471976401179941,
+      "R_direct": 0.9313186813186813,
+      "posterior_slope_variance": 0.04090721649484508,
+      "D_slope_squared": 0.9360824742268046,
+      "Delta_fit": 0.004763792908123232
+    }
+  ],
+  "equal_participant_means": {
+    "R_direct": 0.747295356563091,
+    "D_slope_squared": 0.7890877164005152,
+    "Delta_fit": 0.041792359837424055
+  },
+  "required_assertions": [
+    "For every participant, D_slope_squared = R_direct + Delta_fit within tolerance.",
+    "All Delta_fit values are nonnegative within tolerance.",
+    "The equal-participant means also satisfy exact additivity within tolerance."
+  ]
+}

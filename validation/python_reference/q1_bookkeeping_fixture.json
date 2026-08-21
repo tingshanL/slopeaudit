@@ -1,0 +1,53 @@
+{
+  "fixture_id": "q1_bookkeeping_oracle_v1",
+  "contract_version": "1.1",
+  "observed_LR": 1.0,
+  "replicates": [
+    {
+      "replicate": 1,
+      "status": "positive",
+      "LR_raw": 2.0,
+      "LR_zero": 2.0,
+      "reason": ""
+    },
+    {
+      "replicate": 2,
+      "status": "zero",
+      "LR_raw": 0.0,
+      "LR_zero": 0.0,
+      "reason": ""
+    },
+    {
+      "replicate": 3,
+      "status": "small_negative",
+      "LR_raw": -1e-08,
+      "LR_zero": 0.0,
+      "reason": "small_finite_negative_LR"
+    },
+    {
+      "replicate": 4,
+      "status": "material_negative",
+      "LR_raw": -0.01,
+      "LR_zero": null,
+      "reason": "material_negative_LR"
+    },
+    {
+      "replicate": 5,
+      "status": "failure",
+      "LR_raw": null,
+      "LR_zero": null,
+      "reason": "forced_failure"
+    }
+  ],
+  "expected": {
+    "denominator_drop": 2,
+    "denominator_zero": 3,
+    "exceedances_drop": 1,
+    "exceedances_zero": 1,
+    "p_drop": 0.6666666666666666,
+    "p_zero": 0.5,
+    "n_small_negative": 1,
+    "n_material_negative": 1,
+    "n_failure": 1
+  }
+}

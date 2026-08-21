@@ -1,0 +1,6 @@
+public_file,validated_private_source,equivalence_marker,release_note
+validate_aabc2_advanced_profiles.py,advanced_rlrt_profile_fitting_smoke_validation.py,Frozen final profile state,profile fitting/optimizer validation tail copied verbatim; notebook extraction replaced by validated core imports
+validate_aabc2_advanced_influence.py,advanced_rlrt_influence_fitting_smoke_validation.py,Fit the two observed alternative models,influence/deletion validation tail copied verbatim; notebook extraction replaced by validated core imports
+validate_aabc2_advanced_adequacy.py,advanced_rlrt_adequacy_fitting_smoke_validation.py,Comparator,adequacy comparison/execution tail copied verbatim; frozen spline-state setup reconstructed from validated helper
+preflight_aabc2_operating_simulation.py,advanced_rlrt_operating_simulation_preflight.py,Helpers,all structural/overlay checks copied verbatim; paths parameterized
+validate_aabc2_operating_simulation_repairs.py,advanced_rlrt_operating_simulation_fitting_smoke_validation.py,Smoke cases,five-case repair/comparison tail copied verbatim; exact core functions imported

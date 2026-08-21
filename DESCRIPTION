@@ -1,0 +1,38 @@
+Package: slopeaudit
+Type: Package
+Title: Diagnose Information Sources in Gaussian Random-Slope Models
+Version: 0.1.0
+Authors@R: c(
+    person(
+      given = "Tingshan",
+      family = "Liu",
+      email = "tliu68@jhmi.edu",
+      role = c("aut", "cre")
+    )
+  )
+Description: Implements validated components of a diagnostic framework for
+    person-specific rates of change in Gaussian linear mixed models. The package
+    separates direct within-person information about a target random slope from
+    additional model-assisted information, supports boundary-aware testing of
+    random-slope heterogeneity, and evaluates prospective information under
+    supplied designs. The first public interface targets scalar Gaussian random
+    slopes, with an adapter for compatible 'lme4' model fits and a matrix-based
+    computational backend. A public resampling contract for source stability is
+    deliberately deferred.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 4.3.0)
+Imports:
+    lme4,
+    stats
+Suggests:
+    devtools,
+    testthat (>= 3.0.0),
+    jsonlite,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
