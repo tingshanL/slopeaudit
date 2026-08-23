@@ -1,0 +1,18 @@
+{
+  "source": "https://vincentarelbundock.github.io/Rdatasets/csv/lme4/sleepstudy.csv",
+  "sha256": "20922ddc87d538bf2344f73d49000eeb2d7e14934b6191a3e071fefc329942c4",
+  "checks": {
+    "rows_180": true,
+    "subjects_18": true,
+    "canonical_subject_ids": true,
+    "ten_rows_each": true,
+    "days_0_to_9_each": true,
+    "no_missing": true,
+    "known_first_value": true,
+    "canonical_response_range": true
+  },
+  "rows": 180,
+  "participants": 18,
+  "canonical_RDatasets_SHA256": "20922ddc87d538bf2344f73d49000eeb2d7e14934b6191a3e071fefc329942c4",
+  "downloaded_bytes_match_canonical_RDatasets": true
+}

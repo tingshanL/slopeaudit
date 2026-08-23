@@ -1,0 +1,16 @@
+{
+  "engine_version": "sleepstudy_AR1_profile_v1_2026-08-04",
+  "primary_analysis": "Days 0--9; Reaction ~ Days + (1 + Days | Subject); homogeneous independent residuals",
+  "diagnostic_target": "profile residual AR(1) rho_e while re-estimating fixed effects, G, and residual scale",
+  "recorded_quantities": [
+    "REML likelihood",
+    "descriptive RI-vs-RI+RS LR",
+    "R_direct",
+    "P_full",
+    "Delta_fit",
+    "innovation reliability",
+    "G boundary geometry"
+  ],
+  "posthoc_subset": "Days 2--9, with Day 2 reset to analysis time 0; diagnostic only",
+  "primary_freeze": "The Days 0--9 homogeneous-residual audit and its supported Question 1 result are not replaced by either diagnostic."
+}

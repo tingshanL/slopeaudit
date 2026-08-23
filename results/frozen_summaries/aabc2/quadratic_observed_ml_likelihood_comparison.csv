@@ -1,0 +1,3 @@
+outcome,comparison_valid,linear_optimizer,quadratic_optimizer,linear_ML_log_likelihood,quadratic_ML_log_likelihood,LR_statistic_df1,LR_p_value,quadratic_coefficient,quadratic_coefficient_SE,quadratic_coefficient_p_Wald,delta_AIC_quadratic_minus_linear,delta_BIC_quadratic_minus_linear
+global_mean_thickness,True,lbfgs,lbfgs,-1080.9951119298512,-1079.8097442697608,2.3707353201807564,0.12362880630762518,-0.07987596238259452,0.05184710118578335,0.12341267288287301,-0.3707353201807564,5.024986288421587
+fluid_cognition,True,lbfgs,lbfgs,-6236.301005132269,-6235.374222476017,1.8535653125036333,0.17336929616511773,-0.9945954741223481,0.7301747630583244,0.17315577137475358,0.14643468749636668,5.644750558263695

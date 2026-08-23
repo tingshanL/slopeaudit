@@ -1,0 +1,2 @@
+requested_replicates,usable_replicates,usable_rate,minimum_usable_rate,full_sample_source_difference_d,bootstrap_d_q025,bootstrap_d_median,bootstrap_d_q975,full_sample_source_label,interval_preserves_full_sample_sign,usability_gate_pass,source_stability_gate_pass
+499,499,1.0,0.95,0.7823169756588256,0.284160758622809,0.7634386512526465,0.9112819323328172,directly informed,True,True,True

@@ -1,0 +1,11 @@
+row_type,regime,effect_condition,fitted_replicates,basic_validity_rate,strict_validity_rate,finite_full_rate,slope_boundary_rate,covariance_boundary_rate,hessian_positive_rate
+evaluation,true_zero_slope_variance,beta_xt_0.10_SD_per_5y,500,1.0,0.99,1.0,0.0,0.01,1.0
+evaluation,true_zero_slope_variance,beta_xt_zero,500,1.0,0.99,1.0,0.0,0.01,1.0
+lr_calibration,high_slope_information,beta_xt_zero,500,1.0,0.846,1.0,0.0,0.154,1.0
+lr_calibration,intermediate,beta_xt_zero,500,1.0,0.892,1.0,0.0,0.108,1.0
+lr_calibration,near_boundary,beta_xt_zero,500,1.0,0.558,1.0,0.012,0.442,1.0
+lr_calibration,true_zero_slope_variance,beta_xt_zero,500,1.0,0.996,1.0,0.0,0.004,1.0
+lr_null_evaluation,high_slope_information,beta_xt_zero,500,1.0,0.864,1.0,0.006,0.136,1.0
+lr_null_evaluation,intermediate,beta_xt_zero,500,1.0,0.888,1.0,0.004,0.112,1.0
+lr_null_evaluation,near_boundary,beta_xt_zero,500,1.0,0.536,1.0,0.012,0.464,1.0
+lr_null_evaluation,true_zero_slope_variance,beta_xt_zero,500,1.0,0.99,1.0,0.0,0.01,1.0

@@ -1,0 +1,29 @@
+sleepstudy slope-source audit (unrounded values are in the CSV exports)
+Target: participant-specific linear Reaction-time deviation per Day, Days 0--9
+
+Q1 heterogeneity: supported
+  LR = 42.836813
+  boundary-bootstrap p = 0.001000
+  usable = 999/999
+
+Q2 direct information:
+  R_direct = 0.815424
+  OLS-slope special-case identity verified = True
+
+Q3 complete-model prediction and source:
+  P_full = 0.848531 = 0.815424 + 0.033107
+  R_innovation = 0.814775
+  intercept--slope rho at Day 0 = 0.065551
+  source description = directly informed
+
+Q4 stability:
+  participant-bootstrap usable = 499/499
+  95% interval for R_direct - Delta_fit = [0.284161, 0.911282]
+  numerical gate = pass
+  quadratic fixed-trajectory source ordering preserved = True
+  AR(1) source ordering preserved = True
+  AR(1) random-covariance near-singular warning = True
+
+ACTION: PROCEED—INDIVIDUAL-SLOPE CLAIM
+The action is scoped only to treating individual slopes as established person-level change traits.
+The public case is retained regardless of this result.

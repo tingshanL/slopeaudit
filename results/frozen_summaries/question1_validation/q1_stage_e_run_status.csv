@@ -1,0 +1,2 @@
+"mode","status","operational_checks_passed","operational_checks_total","reference_checks_enforced","reference_checks_passed","reference_checks_total","note"
+"full","PASS",9,9,8,8,8,"Power references are independently estimated statistic-level benchmarks; interval compatibility is enforced."

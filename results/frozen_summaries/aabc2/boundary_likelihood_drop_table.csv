@@ -1,0 +1,5 @@
+dataset_id,outcome,dataset_role,boundary_profile_log_likelihood,reference_log_likelihood,direct_log_likelihood_at_selected,likelihood_match_absolute_difference,boundary_relative_deviance,profile_reaches_admissible_PSD_boundary
+high_gap__fluid_cognition__rep127,fluid_cognition,high_gap_resample_nearest_high_regime_median,-6293.09033310176,-6292.986094919476,-6292.98609493313,2.3646862246096134e-11,0.2084763645671046,True
+high_gap__global_mean_thickness__rep55,global_mean_thickness,high_gap_resample_nearest_high_regime_median,-1130.643809062596,-1130.6438058055583,-1130.643809069979,3.2644206839904655e-06,6.514075266750297e-06,True
+observed__fluid_cognition,fluid_cognition,observed,-6232.135910165706,-6231.440283877169,-6231.440283877353,1.837179297581315e-10,1.3912525770738284,True
+observed__global_mean_thickness,global_mean_thickness,observed,-1120.8974803980536,-1120.8838798802005,-1120.8838798926165,4.774847184307873e-12,0.027201035706184484,True

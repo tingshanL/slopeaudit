@@ -1,0 +1,9 @@
+"cell_id","mode","enforced","reference_source","reference_rate","stage_e_decision_interval_low","stage_e_decision_interval_high","reference_compatible","unresolved_changes_reference_compatibility","pass"
+"null_balanced_q0_0p5","full",TRUE,"nominal_alpha",0.05,0.0399894953246056,0.068823431641574,TRUE,FALSE,TRUE
+"null_balanced_q0_4","full",TRUE,"nominal_alpha",0.05,0.038243717264037,0.0665794944894297,TRUE,FALSE,TRUE
+"null_irregular_q0_0p5","full",TRUE,"nominal_alpha",0.05,0.0443775349737157,0.0744102573981635,TRUE,FALSE,TRUE
+"null_irregular_q0_4","full",TRUE,"nominal_alpha",0.05,0.0399894953246056,0.068823431641574,TRUE,FALSE,TRUE
+"power_three_waves_two_years_rho0","full",TRUE,"v13.3.1_extended_unstructured_Q1",0.055,0.0496831256913415,0.0810754101340853,TRUE,FALSE,TRUE
+"power_three_waves_two_years_rho0p5","full",TRUE,"v13.3.1_extended_unstructured_Q1",0.074,0.0685263843421223,0.104135031785819,TRUE,FALSE,TRUE
+"power_five_waves_five_years_rho0","full",TRUE,"v13.3.1_extended_unstructured_Q1",0.169,0.157763646561175,0.206494086326267,TRUE,FALSE,TRUE
+"power_five_waves_five_years_rho0p5","full",TRUE,"v13.3.1_extended_unstructured_Q1",0.425,0.383657020287896,0.445677678891779,TRUE,FALSE,TRUE

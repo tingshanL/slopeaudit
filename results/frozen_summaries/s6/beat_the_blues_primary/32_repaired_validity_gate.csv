@@ -1,0 +1,7 @@
+gate_item,pass,evidence,overall_pass
+1. Multi-start optimizer and nesting validity,True,"NLL gap/obs=1.95e-12; max source gap=3.1e-06; corrected AR1 NLL=1313.016108, rho=0.206495",False
+2. Boundary-bootstrap validity under hom and occasion-specific residuals,False,"hom: 996/999 usable, p=0.07723; hetero: 999/999 usable, p=0.207",False
+3. Observed-schedule model adequacy,False,1 prespecified core discrepancy/discrepancies outside the 95% predictive interval,False
+4. Missingness and schedule sensitivities completed,True,"prognostic covariates, n>=3 (n=73), complete five-wave selected sample (n=52), and schedule source table",False
+5. Influence and participant-resampling diagnostics completed,True,"influential participants retained; top two=11,64; 499-resample target retained",False
+6. Outcome-independent reporting,True,Reporting text generated regardless of supported/borderline/unsupported status,False

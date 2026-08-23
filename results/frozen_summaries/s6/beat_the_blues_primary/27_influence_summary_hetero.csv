@@ -1,0 +1,2 @@
+residual_model,requested_single_deletions,usable_single_deletions,max_single_deletion_abs_source_shift,max_single_deletion_abs_LR_shift,joint_top_two_subjects,joint_top_two_max_abs_source_shift,joint_top_two_LR,joint_top_two_LR_shift,participants_retained_in_primary_analysis
+hetero,100,100,0.36973816342645927,1.5275273883589762,"11,64",0.8432159759095158,1.87636261015723,-0.6381085711650485,True

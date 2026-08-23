@@ -1,0 +1,1000 @@
+engine_version,replicate,usable,LR,nested_likelihood_ok,rescue_triggered,null_nll,alt_nll,null_optimizer,alt_optimizer,null_start,alt_start
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,1,True,3.498724887761682,True,False,901.1914015243963,899.4420390805154,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,2,True,0.0026810881863639224,True,False,884.7000149588373,884.6986744147441,L-BFGS-B,Powell,mapped_seed_null,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,3,True,2.313351371366025,True,False,894.6081188941239,893.4514432084409,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,4,True,0.5677917637517567,True,False,889.3069894986576,889.0230936167817,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,5,True,0.10635700574516704,True,False,892.4201724422176,892.366993939345,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,6,True,1.0486315647081028,True,False,882.3980197032242,881.8737039208702,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,7,True,1.8340489004767733,True,False,878.9369876436665,878.0199631934281,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,8,True,1.019500596466969,True,False,895.3927399590522,894.8829896608187,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,9,True,2.9414963830367924,True,False,894.9104050788198,893.4396568873015,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,10,True,2.210143989533435,True,False,886.1727442026713,885.0676722079046,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,11,True,0.7461108276690993,True,False,886.0546104317547,885.6815550179201,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,12,True,0.7977928070149574,True,False,882.650074932141,882.2511785286335,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,13,True,1.9468948892758817,True,False,882.567924868607,881.594477423969,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,14,True,0.20922662513271462,True,False,891.4765705357701,891.3719572232037,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,15,True,1.9575706751716098,True,False,890.6492621719973,889.6704768344115,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,16,True,1.494712277841927,True,False,894.7294286438143,893.9820725048934,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,17,True,0.5631732249048582,True,False,872.6396649566119,872.3580783441595,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,18,True,0.02518190414343735,True,False,914.1840563963528,914.1714654442811,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,19,True,2.74437541132761,True,False,882.1996952346333,880.8275075289695,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,20,True,0.06600224173212155,True,False,903.3508640887638,903.3178629678978,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,21,True,0.22676094628263854,True,False,888.1747138623274,888.0613333891861,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,22,True,0.4659108515661501,True,False,902.9036591565566,902.6707037307735,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,23,True,0.39886157742330397,True,False,895.7677107498216,895.56827996111,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,24,True,3.9310676015081754,True,False,884.6284205612175,882.6628867604634,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,25,True,0.0013596881872217637,True,False,898.0536860536745,898.0530062095809,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,26,True,0.8449936552945019,True,False,880.0878438857588,879.6653470581116,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,27,True,1.6144606185737302,True,False,882.6555529427684,881.8483226334815,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,28,True,0.006923515353719267,True,False,884.4518152648126,884.4483535071357,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,29,True,1.2163765967534346,True,False,882.4171569785494,881.8089686801727,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,30,True,1.5218374641724495,True,False,889.6443763929205,888.8834576608343,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,31,True,5.801514522322577,True,False,906.29820777812,903.3974505169587,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,32,True,0.666737205484651,True,False,899.7788423853539,899.4454737826115,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,33,True,6.134580966136127,True,False,898.7569472718195,895.6896567887514,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,34,True,1.0737019378982495,True,False,897.042080467887,896.5052294989379,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,35,True,2.0110328964854034,True,False,912.9185448658955,911.9130284176528,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,36,True,0.21190064452684965,True,False,907.3458336163869,907.2398832941235,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,37,True,5.076116968625911,True,False,902.1527562932764,899.6146978089635,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,38,True,0.49783972052000536,True,False,893.0273097290337,892.7783898687737,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,39,True,2.39252249803576,True,False,891.4783775705364,890.2821163215185,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,40,True,0.44065661651984556,True,False,898.222033684432,898.001705376172,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,41,True,3.2946840485469693,True,False,904.6168841741262,902.9695421498527,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,42,True,2.224915538550704,True,False,888.4314341761335,887.3189764068582,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,43,True,5.3766086671714675,True,False,884.9960034498847,882.307699116299,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,44,True,1.1569431217135389,True,False,881.6261821460487,881.0477105851919,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,45,True,4.015127760364976,True,False,878.2446370457938,876.2370731656113,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,46,True,0.870219458589645,True,False,887.7272486625355,887.2921389332407,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,47,True,0.15001483667811044,True,False,891.587597509637,891.512590091298,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,48,True,0.0004949342071540741,True,False,899.5917790483765,899.5915315812729,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,49,True,0.29882746663429316,True,False,904.5653829163798,904.4159691830627,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,50,True,0.24255545612641072,True,False,901.6457014517785,901.5244237237152,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,51,True,0.33092595337666353,True,False,899.4531420433843,899.287679066696,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,52,True,4.8415414458368105,True,False,901.9722444039047,899.5514736809863,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,53,True,1.8805573372367235,True,False,901.0613770187954,900.121098350177,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,54,True,7.384759934942849,True,False,917.893431832593,914.2010518651216,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,55,True,6.237901038392465,True,False,882.3606792786761,879.2417287594799,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,56,True,0.06959985253092782,True,False,888.1875577598186,888.1527578335531,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,57,True,0.44950748121596007,True,False,894.9953631807527,894.7706094401448,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,58,True,0.05490148386547844,True,False,896.1149980944936,896.0875473525608,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,59,True,0.2303682162005316,True,False,904.9227023054623,904.807518197362,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,60,True,0.4915645062610565,True,False,879.4417286156399,879.1959463625094,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,61,True,0.23973791275943768,True,False,880.0377289200549,879.9178599636751,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,62,True,0.4985112569838748,True,False,871.2537046270129,871.004448998521,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,63,True,0.2411161822790291,True,False,900.291744887944,900.1711867968045,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,64,True,6.495051569314683,True,False,891.9623652258022,888.7148394411448,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,65,True,1.5176479860292602,True,False,902.065390647987,901.3065666549724,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,66,True,0.0033149103232972266,True,False,893.4194858271945,893.4178283720329,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,67,True,0.4741002139560351,True,False,913.185891385532,912.948841278554,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,68,True,9.102527040049836,True,False,895.6544539423217,891.1031904222967,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,69,True,0.9944065146651155,True,False,895.1741241881577,894.6769209308252,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,70,True,0.6209609247855497,True,False,879.5336706426741,879.2231901802813,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,71,True,0.38505600985126875,True,False,896.5461063341966,896.3535783292709,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,72,True,0.23851164699976835,True,False,889.2749178700149,889.155662046515,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,73,True,0.10977910780388811,True,False,878.2094658786878,878.1545763247858,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,74,True,0.041694112692312046,True,False,902.9670530252922,902.9462059689461,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,75,True,1.038159756885534,True,False,890.8441090221509,890.3250291437081,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,76,True,3.3202479472533923,True,False,907.8459094730413,906.1857854994146,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,77,True,0.4315659904787026,True,False,903.8715864061109,903.6558034108715,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,78,True,0.37743754830398757,True,False,860.7887706110024,860.6000518368504,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,79,True,0.12437876894591682,True,False,912.9762019961724,912.9140126116995,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,80,True,0.14817153924150261,True,False,888.6673408836717,888.593255114051,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,81,True,0.07647046717579542,True,False,898.3420784446912,898.3038432111033,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,82,True,2.162577895289587,True,False,889.969038602954,888.8877496553092,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,83,True,0.9490460065046591,True,False,873.1679028036996,872.6933798004472,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,84,True,0.16878438593244027,True,False,880.8555772732906,880.7711850803244,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,85,True,0.0011949736995120475,True,False,892.442665840744,892.4420683538942,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,86,True,9.192594188789371e-05,True,False,875.9903617296375,875.9903157666665,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,87,True,1.2478863796036421,True,False,888.8655412526152,888.2415980628134,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,88,True,0.1227054968212542,True,False,903.5962710066308,903.5349182582202,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,89,True,0.310367374821908,True,False,893.0360798446968,892.8808961572859,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,90,True,2.854289993917746,True,False,888.9868371660447,887.5596921690858,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,91,True,0.5284221982128656,True,False,890.5726514033076,890.3084403042012,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,92,True,0.7559903499036409,True,False,888.9337439915463,888.5557488165945,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,93,True,6.271919858295405,True,False,883.6097006162983,880.4737406871506,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,94,True,0.20273041097425448,True,False,872.5628962554956,872.4615310500085,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,95,True,1.3720485895946695,True,False,891.9572113693168,891.2711870745195,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,96,True,1.4777829769079744,True,False,907.7247586854593,906.9858671970053,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,97,True,0.09243865983421529,True,False,890.4145021132933,890.3682827833762,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,98,True,0.034825309692678275,True,False,912.4497834838946,912.4323708290483,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,99,True,1.654880174994105,True,False,888.9002274496256,888.0727873621286,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,100,True,1.583490582075683,True,False,885.3248971297733,884.5331518387354,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,101,True,0.011004227799276123,True,False,884.25062866933,884.2451265554304,L-BFGS-B,Powell,default,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,102,True,1.370254600750286,True,False,896.0199814362695,895.3348541358944,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,103,True,0.2376189554784105,True,False,891.8693810440917,891.7505715663525,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,104,True,0.2763143069630587,True,False,886.2392998440745,886.101142690593,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,105,True,0.04238421318791552,True,False,886.9574678655509,886.936275758957,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,106,True,4.083028830003286,True,False,910.4000832417315,908.3585688267299,L-BFGS-B,L-BFGS-B,mapped_seed_null,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,107,True,0.3278102899591886,True,False,889.7620571053022,889.5981519603226,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,108,True,0.056434292285302945,True,False,896.0939103097573,896.0656931636147,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,109,True,0.14218653900661593,True,False,884.3721537403609,884.3010604708576,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,110,True,0.01249055937250887,True,False,892.6818222474369,892.6755769677507,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,111,True,3.565127005851764,True,False,884.4935382164937,882.7109747135678,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,112,True,3.146110182657594,True,False,888.0427924221171,886.4697373307883,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,113,True,2.0898459041002297,True,False,890.7849223388782,889.7399993868281,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,114,True,0.695261175897258,True,False,887.6530986077584,887.3054680198097,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,115,True,1.2490566233425398,True,False,892.0729543654501,891.4484260537788,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,116,True,0.6108381928929703,True,False,886.1658360471862,885.8604169507397,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,117,True,0.9071324842450394,True,False,887.7186591368406,887.2650928947181,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,118,True,1.6709851495272687,True,False,898.7804748520409,897.9449822772773,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,119,True,0.6436141895328547,True,False,894.9113746167072,894.5895675219408,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,120,True,0.2427299691062217,True,False,909.863651894896,909.7422869103428,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,121,True,5.1241758065593785,True,False,898.8847251954062,896.3226372921265,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,122,True,0.2683637696520691,True,False,885.7507097141987,885.6165278293727,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,123,True,0.8230723808380844,True,False,878.5480791775715,878.1365429871524,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,124,True,0.8291671053116261,True,False,908.7680508924238,908.353467339768,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,125,True,0.045499064694013214,True,False,893.4902748386113,893.4675253062643,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,126,True,0.47353796871584564,True,False,887.1116694595062,886.8749004751483,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,127,True,0.2149043089987117,True,False,901.1524562972699,901.0450041427705,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,128,True,0.16810958829296396,True,False,892.141792623923,892.0577378297766,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,129,True,0.07259836429284405,True,False,895.5926381728452,895.5563389906988,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,130,True,0.19730986527497407,True,False,893.3426362559038,893.2439813232663,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,131,True,0.06274898094238779,True,False,883.7536484030046,883.7222739125334,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,132,True,1.4804977746246095,True,False,892.3351503800698,891.5949014927575,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,133,True,1.7887245808672105,True,False,898.4976369371267,897.6032746466931,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,134,True,0.3831670429578935,True,False,892.1226509456781,891.9310674241991,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,135,True,2.7180911814282354,True,False,904.073160862237,902.7141152715229,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,136,True,0.6004695804099356,True,False,904.1631661579914,903.8629313677865,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,137,True,0.5258127902002343,True,False,883.4767061623203,883.2137997672202,L-BFGS-B,L-BFGS-B,mapped_seed_null,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,138,True,0.12473850114861307,True,False,900.4073315857605,900.3449623351862,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,139,True,0.7277371847810628,True,False,885.9875930338998,885.6237244415092,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,140,True,0.20295064410379382,True,False,884.3197857619687,884.2183104399168,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,141,True,1.6634757766551047,True,False,897.6278754829682,896.7961375946406,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,142,True,1.1394804986639429,True,False,894.0250359639638,893.4552957146318,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,143,True,0.5973961820500335,True,False,890.6112228699067,890.3125247788817,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,144,True,1.5657106426369864,True,False,913.4243052967415,912.641449975423,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,145,True,0.0023026084086268384,True,False,900.3651357223727,900.3639844181683,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,146,True,0.395487237569796,True,False,887.9405252991182,887.7427816803333,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,147,True,0.010586331815602534,True,False,894.6591562996141,894.6538631337063,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,148,True,0.01946189147338373,True,False,907.5578265147963,907.5480955690596,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,149,True,1.1172976759530684,True,False,912.1955532917021,911.6369044537256,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,150,True,0.07625156836365932,True,False,892.4856904991799,892.4475647149981,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,151,True,2.5102605225713432,True,False,900.8202963848362,899.5651661235505,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,152,True,0.14984103825554485,True,False,857.1601509068887,857.0852303877609,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,153,True,0.014937261394152301,True,False,895.7678568516292,895.7603882209321,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,154,True,2.250906822330535,True,False,885.0381558519451,883.9127024407799,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,155,True,3.9182086985033493,True,False,887.6479062000465,885.6888018507948,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,156,True,0.39557268579665106,True,False,908.3143606212436,908.1165742783453,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,157,True,0.018727217237028526,True,False,880.4309133676257,880.4215497590072,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,158,True,0.5099944080782279,True,False,907.046847073172,906.7918498691329,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,159,True,0.23835981088882363,True,False,902.5235096812052,902.4043297757607,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,160,True,1.289310423000643,True,False,886.6200858433451,885.9754306318448,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,161,True,1.5986441801203455,True,False,894.3215702599194,893.5222481698593,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,162,True,0.0763972866268432,True,False,908.8605627467178,908.8223641034044,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,163,True,2.8139046236310605,True,False,894.9110140623706,893.504061750555,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,164,True,0.2939916137211185,True,False,892.2880610584602,892.1410652515997,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,165,True,6.713462102041149,True,False,881.745066893741,878.3883358427204,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,166,True,5.937312921605326,True,False,894.3846914549355,891.4160349941328,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,167,True,0.8987183117185396,True,False,882.9258607901539,882.4765016342947,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,168,True,0.8192211904545275,True,False,885.9570087190441,885.5473981238168,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,169,True,0.3303446108304797,True,False,906.800829176231,906.6356568708158,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,170,True,0.28525561654078047,True,False,892.4752680106525,892.3326402023821,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,171,True,0.2527442016710211,True,False,877.6837801169296,877.5574080160941,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,172,True,0.8756581005366115,True,False,889.4898672914265,889.0520382411582,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,173,True,2.237031846625314,True,False,902.609485392844,901.4909694695314,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,174,True,0.6089516626113891,True,False,892.6630657750081,892.3585899437024,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,175,True,0.46865992542711865,True,False,874.8560340102275,874.621704047514,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,176,True,14.123889316679879,True,False,899.0238133283268,891.9618686699869,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,177,True,0.07470301617968289,True,False,884.0828034577331,884.0454519496433,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,178,True,0.4512902025662697,True,False,889.8143119870683,889.5886668857852,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,179,True,1.3913862973679443,True,False,901.2078713389543,900.5121781902703,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,180,True,8.597833731359515,True,False,888.953834381682,884.6549175160022,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,181,True,2.7199308492311047,True,False,889.2207551227642,887.8607896981487,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,182,True,0.4261343336513619,True,False,890.9610425767844,890.7479754099587,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,183,True,4.7797273355604375,True,False,904.4395813516328,902.0497176838526,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,184,True,1.0468651101125488,True,False,888.9812206065244,888.4577880514681,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,185,True,1.5341779451891853,True,False,906.2645386797925,905.4974497071979,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,186,True,4.157773158064629,True,False,887.389164126442,885.3102775474097,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,187,True,1.5879651378788822,True,False,905.9259091550365,905.131926586097,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,188,True,8.60130696334977,True,False,893.2377089375814,888.9370554559065,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,189,True,1.4576338394372215,True,False,890.2695979098642,889.5407809901455,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,190,True,1.1565312270561208,True,False,893.4049457170261,892.826680103498,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,191,True,0.027302859800329315,True,False,908.6540597091578,908.6404082792576,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,192,True,0.013732045204733367,True,False,895.3508600027576,895.3439939801552,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,193,True,0.024819203699507852,True,False,891.237794874398,891.2253852725482,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,194,True,4.010786534608087,True,False,866.7198616622104,864.7144683949064,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,195,True,0.5616330496072806,True,False,896.6143671943101,896.3335506695065,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,196,True,0.0017180500155973277,True,False,893.7070605758898,893.706201550882,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,197,True,0.23761251802466177,True,False,897.9397011306479,897.8208948716356,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,198,True,0.022563543389424012,True,False,880.1581173015898,880.146835529895,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,199,True,0.007282461869635881,True,False,890.8692499875934,890.8656087566586,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,200,True,0.09163328028671458,True,False,901.201647543382,901.1558309032387,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,201,True,1.083500157989647,True,False,890.4301238082439,889.8883737292491,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,202,True,0.3897269630183473,True,False,893.7753989623002,893.580535480791,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,203,True,0.37629532139658295,True,False,893.780960696477,893.5928130357787,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,204,True,0.630669549615277,True,False,891.9201174975747,891.604782722767,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,205,True,1.1680518003847737,True,False,901.5655049344764,900.981479034284,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,206,True,3.755547839539531,True,False,882.2534503880918,880.375676468322,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,207,True,2.590338523754326,True,False,891.8750630251197,890.5798937632426,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,208,True,0.3998074840831123,True,False,899.9688287517674,899.7689250097259,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,209,True,10.64758355202025,True,False,905.5955830927217,900.2717913167115,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,210,True,1.9059085157384743,True,False,890.8794311324833,889.9264768746141,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,211,True,1.5496535889599272,True,False,893.5258001181255,892.7509733236456,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,212,True,0.012531184537465379,True,False,894.1633836841964,894.1571180919277,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,213,True,0.9099326574237239,True,False,901.1170034320432,900.6620371033314,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,214,True,0.5964792701809074,True,False,897.8185437489184,897.5203041138279,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,215,True,1.7833377733393263,True,False,897.7166558577986,896.824986971129,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,216,True,0.8352193617718058,True,False,886.0402116446983,885.6226019638124,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,217,True,11.068816400820651,True,False,886.0782800662894,880.543871865879,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,218,True,3.090535253082635,True,False,885.0480878403642,883.5028202138229,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,219,True,0.7547252341303192,True,False,885.4075290189684,885.0301664019032,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,220,True,0.19132165039309257,True,False,902.512513184666,902.4168523594694,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,221,True,0.02015996427076061,True,False,885.4170026110767,885.4069226289413,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,222,True,0.12835636609679568,True,False,893.8984664871634,893.834288304115,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,223,True,0.9652401629625729,True,False,902.9621676235954,902.4795475421141,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,224,True,0.3466303788497953,True,False,887.9398623182499,887.766547128825,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,225,True,0.0036438653824006906,True,False,896.1595726307185,896.1577506980273,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,226,True,1.1859665495321678,True,False,904.6405306051747,904.0475473304086,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,227,True,0.4152506283624007,True,False,892.2236887461179,892.0160634319367,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,228,True,0.23693071389948273,True,False,897.722557184613,897.6040918276633,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,229,True,0.22371028588577246,True,False,886.5486033664431,886.4367482235002,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,230,True,2.375824188683964,True,False,883.1652942639892,881.9773821696472,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,231,True,0.5193299846016544,True,False,899.7992128637198,899.539547871419,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,232,True,1.710037241379041,True,False,904.0721702235375,903.2171516028479,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,233,True,2.048345386231631,True,False,879.3591315655124,878.3349588723966,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,234,True,0.06685349808435603,True,False,871.1837542610533,871.1503275120111,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,235,True,0.5380009905836687,True,False,898.808012018868,898.5390115235762,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,236,True,0.7623885185166728,True,False,891.2549169612466,890.8737227019883,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,237,True,0.12235838435162805,True,False,896.5401527884743,896.4789735962985,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,238,True,0.10515789130158737,True,False,895.0783613282953,895.0257823826445,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,239,True,1.3932756125213928,True,False,908.9149100708929,908.2182722646322,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,240,True,0.1570332121868887,True,False,888.0365804999497,887.9580638938562,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,241,True,1.0402184586225758,True,False,896.641602849284,896.1214936199727,L-BFGS-B,Powell,default,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,242,True,2.5640856241707297,True,False,894.8534661890951,893.5714233770098,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,243,True,4.046208121193104,True,False,899.5647340627607,897.5416300021642,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,244,True,0.10424460130502666,True,False,895.8863102642582,895.8341879636057,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,245,True,1.5907880080183077,True,False,889.8746860140975,889.0792920100884,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,246,True,0.0023230320300626772,True,False,892.614221967717,892.6130604517019,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,247,True,1.0033732278104708,True,False,887.3782271908968,886.8765405769916,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,248,True,5.925178264114265,True,False,915.738869147798,912.7762800157409,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,249,True,1.4020753513746058,True,False,900.8637312448944,900.1626935692071,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,250,True,0.19957828627275376,True,False,887.7934538951351,887.6936647519988,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,251,True,0.9199548814672198,True,False,895.21337914671,894.7534017059764,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,252,True,0.6687397276241427,True,False,902.9805264229104,902.6461565590984,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,253,True,0.10625066514035097,True,False,904.4244634848897,904.3713381523195,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,254,True,5.456425674310594e-05,True,False,909.2667263808411,909.2666990987127,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,255,True,2.6546077282860097,True,False,875.4593600258986,874.1320561617556,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,256,True,1.651969399264317,True,False,890.5963527517804,889.7703680521482,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,257,True,2.9580443185102467,True,False,883.7370366953456,882.2580145360905,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,258,True,1.1933404860096744,True,False,907.1153365727313,906.5186663297264,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,259,True,2.493052401536488,True,False,893.3856743682147,892.1391481674465,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,260,True,0.12318137967940856,True,False,886.7347780782769,886.6731873884372,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,261,True,6.0368260775253475,True,False,907.6140963502671,904.5956833115044,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,262,True,0.14070755571219706,True,False,884.1275374530504,884.0571836751943,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,263,True,1.8915051220349142,True,False,900.1561124831702,899.2103599221527,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,264,True,1.3377235875957467,True,False,886.2535591207172,885.5846973269194,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,265,True,0.17061999748057133,True,False,881.9430783986375,881.8577683998972,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,266,True,0.009051124558709489,True,False,887.4299789143618,887.4254533520824,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,267,True,1.5119182210519284,True,False,890.2844990813446,889.5285399708187,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,268,True,0.16891863282899067,True,False,882.4294085415122,882.3449492250977,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,269,True,1.3285406437405527,True,False,886.1660051528229,885.5017348309526,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,270,True,0.4943420371923821,True,False,892.9272165326789,892.6800455140827,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,271,True,5.525663757290204,True,False,881.7879532168215,879.0251213381764,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,272,True,1.0867096547981419,True,False,878.9539778939788,878.4106230665798,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,273,True,1.7341577526321998,True,False,904.8116439208326,903.9445650445165,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,274,True,2.343657705275973,True,False,894.0804592646409,892.9086304120029,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,275,True,2.8343108848971497,True,False,889.4668722022649,888.0497167598163,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,276,True,0.007986838464148605,True,False,897.2920529063907,897.2880594871586,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,277,True,2.166362900130707,True,False,892.6472725420721,891.5640910920067,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,278,True,0.0006049968455954513,True,False,903.7924863955639,903.7921838971411,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,279,True,1.0727062591022332,True,False,884.6241867757594,884.0878336462083,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,280,True,2.7528467113602346,True,False,892.131960958944,890.7555376032639,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,281,True,2.1030366512031833,True,False,875.1025266390428,874.0510083134412,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,282,True,0.06103382742367103,True,False,889.1836190995264,889.1531021858145,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,283,True,0.018457754746350474,True,False,884.8001696089832,884.79094073161,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,284,True,2.0542110878679978,True,False,876.0079387785564,874.9808332346224,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,285,True,0.4554390168896134,True,False,896.839126859521,896.6114073510762,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,286,True,1.1769511710326697,True,False,887.4895347724536,886.9010591869372,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,287,True,0.5325327147556891,True,False,883.9433683891787,883.6771020318008,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,288,True,0.10970708346826541,True,False,883.1818857544475,883.1270322127134,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,289,True,0.6942575706088974,True,False,899.2418681641656,898.8947393788611,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,290,True,0.6312311228250564,True,False,896.7098296433267,896.3942140819141,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,291,True,0.9002143754364624,True,False,894.6551572305941,894.2050500428759,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,292,True,1.1731062600767928,True,False,896.2304114343789,895.6438583043405,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,293,True,0.09641588165527537,True,False,893.8708547388737,893.8226467980461,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,294,True,1.7151021872232377,True,False,882.7512114200093,881.8936603263977,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,295,True,1.1972363278862304,True,False,879.2808647625941,878.682246598651,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,296,True,0.3684187608182583,True,False,902.807071921292,902.6228625408829,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,297,True,2.3089751928007445,True,False,877.8237934688211,876.6693058724208,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,298,True,0.9375781964797625,True,False,883.3218513669877,882.8530622687479,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,299,True,3.4719890072442467,True,False,901.6482195222998,899.9122250186776,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,300,True,4.949131502057071,True,False,894.1605015993765,891.685935848348,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,301,True,1.3435277105536443,True,False,882.5360917265515,881.8643278712747,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,302,True,3.061617830521982,True,False,885.6059518212741,884.0751429060131,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,303,True,0.2815208784920742,True,False,889.5653636702629,889.4246032310168,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,304,True,0.2667792841032224,True,False,898.0079378216525,897.8745481796009,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,305,True,1.385565107019147,True,False,908.4692376128403,907.7764550593307,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,306,True,0.6803175296372501,True,False,878.4762780659665,878.1361193011479,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,307,True,0.247447956969836,True,False,902.2398186398009,902.116094661316,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,308,True,0.231032628128105,True,False,901.4785862336814,901.3630699196174,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,309,True,0.19351347459314638,True,False,899.0110439425457,898.9142872052491,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,310,True,0.0007024383405678236,True,False,876.9711969035669,876.9708456843966,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,311,True,0.2182418981005867,True,False,887.0104437819277,886.9013228328774,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,312,True,4.278806304529553,True,False,880.5540011964304,878.4145980441656,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,313,True,0.7075738067712791,True,False,894.2821833505619,893.9283964471763,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,314,True,0.7357764074295119,True,False,899.1143747168567,898.7464865131419,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,315,True,0.824175730005436,True,False,874.3260658303657,873.913977965363,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,316,True,5.57803443811963,True,False,875.2789105924178,872.489893373358,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,317,True,0.0879289506317491,True,False,895.8435548030951,895.7995903277792,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,318,True,1.9542952951287589,True,False,887.4428671279675,886.4657194804031,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,319,True,0.35790811535912326,True,False,887.7535741310237,887.5746200733441,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,320,True,0.01770126907604208,True,False,902.9061555526275,902.8973049180895,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,321,True,2.3980056467880786,True,False,897.2414256808538,896.0424228574598,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,322,True,1.2934743566092948,True,False,897.6153351278463,896.9685979495416,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,323,True,1.739433653051492,True,False,902.4590270251841,901.5893101986584,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,324,True,0.05167668984404372,True,False,887.7567463641778,887.7309080192558,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,325,True,0.20125742376717426,True,False,888.7204047453606,888.619776033477,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,326,True,5.742181634228018,True,False,887.1098917383536,884.2388009212395,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,327,True,0.060506244404905374,True,False,881.3126613349585,881.2824082127561,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,328,True,3.8898977419426046,True,False,893.9191591115894,891.974210240618,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,329,True,1.6835027368956617,True,False,874.2421073853973,873.4003560169494,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,330,True,2.7622418520863903,True,False,890.8213705824712,889.440249656428,L-BFGS-B,L-BFGS-B,mapped_seed_null,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,331,True,0.052427428324790526,True,False,901.9416187085384,901.915404994376,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,332,True,2.785390984172409e-05,True,False,882.2048876508769,882.204873723922,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,333,True,1.9932295790431453,True,False,902.2009690189473,901.2043542294257,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,334,True,0.11436352537452876,True,False,891.2663705901474,891.2091888274601,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,335,True,0.3737465284409609,True,False,895.1405339682965,894.953660704076,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,336,True,2.031029548724746,True,False,889.9040684267525,888.8885536523901,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,337,True,0.5602721824420769,True,False,887.9624246874661,887.682288596245,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,338,True,1.051326399808886,True,False,899.8499765425905,899.3243133426861,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,339,True,0.030525681291010187,True,False,894.263396536468,894.2481336958225,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,340,True,0.052681899680464994,True,False,880.4555490781565,880.4292081283163,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,341,True,0.7194510680758412,True,False,881.0249774449462,880.6652519109083,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,342,True,5.946738671212415,True,False,895.8507718341638,892.8774024985576,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,343,True,1.5029064659845517,True,False,880.7002793701862,879.9488261371939,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,344,True,4.34045170195418,True,False,904.8341941108415,902.6639682598644,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,345,True,0.34382496321700273,True,False,891.644287785712,891.4723753041035,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,346,True,0.1358588024513665,True,False,904.0913003204998,904.0233709192742,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,347,True,1.6100942799719178,True,False,900.6004484745034,899.7954013345175,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,348,True,0.7106352780831457,True,False,898.1044905726623,897.7491729336207,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,349,True,0.5615121417472437,True,False,890.1255110921905,889.8447550213169,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,350,True,0.17555026887612257,True,False,887.7140971457609,887.6263220113228,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,351,True,0.09887801241802663,True,False,892.5774272625004,892.5279882562913,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,352,True,0.5306034088068827,True,False,894.981641734686,894.7163400302826,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,353,True,2.2795292454104583,True,False,896.2144024399246,895.0746378172194,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,354,True,1.0207520676858621,True,False,897.2580136643555,896.7476376305126,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,355,True,0.46805915751315297,True,False,892.0622154119674,891.8281858332108,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,356,True,0.11607008974328892,True,False,886.3639940839439,886.3059590390723,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,357,True,1.8962042701971313,True,False,878.573714606655,877.6256124715565,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,358,True,2.743873982117975,True,False,885.890495866804,884.518558875745,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,359,True,2.631704648362984,True,False,891.1763531802118,889.8605008560303,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,360,True,1.8620053281542823,True,False,882.9287499596226,881.9977472955454,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,361,True,0.07934054608244878,True,False,887.609116214113,887.5694459410718,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,362,True,1.1184353536439176,True,False,896.691847262979,896.132629586157,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,363,True,0.32147811764252765,True,False,905.829358918968,905.6686198601467,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,364,True,0.273741644486563,True,False,892.9572115348624,892.8203407126191,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,365,True,2.5885258602372687,True,False,879.7787867582825,878.4845238281639,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,366,True,4.810887538051475,True,False,885.5324560803755,883.1270123113497,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,367,True,0.22948358559892768,True,False,901.083158265301,900.9684164725015,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,368,True,0.0008592609649440419,True,False,890.8714754259571,890.8710457954746,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,369,True,3.4299716158016054,True,False,908.9141473894038,907.199161581503,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,370,True,0.35961666769094336,True,False,884.1067569623566,883.9269486285111,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,371,True,3.03332015813794,True,False,893.8490706189771,892.3324105399081,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,372,True,0.08779639392196259,True,False,905.5793508138512,905.5354526168902,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,373,True,5.1982745699376665,True,False,871.8053619116822,869.2062246267134,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,374,True,1.4725989631681387,True,False,896.1761267176877,895.4398272361036,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,375,True,0.020859251069396123,True,False,878.074362850797,878.0639332252623,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,376,True,0.039691634133532716,True,False,892.3521758565066,892.3323300394399,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,377,True,3.740037383275876,True,False,905.0935332099262,903.2235145182883,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,378,True,0.06743288794928048,True,False,887.7434638768736,887.709747432899,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,379,True,2.1524052919673977,True,False,904.250051996413,903.1738493504294,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,380,True,0.27525528337855576,True,False,876.5179749794224,876.3803473377332,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,381,True,0.6351306511323855,True,False,887.8552229269922,887.537657601426,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,382,True,0.10577120613174884,True,False,897.5164048722235,897.4635192691576,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,383,True,1.2918935531513398,True,False,890.0707682102789,889.4248214337032,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,384,True,0.16488159531650126,True,False,888.665641523492,888.5832007258338,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,385,True,1.2783008109956882,True,False,894.0973966758484,893.4582462703505,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,386,True,8.595481025761956,True,False,887.9809801416343,883.6832396287533,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,387,True,0.25551291843225954,True,False,884.3314068716186,884.2036504124025,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,388,True,0.20048033358307293,True,False,909.6220009132771,909.5217607464856,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,389,True,0.1257267096225405,True,False,904.0809903856118,904.0181270308005,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,390,True,0.05728967321442724,True,False,896.1361041190949,896.1074592824876,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,391,True,4.726892713069219,True,False,896.1473989272221,893.7839525706875,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,392,True,2.336831446030601,True,False,892.8848809505605,891.7164652275452,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,393,True,0.00939563100655505,True,False,887.713646388382,887.7089485728787,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,394,True,3.947165071941299,True,False,900.498305079035,898.5247225430644,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,395,True,0.14531862431795162,True,False,881.3792084362949,881.3065491241359,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,396,True,0.007624193019410086,True,False,902.4501460183636,902.4463339218539,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,397,True,0.5326671172017541,True,False,879.3637968872727,879.0974633286718,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,398,True,2.9685372854655725,True,False,891.5303254560982,890.0460568133655,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,399,True,0.07008044655071899,True,False,885.2390935938575,885.2040533705822,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,400,True,1.2191588120147117,True,False,889.0481141524709,888.4385347464636,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,401,True,0.5278059597276297,True,False,897.7342093536572,897.4703063737934,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,402,True,2.548443543897065,True,False,902.7429027890629,901.4686810171144,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,403,True,0.6046012490257908,True,False,907.0722090348601,906.7699084103472,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,404,True,1.1714911958442826,True,False,888.345638335373,887.7598927374509,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,405,True,0.05379563349220007,True,False,894.3919472702851,894.365049453539,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,406,True,0.66560006477971,True,False,903.6327817213034,903.2999816889136,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,407,True,2.59243614038769,True,False,882.7467287197852,881.4505106495914,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,408,True,0.025028087707141822,True,False,877.3696239694316,877.357109925578,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,409,True,0.4904683254296742,True,False,903.852559228963,903.6073250662481,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,410,True,0.10500078736208707,True,False,898.7363099922122,898.6838095985312,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,411,True,0.18627932756658083,True,False,903.7534047295197,903.6602650657364,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,412,True,0.7603546204923077,True,False,896.9935747555701,896.6133974453239,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,413,True,1.192300092331152,True,False,883.4662702689762,882.8701202228107,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,414,True,7.398980835567954,True,False,898.8503208535934,895.1508304358094,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,415,True,4.7861231963354385,True,False,886.732103600654,884.3390420024863,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,416,True,0.7865843270785717,True,False,878.9226769360165,878.5293847724772,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,417,True,0.46010905023626947,True,False,869.1870915322063,868.9570370070882,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,418,True,1.9587262004235981,True,False,904.5810952701669,903.6017321699551,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,419,True,0.04320943856669146,True,False,888.9186380365063,888.897033317223,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,420,True,0.0020135739414399723,True,False,891.4562604392081,891.4552536522374,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,421,True,7.462597386620473e-05,True,False,893.4398755487146,893.4398382357276,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,422,True,2.466560841980254,True,False,887.889410876243,886.6561304552529,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,423,True,2.05931952988567,True,False,893.9687472742794,892.9390875093366,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,424,True,1.6402795576345852,True,False,890.7736297032283,889.953489924411,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,425,True,0.013097954245722576,True,False,903.6228848612882,903.6163358841653,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,426,True,2.002697137852465,True,False,896.6584966738969,895.6571481049707,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,427,True,0.3317554174370798,True,False,894.5009219680151,894.3350442592965,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,428,True,0.7677376900405761,True,False,893.2334790741771,892.8496102291568,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,429,True,1.2887652385002184,True,False,895.6009486956988,894.9565660764487,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,430,True,0.027173041010655652,True,False,884.508151390511,884.4945648700057,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,431,True,1.9064343910588377,True,False,902.6267696747886,901.6735524792592,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,432,True,0.4807315880950682,True,False,907.263070790981,907.0227049969335,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,433,True,0.4692740045368282,True,False,902.019484843923,901.7848478416546,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,434,True,0.30523680346618676,True,False,887.5759615444713,887.4233431427382,L-BFGS-B,Powell,default,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,435,True,0.008257976676532053,True,False,884.8451091108038,884.8409801224656,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,436,True,1.671693294220404,True,False,889.2456759879612,888.409829340851,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,437,True,0.06493448821947823,True,False,891.210424953127,891.1779577090173,L-BFGS-B,L-BFGS-B,mapped_seed_null,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,438,True,1.5229361074543704,True,False,890.9648479958005,890.2033799420733,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,439,True,0.05724784572612407,True,False,893.700232251773,893.6716083289099,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,440,True,0.9788419769679422,True,False,895.9306303673402,895.4412093788562,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,441,True,1.4456412206529876,True,False,888.5677055428541,887.8448849325276,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,442,True,1.1384850724848548,True,False,886.2071651489917,885.6379226127493,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,443,True,0.020161957215350412,True,False,898.6810941408218,898.6710131622141,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,444,True,0.4652688364712958,True,False,896.529489197446,896.2968547792103,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,445,True,0.9741404826427242,True,False,903.4632277969242,902.9761575556029,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,446,True,1.4416015139968295,True,False,879.8208500403335,879.1000492833351,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,447,True,0.4601318356887987,True,False,885.9637192930271,885.7336533751827,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,448,True,0.9488706581259976,True,False,889.885244008993,889.41080867993,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,449,True,2.202051567966464,True,False,897.8605790628844,896.7595532789012,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,450,True,0.050069584385710186,True,False,885.0033197712345,884.9782849790416,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,451,True,0.044000228007007536,True,False,907.1461516307752,907.1241515167717,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,452,True,2.2577165382433577,True,False,914.9883424803306,913.859484211209,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,453,True,2.5099556950647184,True,False,895.5134020126355,894.2584241651032,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,454,True,0.6815359688719127,True,False,898.5778958438269,898.237127859391,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,455,True,0.2614728200596801,True,False,893.1814389937897,893.0507025837599,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,456,True,10.411224362730536,True,False,882.5363112593542,877.3306990779889,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,457,True,0.7814695021495481,True,False,872.5553514047384,872.1646166536636,L-BFGS-B,Powell,default,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,458,True,4.047226807375864,True,False,896.4183031662542,894.3946897625663,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,459,True,1.2837097545250344,True,False,892.34081614076,891.6989612634975,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,460,True,0.7201346383503733,True,False,901.448125646318,901.0880583271428,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,461,True,3.7280918248309263,True,False,893.7391694500061,891.8751235375906,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,462,True,0.1165400034801678,True,False,897.0379597612734,896.9796897595334,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,463,True,0.8917880309074917,True,False,898.4358073631001,897.9899133476464,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,464,True,1.2568544016323813,True,False,913.1870566724914,912.5586294716752,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,465,True,0.6438037128607448,True,False,888.6594152844444,888.3375134280141,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,466,True,1.830649492782186,True,False,907.1796179508036,906.2642932044125,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,467,True,0.13206658614763,True,False,890.0614780327635,889.9954447396897,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,468,True,0.7934922677814029,True,False,897.1735114074698,896.7767652735791,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,469,True,0.2978175408698007,True,False,896.3636797411884,896.2147709707535,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,470,True,0.8028364719457386,True,False,902.1159953410685,901.7145771050956,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,471,True,4.427839052664012,True,False,886.6916634659875,884.4777439396555,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,472,True,0.5091463094006485,True,False,914.9572453539381,914.7026721992378,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,473,True,0.38451601476117503,True,False,893.0709303606349,892.8786723532543,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,474,True,0.7318335017976096,True,False,904.2186257761897,903.8527090252909,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,475,True,1.4753662305986381,True,False,886.8946245955439,886.1569414802445,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,476,True,0.18167464878092687,True,False,889.6990027459777,889.6081654215873,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,477,True,0.06726839481757452,True,False,879.9871481804721,879.9535139830633,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,478,True,3.473819219132338,True,False,874.7978857424739,873.0609761329077,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,479,True,2.2069197434036596,True,False,887.4763493654759,886.3728894937741,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,480,True,0.4560362601414454,True,False,890.9382968262539,890.7102786961832,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,481,True,1.5751437961710053,True,False,899.692476149931,898.9049042518456,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,482,True,0.036805860162530735,True,False,876.469909349726,876.4515064196447,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,483,True,1.021661010958951,True,False,898.8960864109353,898.3852559054558,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,484,True,2.7690117251825086,True,False,886.9827636215914,885.5982577590001,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,485,True,0.034948236560467194,True,False,901.5143437387247,901.4968696204445,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,486,True,4.8279196548824075,True,False,895.4762659888147,893.0623061613735,L-BFGS-B,L-BFGS-B,mapped_seed_null,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,487,True,2.992627241198761,True,False,891.3121972206379,889.8158836000385,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,488,True,7.563337738920609,True,False,901.7079609311605,897.9262920617002,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,489,True,2.6992968964075317,True,False,904.9387958367183,903.5891473885146,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,490,True,8.893728136172285e-06,True,False,894.9346345284855,894.9346300816214,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,491,True,0.8777753620991007,True,False,889.4941321463956,889.055244465346,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,492,True,0.2749826250735623,True,False,881.8243194981893,881.6868281856525,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,493,True,2.0041062049642733,True,False,901.7607641308172,900.758711028335,L-BFGS-B,Powell,default,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,494,True,0.009566012831101034,True,False,893.8875266544352,893.8827436480196,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,495,True,0.12605187159851994,True,False,904.251832258103,904.1888063223038,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,496,True,2.3875930194726607,True,False,897.0475849317687,895.8537884220324,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,497,True,3.1093594752398985,True,False,898.1471414871838,896.5924617495639,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,498,True,0.8145864340779099,True,False,889.5127138299018,889.1054206128629,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,499,True,1.1716040586647978,True,False,886.4574335449977,885.8716315156653,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,500,True,0.5022232942626488,True,False,911.1890825048677,910.9379708577363,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,501,True,4.739216574447255,True,False,890.547190222688,888.1775819354643,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,502,True,2.498235640823168,True,False,892.3607291973321,891.1116113769206,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,503,True,1.29903632227456,True,False,892.8191872192145,892.1696690580773,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,504,True,1.1694123368745295,True,False,897.1051074823381,896.5204013139008,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,505,True,0.6279708703207234,True,False,896.171549437004,895.8575640018437,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,506,True,0.6400784905792989,True,False,894.0426038781428,893.7225646328532,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,507,True,0.16472349068294534,True,False,920.0894682388113,920.0071064934698,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,508,True,0.12030011507340532,True,False,871.7748944333391,871.7147443758024,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,509,True,0.8745149759326978,True,False,873.7825181211441,873.3452606331778,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,510,True,0.5633985228982965,True,False,897.1607047803259,896.8790055188767,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,511,True,0.9578575426276075,True,False,874.2516689958841,873.7727402245703,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,512,True,2.687414185908665,True,False,881.7220569801599,880.3783498872056,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,513,True,2.6263393719716532,True,False,878.5922917265456,877.2791220405597,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,514,True,0.285771716864474,True,False,883.2503451676831,883.1074593092509,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,515,True,0.1462805922815278,True,False,898.3105688941871,898.2374285980463,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,516,True,4.248271754941243,True,False,896.0264073805429,893.9022715030723,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,517,True,0.8835999148141127,True,False,889.2841478851055,888.8423479276985,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,518,True,0.8208002638666585,True,False,905.7674241246278,905.3570239926945,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,519,True,0.02004193493871753,True,False,879.5187130461312,879.5086920786619,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,520,True,1.9864991981262392,True,False,884.3795775859795,883.3863279869164,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,521,True,1.4443578440127567,True,False,905.2026657422864,904.48048682028,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,522,True,0.6063570663300197,True,False,897.5013304752816,897.1981519421166,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,523,True,0.6181449090952356,True,False,889.3568659658358,889.0477935112882,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,524,True,1.0507290908592495,True,False,902.0970351161733,901.5716705707437,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,525,True,1.1857114501044634,True,False,894.9356367996397,894.3427810745875,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,526,True,0.06769526958373717,True,False,901.224637577894,901.1907899431021,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,527,True,0.6843804606935464,True,False,900.2743715010596,899.9321812707128,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,528,True,1.1054054529668065,True,False,891.4148368228128,890.8621340963294,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,529,True,1.8752161666720895,True,False,883.9471308121786,883.0095227288425,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,530,True,0.3696963418010455,True,False,895.0223980718179,894.8375499009173,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,531,True,0.24524455193591166,True,False,883.9252540156863,883.8026317397183,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,532,True,0.6373062373168068,True,False,905.7527639975411,905.4341108788827,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,533,True,0.9939521452713507,True,False,895.7517664300859,895.2547903574502,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,534,True,1.1478855973002737,True,False,881.6264756858658,881.0525328872156,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,535,True,0.9768419877761971,True,False,895.7188025471228,895.2303815532347,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,536,True,0.16787466060554834,True,False,884.9118348989833,884.8278975686806,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,537,True,5.079888203729297,True,False,892.0705810427767,889.530636940912,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,538,True,0.6744580228537416,True,False,882.7705525355055,882.4333235240787,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,539,True,2.16082963825761,True,False,915.2174765836911,914.1370617645623,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,540,True,5.116960397471075,True,False,887.1839690843801,884.6254888856446,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,541,True,0.5438414606562674,True,False,894.3894562020381,894.11753547171,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,542,True,0.6633518947837729,True,False,883.5261547365307,883.1944787891388,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,543,True,4.117056993518872,True,False,882.6145225860006,880.5559940892412,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,544,True,4.63546031440751,True,False,878.2581642437773,875.9404340865735,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,545,True,0.0025342924686810875,True,False,879.21650661157,879.2152394653357,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,546,True,0.7948625078918212,True,False,892.8000590174214,892.4026277634755,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,547,True,0.24685165384016727,True,False,899.1426361235167,899.0192102965966,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,548,True,0.7864399285092531,True,False,880.9166458391952,880.5234258749406,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,549,True,1.5107742731734106,True,False,890.9323185053785,890.1769313687918,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,550,True,2.050864831049921,True,False,891.8029844795186,890.7775520639937,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,551,True,2.360836301438212,True,False,893.0856616280796,891.9052434773605,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,552,True,0.09732154700350293,True,False,897.7837913994965,897.7351306259948,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,553,True,3.572274435003692,True,False,880.9719967647568,879.185859547255,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,554,True,0.22609357686496878,True,False,907.039538480492,906.9264916920595,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,555,True,0.011557760422647334,True,False,895.015646409489,895.0098675292777,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,556,True,2.386275297558768,True,False,890.4144360278164,889.221298379037,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,557,True,3.4304934252886596,True,False,899.2418105529161,897.5265638402718,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,558,True,0.0996962262888701,True,False,895.2773887788071,895.2275406656627,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,559,True,0.0649261689488867,True,False,894.3191454708998,894.2866823864254,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,560,True,1.5994608808150588,True,False,896.5284234611904,895.7286930207829,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,561,True,0.989433097493702,True,False,898.4424707553765,897.9477542066296,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,562,True,1.0851304180798707,True,False,895.7040396820396,895.1614744729997,L-BFGS-B,Powell,default,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,563,True,0.000792720861682028,True,False,890.9166657753001,890.9162694148692,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,564,True,0.04521041757925559,True,False,894.9952488767011,894.9726436679115,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,565,True,4.093465772984246,True,False,884.1250094260402,882.078276539548,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,566,True,1.1032970359995034,True,False,901.7741176802999,901.2224691623002,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,567,True,0.6595424695424299,True,False,887.285264466478,886.9554932317068,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,568,True,1.065298745033715,True,False,892.3903281011507,891.8576787286338,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,569,True,1.8891557242059207,True,False,890.9195014752819,889.9749236131789,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,570,True,0.36551502002521374,True,False,891.4497740146609,891.2670165046483,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,571,True,2.3876945100510056,True,False,887.6637216960846,886.4698744410591,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,572,True,0.5328763313186755,True,False,889.393058940628,889.1266207749686,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,573,True,0.7470925780280595,True,False,887.0846151967298,886.7110689077158,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,574,True,1.5892864287991415,True,False,874.421448471202,873.6268052568024,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,575,True,0.8866694189598547,True,False,884.3564263698704,883.9130916603905,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,576,True,2.3442067401776967,True,False,894.2510347846774,893.0789314145885,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,577,True,3.984346439157207,True,False,911.2189239706461,909.2267507510675,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,578,True,0.019591619225820978,True,False,891.4624772661858,891.4526814565729,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,579,True,2.1937511791475117,True,False,901.9094154281304,900.8125398385566,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,580,True,0.038770512262999546,True,False,900.619771549572,900.6003862934405,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,581,True,0.36082830316877335,True,False,889.4713459522845,889.2909318007002,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,582,True,1.2963070751684427,True,False,878.2841822656919,877.6360287281077,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,583,True,1.8862213232498561,True,False,891.1174811052073,890.1743704435823,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,584,True,0.42265770649032675,True,False,895.1854092015104,894.9740803482653,L-BFGS-B,L-BFGS-B,mapped_seed_null,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,585,True,0.6918053867955223,True,False,892.9126620426989,892.5667593493012,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,586,True,3.736199547533488,True,False,894.3552608019552,892.4871610281884,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,587,True,1.1417412420964865,True,False,891.6675153200921,891.0966446990438,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,588,True,0.5080348765252438,True,False,894.3028521194907,894.0488346812281,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,589,True,0.042661944935844076,True,False,893.3214695086201,893.3001385361522,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,590,True,3.914789853972252,True,False,897.6929298537711,895.735534926785,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,591,True,2.1787663735919978,True,False,899.2087911103257,898.1194079235297,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,592,True,1.7832631734520419,True,False,889.9011842000841,889.0095526133581,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,593,True,0.41829224266143683,True,False,876.7519759022418,876.5428297809111,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,594,True,1.8732793250819668e-05,True,False,900.5064004534437,900.5063910870471,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,595,True,0.10210233951761438,True,False,891.8114374636489,891.7603862938901,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,596,True,0.08673357468319409,True,False,891.7782199233197,891.7348531359781,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,597,True,1.1933630674652704,True,False,908.6681369333569,908.0714553996243,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,598,True,1.497591509392123,True,False,895.3240135464574,894.5752177917614,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,599,True,2.8257271174152265,True,False,891.981004432975,890.5681408742674,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,600,True,3.3246997288222246,True,False,894.5384099713175,892.8760601069064,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,601,True,0.05566625971391659,True,False,905.2338894977888,905.2060563679319,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,602,True,0.47932591773997046,True,False,900.5281732250511,900.2885102661811,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,603,True,0.8912734483137683,True,False,891.8651750880214,891.4195383638645,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,604,True,1.2579684810132221,True,False,888.5454122327205,887.9164279922139,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,605,True,0.06203732253925409,True,False,897.0678652915884,897.0368466303188,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,606,True,2.084302479546068,True,False,890.5417907991302,889.4996395593572,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,607,True,1.752936581924132,True,False,908.7325447833475,907.8560764923855,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,608,True,0.17591368958483145,True,False,896.3156258981991,896.2276690534067,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,609,True,2.207569301984904,True,False,890.4784020369169,889.3746173859245,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,610,True,3.376244372697329,True,False,889.5467196814828,887.8585974951342,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,611,True,0.03312443916752272,True,False,883.1368413622629,883.1202791426791,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,612,True,1.568365960195706,True,False,896.7267630087438,895.9425800286459,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,613,True,0.31378482436070954,True,False,893.696736423509,893.5398440113287,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,614,True,0.34456174338083656,True,False,883.5548613484232,883.3825804767328,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,615,True,0.6743778836355432,True,False,889.4771286488577,889.13993970704,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,616,True,1.1681131243972231,True,False,888.9022248280713,888.3181682658727,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,617,True,0.0004045028308610199,True,False,880.3121243543478,880.3119221029324,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,618,True,0.22874075308209285,True,False,890.1544829621988,890.0401125856578,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,619,True,1.0739388553656681,True,False,894.8905111625205,894.3535417348377,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,620,True,1.3221998593428452,True,False,888.2709451070527,887.6098451773813,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,621,True,1.2881067229593555,True,False,899.6922047762183,899.0481514147386,L-BFGS-B,L-BFGS-B,default,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,622,True,0.005096710840462038,True,False,894.6090417852433,894.6064934298231,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,623,True,0.7544115116040757,True,False,892.9992152994835,892.6220095436814,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,624,True,0.22223423201057813,True,False,900.1179940040336,900.0068768880283,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,625,True,0.010428397386476718,True,False,897.4232445863302,897.4180303876369,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,626,True,2.1235417310258526,True,False,895.4636003715863,894.4018295060733,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,627,True,1.1135898289828674,True,False,910.3311376558867,909.7743427413952,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,628,True,2.4393223984861834,True,False,885.1344892937257,883.9148280944826,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,629,True,1.6258285977480682,True,False,887.4332917184,886.620377419526,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,630,True,1.6966393531172344,True,False,888.6823106579623,887.8339909814036,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,631,True,0.1575693076194966,True,False,898.622741115929,898.5439564621192,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,632,True,0.8721860544817446,True,False,893.4304352017199,892.994342174479,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,633,True,1.720082054190243,True,False,901.0652397314261,900.205198704331,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,634,True,11.163684203084586,True,False,906.09765017013,900.5158080685877,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,635,True,0.09855028727974968,True,False,891.9110499855502,891.8617748419103,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,636,True,2.8283978203714923,True,False,883.7157346215963,882.3015357114106,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,637,True,0.3124880285342897,True,False,888.7667647537746,888.6105207395075,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,638,True,0.09516102455745568,True,False,898.0104948962505,897.9629143839718,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,639,True,1.1749190573784745,True,False,900.7634450335423,900.1759855048531,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,640,True,0.501133393903956,True,False,904.8658930929511,904.6153263959991,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,641,True,7.514345775965694,True,False,887.9975672206524,884.2403943326696,L-BFGS-B,L-BFGS-B,default,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,642,True,4.7002382315336035,True,False,877.1976804353802,874.8475613196134,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,643,True,0.6729272043239689,True,False,910.2090650476337,909.8726014454717,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,644,True,0.8704823535153992,True,False,886.4673660572323,886.0321248804746,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,645,True,0.2112479776328655,True,False,887.0069766320673,886.9013526432509,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,646,True,1.8676802416882765,True,False,886.7571171991983,885.8232770783542,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,647,True,0.12122143710416822,True,False,897.0175207933854,896.9569100748333,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,648,True,0.04853395534792071,True,False,892.4096104087112,892.3853434310372,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,649,True,0.4627239900019049,True,False,896.3220833841003,896.0907213890994,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,650,True,0.21733227303957392,True,False,903.8876203035676,903.7789541670478,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,651,True,0.0029845324747839186,True,False,880.1521012884531,880.1506090222157,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,652,True,2.139585114120109,True,False,896.7675511457129,895.6977585886528,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,653,True,2.8552053923688163,True,False,889.1107729832527,887.6831702870683,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,654,True,0.6220191979723495,True,False,894.8041010147456,894.4930914157594,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,655,True,0.5972759844012216,True,False,911.479784069751,911.1811460775504,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,656,True,2.7357240583849034,True,False,903.844737864854,902.4768758356615,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,657,True,1.1017103160188526,True,False,900.0751304306817,899.5242752726723,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,658,True,0.09876154645780844,True,False,908.8610848080241,908.8117040347952,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,659,True,2.000476479951203,True,False,902.0776889965659,901.0774507565903,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,660,True,0.2256361507620568,True,False,887.7853936586516,887.6725755832706,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,661,True,1.070523491480344,True,False,900.1117452773245,899.5764835315844,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,662,True,0.004830316448533267,True,False,898.1409749452725,898.1385597870483,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,663,True,1.2298751253892988,True,False,902.4819411609758,901.8670035982811,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,664,True,0.9842541163047827,True,False,898.3700314360043,897.8779043778519,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,665,True,0.8919322008860036,True,False,897.4404379795731,896.9944718791301,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,666,True,0.5908645218164565,True,False,890.3519898990345,890.0565576381263,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,667,True,0.4893492496419185,True,False,872.4632726547003,872.2185980298793,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,668,True,0.08606253756374826,True,False,913.8118712907957,913.7688400220138,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,669,True,1.2293000490994928,True,False,881.1353879933296,880.5207379687798,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,670,True,0.5333941877856887,True,False,885.2716131322104,885.0049160383176,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,671,True,3.7318939524413963,True,False,893.3036582562212,891.4377112800005,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,672,True,0.41673637932694874,True,False,897.5872560876484,897.3788878979849,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,673,True,2.412879155722976,True,False,897.7474008131763,896.5409612353149,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,674,True,0.7353857839657394,True,False,903.7930789460693,903.4253860540864,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,675,True,1.6047033738668688,True,False,900.7254222320596,899.9230705451262,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,676,True,4.429728417818524,True,False,904.8687006623834,902.6538364534741,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,677,True,0.15369170001713428,True,False,894.3668041909139,894.2899583409053,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,678,True,0.116034489228241,True,False,875.4756032656339,875.4175860210198,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,679,True,0.8796006235877485,True,False,882.0712025211092,881.6314022093153,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,680,True,3.2575106335161763,True,False,894.2009562274071,892.572200910649,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,681,True,0.028566332545779005,True,False,905.1408414824172,905.1265583161443,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,682,True,1.9909835352625578,True,False,894.9621646483903,893.966672880759,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,683,True,0.14719083731756655,True,False,888.7623977186284,888.6888022999697,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,684,True,0.004338632500321182,True,False,900.7938613556292,900.7916920393791,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,685,True,0.3155931591841181,True,False,895.267380729214,895.1095841496219,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,686,True,1.594081566970317,True,False,882.7923051861601,881.9952644026749,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,687,True,0.9990745839672854,True,False,884.097363876073,883.5978265840894,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,688,True,0.04177857254649098,True,False,885.9085214279754,885.8876321417022,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,689,True,2.007129478311981,True,False,892.2997976059728,891.2962328668168,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,690,True,0.07330686689647337,True,False,898.5210652455924,898.4844118121441,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,691,True,0.5236848087147337,True,False,901.9937378605198,901.7318954561624,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,692,True,0.5294620770653182,True,False,889.1557646511944,888.8910336126618,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,693,True,0.13976773047193092,True,False,899.194637356378,899.1247534911421,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,694,True,0.948380115999953,True,False,882.9897700469543,882.5155799889543,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,695,True,1.320565771056181,True,False,879.4903235912412,878.8300407057131,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,696,True,2.3642762623635463,True,False,891.1751984839829,889.9930603528011,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,697,True,0.4286460834293848,True,False,898.9524939043692,898.7381708626546,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,698,True,0.2967848677239999,True,False,890.7968733752025,890.6484809413405,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,699,True,1.359114811144991,True,False,899.1492404488761,898.4696830433036,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,700,True,2.300800164895236,True,False,906.9661497074895,905.8157496250419,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,701,True,3.789609707778709,True,False,882.6418663789842,880.7470615250949,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,702,True,0.5447963560075095,True,False,902.3487805934933,902.0763824154895,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,703,True,3.991988820128654,True,False,878.5134884977681,876.5174940877038,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,704,True,0.08514568356577001,True,False,904.0038287441691,903.9612559023863,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,705,True,0.0719828701123788,True,False,894.5799123426101,894.5439209075539,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,706,True,0.6259475206668412,True,False,898.572428847748,898.2594550874146,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,707,True,10.03093042521482,True,False,875.5929549834658,870.5774897708584,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,708,True,2.976551410535194,True,False,901.0742304368346,899.585954731567,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,709,True,0.5360093332608358,True,False,893.4049951100789,893.1369904434484,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,710,True,1.8048162587556362,True,False,878.494809655179,877.5924015258012,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,711,True,0.7514612929041959,True,False,880.0031172173954,879.6273865709433,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,712,True,1.1973952493299294,True,False,898.7030998375783,898.1044022129133,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,713,True,1.9928852046155043,True,False,891.2989127007188,890.302470098411,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,714,True,0.0739617500425993,True,False,908.7965531065631,908.7595722315418,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,715,True,0.04691143139666565,True,False,899.9500768494615,899.9266211337632,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,716,True,0.5812550300963721,True,False,899.0225090923938,898.7318815773456,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,717,True,0.067194076146734,True,False,891.9487569164795,891.9151598784061,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,718,True,3.1186925938666263,True,False,878.5274562353276,876.9681099383943,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,719,True,1.0600256868153792,True,False,899.1749199156728,898.6449070722651,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,720,True,0.14135666297170246,True,False,900.8157987277514,900.7451203962655,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,721,True,1.1519232622483742,True,False,883.9174655133494,883.3415038822252,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,722,True,2.3798579967692604,True,False,886.0532929368551,884.8633639384705,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,723,True,0.6087661883370856,True,False,895.9596540972493,895.6552710030808,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,724,True,0.15357752749696374,True,False,907.8387526051483,907.7619638413998,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,725,True,1.4383361874990896,True,False,907.7174331109679,906.9982650172184,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,726,True,0.5946881097154346,True,False,899.3886268907387,899.091282835881,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,727,True,0.1954985411157395,True,False,875.0642465381856,874.9664972676277,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,728,True,0.9536383416593708,True,False,882.7213484859897,882.24452931516,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,729,True,1.3462557248330995,True,False,903.1789180097488,902.5057901473323,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,730,True,0.11340352934621478,True,False,890.8687534103774,890.8120516457043,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,731,True,1.1235902025075575,True,False,873.4553040425598,872.893508941306,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,732,True,3.5040110784075296,True,False,896.7018296339927,894.9498240947889,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,733,True,1.281049515155246,True,False,882.9268288764164,882.2863041188388,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,734,True,0.01099536229116893,True,False,895.6043184322274,895.5988207510818,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,735,True,3.187739482117877,True,False,898.7618680460503,897.1679983049913,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,736,True,3.7339796838796246,True,False,895.1664331654763,893.2994433235365,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,737,True,1.3421459962837616,True,False,912.7595839966683,912.0885109985264,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,738,True,0.003855130843930965,True,False,887.137834408581,887.1359068431591,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,739,True,0.44239271435412775,True,False,890.6700873856327,890.4488910284556,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,740,True,1.048693904763013,True,False,898.3350491276068,897.8107021752253,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,741,True,6.076787261661593,True,False,882.7676745587537,879.7292809279229,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,742,True,1.136341168288027,True,False,884.2090288577946,883.6408582736506,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,743,True,0.3358336064973173,True,False,894.6176727604208,894.4497559571721,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,744,True,0.5423365483827638,True,False,890.6782161147131,890.4070478405217,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,745,True,0.04099150125853157,True,False,883.4545607196378,883.4340649690085,L-BFGS-B,L-BFGS-B,default,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,746,True,1.3874412943491734,True,False,879.4382558476754,878.7445352005008,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,747,True,3.901401009898109e-05,True,False,873.9759183511483,873.9758988441432,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,748,True,1.0874141651261198,True,False,905.2339120588075,904.6902049762444,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,749,True,0.6023106837105843,True,False,900.1095167500539,899.8083614081986,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,750,True,0.5587843798070935,True,False,889.2628827078142,888.9834905179107,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,751,True,0.003685659347638648,True,False,897.014037527081,897.0121946974072,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,752,True,5.349984911717456,True,False,903.0556026288698,900.3806101730111,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,753,True,0.15605905833695033,True,False,893.3940289008012,893.3159993716328,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,754,True,0.5095303981809138,True,False,900.9807883857803,900.7260231866899,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,755,True,0.7477477901918519,True,False,901.0553745317052,900.6815006366093,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,756,True,0.09745522591742883,True,False,877.0296597454595,876.9809321325008,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,757,True,6.668788261902137,True,False,879.0989131243306,875.7645189933795,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,758,True,2.237609284753489,True,False,882.7255465771303,881.6067419347536,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,759,True,0.9380439397398277,True,False,884.5414835969528,884.0724616270829,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,760,True,0.015778631561033762,True,False,875.2666061528012,875.2587168370206,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,761,True,2.508364742893491,True,False,875.65250176626,874.3983193948133,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,762,True,3.259335578532273,True,False,891.7267612607067,890.0970934714405,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,763,True,0.14377538827625358,True,False,873.2060518784882,873.1341641843501,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,764,True,5.794573155367743,True,False,881.7104691286754,878.8131825509915,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,765,True,0.3690920096996706,True,False,886.489581844072,886.3050358392221,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,766,True,1.5249073686547945,True,False,882.9934293198326,882.2309756355052,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,767,True,1.0816048938247604,True,False,889.3806849545841,888.8398825076717,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,768,True,0.5727126971935377,True,False,883.5642571594856,883.2779008108888,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,769,True,1.9807333015210133,True,False,907.6434247865329,906.6530581357724,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,770,True,0.7704353086494393,True,False,886.0721365861198,885.686918931795,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,771,True,0.6668784153141587,True,False,890.6814078978769,890.3479686902198,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,772,True,1.353102923575534,True,False,886.7522280590782,886.0756765972905,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,773,True,0.9209942340357884,True,False,896.4133704129742,895.9528732959564,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,774,True,1.4152193362306207,True,False,879.376097003528,878.6684873354127,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,775,True,0.39108526094400986,True,False,887.1936856707918,886.9981430403197,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,776,True,0.13212552764071006,True,False,878.9303628731321,878.8643001093118,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,777,True,1.9791502607388338,True,False,867.1492479288834,866.159672798514,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,778,True,1.9515348205400187,True,False,885.072288918494,884.096521508224,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,779,True,0.028495141522398626,True,False,883.5064866636313,883.4922390928701,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,780,True,0.5847668388780676,True,False,895.6749616513258,895.3825782318868,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,781,True,3.1381676163921384,True,False,888.3170428130379,886.7479590048418,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,782,True,0.7247256012597063,True,False,893.2529629805176,892.8906001798878,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,783,True,4.4688865837993035,True,False,905.7951304458848,903.5606871539851,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,784,True,3.092524207204406e-05,True,False,883.0371382819505,883.0371228193295,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,785,True,0.11852231923967338,True,False,885.0384194313348,884.9791582717149,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,786,True,0.44118733529830934,True,False,897.9305464415895,897.7099527739404,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,787,True,0.09591705693583208,True,False,887.5145083597699,887.466549831302,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,788,True,4.002164534402027,True,False,905.1808702790563,903.1797880118553,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,789,True,0.0075894441306445515,True,False,899.4166636747024,899.412868952637,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,790,True,0.06772124548069769,True,False,905.5084706798505,905.4746100571101,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,791,True,0.5783525765687045,True,False,898.4576319766132,898.1684556883289,L-BFGS-B,Powell,default,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,792,True,0.02566979898574573,True,False,889.9783960604503,889.9655611609575,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,793,True,2.034829573344723,True,False,890.683522540801,889.6661077541287,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,794,True,2.5741012981939093,True,False,907.3276343118625,906.0405836627656,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,795,True,0.9700560909891465,True,False,884.3038629734832,883.8188349279886,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,796,True,0.34993909795252875,True,False,898.6320371613351,898.4570676123589,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,797,True,0.009390532014776909,True,False,897.1665555241461,897.1618602581387,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,798,True,1.0837828197018098,True,False,894.1783602394039,893.636468829553,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,799,True,2.2643377705066996,True,False,887.9283066449166,886.7961377596632,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,800,True,1.4860914706225685,True,False,885.742110535447,884.9990648001357,L-BFGS-B,L-BFGS-B,mapped_seed_null,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,801,True,3.9685322010864184,True,False,891.2944898779318,889.3102237773886,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,802,True,0.19155430639921178,True,False,888.7761206505843,888.6803434973847,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,803,True,0.851150319842418,True,False,901.9751178738509,901.5495427139297,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,804,True,4.6957680354091735,True,False,885.1465155677868,882.7986315500822,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,805,True,0.023605200271504145,True,False,874.9878655841183,874.9760629839825,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,806,True,0.7631928750945463,True,False,876.4319280494096,876.0503316118624,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,807,True,0.9217118817878145,True,False,877.9800904480961,877.5192345072022,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,808,True,2.7731666796437366,True,False,880.8774671185988,879.490883778777,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,809,True,1.573379758269084,True,False,887.3279731740748,886.5412832949403,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,810,True,0.0610021200002393,True,False,900.2320351469947,900.2015340869946,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,811,True,0.00994689763479073,True,False,875.2957278278855,875.2907543790681,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,812,True,0.9639268815244577,True,False,893.2625322943903,892.7805688536281,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,813,True,0.4007740515153273,True,False,900.9247227000029,900.7243356742453,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,814,True,0.2178190473837276,True,False,888.3228941958581,888.2139846721662,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,815,True,1.7096562059002736,True,False,883.4178104768451,882.562982373895,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,816,True,1.4470210220608806,True,False,888.8335900624797,888.1100795514493,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,817,True,0.23144654220777738,True,False,898.0397416503797,897.9240183792758,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,818,True,0.25445042452770394,True,False,897.8105097673931,897.6832845551293,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,819,True,0.23001694389699878,True,False,895.0483339690511,894.9333254971026,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,820,True,0.17212385166021704,True,False,895.706124128266,895.6200622024359,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,821,True,0.7236796415641038,True,False,885.8171370865172,885.4552972657351,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,822,True,2.7977053190641072,True,False,896.2167968264209,894.8179441668889,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,823,True,5.034007349460808,True,False,906.8201968735432,904.3031931988128,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,824,True,0.2924519300340762,True,False,892.7560337676264,892.6098078026093,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,825,True,2.876880737324882,True,False,893.147509553593,891.7090691849305,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,826,True,1.8186126171021897,True,False,883.7219049083856,882.8125985998345,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,827,True,3.805828360336818,True,False,889.805103572722,887.9021893925536,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,828,True,1.3772229575315578,True,False,888.2497115499456,887.5611000711798,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,829,True,1.0655537355341949,True,False,911.0138490749473,910.4810722071802,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,830,True,0.6518144178771763,True,False,887.6185026081457,887.2925953992071,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,831,True,0.13956382685705648,True,False,881.9692683383396,881.8994864249111,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,832,True,1.456131036331044,True,False,899.3854942305786,898.6574287124131,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,833,True,0.4843933762144843,True,False,886.4332090769906,886.1910123888833,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,834,True,7.19427511597155,True,False,910.1682189883437,906.5710814303579,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,835,True,0.3430646323397468,True,False,901.6357835858067,901.4642512696369,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,836,True,0.40755626792042676,True,False,901.8016154730343,901.5978373390741,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,837,True,0.25151885104583016,True,False,879.9091783843251,879.7834189588021,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,838,True,0.0985733274692393,True,False,887.8717096952284,887.8224230314938,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,839,True,0.7621412669814163,True,False,914.0000084364551,913.6189378029644,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,840,True,1.684604449545077,True,False,889.9935804484481,889.1512782236756,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,841,True,0.017591384910247143,True,False,891.5667720198785,891.5579763274234,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,842,True,5.570419956049591,True,False,887.0791910989458,884.293981120921,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,843,True,1.313169690613904,True,False,891.6373348695339,890.980750024227,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,844,True,2.1442017302435943,True,False,905.4971085769807,904.4250077118589,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,845,True,0.00385841572915524,True,False,886.5666520775371,886.5647228696726,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,846,True,0.03628475763525785,True,False,883.5163031641839,883.4981607853663,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,847,True,2.2442490991224986,True,False,895.8547017722792,894.732577222718,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,848,True,0.4353664068846683,True,False,903.7991541865541,903.5814709831118,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,849,True,3.5380296045957493,True,False,890.7777452178723,889.0087304155744,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,850,True,0.28393757185426693,True,False,883.4665827189201,883.324613932993,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,851,True,0.66150207826513,True,False,918.4918989914793,918.1611479523467,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,852,True,0.1812954484751117,True,False,905.7541924248701,905.6635447006325,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,853,True,0.19414973358584575,True,False,885.6340156886524,885.5369408218595,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,854,True,1.987111806893381,True,False,900.6213577637707,899.627801860324,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,855,True,0.7066915157374751,True,False,881.8450794568545,881.4917336989857,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,856,True,7.661750074127667,True,False,870.0384990993638,866.2076240622999,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,857,True,0.7896579103960448,True,False,871.6151074902147,871.2202785350166,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,858,True,3.6584045762740516,True,False,891.2332270265317,889.4040247383947,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,859,True,0.5214914231198691,True,False,908.0058095397876,907.7450638282277,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,860,True,1.0841091969318768,True,False,897.9215016683869,897.379447069921,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,861,True,0.7066136199541688,True,False,903.8233074033542,903.4700005933771,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,862,True,1.4354352241180095,True,False,884.1521643576759,883.4344467456169,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,863,True,0.28466326536135966,True,False,889.0785418667209,888.9362102340402,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,864,True,4.345053357617871,True,False,877.9574292864493,875.7849026076403,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,865,True,0.012340992617737356,True,False,896.3277607269172,896.3215902306083,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,866,True,0.0636191619935289,True,False,887.3949592042048,887.3631496232081,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,867,True,0.008656280092509405,True,False,896.3176516988667,896.3133235588205,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,868,True,1.41563401276062,True,False,901.3601337387863,900.652316732406,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,869,True,0.9573827541987612,True,False,877.1609585949508,876.6822672178514,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,870,True,0.01066259608001019,True,False,884.0723505599505,884.0670192619104,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,871,True,2.7979589123565347,True,False,895.3312686655067,893.9322892093285,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,872,True,0.5850843065336448,True,False,892.9226046245371,892.6300624712703,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,873,True,0.08174110814047708,True,False,888.1686671556743,888.127796601604,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,874,True,0.390030133001801,True,False,908.7507192392902,908.5557041727893,L-BFGS-B,Powell,mapped_seed_null,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,875,True,0.06435812780296146,True,False,900.1392724446198,900.1070933807183,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,876,True,1.0093810079192735,True,False,880.4973008188273,879.9926103148676,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,877,True,0.46688103194310315,True,False,891.6072260870144,891.3737855710428,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,878,True,0.16439237082431646,True,False,890.8162714388083,890.7340752533961,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,879,True,1.9665802761053328,True,False,881.7436418360794,880.7603516980267,L-BFGS-B,Powell,default,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,880,True,8.875899073431583,True,False,905.3305327286512,900.8925831919354,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,881,True,1.3134673761455815,True,False,889.7273316204729,889.0705979324001,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,882,True,0.015235882832030256,True,False,891.3513109884773,891.3436930470613,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,883,True,2.8867643426947325,True,False,876.0195846613855,874.5762024900381,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,884,True,2.1764885778520693,True,False,894.1483484984511,893.0601042095251,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,885,True,0.0018044172702502692,True,False,887.9269687523666,887.9260665437315,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,886,True,1.9960030075797022,True,False,899.9748554582438,898.976853954454,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,887,True,0.7705733532784507,True,False,886.645171385172,886.2598847085328,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,888,True,0.7883864140665082,True,False,880.6175019528243,880.2233087457911,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,889,True,4.052521445911907,True,False,888.5128983178132,886.4866375948573,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,890,True,0.5408881357029713,True,False,896.5875688590685,896.317124791217,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,891,True,1.064227988915718,True,False,909.0689362580158,908.536822263558,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,892,True,0.2207909430833297,True,False,899.203807877428,899.0934124058863,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,893,True,1.8543902100145715,True,False,895.4112163160631,894.4840212110558,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,894,True,9.558829350478163,True,False,898.4721068599929,893.6926921847538,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,895,True,2.432890735304909,True,False,877.9753146230985,876.758869255446,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,896,True,0.00022223521614250785,True,False,886.432695570473,886.432584452865,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,897,True,0.7815902963095596,True,False,892.5059194196614,892.1151242715066,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,898,True,13.605208123005696,True,False,883.3386930873075,876.5360890258047,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,899,True,0.001796579277197452,True,False,896.9667054819687,896.9658071923301,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,900,True,4.391308595369992,True,False,891.0810142734409,888.8853599757559,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,901,True,1.1905911620942788,True,False,899.5868986074692,898.991603026422,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,902,True,2.0910930092766193,True,False,915.3883515750691,914.3428050704308,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,903,True,2.093457430416265,True,False,875.5450684627158,874.4983397475077,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,904,True,0.02845665861264024,True,False,892.5276063773523,892.513378048046,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,905,True,0.5717195436118345,True,False,889.4968736299307,889.2110138581248,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,906,True,0.04241806013419591,True,False,879.4649381262766,879.4437290962095,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,907,True,0.16845665431492307,True,False,888.2837614493831,888.1995331222256,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,908,True,0.7282801675623887,True,False,878.565567823952,878.2014277401709,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,909,True,1.2045434448521064,True,False,871.2990488751233,870.6967771526972,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,910,True,3.843191252337874,True,False,896.7356499857794,894.8140543596105,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,911,True,0.33491055339209197,True,False,907.2869486002036,907.1194933235075,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,912,True,0.3172696964743409,True,False,897.6275743064627,897.4689394582256,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,913,True,0.7821393131255263,True,False,887.3276506054433,886.9365809488805,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,914,True,0.0893319967417483,True,False,878.71141184775,878.6667458493791,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,915,True,0.003457675522440695,True,False,887.9041784173871,887.9024495796259,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,916,True,0.0015670153970859246,True,False,890.6266860149107,890.6259025072121,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,917,True,0.010873534603888402,True,False,891.0534878895269,891.0480511222249,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,918,True,0.719127963309802,True,False,889.1705281143853,888.8109641327304,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,919,True,1.2284236870045788,True,False,902.2759895285145,901.6617776850122,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,920,True,6.442647719887873,True,False,910.7751895086283,907.5538656486843,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,921,True,0.07173469543749889,True,False,902.2268245219633,902.1909571742445,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,922,True,0.05851238578907214,True,False,887.8775536328403,887.8482974399458,L-BFGS-B,L-BFGS-B,default,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,923,True,0.52390891067148,True,False,891.2070122194139,890.9450577640781,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,924,True,3.350685388742477,True,False,898.2381997612375,896.5628570668663,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,925,True,0.7872376733989768,True,False,894.169625103587,893.7760062668875,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,926,True,0.007846547334338538,True,False,895.6725417321527,895.6686184584855,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,927,True,0.030075901016743956,True,False,895.0760665556877,895.0610286051793,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,928,True,10.929791361598518,True,False,893.8455825644634,888.3806868836641,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,929,True,5.983676135112091,True,False,894.6971810454218,891.7053429778657,Powell,Powell,mapped_seed_null -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,930,True,0.6328816794014074,True,False,896.4066072688963,896.0901664291956,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,931,True,1.6951912070530852,True,False,900.932340438884,900.0847448353575,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,932,True,1.1435406050352412,True,False,888.2321075771297,887.6603372746121,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,933,True,3.0669616456227686,True,False,897.842604175037,896.3091233522256,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,934,True,1.2597511791457237,True,False,886.434246146253,885.8043705566802,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,935,True,0.006562647623013618,True,False,888.1648652911633,888.1615839673518,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,936,True,0.03807966492399828,True,False,880.6593392961715,880.6402994637095,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,937,True,0.053418085828070616,True,False,905.5659606340887,905.5392515911747,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,938,True,2.1468902286119373,True,False,911.6621594630335,910.5887143487275,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,939,True,1.8611420830854968,True,False,887.007479481153,886.0769084396103,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,940,True,0.3864789376330009,True,False,904.3829659943576,904.1897265255411,Powell,L-BFGS-B,default -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,941,True,2.999870328903853,True,False,879.009456024958,877.5095208605061,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,942,True,3.4704111231342267,True,False,896.5651004096487,894.8298948480816,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,943,True,3.302912939186399,True,False,907.4458763813095,905.7944199117163,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,944,True,4.304373856448137,True,False,882.9899103035115,880.8377233752874,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,945,True,0.3793803181381463,True,False,871.4194986780996,871.2298085190305,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,946,True,3.590177462368956,True,False,892.6656405763792,890.8705518451948,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,947,True,2.1149182071496853,True,False,903.9642321633997,902.9067730598249,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,948,True,1.4656717477889742,True,False,892.6326474032547,891.8998115293602,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,949,True,2.5579235271102334,True,False,884.3713508668993,883.0923891033442,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,950,True,1.7820509002281142,True,False,873.1984200712027,872.3073946210886,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,951,True,0.0014137678977022006,True,False,901.4039459184291,901.4032390344803,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,952,True,0.16568945786252698,True,False,890.782838738769,890.6999940098377,Powell,Powell,mapped_seed_null -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,953,True,0.26697291237587706,True,False,893.6629581104969,893.529471654309,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,954,True,0.004555669650926575,True,False,888.1755957387156,888.1733179038902,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,955,True,0.03935808853088929,True,False,895.0561536882847,895.0364746440192,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,956,True,0.4354191684867601,True,False,912.1538374777384,911.936127893495,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,957,True,0.272664081359153,True,False,895.3061857586891,895.1698537180096,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,958,True,1.4731104214881725,True,False,893.3456923742383,892.6091371634942,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,959,True,0.3500134268667807,True,False,876.7177266407202,876.5427199272868,Powell,L-BFGS-B,default -> L-BFGS-B,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,960,True,5.791141276609778,True,False,893.0211306131681,890.1255599748632,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,961,True,2.8745128267603377,True,False,905.4046088231886,903.9673524098084,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,962,True,0.4333832000529583,True,False,910.4516185754723,910.2349269754458,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,963,True,0.3694644636666453,True,False,887.630756568381,887.4460243365477,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,964,True,3.8862306111204816,True,False,891.6109733627578,889.6678580571976,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,965,True,0.6717364522899061,True,False,899.4191768605306,899.0833086343856,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,966,True,0.1971906163330459,True,False,892.6061333870414,892.5075380788749,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,967,True,0.9374655224416983,True,False,886.4248911836893,885.9561584224684,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,968,True,3.314327753765383,True,False,888.9735802036979,887.3164163268152,Powell,Powell,default -> L-BFGS-B,nested_from_null_moderate -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,969,True,3.5864413263082042,True,False,895.4604184143807,893.6671977512266,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,970,True,3.0693388099255117,True,False,891.6969197381387,890.162250333176,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,971,True,2.5256188383737026,True,False,902.6482087582822,901.3853993390953,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,972,True,0.5428002077462679,True,False,890.6487884425842,890.3773883387111,Powell,Powell,default -> L-BFGS-B,mapped_seed_alt -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,973,True,0.10999798060083776,True,False,892.9523391744574,892.897340184157,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,974,True,1.0366760249448816,True,False,883.2159261930888,882.6975881806163,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,975,True,2.7222381582910202,True,False,882.3202359027089,880.9591168235634,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,976,True,0.3416381071081105,True,False,898.0526005919107,897.8817815383567,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,977,True,0.01340354687818035,True,False,918.4327488276318,918.4260470541927,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,978,True,1.0998006032575631,True,False,893.2086439140004,892.6587436123716,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,979,True,7.175606260954737,True,False,900.5671254196224,896.979322289145,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,980,True,0.014134934959429302,True,False,890.1710858931198,890.16401842564,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,981,True,1.6194135083833316,True,False,882.5821375501819,881.7724307959902,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,982,True,0.2922036233419476,True,False,886.9812516342673,886.8351498225963,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,983,True,0.7734828603595361,True,False,874.9857049836851,874.5989635535053,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,984,True,0.459783970534545,True,False,880.1438078339278,879.9139158486605,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,985,True,0.004383077114198386,True,False,889.7798736248961,889.777682086339,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,986,True,0.09324936088023605,True,False,892.2665101730629,892.2198854926228,Powell,Powell,mapped_seed_null -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,987,True,2.7400992410807703,True,False,908.4982909744273,907.1282413538869,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,988,True,0.40975317523043486,True,False,884.121047514953,883.9161709273378,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,989,True,0.2872958422096872,True,False,869.4338139688624,869.2901660477576,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_moderate
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,990,True,0.0908984094905918,True,False,891.2149522380092,891.1695030332639,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,991,True,2.9246296064809485,True,False,888.41166298685,886.9493481836096,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,992,True,0.47015126718315514,True,False,885.0849242420696,884.849848608478,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,993,True,2.8183556200524436,True,False,893.3914288528969,891.9822510428706,Powell,L-BFGS-B,mapped_seed_null -> L-BFGS-B,mapped_seed_alt
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,994,True,0.7555896679393754,True,False,899.3311340844779,898.9533392505082,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,995,True,6.340867807341965,True,False,889.40982203459,886.239388130919,L-BFGS-B,L-BFGS-B,default,default
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,996,True,0.49367534327871,True,False,878.0142355006067,877.7673978289673,Powell,Powell,default -> L-BFGS-B,default -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,997,True,2.6435940016610857,True,False,903.9165168939104,902.5947198930799,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,998,True,8.261650282292976e-05,True,False,893.6852813442952,893.6852400360438,Powell,Powell,default -> L-BFGS-B,nested_from_null_small -> L-BFGS-B
+sleepstudy_stage0A_nested_safe_v1_2026-08-04,999,True,0.17290946786010863,True,False,893.017654856055,892.9312001221249,Powell,L-BFGS-B,default -> L-BFGS-B,nested_from_null_small

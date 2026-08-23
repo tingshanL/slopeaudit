@@ -1,0 +1,2 @@
+model,participants,observations,mean_R_direct,mean_P_full,mean_Delta_fit,mean_R_innovation,source_difference_d,direct_share,var_intercept,cov_intercept_slope,var_slope,rho_intercept_slope_at_day0,one_minus_rho_squared,g_min_eigen_over_trace,residual_sd,nll
+primary_homogeneous_independent,18,180,0.815423918067602,0.8485308604763783,0.03310694240877632,0.8147749161852498,0.7823169756588256,0.9609832194079664,612.0899049841775,9.604330527988516,35.071655623788686,0.06555130698000113,0.9957030261532137,0.053946093576807505,25.591815533520926,871.8141359792448

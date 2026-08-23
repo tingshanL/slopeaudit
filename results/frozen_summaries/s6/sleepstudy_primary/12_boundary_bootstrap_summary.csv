@@ -1,0 +1,2 @@
+requested_replicates,usable_replicates,usable_rate,nested_violations,rescue_refits,observed_LR,exceedances,p_plus_one,mc_interval_low,mc_interval_high,mc_interval_crosses_0.05,bootstrap_usability_gate_pass,heterogeneity_status
+999,999,1.0,0,0,42.83681343643093,0,0.001,0.0,0.003685762865739383,False,True,supported

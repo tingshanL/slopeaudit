@@ -1,0 +1,2 @@
+target,slope_variance,R_direct,P_full,Delta_fit,additivity_error,R_innovation,rho_intercept_slope_at_day0,source_difference_d,direct_share
+"participant Days slope (ms/day), Day-0 random-intercept origin",35.071655623788686,0.815423918067602,0.8485308604763783,0.03310694240877632,0.0,0.8147749161852498,0.06555130698000113,0.7823169756588256,0.9609832194079664

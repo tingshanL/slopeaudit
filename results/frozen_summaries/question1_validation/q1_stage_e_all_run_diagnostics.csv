@@ -1,0 +1,2 @@
+"n_tasks","n_valid","observed_unresolved_after_rescue","q1_invalid_observed","q1_errors","attempt_cap_failures","inner_attempts_valid_runs","excluded_inner_attempts_valid_runs","excluded_inner_attempt_rate","outer_runs_with_topups","ambiguous_inner_decisions","observed_rescue_attempts","observed_rescue_successes","inner_rescue_attempts","inner_rescue_successes","unresolved_inner_attempts","retained_rescue_or_problem_rows","attempt_arithmetic_ok","topup_arithmetic_ok"
+7992,7992,0,0,0,0,7984164,156,1.95386768107469e-05,143,0,73,73,364083,363927,156,364083,TRUE,TRUE

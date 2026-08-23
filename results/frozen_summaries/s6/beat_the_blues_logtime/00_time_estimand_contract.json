@@ -1,0 +1,9 @@
+{
+  "engine_version": "btheb_logtime_estimand_v1_2026-08-04",
+  "frozen_primary_estimand": "best linear individual deviation from treatment-by-occasion means over months 0--8",
+  "posthoc_estimand": "random slope on 8*log(1+month)/log(9), centered at physical month 4",
+  "fixed_mean": "unchanged saturated treatment-by-occasion cell means",
+  "residual_model": "unchanged planned occasion-specific independent variances",
+  "purpose": "determine whether the unsupported Question 1 result depends on the linear random-slope time basis",
+  "hierarchy_lock": "The primary homogeneous and planned occasion-specific linear-time results remain frozen regardless of this post-hoc result."
+}

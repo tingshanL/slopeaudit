@@ -1,0 +1,2 @@
+time_estimand,residual_model,observed_LR,requested_replicates,usable_replicates,usable_rate,nested_violations,exceedances,p_plus_one,mc_interval_low,mc_interval_high,mc_interval_crosses_0.05,posthoc_status
+scaled log1p month; centered at month 4,hetero,5.897871769192079,999,998,0.998998998998999,1,33,0.03403403403403404,0.02286833641154445,0.046125609013909476,False,exploratory support under post-hoc log-time estimand

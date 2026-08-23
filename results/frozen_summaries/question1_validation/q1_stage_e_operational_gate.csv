@@ -1,0 +1,10 @@
+"check","value","pass"
+"task_manifest_complete_unique_and_exact","7992/7992",TRUE
+"every_valid_outer_run_reached_fixed_usable_B","7992/7992 valid runs",TRUE
+"no_attempt_cap_failure_or_q1_error","0 caps; 0 errors",TRUE
+"observed_unresolved_rate_within_declared_limit","0 maximum; limit 0.005",TRUE
+"inner_attempt_and_topup_arithmetic_reconciles","156 excluded/top-up attempts",TRUE
+"unresolved_inner_attempts_are_bounded_not_silently_imputed","0 outer decisions remain worst-case ambiguous",TRUE
+"paired_rho_seeds_and_direct_channel_are_identical","7.105427357601e-14 maximum direct-statistic difference",TRUE
+"all_cell_operational_checks_pass","8/8",TRUE
+"pooled_null_decision_bounds_include_alpha","0.0470113812766966 to 0.0612575311694799",TRUE

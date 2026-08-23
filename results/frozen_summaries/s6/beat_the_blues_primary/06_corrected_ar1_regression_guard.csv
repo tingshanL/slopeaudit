@@ -1,0 +1,2 @@
+ar1_nll,homogeneous_nll,ar1_residual_rho,nll_nested_pass,real_data_regression_guard_applicable,expected_nll_neighborhood_pass,expected_rho_neighborhood_pass,overall_pass
+1313.0161076956415,1314.1562188864928,0.20649470676431406,True,True,True,True,True

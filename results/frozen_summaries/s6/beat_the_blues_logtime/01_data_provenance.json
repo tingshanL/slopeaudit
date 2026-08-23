@@ -1,0 +1,18 @@
+{
+  "source": "CRAN HSAUR3 source archive",
+  "package_version": "1.0-15",
+  "resolved_url": "https://cran.r-project.org/src/contrib/HSAUR3_1.0-15.tar.gz",
+  "archive_sha256": "a17ac3ec9b0ec781512b26976a495e0c9abe95853bd71761791721962836cf9f",
+  "rda_sha256": "411af909549f229c71e4b835245fb32dff6ccc2d27dc84f89d98c4d7fb9d9abe",
+  "rows": 100,
+  "columns": [
+    "drug",
+    "length",
+    "treatment",
+    "bdi.pre",
+    "bdi.2m",
+    "bdi.3m",
+    "bdi.5m",
+    "bdi.8m"
+  ]
+}

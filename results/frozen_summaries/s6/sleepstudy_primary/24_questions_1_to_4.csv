@@ -1,0 +1,5 @@
+question,primary_result,key_quantity,gate_pass
+Q1. Do rates vary?,supported,LR=42.836813; p=0.001,True
+Q2. What did observed change measure?,direct change information,R_direct=0.81542392,True
+"Q3. What did the complete model predict, and from where?",directly informed,P_full=0.84853086=0.81542392+0.033106942,True
+Q4. Is the attribution stable?,stable source ordering; AR(1) covariance-boundary warning,"95% cluster-bootstrap interval for d=[0.28416076, 0.91128193]",True

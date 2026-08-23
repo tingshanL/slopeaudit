@@ -1,0 +1,12 @@
+check,pass
+canonical 18 x 10 schedule,True
+primary numerical gate,True
+boundary requested denominator completed,True
+boundary usability at least 95%,True
+participant bootstrap requested denominator completed,True
+participant bootstrap usability at least 95%,True
+source additivity identity,True
+quadratic sensitivity numerically valid,True
+AR1 sensitivity is a valid nested optimum,True
+case retained regardless of result,True
+not a smoke-test publication freeze,True

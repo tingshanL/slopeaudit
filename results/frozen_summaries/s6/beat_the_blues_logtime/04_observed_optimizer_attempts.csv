@@ -1,0 +1,17 @@
+model,component,optimizer,start_name,success,admissible,nll_reml,iterations,message,var_intercept,cov_intercept_slope,var_slope
+linear,null,L-BFGS-B,default,True,True,1306.6254187161974,10,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,88.41548375684988,0.0,0.0
+linear,null,Powell,default -> L-BFGS-B,True,True,1306.625418716116,1,Optimization terminated successfully.,88.41549851128163,0.0,0.0
+linear,alternative,L-BFGS-B,default,True,True,1305.3681831257923,18,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,90.42443153731008,1.4671104075424763,0.3063491963997801
+linear,alternative,Powell,default -> L-BFGS-B,True,True,1305.3681831254548,1,Optimization terminated successfully.,90.42459446429162,1.4671142026998245,0.30634749673236444
+linear,alternative,L-BFGS-B,nested_from_fitted_null,True,True,1305.8730293143108,10,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,92.56358203615417,1.7638713058929192,0.033612944523290555
+linear,alternative,Powell,nested_from_fitted_null -> L-BFGS-B,True,True,1305.368183152747,7,Optimization terminated successfully.,90.42693602918348,1.4672828324986453,0.30632676275210224
+log1p_posthoc,null,L-BFGS-B,default,True,True,1306.6254187161974,10,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,88.41548375684988,0.0,0.0
+log1p_posthoc,null,Powell,default -> L-BFGS-B,True,True,1306.625418716116,1,Optimization terminated successfully.,88.41549851128163,0.0,0.0
+log1p_posthoc,null,L-BFGS-B,mapped_null_0,True,True,1306.6254187161135,1,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,88.41548625615049,0.0,0.0
+log1p_posthoc,null,Powell,mapped_null_0 -> L-BFGS-B,True,True,1306.6254187161119,1,Optimization terminated successfully.,88.41548054959516,0.0,0.0
+log1p_posthoc,alternative,L-BFGS-B,default,True,True,1303.6764828337846,15,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,98.34451704836184,3.405889667753651,0.4069259345974267
+log1p_posthoc,alternative,Powell,default -> L-BFGS-B,True,True,1303.6764828316752,1,Optimization terminated successfully.,98.34414427668324,3.4058609539756644,0.4069216033332176
+log1p_posthoc,alternative,L-BFGS-B,nested_from_fitted_null,True,True,1304.1268898803737,10,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,99.6281809903427,3.366344162441045,0.11374665817978125
+log1p_posthoc,alternative,Powell,nested_from_fitted_null -> L-BFGS-B,True,True,1303.6764829371134,5,Optimization terminated successfully.,98.35161135601159,3.4063650338514684,0.40694127888467135
+log1p_posthoc,alternative,L-BFGS-B,mapped_alt_0,True,True,1303.676482832092,13,CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH,98.34411017610597,3.4058595012112756,0.40692970598795747
+log1p_posthoc,alternative,Powell,mapped_alt_0 -> L-BFGS-B,True,True,1303.6764828315158,1,Optimization terminated successfully.,98.34409360169174,3.4058596487497086,0.406927244373813

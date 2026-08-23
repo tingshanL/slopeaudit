@@ -1,0 +1,88 @@
+{
+  "engine_version": "sleepstudy_stage0A_nested_safe_v1_2026-08-04",
+  "smoke_test": false,
+  "data_provenance": {
+    "source": "https://vincentarelbundock.github.io/Rdatasets/csv/lme4/sleepstudy.csv",
+    "sha256": "20922ddc87d538bf2344f73d49000eeb2d7e14934b6191a3e071fefc329942c4",
+    "checks": {
+      "rows_180": true,
+      "subjects_18": true,
+      "canonical_subject_ids": true,
+      "ten_rows_each": true,
+      "days_0_to_9_each": true,
+      "no_missing": true,
+      "known_first_value": true,
+      "canonical_response_range": true
+    },
+    "rows": 180,
+    "participants": 18,
+    "canonical_RDatasets_SHA256": "20922ddc87d538bf2344f73d49000eeb2d7e14934b6191a3e071fefc329942c4",
+    "downloaded_bytes_match_canonical_RDatasets": true
+  },
+  "primary_summary": {
+    "model": "primary_homogeneous_independent",
+    "participants": 18,
+    "observations": 180,
+    "mean_R_direct": 0.815423918067602,
+    "mean_P_full": 0.8485308604763783,
+    "mean_Delta_fit": 0.03310694240877632,
+    "mean_R_innovation": 0.8147749161852498,
+    "source_difference_d": 0.7823169756588256,
+    "direct_share": 0.9609832194079664,
+    "var_intercept": 612.0899049841775,
+    "cov_intercept_slope": 9.604330527988516,
+    "var_slope": 35.071655623788686,
+    "rho_intercept_slope_at_day0": 0.06555130698000113,
+    "one_minus_rho_squared": 0.9957030261532137,
+    "g_min_eigen_over_trace": 0.053946093576807505,
+    "residual_sd": 25.591815533520926,
+    "nll": 871.8141359792448
+  },
+  "boundary_summary": {
+    "requested_replicates": 999,
+    "usable_replicates": 999,
+    "usable_rate": 1.0,
+    "nested_violations": 0,
+    "rescue_refits": 0,
+    "observed_LR": 42.83681343643093,
+    "exceedances": 0,
+    "p_plus_one": 0.001,
+    "mc_interval_low": 0.0,
+    "mc_interval_high": 0.003685762865739383,
+    "mc_interval_crosses_0.05": false,
+    "bootstrap_usability_gate_pass": true,
+    "heterogeneity_status": "supported"
+  },
+  "participant_stability": {
+    "requested_replicates": 499,
+    "usable_replicates": 499,
+    "usable_rate": 1.0,
+    "minimum_usable_rate": 0.95,
+    "full_sample_source_difference_d": 0.7823169756588256,
+    "bootstrap_d_q025": 0.284160758622809,
+    "bootstrap_d_median": 0.7634386512526465,
+    "bootstrap_d_q975": 0.9112819323328172,
+    "full_sample_source_label": "directly informed",
+    "interval_preserves_full_sample_sign": true,
+    "usability_gate_pass": true,
+    "source_stability_gate_pass": true
+  },
+  "final_gate": {
+    "heterogeneity_supported": true,
+    "boundary_bootstrap_usability_pass": true,
+    "numerical_validity_pass": true,
+    "participant_source_stability_pass": true,
+    "quadratic_fixed_trajectory_valid_and_source_order_preserved": true,
+    "AR1_valid_and_source_order_preserved": true,
+    "all_mandatory_gates_pass": true,
+    "scoped_action": "PROCEED\u2014INDIVIDUAL-SLOPE CLAIM",
+    "case_retained_regardless_of_result": true
+  },
+  "versions": {
+    "python": "3.9.20 | packaged by conda-forge | (main, Sep 30 2024, 17:48:00) \n[Clang 17.0.6 ]",
+    "platform": "macOS-14.5-arm64-arm-64bit",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1"
+  }
+}

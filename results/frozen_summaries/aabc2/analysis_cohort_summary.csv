@@ -1,0 +1,7 @@
+outcome,label,modality,participants,observations,median_scans,median_followup_years
+lateral_ventricles,Lateral ventricles,structural MRI,622,1629,3.0,5.49760438056126
+hippocampus,Hippocampus,structural MRI,622,1629,3.0,5.49760438056126
+global_mean_thickness,Global mean cortical thickness,structural MRI,622,1629,3.0,5.49760438056126
+global_cortical_cbf,Global cortical CBF,ASL,802,2047,2.0,5.295003422313483
+global_cortical_att,Global cortical ATT,ASL,802,2047,2.0,5.295003422313483
+fluid_cognition,Fluid Cognition Composite,cognition,691,1805,3.0,5.47296372347707

@@ -1,0 +1,2 @@
+fixed_intercept,fixed_Days,sd_intercept,sd_Days,rho,residual_sd,fixed_intercept_match,fixed_Days_match,sd_intercept_match,sd_Days_match,rho_match,residual_sd_match,all_parameter_checks_pass
+251.40510484848488,10.467285959595964,24.740450783770644,5.922132692180131,0.06555130698000113,25.591815533520926,True,True,True,True,True,True,True

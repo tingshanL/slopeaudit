@@ -1,0 +1,9 @@
+{
+  "frozen_primary_question1": "supported under homogeneous independent residuals",
+  "frozen_primary_decomposition": "0.848531 = 0.815424 + 0.033107",
+  "unrestricted_AR1_decomposition": "0.866736 = 0.523019 + 0.343716",
+  "direct_component_larger_through_approx_profile_set": true,
+  "near_rank_one_G_occurs_inside_approx_profile_set": true,
+  "interpretation": "The AR(1) likelihood improvement is real, but source magnitudes co-move with rho_e and the fitted G enters a near-rank-one region; retain residual-model ranges and the boundary warning.",
+  "Days2_9_role": "post hoc baseline-adaptation diagnostic only; it cannot replace the Days 0--9 primary analysis"
+}

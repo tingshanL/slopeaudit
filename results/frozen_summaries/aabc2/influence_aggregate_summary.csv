@@ -1,0 +1,11 @@
+outcome,metric,largest_individual_change,joint_top10_change,absolute_individual_to_joint_ratio,interpretation
+global_mean_thickness,random_slope_variance,-0.0020173274612060744,-0.0023856126379193294,0.8456223902995148,one participant can reproduce at least half of the joint change
+global_mean_thickness,median_full,0.4570675051842406,0.45661165319404823,1.0009983363039547,one participant can reproduce at least half of the joint change
+global_mean_thickness,median_gap,0.46288698834067143,0.465817178172773,0.9937095711163001,one participant can reproduce at least half of the joint change
+global_mean_thickness,cov_L0_L5,-0.00501608330797676,-0.01905016524695019,0.2633091756923107,joint transition is more cumulative than any one deletion
+global_mean_thickness,d_0_5,-0.0056531592294039035,-0.005652908738143392,1.0000443119236688,one participant can reproduce at least half of the joint change
+fluid_cognition,random_slope_variance,-2.485445738536831,-3.3964584037049605,0.7317757037229224,one participant can reproduce at least half of the joint change
+fluid_cognition,median_full,0.3109350594587107,0.5485482629548142,0.5668326389073326,one participant can reproduce at least half of the joint change
+fluid_cognition,median_gap,0.3673036454193648,0.6190913702891044,0.5932947268314217,one participant can reproduce at least half of the joint change
+fluid_cognition,cov_L0_L5,-1.9340547046981413,-6.4880145717985584,0.2980965414450352,joint transition is more cumulative than any one deletion
+fluid_cognition,d_0_5,-0.024778526987980998,-0.029557242165462183,0.8383233743280304,one participant can reproduce at least half of the joint change

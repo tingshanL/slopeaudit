@@ -1,0 +1,5 @@
+cell_id,schedule_label,variance_label,q0,k,n,false_positive_rate,low,high
+true_zero__balanced_three_wave__q0_0.5,Balanced 3-wave schedule,Smaller level variance,0.5,47,999,0.04704704704704705,0.03556285101075637,0.06200138305646318
+true_zero__balanced_three_wave__q0_4,Balanced 3-wave schedule,Larger level variance,4.0,48,997,0.048144433299899696,0.03650338298351629,0.06325413399458606
+true_zero__empirical__fluid_cognition__q0_0.5,Irregular AABC schedule,Smaller level variance,0.5,41,998,0.041082164328657314,0.03042610862126814,0.055257567238724103
+true_zero__empirical__fluid_cognition__q0_4,Irregular AABC schedule,Larger level variance,4.0,45,999,0.04504504504504504,0.033833514873224405,0.05974205282523147
