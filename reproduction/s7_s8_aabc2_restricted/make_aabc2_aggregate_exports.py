@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
-"""Create a safe AABC2 release-export manifest and, only after approval, copy results.
+"""Inventory AABC2 source artifacts through a conservative router.
 
-The restricted AABC2 workflow intentionally separates computational outputs
-from reviewer-facing release names.  The analysis scripts retain frozen
-internal filenames where doing so supports exact equivalence checks.  This
-router maps those inputs to semantic release filenames without changing their
-contents.
+This router operates inside the authorized AABC2 analysis environment. It
+maps frozen internal filenames to semantic names, records hashes and source
+classifications, and prevents automatic copying of restricted source
+artifacts. Manifest mode copies no AABC2-derived source file; approved-copy
+mode retains its explicit administrative approval safeguard.
 
-For the first submission the default is ``manifest`` mode.  It records which
-expected result files exist, their sizes and SHA-256 hashes, and their release
-classification, but copies no AABC2-derived result file.  ``approved-copy``
-mode is disabled unless the caller supplies an explicit approval file with the
-required acknowledgement phrase.  Participant-linked outputs classified as
-``restricted_never_export`` are never copied in either mode.
+The router policy describes direct source artifacts. It does not govern the
+separately reviewed and, where necessary, redacted 29-file ID-free
+research-result set included under results/frozen_summaries/aabc2. That
+public set has its own aggregate manifest and privacy review. Participant-
+linked outputs classified as restricted_never_export remain uncopiable in
+every router mode.
 
-No source path is written to the manifest.  Only source-group labels and
-relative filenames are recorded.
+No absolute source path is written to the router manifest.
 """
 
 from __future__ import annotations

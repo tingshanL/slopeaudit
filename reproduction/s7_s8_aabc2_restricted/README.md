@@ -20,15 +20,37 @@ Underscore-prefixed modules are implementation modules used by these entry point
 
 ## First-submission data boundary
 
-The first-submission default is conservative. Analysis code, schemas, variable definitions, eligibility rules, and independently synthetic examples can be public. AABC2-derived result files are not copied by the release router unless written derivative-export approval has been recorded. Participant-linked source quantities, deletion refits, and raw trajectory/QC products are classified as `restricted_never_export` and are never copied by the router.
+Participant-level AABC2 inputs are not redistributed. The first-submission
+release includes only the 29 separately reviewed, ID-free aggregate and
+validation artifacts listed in
+`results/frozen_summaries/aabc2/aabc2_aggregate_manifest.csv`.
 
-`source_anchor_schema.json` is a schema only; it deliberately contains no AABC2-derived anchor values.
+These files are research-result summaries rather than copies of participant-
+level AABC2 data or alternatively preprocessed participant data. The public
+candidate excludes participant identifiers, participant-linked source
+quantities, deletion refits, individual trajectories, exact participant
+schedules, and raw trajectory/QC products. The influence summary removes the
+source participant-ID and rank fields, and the quadratic-selection audit
+redacts one local source-path cell; the numerical result fields were not
+altered.
 
-The computational scripts retain some frozen internal filenames so that numerical equivalence to the completed analyses can be checked exactly. Reviewer-facing release filenames are semantic and are produced only through `make_aabc2_aggregate_exports.py`; processing-order prefixes are not part of the release names.
+The automated source router remains deliberately conservative. Its source
+policy governs direct copying from the authorized analysis environment and
+does not itself designate an artifact as safe for public release. In manifest
+mode it copies nothing. The separately reviewed 29-file public set is governed
+by its release manifest and privacy review rather than by automatic copying
+from the source directories.
 
-## Safe default export check
+This boundary reflects the current public AABC Data Use Terms, which
+distinguish research results from redistribution of the underlying Data and
+prohibit public association of participant IDs with individual data elements
+without approval:
 
-Running `make_aabc2_aggregate_exports.py --mode manifest ...` creates only `aabc2_export_manifest.csv`. The manifest contains group labels, relative source filenames, sizes, hashes, release classifications, and semantic release names. It does not contain absolute local paths and does not copy any AABC2-derived result file.
+https://www.humanconnectome.org/study/hcp-lifespan-aging/data-use-terms
+
+Researchers remain responsible for any additional requirements in their
+institution's applicable agreement. This release does not authorize
+redistribution of AABC2 participant-level data.
 
 ## Independent-runnability boundary
 

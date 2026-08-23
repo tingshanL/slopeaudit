@@ -1,9 +1,9 @@
 {
-  "policy_version": "2026-08-19",
-  "first_submission_default": "Do not copy AABC2-derived result files outside the authorized environment without written permission. Code, schemas, variable definitions, eligibility rules, and independently synthetic examples are separate public artifacts.",
+  "policy_version": "2026-08-23",
+  "first_submission_default": "This policy governs the conservative automated source router. The router does not automatically copy AABC2-derived source artifacts. The separately reviewed and, where necessary, redacted 29-file ID-free public research-result set is governed by results/frozen_summaries/aabc2/aabc2_aggregate_manifest.csv. Participant-level and participant-linked materials remain excluded.",
   "classifications": {
-    "hold_pending_written_approval": "ID-free AABC2-derived aggregate or replicate-level output. Do not upload for the first submission unless written AABC permission is obtained.",
-    "restricted_never_export": "Participant-linked, participant-level, trajectory, deletion, or other restricted real-data output. Never copied by this router."
+    "hold_pending_written_approval": "Conservative automated-router hold for an unreviewed source artifact. This machine label prevents direct copying and does not classify the separately reviewed/redacted public research-result files listed in the public AABC2 aggregate manifest.",
+    "restricted_never_export": "Participant-linked, participant-level, trajectory, deletion, or other restricted real-data source output. Never copied by this router and not included in the public aggregate release."
   },
   "entries": [
     {
@@ -510,5 +510,12 @@
       "classification": "restricted_never_export",
       "note": "Participant-linked influence/deletion/QC output."
     }
-  ]
+  ],
+  "separately_reviewed_public_release": {
+    "manifest": "results/frozen_summaries/aabc2/aabc2_aggregate_manifest.csv",
+    "artifact_count": 29,
+    "classification": "id_free_aggregate_research_results",
+    "automated_source_copy": false,
+    "participant_level_data_included": false
+  }
 }
