@@ -180,9 +180,8 @@ The Question 1 bootstrap validation study separately validated the production Qu
 participants, slope variance `.01`, residual variance `1`, and the 3-wave and
 5-wave schedules above. The completed support rates were 0.064 and 0.181 when
 the intercept-slope correlation was 0, and 0.085 and 0.414 when it was 0.5.
-Those are empirical results from a frozen nested simulation, not values
+Those are empirical results from the completed nested simulation, not values
 returned by `slope_design_sensitivity()`.
 
-The distinction is deliberate: the matrix function explains information
-sources under supplied assumptions; it does not turn one analytic reliability
-number into a universal power claim.
+The matrix calculation describes information sources under supplied
+assumptions; power requires a separately specified testing procedure.

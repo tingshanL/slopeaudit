@@ -1,18 +1,16 @@
 # Question-1 extended validation
 
-These scripts are intentionally **not** ordinary `R CMD check` tests.
+These scripts run validation studies outside the ordinary `R CMD check` suite.
 
 The manuscript-scale reference scripts run sequentially and display a base-R
 progress bar. Historical v12/v13 validation workflows may parallelize
 independent outer datasets. Their default is one worker; use at most two workers
 on the 8-GB M2.
 
-**Release-state note.** The v10--v13 sections below are historical validation
-provenance. The v14 7,992-task Question 1 bootstrap validation study is
-complete. For the pre-tag `0.1.0` release candidate, these expensive historical
-runs are not repeated merely to change the package version; release
-verification instead checks the preserved provenance/code bridge and the
-current release-level smoke/check gates.
+**Validation status.** The v10--v13 sections document completed development
+studies. The v14 Question 1 bootstrap validation is complete with 7,992 outer
+tasks. Current compact summaries are under
+`results/frozen_summaries/question1_validation/`.
 
 ## Scripts
 
@@ -20,13 +18,13 @@ current release-level smoke/check gates.
   - canonical public sleepstudy model pair;
   - checks the observed LR against the historical ≈42.837 anchor;
   - runs the current R implementation at `SLOPEAUDIT_Q1_B` (default 999);
-  - writes replicate and summary outputs for refreezing.
+  - writes replicate and summary outputs for reference comparisons.
 
 - `q1_btheb_reference.R`
-  - reads the already-frozen public Beat-the-Blues primary fixture;
+  - reads the public Beat-the-Blues reference fixture;
   - fits the homogeneous REML full/null pair;
   - compares observed LR with the historical ≈4.072 anchor;
-  - runs the current R bootstrap for refreezing.
+  - runs the current R bootstrap for reference comparisons.
 
 - `q1_targeted_stress.R`
   - configurable outer null/strong-signal stress experiment;
@@ -76,15 +74,14 @@ current release-level smoke/check gates.
 
 - `q1_optimizer_rescue_diagnostic.R`
   - is the v11 follow-up to the failed v10 pilot gate;
-  - reconstructs every retained problem replicate from its frozen outer and
+  - reconstructs every retained problem replicate from its recorded outer and
     inner seeds;
   - first reproduces the exact v10 `nloptwrap` result;
   - refits each full/null pair with tighter `nloptwrap`, `bobyqa`, and a
     derivative-disabled diagnostic-only sensitivity;
   - retains likelihood, LR, gradient, Hessian, convergence, singularity, and
     covariance-geometry diagnostics;
-  - checkpoints by outer dataset and never freezes a rescue rule
-    automatically.
+  - checkpoints by outer dataset; rescue-rule decisions are made separately.
 
 - `q1_table1_power_diagnostic.R`
   - is the v13.3.1 focused diagnostic that precedes nested-bootstrap validation;
@@ -136,14 +133,13 @@ After that repair output has been audited, import its checkpoint in `extend`
 mode. This retains all 5,000 repaired rows and runs 20,000 new datasets: 18,000
 null top-ups and 2,000 paired covariance sensitivities. See
 `docs/q1-v13-table1-power-diagnostic.md` for the exact run contract. The
-extended output has now been audited and supplies the frozen nested-bootstrap validation reference
+extended output has been audited and supplies the nested-bootstrap validation reference
 fixture.
 
 ## V14 completed nested-bootstrap validation provenance
 
 The smoke, pilot, and full validation sequence is complete. The commands below
-document authorized historical reproduction of the pre-full stages; they are
-not instructions to restart the expensive validation for release 0.1.0.
+document authorized reproduction of the pre-full stages.
 
 Historical smoke command:
 
@@ -160,7 +156,7 @@ Historical pilot reproduction imports the audited 120 v12 tasks from an
 authorized private checkpoint, so only 40 new tasks are fitted. It requires
 `SLOPEAUDIT_Q1_NESTED_BOOTSTRAP_V12_PILOT_INPUT`,
 `SLOPEAUDIT_Q1_V11_EVIDENCE_DIR`, and `SLOPEAUDIT_Q1_IRREGULAR_SCHEDULE` to point
-to the private frozen inputs:
+to the byte-preserved private inputs:
 
 ```bash
 SLOPEAUDIT_Q1_NESTED_BOOTSTRAP_MODE=pilot \
@@ -172,18 +168,16 @@ SLOPEAUDIT_Q1_NESTED_BOOTSTRAP_OUT="validation/extended/results/q1_nested_bootst
 Rscript validation/extended/q1_nested_bootstrap_validation.R
 ```
 
-The full mode subsequently completed all 7,992 outer datasets with fixed
-usable inner B=999 and passed the frozen validation gates. Preserve that run as
-historical validation provenance; do not relabel it as a `0.1.0` execution.
-See the protocol document for the gates and exact interpretation.
+The full mode completed all 7,992 outer datasets with fixed usable inner
+`B = 999` and met the validation criteria. See the protocol document for the
+criteria and interpretation.
 
 ## Private irregular-schedule provenance
 
 The exact empirical cognition schedule is derived from restricted AABC2 source
-material and is not distributed in the public repository. The one-time freezer
-and its frozen output belong to private release provenance. Authorized
-historical validation runs must provide the byte-preserved schedule through
-`SLOPEAUDIT_Q1_IRREGULAR_SCHEDULE`; do not substitute an approximate schedule.
+material and is not distributed in the repository. The extraction utility and
+its output are stored privately. Authorized historical validation runs provide
+the byte-preserved schedule through `SLOPEAUDIT_Q1_IRREGULAR_SCHEDULE`.
 
 ## V12 completed repeated-pilot provenance
 
@@ -206,11 +200,10 @@ and inner rescue records, all-run totals, pooled-null result, power cells, and
 global gate were audited before escalation. That adjudication is now historical
 provenance; see `docs/q1-v12-rescue-pilot-protocol.md`.
 
-## V11 completed provenance (do not rerun)
+## V11 completed diagnostic
 
-The v10 pilot and both v11 diagnostic runs are complete. Preserve their result
-archives. The commands below document provenance only; do not rerun them for
-v12.
+The v10 pilot and both v11 diagnostic runs are complete. The commands below
+document how they were executed.
 
 First run the small panel-coverage smoke diagnostic:
 
@@ -245,10 +238,9 @@ byte-preserved inputs.
 
 ## Manuscript-scale escalation
 
-The package implementation reports whether a run is floor-limited or whether
-the Monte Carlo interval crosses the reporting alpha. Manuscript workflows may
-then rerun at 4,999 according to the frozen protocol. The package does not
-silently change B.
+The package reports whether a run is floor-limited or whether the Monte Carlo
+interval crosses the reporting alpha. Manuscript workflows may then rerun
+explicitly at 4,999. The package does not change `B` automatically.
 
 
 ## v3 stress coverage
@@ -261,5 +253,5 @@ silently change B.
 
 `q1_compare_reference_outputs.R` creates a compact R-versus-historical-Python
 comparison table. Observed LR values are direct overlap checks; historical
-bootstrap p-values are marked contextual until the R implementation is
-formally refrozen because seed/optimizer implementations differ.
+bootstrap p-values are contextual because the seed and optimizer
+implementations differ.

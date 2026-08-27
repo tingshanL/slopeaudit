@@ -10,15 +10,13 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: Implements validated components of a diagnostic framework for
-    person-specific rates of change in Gaussian linear mixed models. The package
-    separates direct within-person information about a target random slope from
-    additional model-assisted information, supports boundary-aware testing of
-    random-slope heterogeneity, and evaluates prospective information under
-    supplied designs. The first public interface targets scalar Gaussian random
-    slopes, with an adapter for compatible 'lme4' model fits and a matrix-based
-    computational backend. A public resampling contract for source stability is
-    deliberately deferred.
+Description: Implements diagnostics for person-specific rates of change in
+    Gaussian linear mixed models. The package separates direct within-person
+    information about a target random slope from information contributed by
+    the fitted joint model, tests random-slope heterogeneity with a
+    boundary-aware parametric bootstrap, and evaluates prospective information
+    under supplied designs. Version 0.1 supports one scalar Gaussian random
+    slope through compatible 'lme4' fits and a matrix-based backend.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

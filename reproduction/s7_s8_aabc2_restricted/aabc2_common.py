@@ -1,21 +1,12 @@
 """Shared restricted-data loader for the AMPPS AABC analyses.
 
-This module reconstructs the frozen AABC analysis cohorts used by the
+This module reconstructs the AABC analysis cohorts used by the
 six-outcome reanalysis and subsequent restricted-data diagnostics.
 
-It deliberately contains:
-- explicit restricted-input validation;
-- structural/ASL/cognition cohort construction;
-- frozen transformations and time variables;
-- common six-outcome analysis-data preparation;
-- common fixed-formula construction.
-
-It deliberately does NOT contain:
-- filesystem discovery;
-- optimizer/model-fitting code;
-- bootstrap code;
-- participant-level exports;
-- machine-specific path audits.
+It provides restricted-input validation, cohort construction, prespecified
+transformations and time variables, six-outcome data preparation, and common
+fixed formulas. Model fitting, bootstrap execution, participant-level exports,
+filesystem discovery, and machine-specific path audits are handled elsewhere.
 
 Restricted source data remain local and must not be committed.
 """
@@ -32,7 +23,7 @@ import pandas as pd
 
 
 # ---------------------------------------------------------------------------
-# Frozen constants from the authoritative six-outcome notebook
+# Prespecified constants from the six-outcome source notebook
 # ---------------------------------------------------------------------------
 
 FIVE_YEAR_DAYS = 365.25 * 5

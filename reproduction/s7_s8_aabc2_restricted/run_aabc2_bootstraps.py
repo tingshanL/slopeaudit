@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run the AABC2 reliability-gap bootstrap.
 
-This public restricted-data entry point reproduces the frozen
+This restricted-data workflow reproduces the completed
 participant-resampling bootstrap for global mean cortical thickness and
 fluid cognition.
 
@@ -9,9 +9,9 @@ The bootstrap estimates the sampling distribution of median direct
 schedule reliability, full posterior slope predictability, conditional
 slope-innovation reliability, and their gaps.
 
-This script deliberately does NOT run the historical boundary-RLRT
-bootstrap. Final boundary-aware slope-variance inference is handled by
-the separately validated advanced RLRT workflow.
+The historical boundary-RLRT bootstrap is outside this script. Final
+boundary-aware slope-variance inference is handled by the separately validated
+advanced RLRT workflow.
 
 No participant identifiers or participant-level real-data tables are
 exported. Bootstrap replicate summaries contain aggregate metrics only.

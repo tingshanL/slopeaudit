@@ -1,6 +1,6 @@
 # Beat the Blues teaching fixture
 
-`btheb_primary.csv` is the frozen public teaching fixture used by the
+`btheb_primary.csv` is the reference teaching fixture used by the
 reader-facing irregular-schedule example and the manuscript's primary
 homogeneous-independent-residual reference analysis.
 
@@ -33,8 +33,8 @@ Goldberg, Mann, Everitt, Marks, and Gray (2003), *Psychological Medicine*,
 33(2), 217--227.
 
 This CSV is third-party-derived observation data, not original `slopeaudit`
-data, and is not relicensed under the package's MIT license. Retain the HSAUR3
-GPL-2 terms and the study/source attribution when redistributing this fixture.
+data, and is not relicensed under the package's MIT license. Redistribution
+should preserve the HSAUR3 GPL-2 terms and the study/source attribution.
 The exact path-specific redistribution notice is in
 `inst/THIRD_PARTY_NOTICES.md`; the complete GPL-2 text is bundled at
 `inst/licenses/GPL-2.0.txt`.

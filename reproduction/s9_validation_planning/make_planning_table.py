@@ -583,8 +583,8 @@ def build_latex_table(main_table: pd.DataFrame) -> str:
 
 
 def build_contract() -> Dict:
-    # Deliberately store release-relative filenames rather than absolute local
-    # paths.  This is the only provenance change from the exploratory notebook.
+    # Store repository-relative filenames rather than absolute local paths so
+    # the contract is portable across machines.
     return {
         "alpha": ALPHA,
         "interpretation": (

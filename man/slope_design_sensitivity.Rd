@@ -36,7 +36,7 @@ nuisance random-effect column spaces.}
 An object of class \code{slopeaudit_design_sensitivity}.
 }
 \description{
-Apply the authoritative matrix backend to one or more prospective
+Apply the matrix backend to one or more prospective
 participant schedules.  This function evaluates information-source
 quantities; it does not claim to provide Question-1 power for arbitrary
 designs or residual covariance models.

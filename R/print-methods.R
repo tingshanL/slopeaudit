@@ -1,5 +1,5 @@
-# Compact reader-facing methods.  The complete provenance remains available in
-# the returned objects and is deliberately not printed by default.
+# Compact print methods. Complete provenance remains available in the returned
+# objects but is omitted from the default display.
 
 .sa_print_source_summary <- function(x, digits = 3L) {
   if (is.null(x) || nrow(x) == 0L) {

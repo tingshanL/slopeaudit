@@ -2,7 +2,7 @@
 #
 # Question 1 tests whether the marginal variance of one explicitly named
 # random-effect coordinate is supported above the exact boundary value zero.
-# These functions remain internal until the Question-1 subsystem is frozen.
+# These functions support the internal Question-1 implementation.
 
 .sa_q1_lr_tolerance <- function(logLik_full, logLik_null) {
   vals <- c(logLik_full, logLik_null)

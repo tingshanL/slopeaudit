@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 """Pure numerical core for the S5 downstream simulation.
 
-This module contains no AABC file discovery, participant identifiers,
-source paths, frozen-result paths, task execution loop, checkpoint I/O,
-or output I/O.
-
-The numerical routines are refactored from the frozen authoritative
-AABC_final500_covariance_singularity_simulation analysis. The only
-intentional architectural change is that source parameters are passed
-explicitly rather than read from notebook-global SOURCE_PARAMETERS state.
+This module contains the numerical routines from the completed
+`AABC_final500_covariance_singularity_simulation` analysis. Source parameters
+are passed explicitly rather than read from notebook-global state, so the
+module requires no AABC file discovery, participant identifiers, source or
+result paths, task loop, checkpoint I/O, or output I/O.
 """
 
 from __future__ import annotations

@@ -1,6 +1,6 @@
 # Fixed-usable-replicate Question-1 bootstrap.
 #
-# This validated release execution mode draws until the primary convention has
+# This procedure draws until the primary convention has
 # exactly `usable_B` finite, nonnegative likelihood-ratio replicates, subject
 # to a declared attempts cap. The stopping rule and deterministic rescue
 # hierarchy were validated in the v12--v14 Question-1 program.

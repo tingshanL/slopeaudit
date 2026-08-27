@@ -283,7 +283,7 @@ test_that("equivalent controls under different object names are not falsely reje
 })
 
 
-test_that("resolved refit control freezes the common recorded optimizer control", {
+test_that("resolved refit control preserves the common recorded optimizer control", {
   pair <- q1_sleepstudy_pair()
 
   got <- slopeaudit:::.sa_q1_resolve_refit_control(

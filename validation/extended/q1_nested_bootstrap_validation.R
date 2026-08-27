@@ -408,8 +408,8 @@ cell_manifest$n_observations <- vapply(
   integer(1)
 )
 
-# The `version` value below is the frozen historical v14 configuration ID used
-# by completed checkpoints. It is not the current package/repository release state.
+# The `version` value below is the historical v14 configuration ID used by
+# completed checkpoints.
 scientific_config <- list(
   version = "q1_nested_bootstrap_nested_bootstrap_v14_candidate",
   mode = MODE,

@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 """Build the S5 downstream-simulation publication tables.
 
-This is the isolated reviewer-facing table layer for the S5 downstream
-simulation. It performs no simulation, no model fitting, no recursive file
-discovery, and no participant-level data access.
+This table layer performs no simulation or model fitting, conducts no recursive
+file discovery, and does not access participant-level data.
 
-Inputs are explicitly supplied semantic S5 result files. For empirical
-AABC-derived results, the inputs/derived outputs remain HOLD pending written
-AABC permission.
+Inputs are explicitly supplied semantic S5 result files. Empirical
+AABC-derived inputs and replicate-level outputs remain restricted; the reviewed
+aggregate summaries are distributed separately under `results/`.
 
 Generated tables:
     Main Table 4
     Supplementary Tables S6A--S6L
 
 The table calculations, ordering, labels, Wilson intervals, captions, notes,
-and LaTeX formatting are refactored from the frozen publication-table
+and LaTeX formatting are refactored from the source publication-table
 notebook.
 """
 

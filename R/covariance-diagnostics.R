@@ -1,6 +1,6 @@
 # Global random-effects covariance diagnostics.
 #
-# These diagnostics are deliberately separate from the target marginal
+# These diagnostics are separate from the target marginal
 # variance. A singular/near-rank-one G can still have positive target variance.
 
 .sa_covariance_diagnostics <- function(

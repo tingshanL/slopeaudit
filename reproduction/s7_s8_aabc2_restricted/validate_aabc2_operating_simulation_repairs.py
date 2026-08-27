@@ -4,7 +4,7 @@
 This notebook-independent restricted-data validation imports the exact
 validated operating-simulation and direct-REML repair functions from the
 advanced core. It refits only the five preselected repair cases and compares
-their scientific outputs with the frozen 758-row repair overlay.
+their scientific outputs with the completed 758-row repair overlay.
 """
 from __future__ import annotations
 import os

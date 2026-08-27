@@ -2,9 +2,9 @@
 """Validate AABC2 spline and residual-adequacy diagnostics.
 
 This notebook-independent restricted-data validation imports the exact
-validated advanced core, recreates the frozen two-dimensional nonlinear spline
-basis from the observed outcomes, and refits the observed ML comparisons plus
-four selected adequacy datasets.
+validated advanced core, recreates the two-dimensional nonlinear spline basis
+used in the completed analysis, and refits the observed ML comparisons plus four
+selected adequacy datasets.
 
 Only aggregate validation tables are written.
 """

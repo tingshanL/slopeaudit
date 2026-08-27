@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Preflight the frozen AABC2 advanced operating simulation.
+"""Preflight the completed AABC2 advanced operating simulation.
 
 This performs structural and overlay checks on the validated 46-cell,
 62,000-replicate operating-study state without refitting any dataset. It also

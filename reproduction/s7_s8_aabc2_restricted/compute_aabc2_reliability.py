@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Compute exact AABC2 slope-reliability summaries.
 
-This restricted-data entry point fits only the reference and original-frozen
-mixed models needed for the six-outcome reliability decomposition. It writes
+This restricted-data workflow fits only the reference and original model
+specifications needed for the six-outcome reliability decomposition. It writes
 participant-level exact reliability only to ``restricted/`` and writes only
 aggregate summaries to ``public/``.
 
-The public schedule table also appends percentile intervals from the frozen
+The aggregate schedule table also appends percentile intervals from the
 499-replicate thickness/cognition reliability-gap bootstrap supplied through
 ``--bootstrap-metrics``. Boundary-aware RLRT inference, covariance-geometry
 diagnostics, and simulation studies are handled by separate reproduction

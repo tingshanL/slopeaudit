@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Validated computational core for the advanced AABC2 RLRT diagnostics.
 
-Function bodies in this module are extracted verbatim from the notebook cells
-that were independently smoke-validated during release preparation.  Runtime
-data and fitted-state objects are supplied explicitly by public driver scripts.
+Function bodies originate from notebook cells independently smoke-validated
+during development. Runtime data and fitted-state objects are supplied
+explicitly by the driver scripts.
 """
 
 from __future__ import annotations
@@ -2191,7 +2191,7 @@ def fit_profile1d_d_value(
             )
         )
 
-        # One cross-polish pass. This is deliberately bounded: it resolves
+        # One bounded cross-polish pass resolves
         # start dependence without turning one profile point into an
         # unbounded multistart search.
         if (

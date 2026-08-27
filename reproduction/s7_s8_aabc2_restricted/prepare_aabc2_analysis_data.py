@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Prepare and validate the restricted AABC2 analysis cohorts.
 
-This public entry point reconstructs the frozen structural, ASL, and
+This restricted-data workflow reconstructs the structural, ASL, and
 cognition cohorts from explicitly supplied restricted inputs, then
 prepares the six outcome-specific analysis datasets in memory.
 
 Only aggregate cohort summaries are written. Participant identifiers,
 event identifiers, exact visit schedules, prepared participant-level
-analysis tables, and other restricted row-level data are never exported.
+analysis tables, and other restricted row-level data are not exported.
 
 Restricted source data are not distributed with this repository.
 """

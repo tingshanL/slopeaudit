@@ -140,7 +140,7 @@ def parallel_repairs(
     """
     if n_jobs != 1:
         print(
-            "Ventricular direct-REML repairs are intentionally serial "
+            "Ventricular direct-REML repairs run serially "
             "to avoid nested optimizer/BLAS contention."
         )
 

@@ -13,7 +13,10 @@ SMOKE = ROOT / "reproduction" / "smoke_inputs"
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Run nonreportable public/synthetic reproduction smoke checks."
+        description=(
+            "Run public/synthetic software smoke checks; outputs are not "
+            "suitable for scientific reporting."
+        )
     )
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument(
@@ -203,7 +206,7 @@ def main() -> None:
 
     manifest = {
         "schema_version": 1,
-        "purpose": "nonreportable public/synthetic reproduction smoke check",
+        "purpose": "public/synthetic software smoke check",
         "completed_workflows": completed,
         "restricted_s7_s8_execution": "not attempted; authorized AABC2 inputs required",
         "reportable": False,

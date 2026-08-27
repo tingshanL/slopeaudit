@@ -242,7 +242,7 @@ test_that("affine recoding preserves source quantities for the same physical slo
 })
 
 
-test_that("all analytic first-milestone fixtures respect nonnegativity", {
+test_that("all analytic fixtures respect nonnegativity", {
   ids <- c(
     "irregular_hand_oracle",
     "zero_direct_single_observation",

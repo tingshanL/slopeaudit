@@ -10,5 +10,5 @@ to the private byte-preserved adjudication directory. Historical optimizer
 diagnostic reruns also require the private v10 pilot inputs and exact irregular
 schedule.
 
-The public repository retains the protocol and frozen production rescue rule,
+The repository retains the protocol and validated production rescue rule,
 but not the restricted-derived row-level diagnostic evidence.

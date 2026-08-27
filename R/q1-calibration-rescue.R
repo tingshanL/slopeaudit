@@ -1,6 +1,6 @@
 # Deterministic optimizer rescue for the validated Question-1 bootstrap.
 #
-# This is the internal rescue hierarchy adopted by the release implementation.
+# This is the validated internal rescue hierarchy.
 # A full/null pair is always attempted with
 # the declared primary control first. Both models are refitted with the declared
 # rescue control only when that pair is not primary-usable. Optimizers are never

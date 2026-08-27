@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Fully synthetic four-regime smoke anchors. These values are not AABC2-derived and are nonreportable.",
+  "description": "Fully synthetic four-regime smoke anchors. These values are not AABC2-derived and are not suitable for scientific reporting.",
   "regimes": {
     "high_slope_information": {
       "outcome": "lateral_ventricles",

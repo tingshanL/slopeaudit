@@ -50,7 +50,8 @@ Run the validated fixed-usable parametric-bootstrap test for Question 1.
 Both already fitted models must use REML, the same retained observations,
 fixed-effect design, grouping structure, nuisance random effects, and
 effective optimizer controls.  The null must omit the target random slope.
-Supplied observed fits are never silently reconstructed or refitted.
+The supplied observed fits define the model structures used for bootstrap
+refitting.
 }
 \examples{
 if (interactive()) {

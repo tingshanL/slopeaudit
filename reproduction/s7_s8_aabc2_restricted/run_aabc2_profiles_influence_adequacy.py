@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Run targeted AABC2 profile, influence, or adequacy validation.
 
-The heavy final analyses are represented by the exact validated computational
-core and frozen aggregate outputs. This entry point reruns the scientifically
-diagnostic smoke subsets used to certify the refactor without repeating all
-historical exploratory computation.
+The validated computational core and aggregate outputs represent the completed
+analyses. This entry point reruns diagnostic smoke subsets without repeating
+the full historical computation.
 """
 from __future__ import annotations
 import argparse

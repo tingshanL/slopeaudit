@@ -1,10 +1,13 @@
 # Restricted AABC2 reproduction workflow
 
-This directory contains the reviewer-facing code and input contracts for the restricted AABC2 analyses. The participant-level AABC2 inputs are not redistributed. Qualified researchers with authorized access can supply the required files through the explicit configuration/input arguments used by these scripts.
+This directory contains code and input contracts for the restricted AABC2
+analyses. Participant-level inputs are not redistributed. Qualified researchers
+can supply authorized files through the scripts' explicit configuration and
+input arguments.
 
 ## Entry points
 
-The workflow is intentionally split by scientific purpose rather than by historical notebook order:
+The workflow is organized by scientific purpose:
 
 - `prepare_aabc2_analysis_data.py` reconstructs the six analysis cohorts in memory and emits only aggregate cohort checks.
 - `fit_aabc2_outcomes.py` reproduces the observed six-outcome model panels.
@@ -18,28 +21,21 @@ The workflow is intentionally split by scientific purpose rather than by histori
 
 Underscore-prefixed modules are implementation modules used by these entry points rather than independent workflows.
 
-## First-submission data boundary
+## Publicly available results
 
-Participant-level AABC2 inputs are not redistributed. The first-submission
-release includes only the 29 separately reviewed, ID-free aggregate and
-validation artifacts listed in
+Participant-level AABC2 inputs are not redistributed. The repository includes
+29 reviewed, identifier-free aggregate and validation artifacts listed in
 `results/frozen_summaries/aabc2/aabc2_aggregate_manifest.csv`.
 
-These files are research-result summaries rather than copies of participant-
-level AABC2 data or alternatively preprocessed participant data. The public
-candidate excludes participant identifiers, participant-linked source
-quantities, deletion refits, individual trajectories, exact participant
-schedules, and raw trajectory/QC products. The influence summary removes the
-source participant-ID and rank fields, and the quadratic-selection audit
-redacts one local source-path cell; the numerical result fields were not
-altered.
+These research-result summaries exclude participant identifiers,
+participant-linked source quantities, deletion refits, individual trajectories,
+exact participant schedules, and raw trajectory/QC products. The influence
+summary omits participant-ID and rank fields, and the quadratic-selection audit
+omits a local source-path cell; numerical result fields are unchanged.
 
-The automated source router remains deliberately conservative. Its source
-policy governs direct copying from the authorized analysis environment and
-does not itself designate an artifact as safe for public release. In manifest
-mode it copies nothing. The separately reviewed 29-file public set is governed
-by its release manifest and privacy review rather than by automatic copying
-from the source directories.
+The automated source router governs copying from an authorized analysis
+environment and copies nothing in manifest mode. Public availability is
+determined by the reviewed aggregate manifest and privacy review.
 
 This boundary reflects the current public AABC Data Use Terms, which
 distinguish research results from redistribution of the underlying Data and
@@ -49,16 +45,13 @@ without approval:
 https://www.humanconnectome.org/study/hcp-lifespan-aging/data-use-terms
 
 Researchers remain responsible for any additional requirements in their
-institution's applicable agreement. This release does not authorize
+institution's applicable agreement. This repository does not authorize
 redistribution of AABC2 participant-level data.
 
-## Independent-runnability boundary
+## Reproduction requirements
 
-The S7/S8 scientific analyses are **restricted-input workflows**, not public
-turnkey analyses. A fresh public checkout can inspect the schemas, validate the
-explicit input contract, and exercise the safe manifest-only export route, but
-it cannot reproduce the AABC2 model fits without authorized AABC2 source files.
-The top-level public smoke runner therefore does not substitute restricted-
-derived fixtures or fabricated participant data for these analyses. Exact reruns
-must use `--input-config` pointing to authorized source files satisfying
+The S7/S8 scientific analyses require restricted inputs. A public checkout can
+inspect the schemas, validate the input contract, and exercise the manifest-only
+export route, but reproducing the AABC2 model fits requires authorized source
+files. Exact reruns use `--input-config` pointing to files satisfying
 `aabc2_input_schema.csv` and the configuration contract in `aabc2_common.py`.

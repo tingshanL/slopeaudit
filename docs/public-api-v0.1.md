@@ -1,11 +1,8 @@
 # Public API contract v0.1
 
-**Status:** frozen for the pre-tag `0.1.0` release candidate\
-**Numerical authority:** Statistical Contract v1.1 and the v14-validated
-internal engines\
-**Change rule:** additions are allowed only after validation; changing a
-documented argument, default, output field, or interpretation requires an
-explicit API-version decision and regression-test update.
+**Applies to:** `slopeaudit` 0.1.0\
+**Numerical specification:** Statistical Contract v1.1 and the v14-validated
+internal engines
 
 ## Exported functions
 
@@ -34,7 +31,8 @@ slope_design_sensitivity(
 )
 ```
 
-No Python public implementation is part of v0.1.
+The supported package API is implemented in R. Python programs under
+`reproduction/` implement analysis-specific workflows.
 
 ## Required target metadata
 
@@ -49,8 +47,7 @@ User-facing decomposition requires all six non-empty fields:
 
 For `basis_type` equal to `nonlinear`, `piecewise`, `interaction`, or `other`,
 `basis_expression` is additionally required. The public API never guesses or
-silently fills these substantive fields. A two-field shortcut is not part of
-the frozen contract.
+silently fills these substantive fields. A two-field shortcut is not supported.
 
 ## Question-1 behavior
 
@@ -61,8 +58,8 @@ the frozen contract.
   optimizer controls.
 - The null must remove the target random slope and all covariance parameters
   that disappear with it.
-- The supplied observed fits are inspected but never silently reconstructed or
-  refitted.
+- The function evaluates the supplied observed fits and uses their model
+  structures during bootstrap refitting.
 - Bootstrap refits use the v12/v14 validated deterministic hierarchy: paired
   `nloptwrap`, followed when necessary by paired `bobyqa` rescue.
 - The primary denominator contains exactly `B` positive/zero LR values. An
@@ -74,9 +71,9 @@ the frozen contract.
   exceeding. `decision` is `supported`, `unsupported`,
   `numerically_ambiguous`, or `indeterminate`.
 
-The default `B = 999` is part of the public freeze. Smaller values are useful
-for tests and exploratory runs but should not replace the validated manuscript
-setting when Monte Carlo resolution matters.
+The validated default is `B = 999`. Smaller values are useful for tests and
+exploratory runs; use a larger value when Monte Carlo resolution affects
+interpretation.
 
 ## Returned classes and stable fields
 
@@ -133,20 +130,18 @@ Stable reader-facing fields:
 This function evaluates prospective information-source quantities. It does not
 claim arbitrary-design Question-1 power.
 
-## Deliberately deferred interface
+## Functions outside version 0.1
 
-`slope_stability()` is not exported in v0.1. The current package contains no
-validated public resampling contract for participant/bootstrap stability.
-Freezing a placeholder would be more damaging than adding the function later
-as a validated, additive API extension.
+`slope_stability()` is not exported in version 0.1. Participant-resampling
+stability analyses remain available in the documented reproduction workflows.
 
-## Final regression gates
+## Compatibility tests
 
-The public-interface tests freeze:
+The public-interface tests verify:
 
 - export names and formal argument order;
 - strict six-field estimand identification;
-- frozen `sleepstudy` decomposition values;
+- reference `sleepstudy` decomposition values;
 - `.80 = .20 + .60` through the public matrix route;
 - aggregate additivity;
 - affine-time invariance;

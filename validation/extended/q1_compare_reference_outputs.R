@@ -53,7 +53,7 @@ rows <- rbind(
     historical_Python_value =
       anchors$sleepstudy_primary$historical_p_plus_one,
     direct_numeric_comparison = FALSE,
-    note = "Historical and current bootstrap seed/optimizer implementations differ; contextual only until refrozen.",
+    note = "Historical and current bootstrap seed/optimizer implementations differ; the comparison is contextual.",
     stringsAsFactors = FALSE
   ),
   data.frame(
@@ -62,7 +62,7 @@ rows <- rbind(
     R_value = btheb$p_drop[[1]],
     historical_Python_value = 0.077,
     direct_numeric_comparison = FALSE,
-    note = "Historical and current bootstrap implementations differ; contextual only until refrozen.",
+    note = "Historical and current bootstrap implementations differ; the comparison is contextual.",
     stringsAsFactors = FALSE
   )
 )

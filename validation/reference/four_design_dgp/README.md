@@ -3,13 +3,12 @@
 The calibration uses the exact four true-zero cells from
 `AABC_parametric_RLRT_anchored_profile_adequacy_operating_simulation.ipynb`.
 The balanced schedule is generated directly in R. The irregular schedule must
-be frozen once from the original AABC source files because the notebook stores
+be extracted from the original AABC source files because the notebook stores
 the reconstruction code, not the 1,805 schedule rows.
 
-The v11 audit bundle includes the already-frozen deidentified schedule and its
-provenance record from the audited v10 pilot. The extraction commands below are
-for provenance-preserving regeneration, not a prerequisite when those two
-files are already present and their hashes match.
+The v11 audit bundle includes the byte-preserved deidentified schedule and its
+provenance record from the audited v10 pilot. The extraction commands below
+regenerate those files when needed.
 
 From the package root, set:
 

@@ -86,7 +86,7 @@ test_that("lmerMod adapter posterior variance matches lme4 condVar semantics", {
 })
 
 
-test_that("sleepstudy adapter agrees with frozen public reference", {
+test_that("sleepstudy adapter agrees with the public reference", {
   fit <- lme4::lmer(
     Reaction ~ Days + (1 + Days | Subject),
     data = lme4::sleepstudy,

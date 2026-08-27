@@ -4,7 +4,8 @@ The public generator and summarizer use explicit source-anchor and output
 paths. Exact manuscript reproduction uses AABC2-derived source anchors that
 remain restricted. The repository therefore includes a fully synthetic
 four-regime smoke anchor bundle under `reproduction/smoke_inputs/s5_synthetic/`.
-Those smoke values are nonreportable and test only the public code path.
+Those smoke values test only the public code path and are not suitable for
+scientific reporting.
 
 ## Public smoke run
 

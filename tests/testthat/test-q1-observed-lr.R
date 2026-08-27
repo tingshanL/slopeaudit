@@ -20,7 +20,7 @@ test_that("observed LR equals direct likelihood difference", {
 })
 
 
-test_that("LR tolerance follows the frozen likelihood-scale rule", {
+test_that("LR tolerance follows the documented likelihood-scale rule", {
   got <- slopeaudit:::.sa_q1_lr_tolerance(
     logLik_full = -100,
     logLik_null = -101

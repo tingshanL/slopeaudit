@@ -1,4 +1,4 @@
-test_that("the installed Beat the Blues fixture is frozen and coherent", {
+test_that("the installed Beat the Blues fixture is coherent", {
   path <- system.file(
     "extdata",
     "btheb_primary.csv",

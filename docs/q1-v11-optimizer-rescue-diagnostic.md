@@ -1,9 +1,7 @@
 # Q1 v11 optimizer-rescue diagnostic
 
-**Status:** completed and adjudicated. V11 did not change the package bootstrap
-engine, rerun the 120-task pilot, or refreeze either manuscript reference
-analysis. Its audited output now provides the evidence for v12's deterministic
-rescue rule.
+**Protocol role:** completed v11 optimizer diagnostic. Its audited output
+supports the v12 deterministic rescue rule later used in v14 validation.
 
 ## Final adjudication
 
@@ -14,7 +12,7 @@ and was never the only successful rescue. The resolution patterns were 634
 disagreements. In every disagreement, `bobyqa` attained an equal or higher
 full-model likelihood while null likelihoods agreed to numerical precision.
 
-V12 therefore freezes current `nloptwrap` first and paired `bobyqa` rescue only
+V12 therefore specifies current `nloptwrap` first and paired `bobyqa` rescue only
 when the initial pair is not primary-usable. Tight `nloptwrap` and
 `calc.derivs=FALSE` do not enter the production hierarchy.
 
@@ -32,7 +30,7 @@ The problems clustered strongly by outer dataset. Consequently, topping up to
 replacement of randomly missing bootstrap draws. The optimizer behavior must
 be diagnosed before the fixed-usable protocol is accepted or rerun.
 
-## Frozen input
+## Input specification
 
 V11 is bound to the already-audited v10 pilot:
 
@@ -51,9 +49,9 @@ likelihood quantity before any alternative fit is interpreted.
 
 The audited v10 reconstruction payload is restricted-derived and is not
 distributed in the public repository. Authorized historical reproduction must
-provide the private frozen directory through `SLOPEAUDIT_Q1_PILOT_INPUT` and
+provide the byte-preserved private directory through `SLOPEAUDIT_Q1_PILOT_INPUT` and
 the exact private schedule through `SLOPEAUDIT_Q1_IRREGULAR_SCHEDULE`. The
-complete pilot archive remains the authoritative provenance record.
+complete pilot archive contains the full provenance record.
 
 ## Optimizer panel
 
@@ -82,10 +80,9 @@ diagnostic tolerance. It does not automatically choose the first successful
 optimizer, take the largest likelihood across different controls, recode a
 failed fit, or adopt `calc.derivs=FALSE`.
 
-Those decisions were subsequently made: v12 froze the deterministic rescue
-rule and repeated the same 120 outer datasets, and v14 later validated the
-production nested-bootstrap decision procedure. This paragraph is retained as
-historical workflow provenance, not as pending release work.
+V12 subsequently specified the deterministic rescue rule and repeated the same
+120 outer datasets; v14 later validated the production nested-bootstrap
+decision procedure.
 
 ## Outputs
 

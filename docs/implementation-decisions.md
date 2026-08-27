@@ -1,8 +1,7 @@
 # Implementation Decisions
 
-**Status:** frozen coding-facing summary for Statistical Contract v1.1\
-**Purpose:** translate the statistical contract into concise implementation rules.\
-**Precedence:** if this file conflicts with Statistical Contract v1.1, the contract controls.
+This document summarizes implementation rules from Statistical Contract v1.1,
+which governs if the two documents conflict.
 
 ## 1. Direct-change information
 
@@ -97,7 +96,7 @@ Global singularity of the random-effects covariance matrix is a separate diagnos
 
 ## 7. Full/null model contract for Question 1
 
-The publication-quality heterogeneity-test interface requires both the full and null fitted models.
+The heterogeneity-test interface requires both the full and null fitted models.
 
 No hidden construction or hidden refitting of the null model is permitted.
 
@@ -155,13 +154,11 @@ convention and does not erase the material-negative count or failure reason.
 Ordinary refit failures and nonfinite results are excluded from all three
 conventions.
 
-The original v1.1 development engine treated `B` as attempted replicates.
-The subsequent v10--v14 validation program adopted the release implementation's
-fixed-usable execution mode: draw until the primary convention contains exactly
-`B_usable` finite nonnegative LRs, subject to a declared attempts cap. At alpha
-.05, use `B_usable` values such as 39, 99, 399, or 999 for which
-`alpha * (B_usable + 1)` is an integer, with the rejection rule frozen as
-plus-one `p <= alpha`.
+The validated fixed-usable procedure draws until the primary convention
+contains exactly `B_usable` finite nonnegative LRs, subject to a declared
+attempts cap. At alpha .05, use values such as 39, 99, 399, or 999 for which
+`alpha * (B_usable + 1)` is an integer, with the inclusive plus-one rule
+`p <= alpha`.
 
 The fixed-usable rule restores the intended Monte Carlo rank grid conditional
 on the retained bootstrap distribution. It cannot prove that optimizer failure
@@ -175,26 +172,15 @@ Monte Carlo p-value `(k + 1)/(n + 1)`. The v1.1 `mc_interval_*` names remain as
 backward-compatible aliases, but new output uses
 `exceedance_probability_interval_*`.
 
-The historical v10 calibration candidate froze one explicit R control:
-`nloptwrap`, `restart_edge = TRUE`, `boundary.tol = 1e-5`,
-`calc.derivs = TRUE`, `maxeval = 200000`, and singular fits reported as
-messages. There is no claim that this reproduces the old statsmodels/Powell
-control. The later v11--v14 work adjudicated the rescue hierarchy and validated
-the fixed-usable release implementation; final manuscript reference outputs
-are handled separately by release verification.
-
-The v10 pilot did not pass because initial optimizer problems clustered and
-five outer tasks exhausted their attempt caps. The completed v11 diagnostic
-therefore freezes a v12 calibration-only rescue hierarchy. Every observed and
-bootstrap full/null pair first uses the v10 `nloptwrap` control. If that pair is
-not primary-usable—including either finite-negative LR class—both models are
-refitted with `bobyqa`, `calc.derivs = TRUE`, `maxfun = 1000000`, and
-`rhoend = 1e-9`. A primary-usable `bobyqa` pair replaces the failed initial
-pair; otherwise the replicate is unresolved and triggers top-up. No pair mixes
-optimizers, tight `nloptwrap` is not a production fallback, and
-`calc.derivs = FALSE` remains diagnostic-only. This v12 hierarchy was
-subsequently carried into the v14 nested-bootstrap validation and the release
-implementation.
+Each observed and bootstrap full/null pair first uses `nloptwrap` with
+`restart_edge = TRUE`, `boundary.tol = 1e-5`, `calc.derivs = TRUE`, and
+`maxeval = 200000`. If the pair is not primary-usable, both models are refitted
+with `bobyqa`, `calc.derivs = TRUE`, `maxfun = 1000000`, and `rhoend = 1e-9`.
+A primary-usable `bobyqa` pair replaces the initial pair; otherwise the attempt
+is unresolved and triggers top-up. A pair never mixes optimizers,
+`calc.derivs = FALSE` is diagnostic only, and no additional optimizer is used
+for production inference. The v11--v14 protocols document the diagnostic and
+validation history behind this hierarchy.
 
 The v13.3.1 focused power diagnostic applies this same deterministic optimizer
 hierarchy to both an unstructured full model and a covariance-constrained
@@ -232,15 +218,15 @@ free default merely because the covariance is not the investigator's target.
 It may be considered only when the restriction is prespecified and defensible
 at the chosen time origin.
 
-The v14 nested-bootstrap validation experiment returns to the production unstructured model pair
-and validates nested-bootstrap decisions. It uses the audited v13.3.1
+The v14 nested-bootstrap validation evaluates the production unstructured
+model pair and its bootstrap decisions. It uses the audited v13.3.1
 unstructured powers `.055`, `.074`, `.169`, and `.425` as uncertain
 statistic-level references, with interval-overlap rather than exact point
 equality as the compatibility criterion. The rho=.5 cells are paired to rho=0
 by holding slope effects, residual draws, design seeds, and bootstrap seeds
 fixed. The constrained comparator is excluded from nested-bootstrap validation.
 
-nested-bootstrap validation retains fixed usable inner B. An unresolved inner rescue is documented
+The validation retains fixed usable inner B. An unresolved inner rescue is documented
 and deterministically topped up; its mere existence is not a gate failure.
 Every completed outer run also reports worst-case p-value bounds obtained by
 treating excluded attempts as all nonexceeding or all exceeding. Unresolved
@@ -286,14 +272,12 @@ The initial implementation should define named internal constants for equality c
 
 Do not define a universal absolute threshold below which the target slope variance is automatically set to zero.
 
-## 13. Authority when implementations disagree
+## 13. Resolving implementation discrepancies
 
-The R matrix backend is intended to become the authoritative package implementation, but it does not win disagreements by declaration.
-
-Discrepancies are adjudicated in this order:
+Discrepancies involving the R matrix backend are adjudicated in this order:
 
 1. **analytic ground truth** where available, especially balanced designs with independent residuals and the known `.80 = .20 + .60` fixture;
-2. direct inspection of the frozen statistical contract and matrix algebra;
+2. direct inspection of the statistical contract and matrix algebra;
 3. comparison with the independent Python implementation;
 4. additional hand-constructed or high-precision numerical cases where necessary.
 
@@ -301,29 +285,10 @@ For irregular designs without a simple analytic closed form, agreement between i
 
 No published manuscript number is treated as ground truth merely because it was previously reported.
 
-## 14. First implementation milestone
+## 14. Version 0.1 API
 
-Before higher-level package work, the backend must pass at least:
-
-- known `.80 = .20 + .60` fixture;
-- analytic balanced-design direct-reliability check;
-- additivity;
-- nonnegativity;
-- affine shift/rescaling invariance for the same physical slope;
-- one-observation participant;
-- no-within-person-time-variation participant;
-- irregular-schedule fixture;
-- near-singular covariance fixture;
-- frozen `sleepstudy` reference comparison;
-- frozen Beat the Blues irregular-schedule reference comparison.
-
-Only after this milestone should the project proceed to the full Question-1 bootstrap interface, `slope_audit()`, participant stability, planning utilities, and manuscript-facing R workflows.
-
-## 15. First public API freeze
-
-The v14 nested-bootstrap validation experiment completed all declared operational and scientific
-gates. Version 0.1 therefore adds a thin public interface without changing the
-validated numerical or optimizer internals. The exported functions are
+The v14 nested-bootstrap validation met its declared operational and scientific
+criteria. The exported functions are
 `slope_audit()`, `test_slope_heterogeneity()`, `slope_decomposition()`, and
 `slope_design_sensitivity()`.
 
@@ -337,7 +302,5 @@ The public matrix planning route reports prospective information-source
 quantities only. It does not generalize the two nested-bootstrap validation planning-power cells to
 arbitrary schedules or residual covariance structures.
 
-`slope_stability()` remains deferred because a public participant/bootstrap
-resampling contract has not yet completed validation. It is not exported as a
-placeholder. See `docs/public-api-v0.1.md` for frozen signatures and output
-fields.
+`slope_stability()` is not included in version 0.1. See
+`docs/public-api-v0.1.md` for the supported signatures and output fields.

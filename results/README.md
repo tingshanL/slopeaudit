@@ -1,3 +1,7 @@
-# First-submission code/results materials
+# Results and data availability
 
-Small frozen summaries, figures, public audit outputs, validation gates, and ID-free AABC2 aggregate results are stored here. Large completed S4, S5, and Question 1 outputs are listed in external_archive_manifest.csv and are prepared for one Zenodo record. Restricted participant-level AABC2 inputs and outputs are not included. No scientific rerun is needed.
+This directory contains compact reference summaries, figures, public audit
+outputs, validation gates, and identifier-free AABC2 aggregate results. Large
+completed S4, S5, and Question 1 outputs are listed in
+`external_archive_manifest.csv` for external archiving. Restricted
+participant-level AABC2 inputs and outputs are not included.

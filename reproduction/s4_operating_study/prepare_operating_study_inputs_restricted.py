@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Prepare the exact AABC-derived schedules used by the S4 operating study.
 
-RESTRICTED-DATA ENTRY POINT.
+This workflow requires authorized AABC inputs.
 
 This script contains no AABC participant rows or identifiers. It reconstructs
-the frozen analysis cohorts from explicitly supplied authorized AABC inputs
+the analysis cohorts from explicitly supplied authorized AABC inputs
 and writes the empirical visit schedules required by the operating-study
 generator.
 
-The resulting schedule JSON is itself AABC-derived and must remain in
-restricted/private storage unless written permission authorizes release.
+The resulting schedule JSON is AABC-derived and remains in restricted storage.
 """
 
 from __future__ import annotations
@@ -129,7 +128,7 @@ def prepare_restricted_schedules(args):
 
         return read_zip_csv(STRUCT_ZIP, filename, **kwargs)
 
-    # Notebook display calls are intentionally suppressed here.
+    # Replace notebook display calls with a no-op in this script.
     def display(*_args, **_kwargs):
         return None
     struct_roster = pd.read_csv(STRUCT_ROSTER, low_memory=False)
@@ -340,7 +339,7 @@ def prepare_restricted_schedules(args):
     #       -> groupby("pid", sort=False)
     #       -> each participant's t5_mid vector
     #
-    # Participant IDs themselves are deliberately not exported.
+    # Export schedules without participant identifiers.
     schedules = {}
 
     for outcome, data in ANALYSIS_DATA.items():
@@ -358,7 +357,7 @@ def prepare_restricted_schedules(args):
     payload = {
         "schema_version": 1,
         "data_class": "restricted-derived schedule",
-        "release_status": "hold pending written AABC permission",
+        "release_status": "restricted_input_not_distributed",
         "time_variable": "t5_mid",
         "time_unit_years": 5.0,
         "time_definition": "t5_mid = t5 - 0.5",

@@ -25,8 +25,8 @@ A fitted random slope can look precise for two different reasons:
 - **Question 2:** Under the fitted model, how much slope determinacy is direct
   and how much is model-assisted?
 
-An unsupported Question 1 means **STOP—INDIVIDUAL-SLOPE CLAIM**. It does not
-mean that heterogeneity has been proved absent.
+An unsupported result does not establish that heterogeneity is absent, but it
+does not support person-level slope interpretation.
 
 ## Declare the change target
 
@@ -86,7 +86,7 @@ sources <- slope_decomposition(
 sources
 ```
 
-The frozen equal-participant means are approximately:
+The reference equal-participant means are approximately:
 
 | Quantity | Mean | Interpretation |
 |---|---:|---|
@@ -118,7 +118,7 @@ audit
 summary(audit)
 ```
 
-For the frozen `sleepstudy` reference, the observed REML likelihood-ratio
+For the `sleepstudy` reference, the observed REML likelihood-ratio
 statistic is about 42.837 and Question 1 is supported. With no exceedance at
 `B = 999`, the plus-one p-value is `.001`. A floor-limited manuscript result
 can be explicitly rerun at `B = 4999`; the package never changes `B` silently.
@@ -143,7 +143,7 @@ equal-participant source summaries.
 
 ## Frequent input errors
 
-- A model fitted with `REML = FALSE` is outside the first public Question-1
+- A model fitted with `REML = FALSE` is outside the version 0.1 Question-1
   contract.
 - A null model with a different fixed-effect design is not comparable here.
 - A missing metadata field stops before bootstrap work begins.

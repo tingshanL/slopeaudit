@@ -51,7 +51,7 @@ An object of class \code{slopeaudit}.
 }
 \description{
 Run the validated Question-1 heterogeneity test and the fitted-model source
-decomposition through one reader-facing interface.
+decomposition through a single interface.
 }
 \examples{
 if (interactive()) {

@@ -1,8 +1,9 @@
-# Q1 v14 nested-bootstrap validation nested-bootstrap protocol
+# Q1 v14 nested-bootstrap validation protocol
 
 ## Purpose
 
-nested-bootstrap validation validates the decision procedure that will be reported for Question 1.
+This study evaluates the production Question 1 decision procedure using a
+nested parametric-bootstrap design.
 Unlike the v13.3.1 diagnostic, each outer dataset is analyzed with a plug-in
 parametric bootstrap under the fitted homogeneous-slope null. The production
 unstructured model pair is used throughout:
@@ -10,20 +11,20 @@ unstructured model pair is used throughout:
 - full: `y ~ time + (1 + time | id)`;
 - null: `y ~ time + (1 | id)`;
 - REML in both models;
-- initial `nloptwrap`, followed by the frozen paired `bobyqa` rescue when the
+- initial `nloptwrap`, followed by the specified paired `bobyqa` rescue when the
   initial full/null pair is not positive/zero usable.
 
-The covariance-constrained comparator is not part of nested-bootstrap validation. It remains a
+The covariance-constrained comparator is not part of this study. It remains a
 mechanism diagnostic in the v13.3.1 supplement.
 
 ## Eight outer cells
 
-nested-bootstrap validation retains the four historical null-size cells:
+The study retains the four historical null-size cells:
 
 1. balanced three-wave schedule, random-intercept variance 0.5;
 2. balanced three-wave schedule, random-intercept variance 4;
-3. frozen irregular cognition schedule, random-intercept variance 0.5;
-4. frozen irregular cognition schedule, random-intercept variance 4.
+3. prespecified irregular cognition schedule, random-intercept variance 0.5;
+4. prespecified irregular cognition schedule, random-intercept variance 4.
 
 It evaluates four planning-power cells:
 
@@ -37,7 +38,7 @@ residual draws, and inner-bootstrap master seed are identical. Only the random
 intercept construction changes. The known-error direct statistic is saved for
 every planning dataset and must agree within `1e-10` in every pair.
 
-The frozen statistic-level unstructured-Q1 references are `.055`, `.074`,
+The prespecified statistic-level unstructured-Q1 references are `.055`, `.074`,
 `.169`, and `.425`, with their independently estimated v13.3.1 binomial
 intervals. They are comparison references, not assumed nested-bootstrap truth.
 The primary compatibility gate tests interval overlap; it does not pretend the
@@ -54,7 +55,7 @@ For full mode, `B = 999` and the default attempt cap is 1,249. The plus-one
 decision is `p <= .05`, for an exact alpha rank grid.
 
 The existence of an excluded inner attempt is not itself a failed gate. For
-each completed outer run, nested-bootstrap validation additionally reports two worst-case
+each completed outer run, the study additionally reports two worst-case
 sensitivities that treat every excluded attempt as either nonexceeding or
 exceeding the observed LR. If those cases straddle alpha, the outer decision is
 marked ambiguous in the decision bounds. Cell-level support bounds include
@@ -86,7 +87,7 @@ failure because the declared inner experiment did not complete.
 - verifies that all imported scientific fields remain byte-for-value
   identical to the audited v12 rows.
 
-The old v12 analytic-power target gate is intentionally not inherited. Its
+The v12 analytic-power target gate is not inherited. Its
 failure was scientific evidence that the direct-channel analytic power was not
 the production unstructured-Q1 target. V14 replaces that check with the
 independently estimated v13.3.1 unstructured-Q1 reference intervals while
@@ -97,7 +98,7 @@ retaining every v12 operational gate.
 - 999 outer datasets per cell;
 - fixed usable `B = 999`;
 - 7,992 outer tasks and approximately 7.98 million usable inner replicates;
-- no smoke or pilot result is silently promoted into the full run.
+- smoke and pilot results are not included in the full run.
 
 Every mode checkpoints after the declared batch. Resume only with the
 identical mode, output directory, worker count, seed, B, and attempt cap.
@@ -117,8 +118,8 @@ Operational PASS requires:
 - all cell-level operational checks;
 - pooled null decision bounds compatible with alpha.
 
-Pilot and full additionally require every cell's nested-bootstrap validation decision-bound
-interval to be compatible with its frozen reference point or reference
+Pilot and full additionally require every cell's decision-bound interval to be
+compatible with its prespecified reference point or reference
 interval. A scientific reference mismatch produces `DIAGNOSE`; it is not
 relabelled an optimizer failure.
 
@@ -140,7 +141,8 @@ relabelled an optimizer failure.
 ## Run order
 
 Run and audit `smoke`, then run and audit `pilot`, and only then run `full`.
-Do not freeze Table 1 or manuscript claims from smoke or pilot estimates.
+Table 1 and manuscript claims use the full-run estimates, not smoke or pilot
+estimates.
 
 ## Private historical provenance inputs
 
@@ -153,5 +155,5 @@ through:
 - `SLOPEAUDIT_Q1_V11_EVIDENCE_DIR`;
 - `SLOPEAUDIT_Q1_NESTED_BOOTSTRAP_V12_PILOT_INPUT` for `pilot` mode.
 
-These paths change only provenance/input location; the frozen seeds, model
+These paths change only provenance/input location; the specified seeds, model
 pair, rescue hierarchy, and decision rules are unchanged.

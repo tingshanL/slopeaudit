@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fit the six restricted-data AABC2 outcome models.
 
-This public entry point reconstructs the frozen AABC2 analysis cohorts,
+This restricted-data workflow reconstructs the AABC2 analysis cohorts,
 checks the fixed-effect design matrices, fits the prespecified mixed-model
 optimizer panels and participant-clustered GEE comparators, and writes
 aggregate model-fit and population-estimand tables.

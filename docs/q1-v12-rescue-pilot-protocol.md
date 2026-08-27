@@ -1,12 +1,10 @@
 # Q1 v12 deterministic rescue and repeated-pilot protocol
 
-**Historical status:** completed repeated-pilot protocol. V12 repeated the
-failed 120-task v10 pilot under the optimizer rule adjudicated from v11 and
-supplied the deterministic rescue hierarchy later carried into v14 validation
-and the release implementation. It did not itself refreeze the sleepstudy and
-Beat-the-Blues manuscript reference analyses.
+**Protocol role:** completed v12 repeated-pilot protocol. It applied the v11
+optimizer rule to the 120-task v10 pilot and supplied the deterministic rescue
+hierarchy later used in v14 validation.
 
-## Frozen rescue hierarchy
+## Rescue hierarchy
 
 For every observed or bootstrap full/null pair:
 
@@ -19,7 +17,7 @@ For every observed or bootstrap full/null pair:
    enabled, `maxfun=1000000`, and `rhoend=1e-9`.
 4. Retain the `bobyqa` pair only if it is primary-usable.
 5. If `bobyqa` also fails, classify the pair as unresolved and top up the inner
-   bootstrap, subject to the frozen attempts cap.
+   bootstrap, subject to the specified attempts cap.
 
 The full and null models always use the same optimizer within an attempt. V12
 does not mix objectives across controls, select the largest likelihood after
@@ -35,7 +33,7 @@ while null likelihoods agreed within numerical precision. The 188 singular
 `bobyqa` full fits remain eligible because singularity at the null boundary is
 not itself a convergence failure.
 
-V12 programmatically checks the minimal frozen v11 summaries supporting
+V12 programmatically checks the compact v11 summaries supporting
 these anchors, but those restricted-derived summaries are not distributed in
 the public repository. Authorized historical reproduction supplies them through
 `SLOPEAUDIT_Q1_V11_EVIDENCE_DIR`. The original v11 output archive remains the
@@ -83,10 +81,9 @@ V12 reports cell-specific and pooled-null results. A global pass requires:
   cells; the analytic planning value for power cells);
 - the pooled-null exact interval contains .05.
 
-These were diagnostic gates for the repeated pilot, not proof of calibrated
-size or power from only 20 outer datasets per cell. Their role was to authorize
-the next adjudication step; the subsequent v14 validation, not this pilot alone,
-provides the release-level nested-bootstrap validation evidence.
+These were diagnostic gates for the repeated pilot, not evidence of calibrated
+size or power from only 20 outer datasets per cell. The subsequent v14 study
+provides the nested-bootstrap validation evidence.
 
 ## Outputs
 

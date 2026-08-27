@@ -1,8 +1,7 @@
-# Public API for the first validated slopeaudit interface.
+# Public API wrappers for validated slopeaudit numerical engines.
 #
-# The functions in this file are intentionally thin.  They validate and
-# organize the public contract while delegating every numerical calculation to
-# the v14-validated internal engines.
+# These functions validate inputs, organize output objects, and delegate
+# numerical calculations to the internal engines.
 
 .sa_public_decomposition_summary <- function(x) {
   s <- x$summary
@@ -164,7 +163,8 @@
 #' Both already fitted models must use REML, the same retained observations,
 #' fixed-effect design, grouping structure, nuisance random effects, and
 #' effective optimizer controls.  The null must omit the target random slope.
-#' Supplied observed fits are never silently reconstructed or refitted.
+#' The supplied observed fits define the model structures used for bootstrap
+#' refitting.
 #'
 #' @param full A supported Gaussian `lme4::lmer()` full model.
 #' @param null A supported Gaussian `lme4::lmer()` null model.
@@ -233,7 +233,7 @@ test_slope_heterogeneity <- function(
   if (!isTRUE(lme4::isREML(full)) || !isTRUE(lme4::isREML(null))) {
     stop(
       paste0(
-        "The first validated public Question-1 interface requires REML ",
+        "The version 0.1 Question-1 interface requires REML ",
         "full/null fits with identical fixed-effect designs."
       ),
       call. = FALSE
@@ -416,7 +416,7 @@ slope_decomposition <- function(full, target, target_metadata) {
 
 #' Evaluate prospective random-slope information for supplied designs
 #'
-#' Apply the authoritative matrix backend to one or more prospective
+#' Apply the matrix backend to one or more prospective
 #' participant schedules.  This function evaluates information-source
 #' quantities; it does not claim to provide Question-1 power for arbitrary
 #' designs or residual covariance models.
@@ -512,7 +512,7 @@ slope_design_sensitivity <- function(
 #' Audit a target random slope
 #'
 #' Run the validated Question-1 heterogeneity test and the fitted-model source
-#' decomposition through one reader-facing interface.
+#' decomposition through a single interface.
 #'
 #' @inheritParams test_slope_heterogeneity
 #' @param target_metadata The strict target-estimand metadata described in
@@ -555,8 +555,8 @@ slope_audit <- function(
     retain_replicates = FALSE,
     progress = interactive() && B >= 50L) {
 
-  # Fail before any bootstrap work if the reader-facing estimand is not fully
-  # identified.  The decomposition validates it again at its own boundary.
+  # Validate the estimand before starting bootstrap work. The decomposition
+  # validates it again at its own boundary.
   normalized_estimand <- .sa_validate_target_metadata(
     target = target,
     target_metadata = target_metadata,

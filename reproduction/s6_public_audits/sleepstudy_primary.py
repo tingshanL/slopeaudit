@@ -56,8 +56,8 @@ def parse_args():
         "--smoke-test",
         action="store_true",
         help=(
-            "Run a reduced nonreportable code-path QA check instead of "
-            "the full analysis."
+            "Run a reduced software check instead of the full analysis; "
+            "outputs are not suitable for scientific reporting."
         ),
     )
     return parser.parse_args()
@@ -91,14 +91,13 @@ RUN_BOUNDARY_BOOTSTRAP = True
 RUN_PARTICIPANT_BOOTSTRAP = True
 RUN_LEAVE_ONE_OUT = True
 
-# Use --smoke-test only for a quick code-path check.
-# Smoke-test outputs are intentionally nonreportable.
+# Smoke mode checks software execution, not scientific results.
 SMOKE_TEST = ARGS.smoke_test
 if SMOKE_TEST:
     PROVISIONAL_NULL_B = 7
     FINAL_NULL_B = 11
     PARTICIPANT_BOOT_B = 7
-    print("SMOKE_TEST=True: inferential outputs are nonreportable code-path checks.")
+    print("SMOKE_TEST=True: outputs test software execution only.")
 
 FROZEN_CONFIG = {
     name: globals()[name] for name in [

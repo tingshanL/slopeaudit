@@ -1,4 +1,4 @@
-# Authoritative participant-level and sample-level matrix backend.
+# Participant-level and sample-level matrix backend.
 
 .sa_participant_source_decomposition <- function(
     Z,

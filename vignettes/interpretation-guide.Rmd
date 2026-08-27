@@ -24,12 +24,12 @@ Use the audit in this order:
 | Question-1 result | What may be said | What must not be said |
 |---|---|---|
 | `supported` | “The data support population heterogeneity in the declared slope under this model and bootstrap procedure.” | “Every fitted participant slope is a directly observed change rate.” |
-| `unsupported` | “Slope heterogeneity was unsupported by these data.” The decomposition, if returned, is conditional on the fitted positive-variance model. | “There is no heterogeneity.” Do not make individual-slope claims. |
+| `unsupported` | “Slope heterogeneity was unsupported by these data.” The decomposition, if returned, is conditional on the fitted positive-variance model. | “There is no heterogeneity,” or a person-level slope claim. |
 | `numerically_ambiguous` | “The decision is sensitive to unresolved numerical exclusions.” | Any definitive supported/unsupported claim. |
 | `indeterminate` | Diagnose the model pair or attempt cap before interpreting. | Treating a failed computation as a scientific result. |
 
-The operational label for every non-supported branch is
-**STOP—INDIVIDUAL-SLOPE CLAIM**.
+Unsupported, numerically ambiguous, and indeterminate results do not support
+person-level slope claims.
 
 ## The three source quantities
 
@@ -85,8 +85,8 @@ Report:
 
 ## Scope limits
 
-Version 0.1 is a plug-in diagnostic for scalar Gaussian random slopes in the
-analysis sample. Parameter-estimation uncertainty is not propagated through
-the source decomposition. The package does not yet validate generalized
-outcomes, nonlinear change, multivariate targets, external prediction, or a
-public participant/bootstrap stability contract.
+Version 0.1 provides plug-in diagnostics for scalar Gaussian random slopes in
+an analysis sample. The source decomposition conditions on fitted parameters.
+The supported scope covers Gaussian outcomes, one declared slope target, and
+in-sample information; participant-resampling stability analyses are available
+in the documented reproduction workflows.

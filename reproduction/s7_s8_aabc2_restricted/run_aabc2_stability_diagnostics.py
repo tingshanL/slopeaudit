@@ -10,7 +10,7 @@ workflows in dependency order:
 
 Participant-linked outputs remain under each component's ``restricted/``
 subdirectory. Checkpoints remain under each component's ``checkpoints/``
-subdirectory and are not release artifacts.
+subdirectory and are not distributed.
 """
 
 from __future__ import annotations

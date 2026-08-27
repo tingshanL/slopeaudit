@@ -77,7 +77,7 @@ comparisons with the mixed-model statistics.
 ### Null top-up
 
 Repair mode preserves the original 1,000 null datasets per design. Extend mode
-adds 9,000 frozen new null datasets per design, for 10,000 per design, while
+adds 9,000 prespecified new null datasets per design, for 10,000 per design, while
 retaining the original 2,000 null datasets unchanged. New seeds come from a
 separate master seed and are checked not to overlap the v13.2 seeds.
 
@@ -96,7 +96,7 @@ The constrained model remains a mechanism diagnostic. Fixing the covariance to
 zero is a substantive assumption and is not advertised as a generally superior
 test.
 
-## Modes and frozen work
+## Modes
 
 ### `smoke`
 
@@ -105,7 +105,7 @@ No checkpoint import is accepted. Results are operational checks only.
 
 ### `repair`
 
-Requires the v13.2 full checkpoint. It verifies all 5,000 frozen task IDs,
+Requires the v13.2 full checkpoint. It verifies all 5,000 recorded task IDs,
 scenarios, replicates, and seeds; retains the 4,996 usable rows; and reruns only
 the four audited constrained optimizer-code boundary tasks. It then regenerates
 all method-specific summaries and gates.
@@ -154,5 +154,4 @@ variance and covariance. Therefore, Q1 power is reported at `rho = 0` and at
 alone.
 
 The repaired and extended runs both passed independent audit before their
-statistic-level targets were frozen for v14 nested-bootstrap validation. This is
-a historical sequencing rule, not pending release work.
+statistic-level targets were specified for v14 nested-bootstrap validation.

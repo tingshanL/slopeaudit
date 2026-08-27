@@ -1,7 +1,7 @@
 # Reader-facing output and terminology guide
 
-This file freezes the language used by the README, vignettes, examples, and
-manuscript-facing output for the v0.1 public interface.
+This guide defines terminology for the README, vignettes, examples, and
+manuscript-facing output for the version 0.1 API.
 
 ## Required terms
 
@@ -11,7 +11,7 @@ manuscript-facing output for the v0.1 public interface.
 | `D_slope2` | fitted random-slope determinacy | direct reliability |
 | `Delta_fit` | additional model-assisted information | extra observed change information |
 | `unsupported` | unsupported by these data | no heterogeneity |
-| non-supported Q1 branch | **STOP—INDIVIDUAL-SLOPE CLAIM** | bare “STOP” without the claim being stopped |
+| non-supported Q1 branch | insufficient evidence for an individual-slope claim | proof that heterogeneity is absent |
 
 ## Required target declaration
 
@@ -46,7 +46,6 @@ For `nonlinear`, `piecewise`, `interaction`, or `other`, also supply
 
 ## Escalation language
 
-The package does not silently alter the bootstrap size. The manuscript
-workflow may explicitly rerun at `B = 4999` when a `B = 999` result is
-floor-limited or its Monte Carlo interval crosses the reporting alpha. Record
-both runs and the reason for escalation.
+The validated default is `B = 999`. If that run is floor-limited or its Monte
+Carlo interval crosses the reporting alpha, rerun explicitly with a larger
+value such as `B = 4999` and report both runs and the reason for escalation.

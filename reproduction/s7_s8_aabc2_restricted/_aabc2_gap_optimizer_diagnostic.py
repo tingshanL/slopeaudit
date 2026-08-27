@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Restricted-data reproduction of the thickness/cognition gap diagnostic.
 
-This refactors the frozen
+This refactors the completed
 AABC_thickness_cognition_gap_regime_optimizer_diagnostic.ipynb
-workflow into an explicit, non-notebook release entry point.
+workflow into a non-notebook script with explicit inputs.
 
 The upstream reliability-gap bootstrap table must be supplied explicitly.
 No filesystem discovery or "newest matching file" logic is used.
@@ -43,7 +43,7 @@ import aabc2_common as common
 
 
 # ---------------------------------------------------------------------------
-# Frozen numerical/scientific controls
+# Prespecified numerical and scientific controls
 # ---------------------------------------------------------------------------
 
 SEED = 20260718
@@ -68,7 +68,7 @@ LLF_REL_TOL = 1e-5
 FIXED_AGREEMENT_SE_TOL = 0.25
 PSD_REL_TOL = 1e-8
 
-# Diagnostic conventions—not new reliability licensing gates.
+# Diagnostic conventions for this analysis.
 NEAR_ABS_RHO = 0.95
 SMALL_INNOVATION_FRACTION = 0.10
 HIGH_FULL_PREDICTABILITY = 0.40
@@ -386,7 +386,7 @@ gap_source_audit = (
     .reset_index()
 )
 
-# Deliberate release change: portable provenance rather than an absolute path.
+# Record portable provenance rather than an absolute path.
 gap_source_audit[
     "source_file"
 ] = BOOTSTRAP_METRICS_PATH.name
@@ -871,7 +871,7 @@ if CHECKPOINT_FILE.exists():
     if checkpoint.get("selection_signature") != selection_signature:
         raise RuntimeError(
             "The existing checkpoint belongs to a different selection manifest. "
-            "Move or delete the checkpoint before intentionally starting the new manifest."
+            "Move or delete the checkpoint before starting the new manifest."
         )
     optimizer_fit_audit = checkpoint.get("optimizer_fit_audit", pd.DataFrame())
     selected_participant_reliability = checkpoint.get("selected_participant_reliability", pd.DataFrame())

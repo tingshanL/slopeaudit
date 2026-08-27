@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Restricted-data reference-time and covariance-geometry diagnostics.
 
-Refactors the frozen AABC_section10_1_items2to4.ipynb workflow.
+Refactors the completed AABC_section10_1_items2to4.ipynb workflow.
 
-All upstream inputs are explicit. No recursive discovery, newest-file
-selection or absolute-path audit is part of the release workflow.
+All upstream inputs are explicit. The workflow performs no recursive discovery
+or newest-file selection, and provenance records omit absolute paths.
 
 The full 499 × two-outcome bootstrap geometry enrichment is resumable.
 Participant-level reference-time results and the bootstrap checkpoint
@@ -1079,7 +1079,7 @@ if CHECKPOINT_FILE.exists():
     checkpoint = pd.read_pickle(CHECKPOINT_FILE)
     if checkpoint.get("signature") != checkpoint_signature:
         raise RuntimeError(
-            "Existing checkpoint has a different frozen configuration. Move it aside before intentionally restarting."
+            "Existing checkpoint has a different recorded configuration. Move it aside before restarting."
         )
     bootstrap_geometry = checkpoint.get("bootstrap_geometry", pd.DataFrame())
 else:
@@ -1239,7 +1239,7 @@ display(bootstrap_reference_change_summary.round(6))
 
 
 
-# ===== Frozen cell 19: empirical threshold sweep =====
+# ===== Source notebook cell 19: empirical threshold sweep =====
 # 13 — Full-499 empirical bootstrap threshold sweep
 EMPIRICAL_METRICS = {
     "1-rho^2": "one_minus_rho_squared",
@@ -1552,7 +1552,7 @@ reporting_notes = pd.DataFrame([
     },
     {
         "topic": "selected-60 sweep",
-        "required wording": "The low/central/high panel was deliberately selected and is a numerical diagnostic, not a random sample or prevalence estimate.",
+        "required wording": "The low/central/high panel is a numerical diagnostic selected to span the observed range, not a random sample or prevalence estimate.",
     },
     {
         "topic": "schedule table",
@@ -1560,7 +1560,7 @@ reporting_notes = pd.DataFrame([
     },
     {
         "topic": "geometry reference",
-        "required wording": "Empirical rho and eigenvalue-fraction thresholds are evaluated at the frozen 2.5-year model origin; these geometry diagnostics are not invariant to a time-origin shift.",
+        "required wording": "Empirical rho and eigenvalue-fraction thresholds are evaluated at the 2.5-year model origin used in the analysis; these geometry diagnostics are not invariant to a time-origin shift.",
     },
 ])
 
@@ -1584,7 +1584,7 @@ completion = pd.DataFrame([
         "complete": full_bootstrap_geometry.groupby("outcome").replicate.nunique().eq(EXPECTED_BOOTSTRAP_REPS).all(),
     },
     {
-        "requirement": "both geometry metrics swept at exactly four frozen thresholds",
+        "requirement": "both geometry metrics swept at the four specified thresholds",
         "complete": set(empirical_singularity_sweep.geometry_metric) == set(EMPIRICAL_METRICS)
         and set(empirical_singularity_sweep.threshold) == set(SINGULARITY_THRESHOLDS),
     },
@@ -1667,7 +1667,7 @@ for _filename, _frame in (
 
 
 # Participant IDs occur in this table;
-# it is intentionally restricted.
+# it remains restricted.
 observed_reference_participant.to_csv(
     RESTRICTED_DIR
     / "01_observed_reference_time_participant.csv",

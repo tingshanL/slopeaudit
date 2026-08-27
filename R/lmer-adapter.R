@@ -1,5 +1,5 @@
-# Narrow adapter from a supported Gaussian lme4::lmer fit to the
-# authoritative slopeaudit matrix backend.
+# Adapter from a supported Gaussian lme4::lmer fit to the slopeaudit matrix
+# backend.
 
 .sa_validate_lmer_fit <- function(fit) {
   if (!inherits(fit, "lmerMod")) {

@@ -1,4 +1,4 @@
-test_that("the v0.1 public surface and formal arguments are frozen", {
+test_that("the v0.1 public surface has the documented formal arguments", {
   expect_setequal(
     getNamespaceExports("slopeaudit"),
     c(
@@ -59,7 +59,7 @@ test_that("the public decomposition enforces all six estimand fields", {
 })
 
 
-test_that("public sleepstudy decomposition reproduces frozen values", {
+test_that("public sleepstudy decomposition reproduces reference values", {
   fit <- lme4::lmer(
     Reaction ~ Days + (1 + Days | Subject),
     data = lme4::sleepstudy,

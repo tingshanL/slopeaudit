@@ -29,7 +29,7 @@ test_that("public Question 1 reaches a fixed usable denominator", {
 })
 
 
-test_that("slope_audit returns the frozen combined object", {
+test_that("slope_audit returns the documented combined object", {
   pair <- q1_sleepstudy_pair(REML = TRUE)
 
   out <- slope_audit(

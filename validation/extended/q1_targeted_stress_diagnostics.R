@@ -2,7 +2,7 @@
 
 # Focused follow-up for q1_targeted_stress.R.
 #
-# The ordinary stress output deliberately remains compact. This script reads
+# The ordinary stress output is compact. This script reads
 # that outer-run table, selects runs with a material negative LR, at least one
 # small negative LR, or a large inner-failure cluster, and deterministically
 # reruns only those cases while retaining every inner-bootstrap row.

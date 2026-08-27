@@ -31,7 +31,7 @@ make_rescue_assessment <- function(
 }
 
 
-test_that("v12 freezes the adjudicated optimizer controls", {
+test_that("v12 uses the adjudicated optimizer controls", {
   controls <- slopeaudit:::.sa_q1_calibration_rescue_controls()
 
   expect_identical(as.character(controls$initial$optimizer), "nloptwrap")

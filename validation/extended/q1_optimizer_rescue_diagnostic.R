@@ -159,7 +159,7 @@ if (!all(required_problem_columns %in% names(problems))) {
   stop("The v10 inner-problem file is missing required columns.")
 }
 
-# This diagnostic is intentionally bound to the already-audited v10 pilot.
+# This diagnostic is bound to the audited v10 pilot.
 if (!identical(pilot_configuration$version,
                "q1_four_design_calibration_v10_candidate") ||
     !identical(pilot_configuration$mode, "pilot") ||
@@ -1000,7 +1000,7 @@ print(method_summary[method_summary$original_diagnostic_class == "ALL", ])
 print(table(task_summary$resolution_pattern))
 if (!all(operational_gate$pass)) {
   stop(
-    "FAIL: v11 diagnostic did not reproduce its frozen inputs completely."
+    "FAIL: v11 diagnostic did not reproduce its reference inputs completely."
   )
 }
 
@@ -1012,7 +1012,7 @@ if (MODE == "smoke") {
 } else {
   message(
     "PASS: v11 full optimizer-rescue diagnostic completed operationally. ",
-    "No rescue rule is frozen automatically; audit the candidate agreement ",
+    "The script does not select a rescue rule; evaluate candidate agreement ",
     "and unresolved rows before changing the bootstrap protocol."
   )
 }

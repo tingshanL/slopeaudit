@@ -1,8 +1,8 @@
-# Maintainer-only first-release R environment freeze.
+# Maintainer utility for the reference R environment.
 #
 # These versions are the exact direct package versions observed in the
-# validated first-release environment before the project-local renv library
-# was initialized. Reviewers should use renv::restore(), not rerun this file.
+# validated reference environment before the project-local renv library was
+# initialized. Most users should restore renv.lock rather than rerun this file.
 
 options(
   repos = c(
@@ -39,7 +39,7 @@ if (!identical(
   stop(
     "Expected renv ",
     required_renv_version,
-    " for the first-release freeze, but found ",
+    " for the reference environment, but found ",
     actual_renv_version,
     "."
   )
@@ -62,7 +62,7 @@ exact_specs <- paste0(
   unname(validated_versions)
 )
 
-cat("Installing/verifying first-release direct R packages:\n")
+cat("Installing/verifying reference direct R packages:\n")
 for (spec in exact_specs) {
   cat("  ", spec, "\n", sep = "")
 }
@@ -122,7 +122,7 @@ renv::snapshot(
   force = TRUE
 )
 
-cat("\nFrozen validated R versions:\n")
+cat("\nReference R versions:\n")
 for (pkg in names(validated_versions)) {
   cat(
     "  ",

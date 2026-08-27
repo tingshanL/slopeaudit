@@ -3,12 +3,11 @@
 
 This script performs no simulation generation and no mixed-model fitting.
 It consumes explicitly supplied raw generator outputs and reproduces the
-frozen S5 calibration, method-performance, singularity, sensitivity, and
+S5 calibration, method-performance, singularity, sensitivity, and
 descriptive-summary calculations.
 
-For the empirical AABC-derived study, input/output results remain HOLD pending
-written AABC permission. This reviewer-facing script itself contains no
-participant-level AABC data or identifiers.
+Empirical AABC-derived inputs and replicate-level outputs are restricted. The
+script contains no participant-level AABC data or identifiers.
 """
 
 from __future__ import annotations
@@ -91,7 +90,7 @@ def parse_args():
         choices=("smoke", "full"),
         default="smoke",
         help=(
-            "full enforces the frozen 8,000-task / "
+            "full enforces the completed 8,000-task / "
             "500-replicate-per-cell design; smoke validates "
             "the explicitly supplied smaller task manifest."
         ),
@@ -396,7 +395,7 @@ def summarize(
     outcome_map,
 ):
     # ------------------------------------------------------------
-    # Frozen Section 13 — schedule-specific LR calibration
+    # Section 13 — schedule-specific LR calibration
     # ------------------------------------------------------------
 
     calibration = simulation_replicates.loc[
@@ -532,7 +531,7 @@ def summarize(
     )
 
     # ------------------------------------------------------------
-    # Frozen Section 14 — downstream-method performance
+    # Section 14 — downstream-method performance
     # ------------------------------------------------------------
 
     evaluation = simulation_analysis.loc[
@@ -696,7 +695,7 @@ def summarize(
     )
 
     # ------------------------------------------------------------
-    # Frozen Section 15 — true-zero primary diagnostic subset
+    # Section 15 — true-zero primary diagnostic subset
     # ------------------------------------------------------------
 
     true_zero_primary = (
@@ -799,7 +798,7 @@ def summarize(
     )
 
     # ------------------------------------------------------------
-    # Frozen Section 16 — concentration + logistic sensitivity
+    # Section 16 — concentration + logistic sensitivity
     # ------------------------------------------------------------
 
     primary_concentration_tests = pd.DataFrame(
@@ -982,7 +981,7 @@ def summarize(
         )
 
     # ------------------------------------------------------------
-    # Frozen Section 17 — threshold + continuous sensitivity
+    # Section 17 — threshold + continuous sensitivity
     # ------------------------------------------------------------
 
     threshold_rows = []
@@ -1141,7 +1140,7 @@ def summarize(
     )
 
     # ------------------------------------------------------------
-    # Frozen Section 18 — high vs non-high descriptive contrast
+    # Section 18 — high vs non-high descriptive contrast
     # ------------------------------------------------------------
 
     true_zero_group_summary = (

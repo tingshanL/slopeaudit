@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 """Inventory AABC2 source artifacts through a conservative router.
 
-This router operates inside the authorized AABC2 analysis environment. It
-maps frozen internal filenames to semantic names, records hashes and source
-classifications, and prevents automatic copying of restricted source
-artifacts. Manifest mode copies no AABC2-derived source file; approved-copy
-mode retains its explicit administrative approval safeguard.
+This router operates inside an authorized AABC2 analysis environment. It maps
+internal filenames to semantic names, records hashes and source classifications,
+and prevents automatic copying of restricted artifacts. Manifest mode copies no
+AABC2-derived source file; approved-copy mode requires explicit approval.
 
-The router policy describes direct source artifacts. It does not govern the
-separately reviewed and, where necessary, redacted 29-file ID-free
-research-result set included under results/frozen_summaries/aabc2. That
-public set has its own aggregate manifest and privacy review. Participant-
+The router policy describes direct source artifacts. The reviewed 29-file,
+identifier-free aggregate result set under `results/frozen_summaries/aabc2/`
+has a separate manifest and privacy review. Participant-
 linked outputs classified as restricted_never_export remain uncopiable in
 every router mode.
 

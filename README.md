@@ -5,7 +5,7 @@ mixed models are actually informed by. It separates direct within-person
 information about change from additional model-assisted information supplied
 by the fitted joint model.
 
-The first public interface is intentionally narrow and frozen:
+Version 0.1 provides four functions:
 
 - `slope_audit()` runs the complete reader-facing audit;
 - `test_slope_heterogeneity()` answers whether slope heterogeneity is supported;
@@ -13,23 +13,9 @@ The first public interface is intentionally narrow and frozen:
 - `slope_design_sensitivity()` evaluates information sources under planned
   designs supplied as matrices.
 
-Version 0.1 targets one scalar Gaussian random slope. It does not automate
-generalized outcomes, nonlinear change, external prediction, or a public
-participant/bootstrap stability analysis.
-
-## Release state
-
-This working tree is the **pre-tag 0.1.0 release candidate** for the AMPPS
-first-submission repository. `DESCRIPTION` is intentionally set to `0.1.0` so
-final package checks exercise the intended release version. No Git tag, GitHub
-release, archive DOI, or final clean-session verification is asserted yet.
-
-The completed 7,992-task Question 1 bootstrap validation study is retained as
-historical validation provenance from development package version `0.0.0.9000`.
-It must not be relabeled as a `0.1.0` execution. Final release verification
-must instead establish the recorded code/provenance bridge to this release
-candidate and run the release-level checks required for the first-submission
-freeze.
+The exported API covers one scalar Gaussian random slope in Gaussian linear
+mixed models, using compatible `lme4` fits or explicitly supplied design and
+covariance matrices.
 
 ## Installation
 
@@ -62,11 +48,10 @@ python3 -m pip install -r environment/requirements.txt
 python3 reproduction/run_public_smoke.py --output-dir reproduction_smoke_output
 ```
 
-`reproduction/run_public_smoke.py` uses only public or synthetic inputs and is
-a nonreportable code-path check. Exact historical S4/S5 reproduction and the
-AABC2 S7/S8 analyses require authorized restricted inputs; their public
-contracts and reconstruction instructions are documented under `reproduction/`.
-See `reproduction/README.md` for the workflow-by-workflow boundary.
+`reproduction/run_public_smoke.py` checks the public execution paths using
+public or synthetic inputs. It is a software smoke test rather than a
+reproduction of the reported S4, S5, or AABC2 estimates. Input requirements for
+each workflow are documented under `reproduction/`.
 
 ## A five-minute first example
 
@@ -115,7 +100,7 @@ sources <- slope_decomposition(full, "Days", days_target)
 sources
 ```
 
-The frozen `sleepstudy` reference is:
+The expected output for the bundled `sleepstudy` example is:
 
 ```text
 Random-slope source decomposition
@@ -148,18 +133,17 @@ audit
 summary(audit)
 ```
 
-`B = 999` is the validated public default and gives a minimum plus-one p-value
-of `.001`. Smaller values are useful only for smoke tests or exploration. The
-package never silently increases `B`; a manuscript workflow may explicitly
-rerun at `B = 4999` when a result is floor-limited or its Monte Carlo interval
-crosses the reporting threshold.
+The validated default is `B = 999`, corresponding to a minimum plus-one
+p-value of `.001`. Use smaller values for exploratory or smoke runs. When
+Monte Carlo resolution affects interpretation, rerun explicitly with a larger
+value such as `B = 4999`.
 
 ## How to read the result
 
 | Output | Reader-facing meaning |
 |---|---|
 | `decision = "supported"` | The fitted data support nonzero population slope heterogeneity under the declared model and bootstrap procedure. |
-| `decision = "unsupported"` | Use **STOP—INDIVIDUAL-SLOPE CLAIM**. Say “unsupported by these data,” not “there is no heterogeneity.” |
+| `decision = "unsupported"` | The data do not provide sufficient evidence of population slope heterogeneity under the declared analysis. Any returned decomposition describes the fitted model conditionally. |
 | `decision = "numerically_ambiguous"` | Worst-case treatment of excluded attempts changes the decision; do not make an individual-slope claim. |
 | `R_direct` | Direct within-person information about the declared change target. |
 | `D_slope2` | Total determinacy of the fitted random slope under the fitted joint model. |
@@ -169,7 +153,7 @@ When Question 1 is unsupported but the fitted slope variance is positive, the
 decomposition is returned only as a conditional description of that fitted
 model. At an exact fitted zero-variance boundary, it is withheld.
 
-## Common stops before interpretation
+## Requirements for interpretation
 
 - Define all six target fields. The package will not infer the outcome units,
   time scale, origin, window, or substantive estimand.
@@ -207,20 +191,19 @@ by third-party R packages and are not original `slopeaudit` data:
   Belenky et al. (2003) as the study source.
 
 The MIT license in `DESCRIPTION`/`LICENSE` does not relicense these
-third-party-derived observation data. Retain the upstream package licensing and
-source attribution when redistributing the derived fixture files. Exact
+third-party-derived observation data. Redistribution of these fixtures should
+preserve the upstream licensing terms and source attribution. Exact
 redistributed paths and full applicable GPL texts are provided in
 `inst/THIRD_PARTY_NOTICES.md` and `inst/licenses/`; the validation-fixture
 READMEs retain analysis-specific provenance.
 
 ## Validation status
 
-The numerical backend and the fixed-usable Question-1 bootstrap completed the
-full v14 Question 1 bootstrap validation study: all four null-size cells and all four planning
-power cells passed their operational and reference gates. The four-cell pooled
-null support rate was 215/3,996 = 0.0538 with exact 95% interval
-[0.0470, 0.0613].
+The v14 Question 1 validation study comprised 7,992 outer tasks. All four
+null-size cells and all four planning-power cells met their prespecified
+operational and reference criteria. The pooled null support rate was
+215/3,996 = 0.0538, with an exact 95% interval of [0.0470, 0.0613].
 
-The statistical contract, internal validation protocols, and manuscript
-reproduction materials remain in the source repository. This reader-facing
-layer does not change the v14 numerical engine or the frozen v0.1 API.
+The study was conducted during package development under version `0.0.0.9000`;
+version `0.1.0` contains the same v14-tested numerical and fixed-usable
+bootstrap implementation.

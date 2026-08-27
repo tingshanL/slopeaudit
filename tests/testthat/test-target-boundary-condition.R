@@ -19,7 +19,7 @@ test_that("exact target-zero raises a typed boundary condition", {
   expect_equal(err$target_slope_variance, 0)
 })
 
-test_that("future slope_audit can catch target boundary by class, not message text", {
+test_that("slope_audit handles target boundaries by class, not message text", {
   handler <- function(expr) {
     tryCatch(
       {

@@ -1,19 +1,11 @@
 #!/usr/bin/env python3
 """Pure numerical helpers for the S4 operating-characteristic simulation.
 
-This module contains numerical geometry, REML fitting, predictability,
-and robust-refit helpers only.
-
-It deliberately contains no:
-- AABC2 data reads;
-- empirical schedule values;
-- schedule or cell manifests;
-- filesystem discovery;
-- output/checkpoint paths;
-- simulation execution loops.
-
-Schedule construction, data generation, execution, repair orchestration,
-and deterministic summarization live in separate entry points.
+This module contains numerical geometry, REML fitting, predictability, and
+robust-refit helpers. Schedule construction, data generation, execution,
+repair orchestration, and deterministic summarization are implemented in
+separate modules, so this file requires no AABC2 data reads, empirical
+schedules, manifests, filesystem discovery, checkpoints, or output paths.
 """
 
 from __future__ import annotations

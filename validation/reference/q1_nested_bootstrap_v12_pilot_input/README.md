@@ -10,5 +10,5 @@ Authorized internal reproduction of nested-bootstrap `pilot` mode may point
 directory. The same workflow also requires `SLOPEAUDIT_Q1_V11_EVIDENCE_DIR`
 and `SLOPEAUDIT_Q1_IRREGULAR_SCHEDULE`.
 
-The public repository retains deterministic synthetic/public-data checks and
-protocol documentation; it does not expose this restricted-derived checkpoint.
+The repository includes deterministic synthetic/public-data checks and protocol
+documentation, but not this restricted-derived checkpoint.

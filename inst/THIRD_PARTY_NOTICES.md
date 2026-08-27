@@ -2,7 +2,8 @@
 
 The MIT license for `slopeaudit`-authored code and documentation does not
 replace the upstream terms applicable to the third-party-derived observation
-data listed below. This notice is deliberately path-specific. Project-generated
+data listed below. The notice applies to the five observation-data files listed
+below. Project-generated
 fitted-parameter files, expected-output files, synthetic data, and other
 `slopeaudit` validation artifacts are not relicensed by this notice.
 

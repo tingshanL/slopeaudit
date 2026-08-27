@@ -5,10 +5,10 @@ This entry point contains no AABC file discovery and no observed-data reads.
 It consumes an explicitly supplied source-anchor manifest plus the exact
 schedule files named by that manifest.
 
-Outputs from empirical AABC-derived anchors/schedules remain restricted/HOLD
-pending written AABC permission. The script itself is reviewer-facing code.
+Empirical AABC-derived anchors and schedules are restricted inputs and are not
+distributed with the repository.
 
-The full frozen design requests 500 replicates per cell:
+The full design uses 500 replicates per cell:
     4 regimes x
     [500 LR calibration
      + 500 independent-null LR evaluation
@@ -70,7 +70,7 @@ def parse_args():
         type=Path,
         help=(
             "Explicit source_anchor_manifest.json. Empirical AABC-derived "
-            "manifests must remain restricted/HOLD."
+            "manifests are restricted inputs and are not distributed."
         ),
     )
 
@@ -86,7 +86,7 @@ def parse_args():
         default="smoke",
         help=(
             "smoke: small fixed-seed run; "
-            "full: frozen 500-replicate-per-cell study."
+            "full: completed 500-replicate-per-cell study design."
         ),
     )
 
@@ -95,8 +95,8 @@ def parse_args():
         type=int,
         default=1,
         help=(
-            "Parallel workers. The frozen analysis used 2. "
-            "Do not exceed available memory."
+            "Parallel workers. The reference analysis used 2; choose a value "
+            "within available memory."
         ),
     )
 
@@ -425,9 +425,8 @@ def build_task_manifest(
 ):
     rows = []
 
-    # Preserve frozen regime indices even when a smoke run
-    # selects only a subset. This preserves each regime's
-    # authoritative random seeds.
+    # Preserve the recorded regime indices when a smoke run selects only a
+    # subset so each regime retains its original random seeds.
     regime_index = {
         regime: index
         for index, regime in enumerate(
@@ -649,8 +648,7 @@ def run_generator(
         ):
             raise RuntimeError(
                 "Checkpoint configuration differs. "
-                "Move/delete the checkpoint before "
-                "intentionally restarting."
+                "Move or delete the checkpoint before restarting."
             )
 
         simulation_replicates = (
@@ -870,9 +868,8 @@ def write_raw_outputs(
     model_fit_diagnostics: pd.DataFrame,
     optimizer_attempt_audit: pd.DataFrame,
 ):
-    # These are deliberately raw generator products.
-    # Calibration and final semantic summaries are produced
-    # downstream by summarize_downstream_simulation.py.
+    # These are raw generator products. Calibration and final semantic
+    # summaries are produced by summarize_downstream_simulation.py.
     outputs = {
         "task_manifest.csv":
             task_manifest,
@@ -901,8 +898,8 @@ def main():
 
     if args.workers > 3:
         raise ValueError(
-            "--workers > 3 is intentionally blocked "
-            "for the validated low-memory workflow."
+            "--workers > 3 is not supported by the validated low-memory "
+            "workflow."
         )
 
     reps_per_cell = (

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Restricted-data reproduction of the quadratic within-person gap audit.
 
-This refactors the frozen
+This refactors the completed
 AABC_quadratic_within_person_gap_audit.ipynb
-workflow into an explicit non-notebook release entry point.
+workflow into a non-notebook script with explicit inputs.
 
 The 60-row selection manifest from the preceding gap-optimizer workflow
 must be supplied explicitly. No recursive file discovery or fallback to
@@ -44,7 +44,7 @@ import aabc2_common as common
 
 
 # ---------------------------------------------------------------------------
-# Frozen controls
+# Prespecified controls
 # ---------------------------------------------------------------------------
 
 SEED = 20260718
@@ -848,7 +848,7 @@ assert (
 )
 
 
-# Deliberate release-only provenance change:
+# Record portable provenance:
 # explicit upstream file and portable basename.
 selection_audit = pd.DataFrame([
     {
@@ -978,7 +978,7 @@ if CHECKPOINT_FILE.exists():
     if checkpoint.get("selection_signature") != selection_signature:
         raise RuntimeError(
             "The checkpoint belongs to a different selection/formula configuration. "
-            "Move it before intentionally starting a different audit."
+            "Move it before starting a different audit."
         )
     bootstrap_optimizer_fits = checkpoint.get("bootstrap_optimizer_fits", pd.DataFrame())
     bootstrap_representative_participants = checkpoint.get(

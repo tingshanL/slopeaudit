@@ -1,4 +1,4 @@
-# Internal numerical constants for the authoritative matrix backend.
+# Internal numerical constants for the matrix backend.
 #
 # These are identity/equality tolerances only. They are NOT universal
 # thresholds for declaring a fitted target-slope variance to be zero.

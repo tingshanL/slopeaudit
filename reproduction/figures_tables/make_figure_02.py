@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Reproduce manuscript Figure 2 from frozen analysis outputs.
+Reproduce manuscript Figure 2 from the recorded analysis outputs.
 
 This script performs deterministic post-processing and plotting only.
 It does not fit mixed models, generate simulations, or search the local
@@ -8,8 +8,8 @@ filesystem for analysis results.
 
 Inputs are supplied explicitly:
 - repaired S4 operating-study replicates;
-- frozen downstream simulation replicates;
-- frozen observed source-fit audit.
+- downstream simulation replicates;
+- observed source-fit audit.
 
 The provenance manifest records source filenames and SHA-256 hashes,
 but never absolute machine-specific paths.

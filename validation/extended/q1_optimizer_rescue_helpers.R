@@ -1,8 +1,7 @@
 # Helpers for the v11 Question-1 optimizer-rescue diagnostic.
 #
-# These helpers deliberately live outside the package API. They reconstruct
-# the v10 pilot DGP and retain detailed optimizer diagnostics without changing
-# the frozen package bootstrap engines.
+# These validation helpers reconstruct the v10 pilot DGP and retain detailed
+# optimizer diagnostics without changing the package bootstrap engines.
 
 q1v11_read_integer_env <- function(name, default, minimum = 1L) {
   raw <- Sys.getenv(name, unset = as.character(default))

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Prepare restricted source anchors for the S5 downstream simulation.
 
-RESTRICTED-DATA ENTRY POINT.
+This workflow requires authorized AABC inputs.
 
 This script contains no embedded AABC participant rows or identifiers. It
-reconstructs the frozen analysis cohorts from explicitly supplied authorized
+reconstructs the analysis cohorts from explicitly supplied authorized
 AABC inputs, fits the four observed source regimes used by the downstream
 simulation, and writes:
 
@@ -12,8 +12,7 @@ simulation, and writes:
 2. anonymous exact schedule fixtures containing only within-participant times;
 3. an optimizer-fit audit for validating the source-model refactor.
 
-All resulting files are AABC-derived and must remain in restricted/private
-storage unless written permission authorizes release.
+All resulting files are AABC-derived and remain in restricted storage.
 """
 
 from __future__ import annotations
@@ -158,7 +157,7 @@ def prepare_source_anchors(args):
 
         return read_zip_csv(STRUCT_ZIP, filename, **kwargs)
 
-    # Notebook display calls are intentionally suppressed here.
+    # Replace notebook display calls with a no-op in this script.
     def display(*_args, **_kwargs):
         return None
     struct_roster = pd.read_csv(STRUCT_ROSTER, low_memory=False)
@@ -972,7 +971,7 @@ def prepare_source_anchors(args):
         "data_class":
             "restricted-derived source anchors",
         "release_status":
-            "hold pending written AABC permission",
+            "restricted_input_not_distributed",
         "source_model":
             "frozen S5 downstream simulation source fits",
         "regimes": {},
@@ -1058,7 +1057,7 @@ def prepare_source_anchors(args):
             "data_class":
                 "restricted-derived exact schedule",
             "release_status":
-                "hold pending written AABC permission",
+                "restricted_input_not_distributed",
             "regime": regime,
             "source_outcome": outcome,
             "time_variable": "t",

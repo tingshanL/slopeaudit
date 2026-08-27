@@ -1,8 +1,8 @@
 #!/usr/bin/env Rscript
 
-# This script audits the already-frozen historical four-design calibration
-# summary. It does NOT claim that the historical calibrated restricted-LR
-# procedure is identical to the new Contract-v1.1 per-analysis bootstrap.
+# Audit the completed historical four-design calibration summary. The
+# calibrated restricted-LR procedure differs from the Contract-v1.1
+# per-analysis bootstrap.
 
 path <- Sys.getenv(
   "SLOPEAUDIT_AABC_FIG2_Q1_SUMMARY",

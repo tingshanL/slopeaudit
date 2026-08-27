@@ -54,8 +54,8 @@ from simulation_core import (
 SEED = 20260718
 SIM_ANCHORED_NEAR_THRESHOLD = 0.01
 
-# Runtime state retained because the authoritative notebook functions used
-# these names as globals. Values are populated only from explicit inputs.
+# Runtime state retains the global names used by the source notebook functions.
+# Values are populated only from explicit inputs.
 SCHEDULE_TEMPLATES = {}
 SIMULATION_CELL_LOOKUP = {}
 simulation_manifest = pd.DataFrame()
@@ -1163,8 +1163,9 @@ def run_generation(args):
         print(
             "Smoke generation complete: "
             f"{len(smoke_repaired):,} rows. "
-            "Historical 758-fit repair was not run in smoke mode; "
-            "a summarizer-compatible nonreportable replicate file was written."
+            "The historical 758-fit repair was not run in smoke mode. "
+            "The replicate file is compatible with the summarizer but is "
+            "not suitable for scientific reporting."
         )
         return
 

@@ -1,4 +1,4 @@
-test_that("sleepstudy frozen participant and summary references are reproduced", {
+test_that("sleepstudy participant and summary references are reproduced", {
   pars <- read_fixture_json("sleepstudy_primary", "fitted_parameters.json")
   exp_summary <- read_fixture_json("sleepstudy_primary", "expected_summary.json")
 
@@ -68,7 +68,7 @@ test_that("sleepstudy frozen participant and summary references are reproduced",
 })
 
 
-test_that("Beat the Blues frozen irregular reference is reproduced", {
+test_that("Beat the Blues irregular reference is reproduced", {
   pars <- read_fixture_json("btheb_primary", "fitted_parameters.json")
   exp_summary <- read_fixture_json("btheb_primary", "expected_summary.json")
 

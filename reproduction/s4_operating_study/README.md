@@ -1,12 +1,11 @@
 # S4 operating-study reproduction
 
-This directory contains the reviewer-facing reproduction code for the
+This directory contains reproduction code for the
 operating-characteristic study reported in Supplement S4.
 
 ## Scope
 
-The release separates the original notebook workflow into four semantic
-components:
+The original notebook workflow is organized into four components:
 
 - `prepare_operating_study_inputs_restricted.py`
   reconstructs the exact empirical visit schedules from authorized AABC2
@@ -30,15 +29,14 @@ The manuscript Figure 2 post-processing is implemented separately in:
 
 - `../figures_tables/make_figure_02.py`
 
-## Restricted-input boundary
+## Input requirements
 
 The public code contains no AABC2 participant rows, participant identifiers,
 individual trajectories, local-machine search roots, or embedded AABC2 file
 paths.
 
-Two inputs required for an exact historical reproduction are derived from
-restricted AABC2 analyses and are therefore not included in the public
-release pending written authorization:
+Two inputs required for exact reproduction are derived from restricted AABC2
+analyses and are not distributed in this repository:
 
 1. the exact empirical participant visit schedules used by the six
    empirical-schedule simulation cells;
@@ -53,7 +51,7 @@ discovering or embedding them.
 
 ## Historical design
 
-The frozen operating study contains 46 simulation cells and 62,000 requested
+The completed operating study contains 46 simulation cells and 62,000 requested
 replicates:
 
 - 24 balanced-core cells;
@@ -76,10 +74,7 @@ After the initial 62,000 replicate fits:
 - the final repaired export still contains 82 rows that fail the strict
   numerical-validity criterion.
 
-The release preserves this history rather than rewriting it as a clean
-rerun.
-
-The final repaired 62,000-row result is the authoritative replicate-level
+The final repaired 62,000-row result is the replicate-level
 input to deterministic S4 summarization and Figure 2 post-processing.
 
 ## Generator modes
@@ -102,7 +97,8 @@ python3 reproduction/s4_operating_study/generate_operating_study.py \
 ```
 
 The included design is fully synthetic and contains one balanced true-zero cell.
-Smoke generation writes a summarizer-compatible nonreportable replicate file.
+Smoke generation writes a summarizer-compatible replicate file for software
+testing; it is not suitable for scientific reporting.
 Run the deterministic smoke summarizer with:
 
 ```bash
@@ -113,6 +109,6 @@ python3 reproduction/s4_operating_study/summarize_operating_study.py \
   --mode smoke
 ```
 
-Exact historical full mode additionally requires the frozen 46-cell design and
+Exact historical full mode additionally requires the prespecified 46-cell design and
 restricted-derived empirical schedule/anchor inputs described above. Those inputs
 are not replaced by the synthetic smoke design.

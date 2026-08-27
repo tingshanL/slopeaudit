@@ -22,7 +22,7 @@ observation and therefore no direct slope information.
 This contrast demonstrates how the diagnostic behaves; it is not evidence
 that one schedule type is always superior.
 
-## Load the frozen teaching fixture
+## Load the teaching fixture
 
 ```{r data}
 library(lme4)
@@ -82,7 +82,7 @@ sources <- slope_decomposition(full, "month_c", month_target)
 sources
 ```
 
-The manuscript-frozen homogeneous-independent-residual reference has 100
+The homogeneous-independent-residual reference has 100
 participants, 380 observations, and these equal-participant means:
 
 | Quantity | Mean |
@@ -113,8 +113,8 @@ audit_999 <- slope_audit(
 audit_999
 ```
 
-The observed likelihood-ratio statistic is about 4.072. In the frozen
-manuscript workflow, the `B = 999` Monte Carlo interval crossed `.05`, so the
+The observed likelihood-ratio statistic is about 4.072. In the manuscript
+workflow, the `B = 999` Monte Carlo interval crossed `.05`, so the
 run was explicitly escalated. The `B = 4999` result was approximately `.074`
 and Question 1 was **unsupported by these data**.
 
@@ -130,16 +130,16 @@ audit_4999 <- slope_audit(
 )
 ```
 
-The reader-facing conclusion is therefore **STOP—INDIVIDUAL-SLOPE CLAIM**.
-The returned decomposition may still describe the fitted positive-variance
-model, but only conditionally. Do not write “there is no slope heterogeneity,”
-and do not use fitted individual slopes as though their population variation
-had been established.
+The data therefore do not support an individual-slope claim. The returned
+decomposition may still describe the fitted positive-variance model, but only
+conditionally. This is not evidence that slope heterogeneity is absent, and
+the fitted individual slopes should not be treated as established population
+variation.
 
 ## Scope of this worked model
 
-This example deliberately uses the manuscript's homogeneous independent
-residual specification. It does not claim that `lme4` fitted AR(1),
+This example uses the manuscript's homogeneous independent-residual
+specification. It does not imply that `lme4` fitted AR(1),
 occasion-specific residual variances, or a nonlinear time effect. Those are
 separate model-sensitivity questions. A defensible correlated-residual model
 fitted elsewhere may be represented by participant-specific `R` matrices in

@@ -1,7 +1,7 @@
 # Explicit full/null validation for Question 1.
 #
-# The publication-quality route accepts already fitted full and null models.
-# It never silently constructs or silently refits a null model.
+# The interface accepts already fitted full and null models and evaluates them
+# as supplied.
 
 .sa_q1_response_label <- function(fit) {
   paste(deparse(stats::formula(fit)[[2]]), collapse = " ")
@@ -199,7 +199,7 @@
   if (length(nuisance_names) == 0L) {
     stop(
       paste0(
-        "The validated lmer Question-1 route currently requires at least ",
+        "The lmer Question-1 interface requires at least ",
         "one nuisance random effect to remain under the null."
       ),
       call. = FALSE

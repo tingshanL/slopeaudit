@@ -15,9 +15,8 @@ The final repaired LR calibration, strict-valid operating characteristics,
 metric quantiles, true-zero apparent-determinacy summaries, and cell-validity
 table used by the manuscript pipeline.
 
-The numerical summary logic is the final strict-valid repair logic from the
-authoritative notebook. It supersedes the original pre-repair operating
-summary.
+The numerical summary logic matches the final strict-valid repair logic from
+the source notebook and supersedes the original pre-repair summary.
 """
 
 from __future__ import annotations

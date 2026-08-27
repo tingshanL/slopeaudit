@@ -1,9 +1,8 @@
 # Q1 v10 calibration decisions
 
-**Historical status:** v10 candidate protocol. The v10 pilot failed its
-operational gate and was superseded by the v11 optimizer adjudication, v12
-deterministic rescue hierarchy, and v14 nested-bootstrap validation. It does
-not retroactively alter the earlier v1.1 reference or stress runs.
+**Protocol role:** v10 calibration candidate. Its failed operational gate led
+to the v11 optimizer diagnostic, v12 deterministic rescue hierarchy, and v14
+nested-bootstrap validation.
 
 ## Review points adopted
 
@@ -19,13 +18,13 @@ not retroactively alter the earlier v1.1 reference or stress runs.
 
 3. **Explicit R control.** The original notebook used statsmodels and an
    optimizer panel, so an equivalent `lmerControl` cannot be recovered. The
-   candidate freezes `nloptwrap`, derivative checks on, a 200,000-evaluation
+   candidate specifies `nloptwrap`, derivative checks on, a 200,000-evaluation
    cap, default edge restart/boundary tolerance, and singular messages. The
    same control is used for observed and bootstrap full/null fits throughout
    the calibration.
 
 4. **Exact DGP or no historical comparison.** All scalar DGP settings were
-   recovered from the authoritative notebook. The empirical schedule values
+   recovered from the source notebook. The empirical schedule values
    must be extracted exactly from the original AABC files with the supplied
    provenance utility. Approximate schedules are rejected. If exact extraction
    ultimately fails, the fallback is a newly named/documented irregular DGP
@@ -52,7 +51,7 @@ not retroactively alter the earlier v1.1 reference or stress runs.
 8. **Interval relabeling.** `exceedance_probability_interval_*` identifies the
    exact binomial interval for the fitted-null exceedance probability `k/n`.
    It is not labeled as an interval for `(k+1)/(n+1)`. Old `mc_interval_*`
-   fields remain aliases so frozen output readers do not break.
+   fields remain aliases for compatibility with existing output readers.
 
 9. **License.** The MIT copyright holder placeholder is replaced with
    Tingshan Liu.
@@ -89,8 +88,7 @@ The corresponding exact binomial intervals describe fitted-null exceedance
 probabilities, not plus-one-p intervals. The sleepstudy attainable floor in
 that run is 1/4,937 = .000203, not .001.
 
-This was a historical conditional decision point, not a current release
-instruction. The v10 pilot did not pass; the later v11--v14 sequence supplied
-the adjudicated rescue hierarchy and validation used by the release
-implementation. Cross-implementation agreement of observed LR statistics
-remains distinct from implementation- and protocol-specific bootstrap p-values.
+The v10 pilot did not pass. The later v11--v14 sequence supplied the optimizer
+hierarchy and validation used by the current implementation.
+Cross-implementation agreement of observed LR statistics remains distinct
+from implementation- and protocol-specific bootstrap p-values.
