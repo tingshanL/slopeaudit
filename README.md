@@ -197,6 +197,14 @@ redistributed paths and full applicable GPL texts are provided in
 `inst/THIRD_PARTY_NOTICES.md` and `inst/licenses/`; the validation-fixture
 READMEs retain analysis-specific provenance.
 
+## Archived simulation and validation outputs
+
+Large S4 operating-study, S5 downstream-simulation, and Question 1
+bootstrap-validation outputs are archived at
+[Zenodo](https://doi.org/10.5281/zenodo.22092591). Code, documentation,
+compact summaries, and reproduction instructions are maintained in this
+repository.
+
 ## Validation status
 
 The v14 Question 1 validation study comprised 7,992 outer tasks. All four
