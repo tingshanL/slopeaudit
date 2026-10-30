@@ -24,15 +24,33 @@
     return(invisible(NULL))
   }
   r <- x[x$quantity == "sqrt_kappa", , drop = FALSE]
-  if (nrow(r) == 0L || is.na(r$median)) {
+  if (nrow(r) == 0L) {
     return(invisible(NULL))
   }
   f <- function(v) formatC(v, digits = digits, format = "f")
-  cat(
-    "  sqrt(kappa) = ", f(r$median), " (median participant; 5th-95th percentile ",
-    f(r$p05), "-", f(r$p95), ")\n",
-    sep = ""
+  if (!is.na(r$median)) {
+    cat(
+      "  sqrt(kappa) = ", f(r$median), " (median participant; 5th-95th percentile ",
+      f(r$p05), "-", f(r$p95), ")\n",
+      sep = ""
+    )
+  } else {
+    cat("  sqrt(kappa): no participant with a valid value\n")
+  }
+  count <- function(name) if (is.null(r[[name]])) 0L else r[[name]]
+  excluded <- c(
+    undefined = count("n_undefined"),
+    unresolved = count("n_unresolved"),
+    invalid = count("n_invalid")
   )
+  if (sum(excluded) > 0L) {
+    shown <- excluded[excluded > 0L]
+    cat(
+      "  kappa not summarized for ", sum(excluded), " participant(s) (",
+      paste(names(shown), shown, sep = ": ", collapse = "; "), ")\n",
+      sep = ""
+    )
+  }
   invisible(NULL)
 }
 

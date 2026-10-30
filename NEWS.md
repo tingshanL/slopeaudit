@@ -9,15 +9,21 @@
   correlation between the fitted slope and a participant-level variable
   uncorrelated with the target slope and the residuals.
 - `kappa` is computed from the fitted matrices, so it applies to structured
-  residual covariances and to models with several nuisance effects. It is zero
-  when the model has no nuisance effects and `NA` (status
-  `"undefined_zero_determinacy"`) when fitted-slope determinacy is zero.
-  Rounding-level negatives are set to zero; material negatives, violations of the
-  identity `D_slope2 + kappa + residual share = 1`, and values above the ceilings
+  residual covariances and to models with several nuisance effects. The
+  fitted-slope variance is computed as the sum of its target, nuisance and
+  residual components, so `kappa` stays accurate when determinacy is small but
+  positive. `kappa` is zero when the model has no nuisance effects, `NA` with
+  status `"undefined_zero_fitted_variance"` when the fitted slope has exactly
+  zero variance, and `NA` with status `"unresolved_fitted_variance"` when that
+  variance is nonzero only at rounding level. Rounding-level negatives are set to
+  zero; a material negative keeps its raw value with status
+  `"invalid_negative_share"`. Material negatives, violations of the identity
+  `D_slope2 + kappa + residual share = 1`, and values above the ceilings
   `1 - D_slope2` and `Delta_fit / D_slope2` mark the participant as numerically
   invalid.
 - A new `capacity_summary` reports participant-level percentiles of `kappa` and
-  `sqrt_kappa`. These are participant-level values at the fitted parameters,
+  `sqrt_kappa` over valid rows, with counts of valid, undefined, unresolved and
+  invalid rows; the print methods state how many participants were excluded. These are participant-level values at the fitted parameters,
   not bounds for a pooled regression over participants with different
   schedules. `source_summary` is unchanged.
 

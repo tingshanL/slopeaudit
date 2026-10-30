@@ -327,10 +327,15 @@ test_slope_heterogeneity <- function(
 #'   `Delta_fit` and the nuisance share `kappa` with `sqrt_kappa`, the largest
 #'   attainable absolute correlation between the fitted slope and a
 #'   participant-level variable uncorrelated with the target slope and the
-#'   residuals. `kappa` is `NA` (status `"undefined_zero_determinacy"`) when
-#'   fitted-slope determinacy is zero. `source_summary` gives equal-participant
+#'   residuals. `kappa_status` is `"defined"` or `"no_nuisance_effects"` for
+#'   valid values; `kappa` is `NA` with status `"undefined_zero_fitted_variance"`
+#'   when the fitted slope has exactly zero variance (zero determinacy), and with
+#'   status `"unresolved_fitted_variance"` when that variance is nonzero only at
+#'   rounding level. Status `"invalid_negative_share"` keeps a materially negative
+#'   raw `kappa` with `sqrt_kappa` `NA`. `source_summary` gives equal-participant
 #'   summaries of the additive quantities and `capacity_summary` gives
-#'   participant-level percentiles of `kappa` and `sqrt_kappa`. These are
+#'   participant-level percentiles of `kappa` and `sqrt_kappa` over valid rows,
+#'   with counts of valid, undefined, unresolved and invalid rows. These are
 #'   participant-level values at the fitted parameters; they are not bounds for
 #'   a pooled regression over participants with different schedules.
 #' @examples
