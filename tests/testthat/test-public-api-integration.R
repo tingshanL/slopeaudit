@@ -49,7 +49,8 @@ test_that("slope_audit returns the documented combined object", {
     c(
       "call", "status", "target", "target_metadata", "heterogeneity",
       "decomposition", "decomposition_status", "decomposition_boundary",
-      "participant_table", "source_summary", "interpretation"
+      "participant_table", "source_summary", "capacity_summary",
+      "interpretation"
     ),
     ignore.order = FALSE
   )

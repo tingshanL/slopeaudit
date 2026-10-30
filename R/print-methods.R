@@ -19,6 +19,23 @@
   invisible(NULL)
 }
 
+.sa_print_capacity_summary <- function(x, digits = 3L) {
+  if (is.null(x) || nrow(x) == 0L) {
+    return(invisible(NULL))
+  }
+  r <- x[x$quantity == "sqrt_kappa", , drop = FALSE]
+  if (nrow(r) == 0L || is.na(r$median)) {
+    return(invisible(NULL))
+  }
+  f <- function(v) formatC(v, digits = digits, format = "f")
+  cat(
+    "  sqrt(kappa) = ", f(r$median), " (median participant; 5th-95th percentile ",
+    f(r$p05), "-", f(r$p95), ")\n",
+    sep = ""
+  )
+  invisible(NULL)
+}
+
 
 #' @export
 print.slopeaudit_heterogeneity <- function(x, ..., digits = 3L) {
@@ -60,6 +77,7 @@ print.slopeaudit_decomposition <- function(x, ..., digits = 3L) {
   cat("  Target: ", x$extracted$target_name, "\n", sep = "")
   cat("  Participants: ", x$summary$n_participants, "\n", sep = "")
   .sa_print_source_summary(x$source_summary, digits = digits)
+  .sa_print_capacity_summary(x$capacity_summary, digits = digits)
 
   if (x$summary$n_no_direct_slope_information > 0L) {
     cat(
@@ -83,6 +101,7 @@ print.slopeaudit_design_sensitivity <- function(x, ..., digits = 3L) {
   cat("  Target: ", x$target, "\n", sep = "")
   cat("  Design entries: ", nrow(x$design_table), "\n", sep = "")
   .sa_print_source_summary(x$source_summary, digits = digits)
+  .sa_print_capacity_summary(x$capacity_summary, digits = digits)
   cat("  Scope: information-source quantities; no arbitrary-design Q1 power.\n")
   invisible(x)
 }
@@ -113,6 +132,7 @@ print.slopeaudit <- function(x, ..., digits = 3L) {
     cat("  Withheld: fitted marginal target-slope variance is exactly zero.\n")
   } else {
     .sa_print_source_summary(x$source_summary, digits = digits)
+    .sa_print_capacity_summary(x$capacity_summary, digits = digits)
     if (x$decomposition$summary$n_no_direct_slope_information > 0L) {
       cat(
         "  No direct slope information: ",

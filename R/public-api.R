@@ -311,8 +311,8 @@ test_slope_heterogeneity <- function(
 #' Decompose fitted random-slope information sources
 #'
 #' Compute participant-level direct-change reliability, total fitted-slope
-#' determinacy, and their model-assisted difference from one supported
-#' Gaussian `lme4::lmer()` fit.
+#' determinacy, their model-assisted difference, and the nuisance share
+#' `kappa` from one supported Gaussian `lme4::lmer()` fit.
 #'
 #' @param full A supported Gaussian `lme4::lmer()` full model.
 #' @param target One non-empty target random-effect coefficient name.
@@ -322,7 +322,17 @@ test_slope_heterogeneity <- function(
 #'   piecewise, interaction, and other non-affine bases additionally require
 #'   `basis_expression`.
 #'
-#' @return An object of class `slopeaudit_decomposition`.
+#' @return An object of class `slopeaudit_decomposition`. Its
+#'   `participant_table` gives, for each participant, `R_direct`, `D_slope2`,
+#'   `Delta_fit` and the nuisance share `kappa` with `sqrt_kappa`, the largest
+#'   attainable absolute correlation between the fitted slope and a
+#'   participant-level variable uncorrelated with the target slope and the
+#'   residuals. `kappa` is `NA` (status `"undefined_zero_determinacy"`) when
+#'   fitted-slope determinacy is zero. `source_summary` gives equal-participant
+#'   summaries of the additive quantities and `capacity_summary` gives
+#'   participant-level percentiles of `kappa` and `sqrt_kappa`. These are
+#'   participant-level values at the fitted parameters; they are not bounds for
+#'   a pooled regression over participants with different schedules.
 #' @examples
 #' full <- lme4::lmer(
 #'   Reaction ~ Days + (1 + Days | Subject),
@@ -352,6 +362,7 @@ slope_decomposition <- function(full, target, target_metadata) {
   out$status <- out$diagnostics$status
   out$call <- match.call()
   out$source_summary <- .sa_public_decomposition_summary(out)
+  out$capacity_summary <- .sa_kappa_summary(out$participant_table)
   class(out) <- c("slopeaudit_decomposition", "slopeaudit_result")
   out
 }
@@ -432,7 +443,9 @@ slope_decomposition <- function(full, target, target_metadata) {
 #'   nuisance random-effect column spaces.
 #' @param design_id Optional labels, one per entry of `Z`.
 #'
-#' @return An object of class `slopeaudit_design_sensitivity`.
+#' @return An object of class `slopeaudit_design_sensitivity`, with
+#'   `design_table`, `source_summary` and `capacity_summary` defined as in
+#'   `slope_decomposition()`.
 #' @examples
 #' Z <- matrix(c(1, -0.5, 1, 0.5), nrow = 2, byrow = TRUE)
 #' colnames(Z) <- c("intercept", "time")
@@ -497,6 +510,7 @@ slope_design_sensitivity <- function(
     design_table = design_table,
     summary = backend$summary,
     source_summary = .sa_public_decomposition_summary(backend),
+    capacity_summary = .sa_kappa_summary(backend$participant_table),
     diagnostics = backend$diagnostics,
     matrix_backend = backend,
     scope = paste0(
@@ -518,7 +532,8 @@ slope_design_sensitivity <- function(
 #' @param target_metadata The strict target-estimand metadata described in
 #'   `slope_decomposition()`.
 #'
-#' @return An object of class `slopeaudit`.
+#' @return An object of class `slopeaudit`, including the decomposition's
+#'   `participant_table`, `source_summary` and `capacity_summary`.
 #' @examples
 #' if (interactive()) {
 #'   full <- lme4::lmer(
@@ -623,6 +638,11 @@ slope_audit <- function(
       NULL
     } else {
       decomposition$source_summary
+    },
+    capacity_summary = if (is.null(decomposition)) {
+      NULL
+    } else {
+      decomposition$capacity_summary
     },
     interpretation = list(
       question1 = heterogeneity$decision,

@@ -1,7 +1,7 @@
 Package: slopeaudit
 Type: Package
 Title: Diagnose Information Sources in Gaussian Random-Slope Models
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
     person(
       given = "Tingshan",
@@ -13,9 +13,12 @@ Authors@R: c(
 Description: Implements diagnostics for person-specific rates of change in
     Gaussian linear mixed models. The package separates direct within-person
     information about a target random slope from information contributed by
-    the fitted joint model, tests random-slope heterogeneity with a
+    the fitted joint model, reports the share of fitted-slope variance
+    attributable to variation in other person-specific effects that is
+    uncorrelated with the target slope, tests random-slope
+    heterogeneity with a
     boundary-aware parametric bootstrap, and evaluates prospective information
-    under supplied designs. Version 0.1 supports one scalar Gaussian random
+    under supplied designs. The package supports one scalar Gaussian random
     slope through compatible 'lme4' fits and a matrix-based backend.
 License: MIT + file LICENSE
 Encoding: UTF-8
