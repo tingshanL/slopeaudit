@@ -2,10 +2,20 @@
 """Assemble the public result files for the 2026 manuscript from a local project folder.
 
 Two outputs, both built only from an explicit allowlist:
-  --github-out DIR   small summaries for results/pm2026/ in the repository
-  --zenodo-out DIR   zip archives with the full run outputs, a file manifest and SHA256SUMS
+  --github-out DIR   the complete results/pm2026/ tree for the repository: small summaries,
+                     the compact replicate table, the check folder given by --checks,
+                     FILES.csv (every file with its SHA-256) and path_rewrites.csv
+  --zenodo-out DIR   zip archives with the full run outputs, archive_entry_manifest.csv,
+                     path_rewrites.csv and SHA256SUMS.txt (no FILES.csv)
 
 The project folder (--root) is the local working folder that holds runs/ and inputs/.
+--checks is the folder of check outputs and expected values copied to checks/ (normally the
+committed results/pm2026/checks); it must contain every file listed in expected_outputs.py.
+
+Every output folder must be new or empty. All inputs are located and screened before
+anything is written; each output is assembled in a temporary sibling folder and moved into
+place only after it is complete, so a failed run leaves no partial output and never removes
+existing files.
 JSON manifests are copied with machine-specific absolute paths rewritten to
 repository-relative ones; every rewritten file is listed in path_rewrites.csv with its
 original and public SHA-256, so the private originals remain verifiable. The script stops
@@ -15,7 +25,9 @@ inputs, schedule exports or notebook extracts.
 
 Usage:
   python3 reproduction/pm2026/release/prepare_release_files.py --root <project folder> \
-      --github-out results/pm2026 [--zenodo-out <dir>] [--extra <dir>=<label> ...]
+      --github-out <new dir> --checks results/pm2026/checks
+  python3 reproduction/pm2026/release/prepare_release_files.py --root <project folder> \
+      --zenodo-out <new dir>
 """
 from __future__ import annotations
 
@@ -24,10 +36,14 @@ import csv
 import hashlib
 import json
 import re
+import os
 import shutil
 import sys
 import zipfile
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from expected_outputs import CHECK_OUTPUTS, EXPECTED_FILES  # noqa: E402
 
 # Absolute-path prefixes rewritten in manifests: (pattern, replacement).
 PATH_REWRITES = [
@@ -157,11 +173,14 @@ def selection(root: Path, include_large: bool):
     for f in EMPIRICAL_SMALL:
         items.append((runs / f, f"empirical/{f}"))
     missing = [str(s) for s, _ in items if not s.exists()]
+    if not include_large and not (root / COMPACT_SOURCE).exists():
+        missing.append(str(root / COMPACT_SOURCE))
     if missing:
         sys.exit("STOP: expected files are missing:\n  " + "\n  ".join(missing))
     return items
 
 
+COMPACT_SOURCE = "runs/s4_step6_consolidated_refit/summary/operating_study_replicate_results.csv"
 COMPACT_COLUMNS = ["cell_id", "replicate", "cell_family", "repair_method", "strict_fit_valid",
                    "mean_Pfull", "mean_Rdirect", "LR_evaluation_replicate", "slope_heterogeneity_supported"]
 
@@ -169,7 +188,7 @@ COMPACT_COLUMNS = ["cell_id", "replicate", "cell_family", "repair_method", "stri
 def write_compact_replicates(root: Path, out: Path):
     """Columns of the refit replicate table needed by make_S4_tables.py and make_figure_03.py."""
     import pandas as pd
-    src = root / "runs/s4_step6_consolidated_refit/summary/operating_study_replicate_results.csv"
+    src = root / COMPACT_SOURCE
     d = pd.read_csv(src, usecols=COMPACT_COLUMNS, low_memory=False, float_precision="round_trip")
     rel = "operating_audit/s4_step6_consolidated_refit/summary/operating_study_replicate_results_compact.csv.gz"
     dst = out / rel
@@ -178,7 +197,45 @@ def write_compact_replicates(root: Path, out: Path):
     return rel, dst, sha256(src)
 
 
-def write_tree(items, out: Path, extra, root: Path):
+def check_selection(checks: Path):
+    """Files copied from --checks to checks/; every expected and check output is required."""
+    required = [f"expected/{f}" for f in EXPECTED_FILES] + CHECK_OUTPUTS
+    missing = [str(checks / f) for f in required if not (checks / f).is_file()]
+    if missing:
+        sys.exit("STOP: check files are missing:\n  " + "\n  ".join(missing))
+    return [(p, f"checks/{p.relative_to(checks).as_posix()}") for p in sorted(checks.rglob("*"))
+            if p.is_file() and not p.name.startswith(".") and "__pycache__" not in p.parts]
+
+
+def screen(items):
+    """Screen every selected file before anything is written."""
+    for src, _ in items:
+        public_bytes(src, [], "")
+
+
+def require_new_or_empty(out: Path):
+    if out.exists() and (not out.is_dir() or any(out.iterdir())):
+        sys.exit(f"STOP: output folder {out} exists and is not empty; give a new or empty folder")
+
+
+def build_atomically(out: Path, build):
+    """Run build(tmp) in a temporary sibling folder and move it to out on success."""
+    tmp = out.parent / f".{out.name}.partial-{os.getpid()}"
+    if tmp.exists():
+        shutil.rmtree(tmp)
+    tmp.mkdir(parents=True)
+    try:
+        result = build(tmp)
+    except BaseException:
+        shutil.rmtree(tmp, ignore_errors=True)
+        raise
+    if out.exists():
+        out.rmdir()  # empty, checked by require_new_or_empty
+    tmp.rename(out)
+    return result
+
+
+def write_tree(items, out: Path, root: Path):
     out.mkdir(parents=True, exist_ok=True)
     rewrites, rows = [], []
     for src, rel in items:
@@ -187,14 +244,6 @@ def write_tree(items, out: Path, extra, root: Path):
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_bytes(data)
         rows.append({"path": rel, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
-    for d, label in extra:
-        for p in sorted(Path(d).rglob("*")):
-            if p.is_file() and not p.name.startswith("."):
-                rel = f"{label}/{p.relative_to(d).as_posix()}"
-                data = public_bytes(p, rewrites, rel)
-                (out / rel).parent.mkdir(parents=True, exist_ok=True)
-                (out / rel).write_bytes(data)
-                rows.append({"path": rel, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
     rel, dst, src_hash = write_compact_replicates(root, out)
     rows.append({"path": rel, "bytes": dst.stat().st_size, "sha256": sha256(dst)})
     rewrites.append({"public_path": rel, "original_sha256": src_hash, "public_sha256": sha256(dst),
@@ -239,22 +288,36 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", type=Path, required=True)
     ap.add_argument("--github-out", type=Path)
+    ap.add_argument("--checks", type=Path,
+                    help="folder copied to checks/ in --github-out (normally results/pm2026/checks)")
     ap.add_argument("--zenodo-out", type=Path)
-    ap.add_argument("--extra", action="append", default=[],
-                    help="DIR=LABEL: also copy a folder of regenerated check outputs into --github-out")
     a = ap.parse_args()
     if not (a.github_out or a.zenodo_out):
         sys.exit("give --github-out and/or --zenodo-out")
-    extra = [tuple(x.split("=", 1)) for x in a.extra]
+    if a.github_out and not a.checks:
+        sys.exit("--github-out needs --checks (normally results/pm2026/checks)")
+
+    # Locate and screen everything first; nothing is written until all inputs pass.
+    plans = []
     if a.github_out:
-        if a.github_out.exists():
-            shutil.rmtree(a.github_out)
-        rows, rw = write_tree(selection(a.root, include_large=False), a.github_out, extra, a.root)
-        print(f"GitHub results: {len(rows)} files, {sum(r['bytes'] for r in rows) / 1e6:.1f} MB; "
-              f"{len(rw)} manifests rewritten")
+        require_new_or_empty(a.github_out)
+        items = selection(a.root, include_large=False) + check_selection(a.checks)
+        screen(items)
+        plans.append(("github", a.github_out, items))
     if a.zenodo_out:
-        manifest = build_zips(selection(a.root, include_large=True), a.zenodo_out)
-        print(f"Zenodo archives: {len(manifest)} entries in {a.zenodo_out}")
+        require_new_or_empty(a.zenodo_out)
+        items = selection(a.root, include_large=True)
+        screen(items)
+        plans.append(("zenodo", a.zenodo_out, items))
+
+    for kind, out, items in plans:
+        if kind == "github":
+            rows, rw = build_atomically(out, lambda tmp: write_tree(items, tmp, a.root))
+            print(f"GitHub results: {len(rows)} files, {sum(r['bytes'] for r in rows) / 1e6:.1f} MB; "
+                  f"{len(rw)} rewrites recorded; written to {out}")
+        else:
+            manifest = build_atomically(out, lambda tmp: build_zips(items, tmp))
+            print(f"Zenodo archives: {len(manifest)} entries; written to {out}")
 
 
 if __name__ == "__main__":

@@ -15,6 +15,9 @@ import sys
 import tempfile
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from expected_outputs import EXPECTED_FILES, N_REPORTED_GROUPS, S3_TABLES, S4_TABLES  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[3]
 P = ROOT / "reproduction/pm2026"
 D = ROOT / "results/pm2026"
@@ -29,6 +32,8 @@ def run(args):
 
 
 def same_rows(new: Path, old: Path):
+    if not new.is_file():
+        return False, 0
     a = [x for x in new.read_text().splitlines() if x.strip()]
     b = [x for x in old.read_text().splitlines() if x.strip()]
     return a == b, len(b)
@@ -38,6 +43,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out-dir", type=Path, default=None)
     a = ap.parse_args()
+    missing = [str(E / f) for f in EXPECTED_FILES if not (E / f).is_file()]
+    if missing:
+        sys.exit("reported-value check FAILED: expected files are missing:\n  " + "\n  ".join(missing))
     out = a.out_dir or Path(tempfile.mkdtemp(prefix="pm2026_check_"))
     runs = {k: D / "downstream" / k for k in ("common_80", "common_50", "irregular_80", "irregular_50")}
     run_args = [x for k, v in runs.items() for x in ("--run", f"{k}={v}")]
@@ -47,16 +55,16 @@ def main():
     results = []
 
     run([P / "s3_downstream/make_S3_tables.py", "--out-dir", out / "s3", *run_args, "--dose", dose, "--n600", n600])
-    for f in sorted((E / "s3_tables").glob("*.tex")):
-        results.append((f"S3 {f.stem}", *same_rows(out / "s3" / f.name, f)))
+    for name in S3_TABLES:
+        results.append((f"S3 {Path(name).stem}", *same_rows(out / "s3" / name, E / "s3_tables" / name)))
     run([P / "s3_downstream/make_figure_02.py", "--out-dir", out / "fig2", *run_args, "--dose", dose, "--n600", n600])
     results.append(("Table 1", *same_rows(out / "fig2/s5_table_main_rows.tex", E / "table1_rows.tex")))
 
     run([P / "s4_operating_audit/make_S4_tables.py", "--summary", summary, "--replicates", compact,
          "--step7", D / "operating_audit/s4_step7_reporting",
          "--design", D / "operating_audit/operating_study_design.csv", "--out-dir", out / "s4"])
-    for f in sorted((E / "s4_tables").glob("*.tex")):
-        results.append((f"S4 {f.stem}", *same_rows(out / "s4" / f.name, f)))
+    for name in S4_TABLES:
+        results.append((f"S4 {Path(name).stem}", *same_rows(out / "s4" / name, E / "s4_tables" / name)))
     run([P / "s4_operating_audit/make_figure_03.py", "--operating-csv", compact, "--out-dir", out / "fig3"])
     results.append(("Figure 3 (count assertions)", True, 4))
 
@@ -74,8 +82,11 @@ def main():
     for name, ok, n in results:
         print(f"{name:<{width}}  {'PASS' if ok else 'FAIL'}  ({n} rows/items)")
     print(f"outputs in {out}")
+    if len(results) != N_REPORTED_GROUPS:
+        sys.exit(f"reported-value check FAILED: {len(results)} groups evaluated, {N_REPORTED_GROUPS} expected")
     if not all(ok for _, ok, _ in results):
         sys.exit("reported-value check FAILED")
+    print(f"all {N_REPORTED_GROUPS} reported-value groups PASS")
 
 
 if __name__ == "__main__":
