@@ -112,3 +112,12 @@ python3 reproduction/s4_operating_study/summarize_operating_study.py \
 Exact historical full mode additionally requires the prespecified 46-cell design and
 restricted-derived empirical schedule/anchor inputs described above. Those inputs
 are not replaced by the synthetic smoke design.
+
+## Note for the 2026 manuscript
+
+The original operating-study fits produced by this workflow were audited and, where
+flagged, refit by likelihood-based selection (Supplement S5 of the 2026 manuscript). The
+audit code is in `reproduction/pm2026/s4_operating_audit/`, and the summaries after the
+refits, which supersede the v0.1.0 summaries for reporting, are in
+`results/pm2026/operating_audit/`. The generator and summarizer in this folder are used
+unchanged by that audit.

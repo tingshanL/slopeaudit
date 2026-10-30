@@ -1,0 +1,6 @@
+{
+  "reduction_checked": 20000,
+  "reduction_nonfinite": 0,
+  "reduction_max_abs_error": 1.0547118733938987e-15,
+  "tolerance": 1e-10
+}

@@ -1,0 +1,16 @@
+cell_id,subset,change_pattern,0->1,1->0
+core__q1_0.05__q0_4__rho_0,neither,LR_and_cutoff_changed,3,0
+core__q1_0.05__q0_4__rho_0,neither,cutoff_only_changed,0,6
+core__q1_0.05__q0_4__rho_0.7,neither,cutoff_only_changed,0,4
+core__q1_0.25__q0_4__rho_0,neither,LR_and_cutoff_changed,12,0
+core__q1_0.25__q0_4__rho_0,neither,cutoff_only_changed,0,14
+core__q1_1__q0_4__rho_0,neither,LR_and_cutoff_changed,10,0
+critical__late_visit_residual_variance_doubled__q1_0.05__q0_4,neither,LR_and_cutoff_changed,5,0
+critical__late_visit_residual_variance_doubled__q1_0.25__q0_4,neither,LR_and_cutoff_changed,21,0
+critical__mild_curvature_max_0p25_residual_SD__q1_0.05__q0_4,neither,cutoff_only_changed,0,1
+critical__residual_AR1_rho_0p4__q1_0.05__q0_0.5,neither,LR_only_changed,7,0
+empirical__global_cortical_att,neither,LR_only_changed,63,420
+empirical__global_cortical_cbf,neither,LR_only_changed,16,4
+empirical__global_mean_thickness,neither,LR_only_changed,0,8
+true_zero__balanced_three_wave__q0_4,calibration,LR_and_cutoff_changed,1,0
+true_zero__balanced_three_wave__q0_4,calibration,cutoff_only_changed,0,1

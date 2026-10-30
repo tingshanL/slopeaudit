@@ -59,6 +59,9 @@ def main():
     ap.add_argument("--summary", type=Path, required=True)
     ap.add_argument("--step7", type=Path, required=True)
     ap.add_argument("--design", type=Path, required=True, help="operating_study_design.csv")
+    ap.add_argument("--replicates", type=Path, default=None,
+                    help="replicate table; default <summary>/operating_study_replicate_results.csv "
+                         "(the compact public .csv.gz also works)")
     ap.add_argument("--out-dir", type=Path, required=True)
     a = ap.parse_args()
     a.out_dir.mkdir(parents=True, exist_ok=True)
@@ -104,7 +107,7 @@ def main():
                                 f(r.bias_mean_Rdirect), f(r.bias_mean_Delta)]) + "\\\\")
     out["S4_cells_rows.tex"] = rows
 
-    rep = pd.read_csv(a.summary / "operating_study_replicate_results.csv", low_memory=False,
+    rep = pd.read_csv(a.replicates or a.summary / "operating_study_replicate_results.csv", low_memory=False,
                       usecols=["cell_family", "repair_method", "strict_fit_valid"])
     rows = []
     for fam in FAM_ORDER:

@@ -115,3 +115,39 @@ test_that("public outputs report kappa for sleepstudy", {
   expect_equal(out$capacity_summary$n_undefined[[1]], 0L)
   expect_output(print(out), "sqrt\\(kappa\\)")
 })
+
+test_that("a singular covariance with two nuisance effects can still give positive kappa", {
+  # Level and slope perfectly correlated, curvature independent: G is singular,
+  # but the curvature effect leaves slope-unrelated nuisance variation.
+  t <- c(0, 1, 2, 3, 4)
+  Z <- cbind(1, (t - 2)^2, t - 2)
+  G <- matrix(0, 3, 3)
+  G[c(1, 3), c(1, 3)] <- matrix(c(4, 1, 1, 0.25), 2, 2)
+  G[2, 2] <- 0.5
+  expect_lt(min(eigen(G, symmetric = TRUE, only.values = TRUE)$values), 1e-12)
+  out <- participant(Z, G, diag(5), target_index = 3L)
+  expect_gt(out$kappa, 1e-4)
+  expect_true(out$diagnostics$numerically_valid)
+})
+
+test_that("design sensitivity summarizes and prints with an undefined kappa", {
+  metadata <- list(
+    basis_type = "linear",
+    outcome_units = "outcome units",
+    time_or_exposure_scale = "1 time unit",
+    origin_or_reference = "centered time 0",
+    reference_window = "planned observations",
+    estimand = "participant-specific linear change per time unit"
+  )
+  Z <- list(
+    spread = cbind(intercept = 1, time = c(-1, 0, 1)),
+    flat = cbind(intercept = 1, time = c(0, 0, 0))
+  )
+  # Uncorrelated level and slope: the flat design then has zero determinacy.
+  G <- matrix(c(1, 0, 0, 0.5), 2, 2, dimnames = list(c("intercept", "time"), c("intercept", "time")))
+  out <- slope_design_sensitivity(Z = Z, G = G, R = diag(3), target = "time", target_metadata = metadata)
+  expect_identical(out$design_table$kappa_status, c("defined", "undefined_zero_determinacy"))
+  expect_equal(out$capacity_summary$n_undefined, c(1L, 1L))
+  expect_equal(out$capacity_summary$n_defined, c(1L, 1L))
+  expect_output(print(out), "sqrt\\(kappa\\)")
+})

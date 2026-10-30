@@ -30,3 +30,12 @@ python3 reproduction/s5_downstream_simulation/summarize_downstream_simulation.py
 Full mode requires the authorized empirical source-anchor manifest and its
 relative schedule JSON files. `prepare_source_anchors_restricted.py` reconstructs
 those inputs from explicitly supplied authorized AABC2 files.
+
+## Note for the 2026 manuscript
+
+This simulation is the attenuation study of the 2026 manuscript (Supplement S3.4). Its fits
+were audited by likelihood-based refitting of a sample (Supplement S5.4); the coefficient
+and coverage results reported there are unchanged. Its auxiliary likelihood-ratio
+diagnostics failed nesting checks in the high-information regime and are retired;
+heterogeneity testing is evaluated by the true-zero simulation instead. The audit is in
+`reproduction/pm2026/provenance/attenuation_audit/` (see `reproduction/pm2026/README.md`).

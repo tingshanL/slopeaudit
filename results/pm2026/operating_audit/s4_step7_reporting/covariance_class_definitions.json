@@ -1,0 +1,5 @@
+{
+  "singular_proxy": "boundary flag, missing rho, or 1 - rho^2 <= 1e-4 (|rho| >= .99995)",
+  "near_rank_one": "1e-4 < 1 - rho^2 <= .0975 (.95 <= |rho| < .99995)",
+  "interior": "1 - rho^2 > .0975 (|rho| < .95)"
+}

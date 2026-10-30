@@ -1,0 +1,13 @@
+row_type,regime,model_role,models_with_multiple_attempts,selected_below_best_attempt_gt_001,min_gap
+evaluation,near_boundary,random_slope_predictor_omitted,25,0,-0.007890705850286395
+evaluation,near_boundary,random_slope_primary,31,0,-0.006953310461540241
+evaluation,true_zero_slope_variance,random_slope_predictor_omitted,193,12,-0.020781874791282462
+evaluation,true_zero_slope_variance,random_slope_primary,285,31,-0.02170871117778006
+lr_calibration,high_slope_information,random_slope_primary,110,0,0.0
+lr_calibration,intermediate,random_slope_primary,163,0,-0.0001730103422232787
+lr_calibration,near_boundary,random_slope_primary,232,4,-28.83873074224448
+lr_calibration,true_zero_slope_variance,random_slope_primary,135,8,-0.017360156765789725
+lr_null_evaluation,high_slope_information,random_slope_primary,104,0,0.0
+lr_null_evaluation,intermediate,random_slope_primary,145,0,-0.00021867290615773527
+lr_null_evaluation,near_boundary,random_slope_primary,238,1,-0.13746636363430298
+lr_null_evaluation,true_zero_slope_variance,random_slope_primary,134,12,-0.021461859465489397

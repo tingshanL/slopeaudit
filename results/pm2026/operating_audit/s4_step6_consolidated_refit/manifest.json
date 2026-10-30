@@ -1,0 +1,19 @@
+{
+  "method": "startpoint_screen_likelihood_refit_v2",
+  "smoke": false,
+  "unresolved_rows": 0,
+  "candidates": 6906,
+  "patched_rows": 6906,
+  "tie_tol": 0.01,
+  "signature": "G00 == sigma2 (rtol 1e-8), |G01| <= 1e-10 sigma2, tau2 == 0.1 sigma2 (rtol 1e-8)",
+  "strict_rule_for_refit_rows": "successful winning optimization corroborated by >=2 distinct successful starts within tol; objective, embedding, nesting and finite metrics checks pass",
+  "sha256": {
+    "experiments/s4_step4_startpoint_refit.py": "030b08f3b78575515ad0de6ffab8e029615176ae9fa236cc58c41b68f30ad2f3",
+    "experiments/s5b_contamination_pilot/reml_tools.py": "94f761cff1b7129793e63554097d020d95960f1b51eab1392bd792d30438f746",
+    "inputs/s4_completion_validation_v1/operating_study_design.csv": "3784995b58881b284687c34b83a19244919c06f050fd2fe451f4b4205eadf9ed",
+    "slopeaudit-v0.1.0/reproduction/s4_operating_study/simulation_core.py": "1df3222d39dad0d897248eb79ab01c5ed483d526bff5cda9698856dc0fc4bbd0",
+    "slopeaudit-v0.1.0/reproduction/s4_operating_study/generate_operating_study.py": "7fc8c8375e0c0479d160c8c8fe28ed71a4ee4e2886717053011f6536a26f612a",
+    "inputs/s4_completion_validation_v1/operating_study_replicate_results.csv": "62587fb97a837a2171d6b5c8939de192242efe4fcf6009e633f74742837cfdcd",
+    "inputs/s4_refit_schedules_all_v2/s4_refit_schedules.json": "654954f2b43700a406005b41bace4114196b83a0892a192edfbb467c7a6e60c0"
+  }
+}

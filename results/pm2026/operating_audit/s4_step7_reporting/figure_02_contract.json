@@ -1,0 +1,35 @@
+{
+  "strict_valid_true_zero_fits": 7985,
+  "score_counts": [
+    1997,
+    1994,
+    1998,
+    1996
+  ],
+  "heterogeneity_k_over_n": [
+    [
+      47,
+      999
+    ],
+    [
+      48,
+      997
+    ],
+    [
+      41,
+      998
+    ],
+    [
+      45,
+      999
+    ]
+  ],
+  "determinacy_proceeds_D2_ge_040": 4040,
+  "direct_proceeds_Rdirect_ge_040": 0,
+  "cell_order": [
+    "true_zero__balanced_three_wave__q0_0.5",
+    "true_zero__balanced_three_wave__q0_4",
+    "true_zero__empirical__fluid_cognition__q0_0.5",
+    "true_zero__empirical__fluid_cognition__q0_4"
+  ]
+}

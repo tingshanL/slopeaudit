@@ -1,0 +1,56 @@
+{
+  "stage": "common",
+  "n": 600,
+  "reps": 500,
+  "g00": 100.0,
+  "target_d2": 0.5,
+  "tau2": 1.0,
+  "seed": 40261018,
+  "smoke": false,
+  "selection_rule": "highest REML likelihood among admissible candidates (statsmodels optimizers, independent multistart, embedded random-intercept fit); corroboration tolerance 0.01 log-lik; up to 2 restarts; uncorroborated fits not fit_ok",
+  "optimizers": [
+    "lbfgs",
+    "powell",
+    "bfgs"
+  ],
+  "n_starts": 8,
+  "versions": {
+    "python": "3.9.20",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.3",
+    "statsmodels": "0.14.6"
+  },
+  "cells": [
+    {
+      "construction": "A",
+      "c": 0.5,
+      "G": [
+        [
+          100.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "sigma2": 5.0,
+      "S": 100.0,
+      "rho": 0.0,
+      "common_R_direct": 0.5000000000000001,
+      "common_D2": 0.5,
+      "common_Delta_fit": -1.1102230246251565e-16,
+      "common_kappa": 1.5407439555097887e-31,
+      "common_w_sum": -2.7755575615628914e-17,
+      "E_w_sum": -2.7755575615628914e-17,
+      "E_D2": 0.5,
+      "E_R_direct": 0.5000000000000001,
+      "E_Delta_fit": -1.1102230246251565e-16,
+      "mean_kappa_i": 1.5407439555097887e-31,
+      "gamma": 5.0,
+      "beta_pop_eb_omit": -1.3877787807814457e-16,
+      "corr_pop_eb_omit": -1.9626155733547187e-16
+    }
+  ]
+}
