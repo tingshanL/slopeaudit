@@ -219,11 +219,13 @@ superseded for reporting by `results/pm2026/`; see `reproduction/pm2026/README.m
 
 ## Archived simulation and validation outputs
 
-Large outputs are archived at [Zenodo](https://doi.org/10.5281/zenodo.22092591):
-the v0.1.0 S4 operating-study, S5 downstream-simulation and Question 1
-bootstrap-validation outputs, and, in a later version of the same record, the
-full run outputs for the 2026 manuscript. Code, documentation, compact
-summaries and reproduction instructions are maintained in this repository.
+Large outputs are archived in a Zenodo output dataset
+([10.5281/zenodo.22092591](https://doi.org/10.5281/zenodo.22092591)): the v0.1.0
+S4 operating-study, S5 downstream-simulation and Question 1 bootstrap-validation
+outputs, and, in a later version of the same dataset, the full run outputs for
+the 2026 manuscript. That dataset holds outputs only; the code of each tagged
+release is archived separately as a Zenodo software record. Code, documentation,
+compact summaries and reproduction instructions are maintained in this repository.
 
 ## Validation status
 

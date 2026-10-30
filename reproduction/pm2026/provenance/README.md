@@ -34,9 +34,12 @@ identical to the released files in `reproduction/s5_downstream_simulation/`.
 
 For every maintained script: its release path and hash, the original file name and hash,
 the executed snapshot it corresponds to, and the change made. Maintained copies differ from
-the originals only in docstrings and comments, apart from one recorded path default
-(`downstream_simulation.py`, `DEFAULT_REPO_ROOT`). This was checked by comparing the
-Python syntax trees with docstrings removed.
+the originals only in docstrings and comments, apart from two recorded executable changes:
+the repository-path default in `downstream_simulation.py` (`DEFAULT_REPO_ROOT`), and an
+optional `--replicates` argument added to `make_S4_tables.py` so that the S4 tables can be
+regenerated from the compact public replicate table (without the argument the script behaves
+as before). For all other maintained copies, equivalence was checked by comparing the Python
+syntax trees with docstrings removed.
 
 ## Not distributed
 

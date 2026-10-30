@@ -5,8 +5,9 @@ Downstream Inference." Folders follow the online supplement. Run every command f
 repository root after restoring the environments (`environment/README.md`; Python 3.9.20 with
 `environment/requirements.txt`, R with `renv.lock`).
 
-Small result files are in `results/pm2026/`; full run outputs are in the Zenodo archive
-(new version of 10.5281/zenodo.22092591). The v0.1.0 reproduction folders elsewhere in
+Small result files are in `results/pm2026/`; full run outputs are in a new version of the
+Zenodo output dataset (10.5281/zenodo.22092591). The code of each tagged release is archived
+separately as a Zenodo software record. The v0.1.0 reproduction folders elsewhere in
 `reproduction/` are unchanged; see "Relation to v0.1.0" below.
 
 ## Results, code and inputs (Table S8.2)
@@ -166,19 +167,40 @@ Output file names keep the `s5_` and `s7_` prefixes of the original runs.
 
 ## Release tools
 
-`release/prepare_release_files.py` builds `results/pm2026/` and the Zenodo archives from the
-local project folder using an explicit file list, rewrites absolute paths in manifests (both
-hashes are listed in `path_rewrites.csv`), and stops on restricted files, participant
-identifiers or remaining home-directory paths. `release/check_reported_values.py` is described
-above.
+`release/prepare_release_files.py` builds `results/pm2026/` and the Zenodo output archives
+from the local project folder using an explicit file list, rewrites absolute paths in
+manifests (both hashes are listed in `path_rewrites.csv`), and stops on restricted files,
+participant identifiers or remaining home-directory paths. It locates and screens every input
+before writing, requires a new or empty output folder, and moves the output into place only
+when it is complete.
+
+```bash
+# complete results/pm2026 tree (summaries, compact replicate table, checks/, FILES.csv, path_rewrites.csv)
+python3 reproduction/pm2026/release/prepare_release_files.py --root <project folder> \
+    --github-out <new folder> --checks results/pm2026/checks
+diff -r <new folder> results/pm2026        # no output: the local runs match the committed files
+
+# Zenodo output archives (four zips, archive_entry_manifest.csv, path_rewrites.csv, SHA256SUMS.txt)
+python3 reproduction/pm2026/release/prepare_release_files.py --root <project folder> \
+    --zenodo-out <new folder>
+```
+
+`checks/` holds the regenerated S2 and S7 check outputs and the expected values that
+`release/check_reported_values.py` compares against; they are copied as given, so the
+`diff -r` comparison tests the files derived from the project folder. The expected files are
+listed in `release/expected_outputs.py`; `check_reported_values.py` stops if any is missing
+and requires all 17 groups to be evaluated.
 
 ## Relation to v0.1.0
 
 - **Operating study.** The v0.1.0 summaries in `results/frozen_summaries/s4/` and the v0.1.0
   Zenodo outputs predate the likelihood audit. They are superseded for reporting by the summaries
   after the consolidated refit in `results/pm2026/operating_audit/`.
-- **Attenuation study.** Its coefficient and coverage results are unchanged by the audit
-  (Supplement S5.4). Its auxiliary likelihood-ratio diagnostics failed nesting checks and are
-  retired; heterogeneity testing is evaluated by the true-zero simulation instead.
+- **Attenuation study.** The reported results are retained. In the audited sample
+  (Supplement S5.4), refitting from the best fits changed downstream coefficients negligibly
+  (at most 7 × 10⁻⁶) and changed none of the significance decisions in the reported regimes;
+  coverage was not reassessed, because the audit did not record standard errors or the
+  generating coefficient. Its auxiliary likelihood-ratio diagnostics failed nesting checks and
+  are retired; heterogeneity testing is evaluated by the true-zero simulation instead.
 - **Package.** v0.2.0 adds the nuisance share κ (`NEWS.md`); the other numerical routines are
   unchanged.
