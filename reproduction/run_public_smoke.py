@@ -211,6 +211,7 @@ def main() -> None:
         pm = output / "pm2026"
         P = "reproduction/pm2026"
         reml = f"{P}/s3_downstream/reml_tools.py"
+        pm.mkdir(parents=True, exist_ok=True)
         run("pm2026 S2 identities", [py, f"{P}/s2_identities/s2_numerical_checks.py", str(pm / "s2.json")])
         run("pm2026 S7 design sensitivity", [py, f"{P}/s7_design/make_S7.py",
                                              "--aabc2", "results/pm2026/empirical/s7_aabc2_aggregate",
@@ -220,7 +221,7 @@ def main() -> None:
         run("pm2026 downstream simulation synthetic smoke fit",
             [py, f"{P}/s3_downstream/downstream_simulation.py", "--stage", "common", "--smoke",
              "--constructions", "B", "--c-values", "0.5", "--output-dir", str(pm / "downstream")])
-        require(pm / "downstream" / "common_D2_0.80_likelihood_selection" / "summary_by_method.csv")
+        require(pm / "downstream" / "common_D2_0.80_likelihood_selection_smoke" / "summary_by_method.csv")
 
         s4_out = output / "s4" / "generator"
         keys = pm / "s4_keys.csv"
