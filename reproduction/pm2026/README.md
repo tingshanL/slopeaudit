@@ -120,7 +120,7 @@ python3 $A/make_figure_03.py --operating-csv runs/s4_step6_consolidated_refit/su
     --out-dir figure_03
 ```
 
-The step manifests record the hashes of every input and script; the executed script versions
+The manifests of steps 3–6 record the hashes of their inputs and scripts; the executed script versions
 are in `provenance/downstream_and_s4_audit/`.
 
 **Restricted workflow.** `s4_operating_audit/restricted/` exports the empirical schedules
