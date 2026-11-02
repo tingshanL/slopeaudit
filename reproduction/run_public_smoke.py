@@ -257,6 +257,8 @@ def main() -> None:
 
         run("pm2026 reported values from results/pm2026",
             [py, f"{P}/release/check_reported_values.py", "--out-dir", str(pm / "reported_values")])
+        run("pm2026 release-builder screening checks",
+            [py, f"{P}/release/test_release_builder.py"])
         completed.append("pm2026")
 
     manifest = {

@@ -23,6 +23,13 @@ if any selected file is a restricted input, contains an AABC2 participant identi
 still contains an absolute home-directory path after rewriting. It never reads restricted
 inputs, schedule exports or notebook extracts.
 
+Screening covers every byte that is published: the text of each selected file, the
+uncompressed content of the compact replicate table (screened before it is written and
+again after), the decompressed streams of PDF figures and the compressed text chunks of
+PNG figures. Archive files (zip, 7z, rar, tar) and other gzip files are never published.
+From --checks only the listed expected files and check outputs are copied; any other file
+in that folder stops the build (macOS .DS_Store files are ignored).
+
 Usage:
   python3 reproduction/pm2026/release/prepare_release_files.py --root <project folder> \
       --github-out <new dir> --checks results/pm2026/checks
@@ -35,11 +42,14 @@ import argparse
 import csv
 import hashlib
 import json
-import re
+import gzip
 import os
+import re
 import shutil
 import sys
+import tempfile
 import zipfile
+import zlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -132,14 +142,82 @@ def rewrite_paths(obj):
     return obj
 
 
+ARCHIVE_MAGIC = {b"PK\x03\x04": "zip", b"PK\x05\x06": "zip", b"7z\xbc\xaf\x27\x1c": "7z",
+                 b"Rar!": "rar"}
+PDF_STREAM_START = re.compile(rb"(?<!end)stream\r?\n")
+PDF_IMAGE_FILTERS = {b"DCTDecode", b"JPXDecode", b"CCITTFaxDecode", b"JBIG2Decode"}
+
+
+def _screen_text(label: str, data: bytes):
+    text = data.decode("utf-8", errors="ignore")
+    if PARTICIPANT_ID.search(text):
+        sys.exit(f"STOP: participant identifier found in {label}")
+    if ABSOLUTE_HOME.search(text):
+        sys.exit(f"STOP: absolute home-directory path remains in {label}")
+
+
+def _pdf_streams(label: str, data: bytes):
+    """Decoded content of every Flate-compressed PDF stream. Unfiltered streams are already
+    covered by the raw-byte screen; image-only codecs carry no text; any other filter stops."""
+    for m in PDF_STREAM_START.finditer(data):
+        end = data.find(b"endstream", m.end())
+        if end < 0:
+            sys.exit(f"STOP: unterminated PDF stream in {label}")
+        header = data[data.rfind(b"obj", 0, m.start()) + 3:m.start()]
+        filters = re.findall(rb"/([A-Za-z0-9]+Decode)", header)
+        if not filters or set(filters) <= PDF_IMAGE_FILTERS:
+            continue
+        if filters != [b"FlateDecode"]:
+            sys.exit(f"STOP: PDF stream filter {[f.decode() for f in filters]} cannot be screened in {label}")
+        try:
+            yield zlib.decompressobj().decompress(data[m.end():end])
+        except zlib.error:
+            sys.exit(f"STOP: unreadable compressed PDF stream in {label}")
+
+
+def _png_text_chunks(label: str, data: bytes):
+    """Decompressed zTXt and iTXt chunks of a PNG (tEXt is plain and screened as raw bytes)."""
+    pos = 8
+    while pos + 8 <= len(data):
+        length = int.from_bytes(data[pos:pos + 4], "big")
+        kind, body = data[pos + 4:pos + 8], data[pos + 8:pos + 8 + length]
+        pos += 12 + length
+        try:
+            if kind == b"zTXt":
+                yield zlib.decompress(body.split(b"\x00", 1)[1][1:])
+            elif kind == b"iTXt":
+                keyword, rest = body.split(b"\x00", 1)
+                if rest[:1] == b"\x01":
+                    yield zlib.decompress(rest[2:].split(b"\x00", 2)[2])
+        except (zlib.error, IndexError, ValueError):
+            sys.exit(f"STOP: unreadable compressed PNG text chunk ({kind.decode(errors='ignore')}) in {label}")
+
+
+def screen_bytes(label: str, data: bytes, allow_gzip: bool = False):
+    """Screen everything a reader could recover from data: raw text and compressed content."""
+    for magic, kind in ARCHIVE_MAGIC.items():
+        if data.startswith(magic):
+            sys.exit(f"STOP: {kind} archive selected for publication: {label}")
+    if len(data) > 262 and data[257:262] == b"ustar":
+        sys.exit(f"STOP: tar archive selected for publication: {label}")
+    if data[:2] == b"\x1f\x8b":
+        if not allow_gzip:
+            sys.exit(f"STOP: gzip file selected for publication: {label}")
+        _screen_text(f"{label} (uncompressed)", gzip.decompress(data))
+        return
+    _screen_text(label, data)
+    if data.startswith(b"%PDF"):
+        for inner in _pdf_streams(label, data):
+            _screen_text(f"{label} (PDF stream)", inner)
+    elif data.startswith(b"\x89PNG\r\n\x1a\n"):
+        for inner in _png_text_chunks(label, data):
+            _screen_text(f"{label} (PNG text chunk)", inner)
+
+
 def check_text(path: Path, data: bytes):
     if RESTRICTED_NAMES.search(path.name):
         sys.exit(f"STOP: restricted file selected: {path}")
-    text = data.decode("utf-8", errors="ignore")
-    if PARTICIPANT_ID.search(text):
-        sys.exit(f"STOP: participant identifier found in {path}")
-    if ABSOLUTE_HOME.search(text):
-        sys.exit(f"STOP: absolute home-directory path remains in {path}")
+    screen_bytes(str(path), data)
 
 
 def public_bytes(src: Path, rewrites: list, public_name: str) -> bytes:
@@ -156,9 +234,10 @@ def public_bytes(src: Path, rewrites: list, public_name: str) -> bytes:
     return data
 
 
-def selection(root: Path, include_large: bool):
+def planned_items(root: Path, include_large: bool):
+    """(source path, public relative path) for every selected run file; no existence check."""
     runs = root / "runs"
-    items = []  # (source path, public relative path)
+    items = []
     for run, label in DOWNSTREAM_RUNS.items():
         for f in DOWNSTREAM_SMALL + (DOWNSTREAM_LARGE if include_large else []):
             p = runs / run / f
@@ -172,6 +251,11 @@ def selection(root: Path, include_large: bool):
         items.append((runs / ATTENUATION / f, f"attenuation_audit/{f}"))
     for f in EMPIRICAL_SMALL:
         items.append((runs / f, f"empirical/{f}"))
+    return items
+
+
+def selection(root: Path, include_large: bool):
+    items = planned_items(root, include_large)
     missing = [str(s) for s, _ in items if not s.exists()]
     if not include_large and not (root / COMPACT_SOURCE).exists():
         missing.append(str(root / COMPACT_SOURCE))
@@ -185,26 +269,43 @@ COMPACT_COLUMNS = ["cell_id", "replicate", "cell_family", "repair_method", "stri
                    "mean_Pfull", "mean_Rdirect", "LR_evaluation_replicate", "slope_heterogeneity_supported"]
 
 
-def write_compact_replicates(root: Path, out: Path):
-    """Columns of the refit replicate table needed by make_S4_tables.py and make_figure_03.py."""
+COMPACT_REL = "operating_audit/s4_step6_consolidated_refit/summary/operating_study_replicate_results_compact.csv.gz"
+
+
+def compact_replicates(root: Path):
+    """Columns of the refit replicate table needed by make_S4_tables.py and make_figure_03.py.
+
+    Built in a private temporary folder (outside every output folder) and screened on its
+    uncompressed content before it can be published. Returns (gzip bytes, source SHA-256)."""
     import pandas as pd
     src = root / COMPACT_SOURCE
     d = pd.read_csv(src, usecols=COMPACT_COLUMNS, low_memory=False, float_precision="round_trip")
-    rel = "operating_audit/s4_step6_consolidated_refit/summary/operating_study_replicate_results_compact.csv.gz"
-    dst = out / rel
-    dst.parent.mkdir(parents=True, exist_ok=True)
-    d[COMPACT_COLUMNS].to_csv(dst, index=False, compression={"method": "gzip", "mtime": 0})
-    return rel, dst, sha256(src)
+    with tempfile.TemporaryDirectory(prefix="pm2026_compact_") as tmp:
+        dst = Path(tmp) / Path(COMPACT_REL).name
+        d[COMPACT_COLUMNS].to_csv(dst, index=False, compression={"method": "gzip", "mtime": 0})
+        data = dst.read_bytes()
+    screen_bytes(f"{COMPACT_REL} (built from {src})", data, allow_gzip=True)
+    return data, sha256(src)
+
+
+CHECKS_IGNORED = {".DS_Store"}
 
 
 def check_selection(checks: Path):
-    """Files copied from --checks to checks/; every expected and check output is required."""
+    """Exactly the listed expected files and check outputs from --checks, copied to checks/.
+
+    Every listed file is required; any other file in the folder stops the build."""
     required = [f"expected/{f}" for f in EXPECTED_FILES] + CHECK_OUTPUTS
     missing = [str(checks / f) for f in required if not (checks / f).is_file()]
     if missing:
         sys.exit("STOP: check files are missing:\n  " + "\n  ".join(missing))
-    return [(p, f"checks/{p.relative_to(checks).as_posix()}") for p in sorted(checks.rglob("*"))
-            if p.is_file() and not p.name.startswith(".") and "__pycache__" not in p.parts]
+    present = {p.relative_to(checks).as_posix() for p in checks.rglob("*")
+               if (p.is_file() or p.is_symlink()) and p.name not in CHECKS_IGNORED}
+    unexpected = sorted(present - set(required))
+    if unexpected:
+        sys.exit("STOP: unexpected files in the checks folder (only the listed expected files and "
+                 "check outputs are published):\n  " + "\n  ".join(str(checks / f) for f in unexpected))
+    return [(checks / f, f"checks/{f}") for f in sorted(required, key=lambda f: Path(f).parts)]
 
 
 def screen(items):
@@ -235,7 +336,7 @@ def build_atomically(out: Path, build):
     return result
 
 
-def write_tree(items, out: Path, root: Path):
+def write_tree(items, out: Path, compact):
     out.mkdir(parents=True, exist_ok=True)
     rewrites, rows = [], []
     for src, rel in items:
@@ -244,9 +345,14 @@ def write_tree(items, out: Path, root: Path):
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_bytes(data)
         rows.append({"path": rel, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
-    rel, dst, src_hash = write_compact_replicates(root, out)
-    rows.append({"path": rel, "bytes": dst.stat().st_size, "sha256": sha256(dst)})
-    rewrites.append({"public_path": rel, "original_sha256": src_hash, "public_sha256": sha256(dst),
+    data, src_hash = compact
+    dst = out / COMPACT_REL
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_bytes(data)
+    screen_bytes(str(dst), dst.read_bytes(), allow_gzip=True)  # the written file, as published
+    rows.append({"path": COMPACT_REL, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+    rewrites.append({"public_path": COMPACT_REL, "original_sha256": src_hash,
+                     "public_sha256": hashlib.sha256(data).hexdigest(),
                      "change": "column subset of operating_study_replicate_results.csv (full file on Zenodo)"})
     with open(out / "FILES.csv", "w", newline="") as f:
         w = csv.DictWriter(f, ["path", "bytes", "sha256"]); w.writeheader(); w.writerows(rows)
@@ -303,7 +409,8 @@ def main():
         require_new_or_empty(a.github_out)
         items = selection(a.root, include_large=False) + check_selection(a.checks)
         screen(items)
-        plans.append(("github", a.github_out, items))
+        compact = compact_replicates(a.root)
+        plans.append(("github", a.github_out, (items, compact)))
     if a.zenodo_out:
         require_new_or_empty(a.zenodo_out)
         items = selection(a.root, include_large=True)
@@ -312,7 +419,8 @@ def main():
 
     for kind, out, items in plans:
         if kind == "github":
-            rows, rw = build_atomically(out, lambda tmp: write_tree(items, tmp, a.root))
+            files, compact = items
+            rows, rw = build_atomically(out, lambda tmp: write_tree(files, tmp, compact))
             print(f"GitHub results: {len(rows)} files, {sum(r['bytes'] for r in rows) / 1e6:.1f} MB; "
                   f"{len(rw)} rewrites recorded; written to {out}")
         else:
