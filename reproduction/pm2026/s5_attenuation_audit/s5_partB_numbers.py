@@ -2,6 +2,8 @@
 """Numbers in Supplement S5.4 (attenuation-study audit) from partB_by_task.csv alone. No refitting.
 
 Works with the reported audit run, whose output predates the standard-error and coverage columns.
+The CSV is parsed with float_precision="round_trip" (correctly rounded). pandas' default parser gave
+different last bits on x86-64 Linux and Apple Silicon for the largest rerun discrepancy.
 Usage: python3 reproduction/pm2026/s5_attenuation_audit/s5_partB_numbers.py <partB_by_task.csv>
 """
 import json
@@ -15,7 +17,7 @@ METHODS = ["one_stage_LMM", "BLUP_as_outcome_attenuation", "predictor_double_use
            "uncertainty_aware_two_stage"]
 REPORTED = ["high_slope_information", "intermediate", "near_boundary"]
 
-d = pd.read_csv(sys.argv[1])
+d = pd.read_csv(sys.argv[1], float_precision="round_trip")
 regen = [c for c in d if c.endswith("_regenerated")]
 gap_cols = [f"{r}_recorded_minus_best" for r in ROLES]
 rerun_diff = pd.concat([(d[f"{r}_frozen_rerun_llf"] - d[f"{r}_recorded_llf"]).abs() for r in ROLES]).dropna()

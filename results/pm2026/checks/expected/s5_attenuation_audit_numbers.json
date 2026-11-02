@@ -2,26 +2,26 @@
   "datasets": 200,
   "model_fits": 485,
   "regeneration_reproduced": "485 / 485",
-  "max_frozen_rerun_llf_discrepancy": 4.547473508864641e-13,
+  "max_frozen_rerun_llf_discrepancy": 2.2737367544323206e-13,
   "corroborated_refits": "485 / 485",
   "reported_evaluation_datasets": 60,
   "reported": {
     "fits": 180,
     "below_best_gt_001": 0,
     "min_gap": -2.2766078927816125e-05,
-    "max_abs_beta_change": 6.889476358601376e-06,
-    "max_rel_beta_change": 0.0029099887849849963,
+    "max_abs_beta_change": 6.889476358573621e-06,
+    "max_rel_beta_change": 0.002909988784983433,
     "p05_flips": "0 of 240",
-    "max_abs_D2_or_Rdirect_change": 7.948385319667128e-05
+    "max_abs_D2_or_Rdirect_change": 7.94838531967268e-05
   },
   "true_zero_evaluation": {
     "fits": 75,
     "below_best_gt_001": 4,
-    "min_gap": -0.1363594562408252,
+    "min_gap": -0.13635945624082524,
     "max_abs_beta_change": 0.00041175507982338296,
     "max_rel_beta_change": 0.9999716552265574,
     "p05_flips": "0 of 100",
-    "max_abs_D2_or_Rdirect_change": 0.9018467406086734
+    "max_abs_D2_or_Rdirect_change": 0.9018467406086733
   },
   "auxiliary_LR": {
     "lr_calibration": {
