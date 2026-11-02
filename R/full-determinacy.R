@@ -58,6 +58,7 @@
 
   list(
     conditional_random_effect_covariance = C,
+    slope_weights = Vinv_ZG[, target_index],
     posterior_slope_variance = posterior_slope_variance,
     D_slope2 = D_slope2,
     target_slope_variance = tau_s2,

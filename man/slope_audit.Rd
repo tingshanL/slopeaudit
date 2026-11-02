@@ -47,7 +47,8 @@ top-up until \code{B} usable values are obtained or this cap is reached.}
 \item{progress}{Logical; display a text progress bar.}
 }
 \value{
-An object of class \code{slopeaudit}.
+An object of class \code{slopeaudit}, including the decomposition's
+\code{participant_table}, \code{source_summary} and \code{capacity_summary}.
 }
 \description{
 Run the validated Question-1 heterogeneity test and the fitted-model source

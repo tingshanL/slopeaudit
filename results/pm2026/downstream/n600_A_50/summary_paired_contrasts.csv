@@ -1,0 +1,4 @@
+construction,c,schedule,contrast,n,mean_difference,mc_se,predicted
+A,0.5,common,oracle_workflow_gap,500,-1.797921620610987e-16,1.3576731867250042e-18,-1.3877787807814457e-16
+A,0.5,common,estimation_effect_EB_omit,500,-0.000452136909909596,0.0006699278624027377,
+A,0.5,common,estimation_effect_EB_adjusted,500,2.5409702441464584e-05,9.301789154955756e-05,

@@ -1,0 +1,54 @@
+{
+  "prop2_random_configs": {
+    "n": 20000,
+    "violations": 0,
+    "max_abs_composition_error": 6.317169010117141e-14,
+    "max_kappa_minus_ceiling": -5.36582151046214e-12,
+    "min_kappa_or_Delta": 7.917877464791445e-11,
+    "nonfinite": 0
+  },
+  "corollary_S1_closed_form": {
+    "n": 5000,
+    "checked": 5000,
+    "skipped_outside_domain": 0,
+    "max_abs_error": 8.066464163292153e-16,
+    "nonfinite": 0
+  },
+  "affine_invariance": {
+    "n": 3000,
+    "max_abs_difference": 1.6653345369377348e-15,
+    "nonfinite": 0
+  },
+  "prop3_rank_one": {
+    "rows": [
+      {
+        "eps": 0.5,
+        "D2_direct": 0.9310344827586208,
+        "D2_formula": 0.9310344827586207
+      },
+      {
+        "eps": 0.1,
+        "D2_direct": 0.8991257565568259,
+        "D2_formula": 0.8991257565568258
+      },
+      {
+        "eps": 0.001,
+        "D2_direct": 0.8929108174852647,
+        "D2_formula": 0.8929108174852647
+      }
+    ],
+    "limit": 0.8928571428571429,
+    "balanced_three_wave_limits": {
+      "q0=.5": 0.6,
+      "q0=4": 0.9230769230769231
+    }
+  },
+  "remark_S1_singular_example": {
+    "D2": 0.5,
+    "R_direct": 0.3333333333333333,
+    "Delta_fit": 0.16666666666666669
+  },
+  "tolerance": 1e-10,
+  "status": "PASS",
+  "failures": []
+}

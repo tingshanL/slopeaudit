@@ -1,0 +1,4 @@
+construction,c,schedule,model,n,agreed,confirmed_on_restart,improved_by_restart,unresolved,best_is_random_intercept_embedded,boundary_rate,mean_rho,frozen_rule_below_best_gt_001,frozen_rule_below_best_gt_1,frozen_gap_min,frozen_gap_median
+A,0.5,common,EB_omit,500,241,259,0,0,0,0.0,-0.002063184242516333,276,270,-116.17905025016717,-1.1071860237343571
+A,0.5,common,EB_adjusted,500,490,10,0,0,0,0.0,0.0006043769755178454,12,11,-64.34478405757727,-4.01032593799755e-08
+A,0.5,common,one_stage,500,490,10,0,0,0,0.0,0.0006047165521726736,12,12,-37.01629298963235,-4.3538875615922734e-08

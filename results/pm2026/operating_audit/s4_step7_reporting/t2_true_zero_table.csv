@@ -1,0 +1,9 @@
+version,cell_id,valid_fits,D2_median_IQR,D2_ge_040,Rdirect_median_IQR,false_positive_evaluation_subset
+original,true_zero__balanced_three_wave__q0_0.5,1997,"0.337 [0.088, 0.591]",976/1997 (48.9%),"0.008 [0.001, 0.052]",47/999 (4.7%)
+original,true_zero__balanced_three_wave__q0_4,1994,"0.414 [0.088, 0.918]",1002/1994 (50.3%),"0.007 [0.001, 0.049]",48/997 (4.8%)
+original,true_zero__empirical__fluid_cognition__q0_0.5,1998,"0.469 [0.080, 0.556]",1029/1998 (51.5%),"0.006 [0.001, 0.036]",41/998 (4.1%)
+original,true_zero__empirical__fluid_cognition__q0_4,1996,"0.469 [0.081, 0.904]",1007/1996 (50.5%),"0.006 [0.001, 0.040]",45/999 (4.5%)
+repaired,true_zero__balanced_three_wave__q0_0.5,1997,"0.337 [0.088, 0.591]",976/1997 (48.9%),"0.008 [0.001, 0.052]",47/999 (4.7%)
+repaired,true_zero__balanced_three_wave__q0_4,1994,"0.576 [0.091, 0.918]",1024/1994 (51.4%),"0.006 [0.001, 0.050]",48/997 (4.8%)
+repaired,true_zero__empirical__fluid_cognition__q0_0.5,1998,"0.469 [0.080, 0.556]",1029/1998 (51.5%),"0.006 [0.001, 0.036]",41/998 (4.1%)
+repaired,true_zero__empirical__fluid_cognition__q0_4,1996,"0.526 [0.081, 0.904]",1011/1996 (50.7%),"0.006 [0.001, 0.040]",45/999 (4.5%)

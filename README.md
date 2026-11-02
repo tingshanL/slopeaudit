@@ -3,9 +3,11 @@
 `slopeaudit` audits what person-specific random slopes in Gaussian linear
 mixed models are actually informed by. It separates direct within-person
 information about change from additional model-assisted information supplied
-by the fitted joint model.
+by the fitted joint model, and reports how much of each fitted slope's
+variance could come from other person-specific effects (the nuisance share
+`kappa`).
 
-Version 0.1 provides four functions:
+The package provides four functions:
 
 - `slope_audit()` runs the complete reader-facing audit;
 - `test_slope_heterogeneity()` answers whether slope heterogeneity is supported;
@@ -148,6 +150,7 @@ value such as `B = 4999`.
 | `R_direct` | Direct within-person information about the declared change target. |
 | `D_slope2` | Total determinacy of the fitted random slope under the fitted joint model. |
 | `Delta_fit` | Additional model-assisted information: `D_slope2 - R_direct`. |
+| `kappa`, `sqrt_kappa` | Share of a participant's fitted-slope variance due to variation in the other person-specific effects that is uncorrelated with the target slope; `sqrt_kappa` is the largest attainable absolute correlation with a person-level variable uncorrelated with the target slope and the residuals. Participant-level values at the fitted parameters, not a bound for a pooled regression; `NA` when determinacy is zero. |
 
 When Question 1 is unsupported but the fitted slope variance is positive, the
 decomposition is returned only as a conditional description of that fitted
@@ -163,6 +166,9 @@ model. At an exact fitted zero-variance boundary, it is withheld.
   it in the null model.
 - Do not describe an unsupported result as proof of no heterogeneity.
 - Do not interpret `Delta_fit` as observed within-person change.
+- Do not read a small fitted `kappa` as reassurance near a rank-one fitted
+  covariance, where it can be zero while model assistance is large, or as a
+  check that a downstream regression on fitted slopes is calibrated.
 - Do not claim that an `lme4` fit used AR(1). Correlated-residual sensitivity
   is available only through separately justified `R` matrices in
   `slope_design_sensitivity()`.
@@ -197,13 +203,29 @@ redistributed paths and full applicable GPL texts are provided in
 `inst/THIRD_PARTY_NOTICES.md` and `inst/licenses/`; the validation-fixture
 READMEs retain analysis-specific provenance.
 
+## 2026 manuscript
+
+Code, exact command lines and small result files for the 2026 manuscript are in
+`reproduction/pm2026/` and `results/pm2026/`. To check the reported tables and
+figures against the saved outputs without refitting:
+
+```bash
+python3 reproduction/pm2026/release/check_reported_values.py
+```
+
+The v0.1.0 reproduction folders are unchanged. Their operating-study summaries
+predate the likelihood audit described in the manuscript's Supplement S5 and are
+superseded for reporting by `results/pm2026/`; see `reproduction/pm2026/README.md`.
+
 ## Archived simulation and validation outputs
 
-Large S4 operating-study, S5 downstream-simulation, and Question 1
-bootstrap-validation outputs are archived at
-[Zenodo](https://doi.org/10.5281/zenodo.22092591). Code, documentation,
-compact summaries, and reproduction instructions are maintained in this
-repository.
+Large outputs are archived in a Zenodo output dataset
+([10.5281/zenodo.22092591](https://doi.org/10.5281/zenodo.22092591)): the v0.1.0
+S4 operating-study, S5 downstream-simulation and Question 1 bootstrap-validation
+outputs, and, in a later version of the same dataset, the full run outputs for
+the 2026 manuscript. That dataset holds outputs only; the code of each tagged
+release is archived separately as a Zenodo software record. Code, documentation,
+compact summaries and reproduction instructions are maintained in this repository.
 
 ## Validation status
 

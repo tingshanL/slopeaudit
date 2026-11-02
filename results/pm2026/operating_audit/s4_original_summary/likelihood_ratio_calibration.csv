@@ -1,0 +1,5 @@
+cell_id,schedule_class,q0,calibration_requested_n,calibration_strict_n,evaluation_requested_n,evaluation_strict_n,LR_95_critical_value,evaluation_false_support_rate,evaluation_false_support_MCSE
+true_zero__balanced_three_wave__q0_0.5,balanced,0.5,1000,998,1000,999,4.96312976006252,0.04704704704704705,0.006699141804150148
+true_zero__balanced_three_wave__q0_4,balanced,4.0,1000,997,1000,997,5.178662378863723,0.048144433299899696,0.006779707970305141
+true_zero__empirical__fluid_cognition__q0_0.5,irregular,0.5,1000,1000,1000,998,5.6401605183641985,0.041082164328657314,0.006282783366980221
+true_zero__empirical__fluid_cognition__q0_4,irregular,4.0,1000,997,1000,999,5.349957460708538,0.04504504504504504,0.006561939348237292

@@ -1,0 +1,12 @@
+{
+  "per_class": 10,
+  "sample_seed": 1,
+  "ranges": false,
+  "source_sha256": {
+    "experiments/s4_step3_fit_audit.py": "d61a3f0454c2818f2c02f5cc319cb6c3fe3a89536a133b1434f7b9b6842b7e9e",
+    "experiments/s5b_contamination_pilot/reml_tools.py": "94f761cff1b7129793e63554097d020d95960f1b51eab1392bd792d30438f746",
+    "slopeaudit-v0.1.0/reproduction/s4_operating_study/simulation_core.py": "1df3222d39dad0d897248eb79ab01c5ed483d526bff5cda9698856dc0fc4bbd0",
+    "slopeaudit-v0.1.0/reproduction/s4_operating_study/generate_operating_study.py": "7fc8c8375e0c0479d160c8c8fe28ed71a4ee4e2886717053011f6536a26f612a"
+  },
+  "note": "Stratified diagnostic sample, not a population failure-rate estimate. Optional D2 extrema are exploratory and 1.92 is not a calibrated cutoff here."
+}

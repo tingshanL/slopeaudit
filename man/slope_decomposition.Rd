@@ -18,12 +18,27 @@ piecewise, interaction, and other non-affine bases additionally require
 \code{basis_expression}.}
 }
 \value{
-An object of class \code{slopeaudit_decomposition}.
+An object of class \code{slopeaudit_decomposition}. Its
+\code{participant_table} gives, for each participant, \code{R_direct}, \code{D_slope2},
+\code{Delta_fit} and the nuisance share \code{kappa} with \code{sqrt_kappa}, the largest
+attainable absolute correlation between the fitted slope and a
+participant-level variable uncorrelated with the target slope and the
+residuals. \code{kappa_status} is \code{"defined"} or \code{"no_nuisance_effects"} for
+valid values; \code{kappa} is \code{NA} with status \code{"undefined_zero_fitted_variance"}
+when the fitted slope has exactly zero variance (zero determinacy), and with
+status \code{"unresolved_fitted_variance"} when that variance is nonzero only at
+rounding level. Status \code{"invalid_negative_share"} keeps a materially negative
+raw \code{kappa} with \code{sqrt_kappa} \code{NA}. \code{source_summary} gives equal-participant
+summaries of the additive quantities and \code{capacity_summary} gives
+participant-level percentiles of \code{kappa} and \code{sqrt_kappa} over valid rows,
+with counts of valid, undefined, unresolved and invalid rows. These are
+participant-level values at the fitted parameters; they are not bounds for
+a pooled regression over participants with different schedules.
 }
 \description{
 Compute participant-level direct-change reliability, total fitted-slope
-determinacy, and their model-assisted difference from one supported
-Gaussian \code{lme4::lmer()} fit.
+determinacy, their model-assisted difference, and the nuisance share
+\code{kappa} from one supported Gaussian \code{lme4::lmer()} fit.
 }
 \examples{
 full <- lme4::lmer(

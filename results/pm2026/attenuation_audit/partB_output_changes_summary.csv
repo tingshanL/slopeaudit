@@ -1,0 +1,13 @@
+row_type,regime,n,LR_mean_recorded,LR_mean_best,LR_changed_gt_001,LR_zero_recorded,LR_zero_best,one_stage_LMM_max_abs_beta_change,one_stage_LMM_p05_decision_flips,BLUP_as_outcome_attenuation_max_abs_beta_change,BLUP_as_outcome_attenuation_p05_decision_flips,predictor_double_use_overconfidence_max_abs_beta_change,predictor_double_use_overconfidence_p05_decision_flips,uncertainty_aware_two_stage_max_abs_beta_change,uncertainty_aware_two_stage_p05_decision_flips,full_predictability_max_abs_change
+evaluation,high_slope_information,20,285.8886647126986,285.8886680411215,0,0,0,5.34581960292841e-07,0,6.889476358573621e-06,0,5.345819603778425e-07,0,6.040518617791632e-07,0,6.700491768829586e-05
+evaluation,intermediate,20,86.76518032098856,86.76518058026056,0,0,0,1.2584923188979635e-06,0,6.02159018331383e-06,0,1.2584923188979635e-06,0,6.839177021239484e-07,0,7.94838531967268e-05
+evaluation,near_boundary,20,5.079074564457369,5.079075163097263,0,0,0,7.96126442149242e-08,0,1.008949947699483e-06,0,7.96126442218631e-08,0,6.750192771756702e-08,0,6.19515137075255e-05
+evaluation,true_zero_slope_variance,25,1.2681028647490893,1.2711967209390422,2,5,0,0.0003184080874543138,0,0.00041175507982338296,0,0.0003184080874543138,0,7.527465398171618e-06,0,0.9018467406086733
+lr_calibration,high_slope_information,25,0.41699685586929264,1.0892136439762181,20,18,0,,0,,0,,0,,0,
+lr_calibration,intermediate,10,0.6918517686428458,0.6918899791963213,0,0,0,,0,,0,,0,,0,
+lr_calibration,near_boundary,10,1.2475700548284294,1.2475754466689977,0,0,0,,0,,0,,0,,0,
+lr_calibration,true_zero_slope_variance,10,1.8926490228113835,1.8927423214221561,0,0,0,,0,,0,,0,,0,
+lr_null_evaluation,high_slope_information,30,0.3868515060565793,0.867886852853735,25,23,0,,0,,0,,0,,0,
+lr_null_evaluation,intermediate,10,1.5710689165436633,1.5711048520536224,0,0,0,,0,,0,,0,,0,
+lr_null_evaluation,near_boundary,10,0.6529116856241671,0.6535365877236472,0,0,0,,0,,0,,0,,0,
+lr_null_evaluation,true_zero_slope_variance,10,0.3084826460777549,0.30850912750029236,0,0,0,,0,,0,,0,,0,

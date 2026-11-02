@@ -33,7 +33,9 @@ nuisance random-effect column spaces.}
 \item{design_id}{Optional labels, one per entry of \code{Z}.}
 }
 \value{
-An object of class \code{slopeaudit_design_sensitivity}.
+An object of class \code{slopeaudit_design_sensitivity}, with
+\code{design_table}, \code{source_summary} and \code{capacity_summary} defined as in
+\code{slope_decomposition()}.
 }
 \description{
 Apply the matrix backend to one or more prospective

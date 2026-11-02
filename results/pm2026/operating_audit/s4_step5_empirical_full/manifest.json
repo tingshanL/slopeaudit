@@ -1,0 +1,29 @@
+{
+  "method": "s4_null_screen_v2",
+  "rows": 7000,
+  "tol": 0.01,
+  "check_tol": 1e-05,
+  "per_cell": null,
+  "sample_seed": 20261019,
+  "families": [
+    "empirical_AABC",
+    "true_zero"
+  ],
+  "schedules": [
+    "empirical__fluid_cognition",
+    "empirical__global_cortical_att",
+    "empirical__global_cortical_cbf"
+  ],
+  "polish_families": [],
+  "sha256": {
+    "experiments/s4_step5_null_screen.py": "89a18e7e902145d392c1399d4cf5d2e0ce3c18ec4e9d11b3bdbac01d984475ab",
+    "experiments/s5b_contamination_pilot/reml_tools.py": "94f761cff1b7129793e63554097d020d95960f1b51eab1392bd792d30438f746",
+    "experiments/s4_step4_startpoint_refit.py": "030b08f3b78575515ad0de6ffab8e029615176ae9fa236cc58c41b68f30ad2f3",
+    "runs/s4_step4_full_v2/operating_study_replicate_results_startpoint_patched.csv": "0c8b2bcd4b5459b9ffd854ce4f7162d2c89d0eaa705d1554dfea06d9eece92c2",
+    "runs/s4_step4_full_v2/startpoint_refit_audit.csv": "406cc1a9ce1a8d94d54f0c72faaca58b0e94db04d5b070e9fecbdd38b544bf50",
+    "inputs/s4_completion_validation_v1/operating_study_design.csv": "3784995b58881b284687c34b83a19244919c06f050fd2fe451f4b4205eadf9ed",
+    "slopeaudit-v0.1.0/reproduction/s4_operating_study/simulation_core.py": "1df3222d39dad0d897248eb79ab01c5ed483d526bff5cda9698856dc0fc4bbd0",
+    "slopeaudit-v0.1.0/reproduction/s4_operating_study/generate_operating_study.py": "7fc8c8375e0c0479d160c8c8fe28ed71a4ee4e2886717053011f6536a26f612a",
+    "inputs/s4_refit_schedules_v1/s4_refit_schedules.json": "38e2570253453f7fed9250e57a27d1f63e4f8d583465f0ed124874fd136316f6"
+  }
+}

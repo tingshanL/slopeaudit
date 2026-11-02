@@ -1,0 +1,13 @@
+row_type,regime,tasks,nested_violations,min_primary_minus_null,LR_zero
+evaluation,high_slope_information,1000,0,96.05073357353652,0
+evaluation,intermediate,1000,0,17.778165199917566,0
+evaluation,near_boundary,1000,0,-6.132358976174146e-08,1
+evaluation,true_zero_slope_variance,1000,10,-0.13077465794049203,10
+lr_calibration,high_slope_information,500,107,-26.262017609921713,107
+lr_calibration,intermediate,500,1,-0.002046629261712951,1
+lr_calibration,near_boundary,500,3,-0.11810455335307779,3
+lr_calibration,true_zero_slope_variance,500,3,-0.010426764984003967,3
+lr_null_evaluation,high_slope_information,500,131,-29.0485809148513,131
+lr_null_evaluation,intermediate,500,3,-0.024857249847627827,3
+lr_null_evaluation,near_boundary,500,1,-0.1355915193130386,1
+lr_null_evaluation,true_zero_slope_variance,500,1,-0.004975006842869334,1

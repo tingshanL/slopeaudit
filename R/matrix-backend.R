@@ -85,6 +85,17 @@
   Delta_fit <- full$D_slope2 - direct$R_direct
   additivity_error <- full$D_slope2 - direct$R_direct - Delta_fit
 
+  capacity <- .sa_nuisance_share(
+    Z = Z,
+    G = G,
+    R = R,
+    target_index = target_index,
+    slope_weights = full$slope_weights,
+    D_slope2 = full$D_slope2,
+    Delta_fit = Delta_fit,
+    identity_tol = identity_tol
+  )
+
   direct_constraint_failed <-
     direct$constraint_nuisance_failed ||
     direct$constraint_target_failed
@@ -109,7 +120,17 @@
     determinacy_below_zero =
       full$determinacy_below_zero,
     determinacy_above_one =
-      full$determinacy_above_one
+      full$determinacy_above_one,
+    kappa_composition_error =
+      capacity$kappa_composition_error,
+    kappa_ceiling_excess =
+      capacity$kappa_ceiling_excess,
+    kappa_composition_failed =
+      capacity$kappa_composition_failed,
+    kappa_ceiling_violated =
+      capacity$kappa_ceiling_violated,
+    kappa_materially_negative =
+      capacity$kappa_materially_negative
   )
 
   diagnostics$numerically_valid <- !any(c(
@@ -117,7 +138,10 @@
     diagnostics$additivity_failed,
     diagnostics$Delta_fit_materially_negative,
     diagnostics$determinacy_below_zero,
-    diagnostics$determinacy_above_one
+    diagnostics$determinacy_above_one,
+    diagnostics$kappa_composition_failed,
+    diagnostics$kappa_ceiling_violated,
+    diagnostics$kappa_materially_negative
   ))
 
   list(
@@ -132,6 +156,10 @@
     posterior_slope_variance = full$posterior_slope_variance,
     D_slope2 = full$D_slope2,
     Delta_fit = Delta_fit,
+    kappa = capacity$kappa,
+    sqrt_kappa = capacity$sqrt_kappa,
+    kappa_residual_share = capacity$kappa_residual_share,
+    kappa_status = capacity$kappa_status,
     target_slope_variance = full$target_slope_variance,
     diagnostics = diagnostics
   )
@@ -234,6 +262,14 @@
       vapply(out, `[[`, numeric(1), "D_slope2"),
     Delta_fit =
       vapply(out, `[[`, numeric(1), "Delta_fit"),
+    kappa =
+      vapply(out, `[[`, numeric(1), "kappa"),
+    sqrt_kappa =
+      vapply(out, `[[`, numeric(1), "sqrt_kappa"),
+    kappa_residual_share =
+      vapply(out, `[[`, numeric(1), "kappa_residual_share"),
+    kappa_status =
+      vapply(out, `[[`, character(1), "kappa_status"),
     direct_constraint_error_nuisance =
       vapply(out, function(x) {
         x$diagnostics$direct_constraint_error_nuisance
@@ -265,6 +301,26 @@
     determinacy_above_one =
       vapply(out, function(x) {
         x$diagnostics$determinacy_above_one
+      }, logical(1)),
+    kappa_composition_error =
+      vapply(out, function(x) {
+        x$diagnostics$kappa_composition_error
+      }, numeric(1)),
+    kappa_ceiling_excess =
+      vapply(out, function(x) {
+        x$diagnostics$kappa_ceiling_excess
+      }, numeric(1)),
+    kappa_composition_failed =
+      vapply(out, function(x) {
+        x$diagnostics$kappa_composition_failed
+      }, logical(1)),
+    kappa_ceiling_violated =
+      vapply(out, function(x) {
+        x$diagnostics$kappa_ceiling_violated
+      }, logical(1)),
+    kappa_materially_negative =
+      vapply(out, function(x) {
+        x$diagnostics$kappa_materially_negative
       }, logical(1)),
     numerically_valid =
       vapply(out, function(x) {
@@ -350,6 +406,19 @@
       max(participant_table$direct_constraint_error_target),
     max_abs_additivity_error =
       max(abs(participant_table$additivity_error)),
+    n_kappa_composition_failures =
+      if (is.null(participant_table$kappa_composition_failed)) 0L else
+        sum(participant_table$kappa_composition_failed),
+    n_kappa_ceiling_violations =
+      if (is.null(participant_table$kappa_ceiling_violated)) 0L else
+        sum(participant_table$kappa_ceiling_violated),
+    n_kappa_material_negative =
+      if (is.null(participant_table$kappa_materially_negative)) 0L else
+        sum(participant_table$kappa_materially_negative),
+    max_abs_kappa_composition_error =
+      if (is.null(participant_table$kappa_composition_error) ||
+          all(is.na(participant_table$kappa_composition_error))) NA_real_ else
+        max(abs(participant_table$kappa_composition_error), na.rm = TRUE),
     numerically_valid =
       all(participant_table$numerically_valid)
   )
