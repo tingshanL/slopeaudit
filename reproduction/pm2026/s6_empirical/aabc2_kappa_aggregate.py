@@ -1,33 +1,17 @@
 #!/usr/bin/env python3
-"""Supplement S6.3: source decomposition and nuisance capacity for AABC2 outcomes, from local
-restricted participant-level inputs. Writes aggregate summaries only (no participant
-identifiers and no participant-level rows):
+r"""Summarize fitted-slope determinacy and nuisance capacity for AABC2 (S6.3).
 
-  s7_aabc2_decomposition.csv   per outcome: N, fitted variance components, equal-participant means
-                               of D2, R_direct and Delta_fit (additive), visit-count distribution
-                               (cells with fewer than 10 participants masked)
-  s7_aabc2_kappa_quantiles.csv per outcome: mean kappa_i and the 5, 10, 25, 50, 75, 90 and 95th
-                               percentiles of kappa_i and sqrt(kappa_i); shares with sqrt(kappa_i)
-                               >= .1, .2 and .3
-  s7_aabc2_checks.csv          internal consistency checks (below)
-(The s7_ prefix of the output names is kept from the original run.) Whether an output may be
-released is decided by the reviewed release manifest, not by this script.
+For a random-intercept, random-slope model with independent, equal-variance
+residuals (Supplement S2, Corollary S1), the nuisance share is
 
-kappa_i uses the closed form for a random-intercept, random-slope model with independent
-equal-variance residuals (Corollary S1 in Supplement S2):
-    kappa_i = Delta_i (1 - D2_i) / (D2_i (1 - R_i)) * S / (S + sigma2 / n_i),  S = G00 - g01^2 / tau2,
-with n_i = scan_count. Inputs must be finite, with positive slope and residual variances,
-nonnegative S, positive visit counts, 0 < D2 < 1 and 0 <= R_direct < 1; outcomes outside this
-domain are flagged, not evaluated, and nonfinite kappa or ceilings are flagged.
-Checks: (1) R_direct recomputed from direct_schedule_information_I_i as tau2*J/(1+tau2*J),
-J = I_i/sigma2, must match the file; (2) Delta = D2 - R_direct; (3) the implied person-mean
-precision C_i = (D2(A+B) - B)/(1 - D2) must be >= 0; if check (1) fails for an outcome, kappa is
-not reported; (4) raw kappa is checked against 0 and both ceilings, 1 - D2 and Delta/D2, before
-any clipping. These checks establish algebraic consistency with the random-intercept,
-random-slope model with equal-variance residuals; they do not verify that the source model used
-that residual structure.
+    kappa_i = Delta_i * (1 - D2_i) / (D2_i * (1 - R_i)) * S / (S + sigma2 / n_i)
+    S = G00 - g01**2 / tau2
 
-Usage (on the data holder's machine):
+Here R_i is direct-change reliability and n_i is the visit count. The script
+writes outcome-level decomposition summaries, capacity quantiles, and
+consistency checks.
+
+Usage:
   python3 reproduction/pm2026/s6_empirical/aabc2_kappa_aggregate.py \
       --input <restricted participant-level reliability CSV> \
       --outcomes lateral_ventricles fluid_cognition --out-dir <dir>

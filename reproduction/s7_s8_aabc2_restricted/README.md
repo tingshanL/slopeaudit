@@ -23,35 +23,13 @@ Underscore-prefixed modules are implementation modules used by these entry point
 
 ## Publicly available results
 
-Participant-level AABC2 inputs are not redistributed. The repository includes
-29 reviewed, identifier-free aggregate and validation artifacts listed in
-`results/frozen_summaries/aabc2/aabc2_aggregate_manifest.csv`.
-
-These research-result summaries exclude participant identifiers,
-participant-linked source quantities, deletion refits, individual trajectories,
-exact participant schedules, and raw trajectory/QC products. The influence
-summary omits participant-ID and rank fields, and the quadratic-selection audit
-omits a local source-path cell; numerical result fields are unchanged.
-
-The automated source router governs copying from an authorized analysis
-environment and copies nothing in manifest mode. Public availability is
-determined by the reviewed aggregate manifest and privacy review.
-
-This boundary reflects the current public AABC Data Use Terms, which
-distinguish research results from redistribution of the underlying Data and
-prohibit public association of participant IDs with individual data elements
-without approval:
-
-https://www.humanconnectome.org/study/hcp-lifespan-aging/data-use-terms
-
-Researchers remain responsible for any additional requirements in their
-institution's applicable agreement. This repository does not authorize
-redistribution of AABC2 participant-level data.
+The [AABC2 output manifest](../../results/frozen_summaries/aabc2/aabc2_aggregate_manifest.csv)
+lists the aggregate results and validation summaries included in this repository.
+Qualified researchers can request access to the participant-level data through
+[AABC Release 2 on BALSA](https://balsa.wustl.edu/project?project=AABC2).
 
 ## Reproduction requirements
 
-The S7/S8 scientific analyses require restricted inputs. A public checkout can
-inspect the schemas, validate the input contract, and exercise the manifest-only
-export route, but reproducing the AABC2 model fits requires authorized source
-files. Exact reruns use `--input-config` pointing to files satisfying
-`aabc2_input_schema.csv` and the configuration contract in `aabc2_common.py`.
+To rerun the AABC2 analyses, pass `--input-config` with paths to authorized
+source files. See [the input schema](aabc2_input_schema.csv) and
+[the configuration loader](aabc2_common.py).

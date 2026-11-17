@@ -162,17 +162,11 @@ python3 reproduction/pm2026/s6_empirical/make_figure_04.py --sleep s6_sleepstudy
 python3 reproduction/pm2026/s7_design/make_S7.py --aabc2 results/pm2026/empirical/s7_aabc2_aggregate --out-dir s7_out
 ```
 
-The sleepstudy values depend on the `lme4` optimizer only at about the 10th significant digit.
-Output file names keep the `s5_` and `s7_` prefixes of the original runs.
-
 ## Release tools
 
-`release/prepare_release_files.py` builds `results/pm2026/` and the Zenodo output archives
-from the local project folder using an explicit file list, rewrites absolute paths in
-manifests (both hashes are listed in `path_rewrites.csv`), and stops on restricted files,
-participant identifiers or remaining home-directory paths. It locates and screens every input
-before writing, requires a new or empty output folder, and moves the output into place only
-when it is complete.
+`release/prepare_release_files.py` builds `results/pm2026/` and the Zenodo
+archives from the listed project outputs. It rewrites local paths in manifests
+and screens release files for participant identifiers and local paths.
 
 ```bash
 # complete results/pm2026 tree (summaries, compact replicate table, checks/, FILES.csv, path_rewrites.csv)
@@ -185,23 +179,10 @@ python3 reproduction/pm2026/release/prepare_release_files.py --root <project fol
     --zenodo-out <new folder>
 ```
 
-Screening covers every published byte: file text, the uncompressed content of the compact
-replicate table (checked before and after it is written), decompressed PDF streams and
-compressed PNG text chunks. Archives and other gzip files are never published.
-
-`checks/` holds the regenerated S2 and S7 check outputs and the expected values that
-`release/check_reported_values.py` compares against. Only the listed files are copied; any
-other file in the `--checks` folder stops the build (macOS `.DS_Store` files are ignored).
-They are copied as given, so the `diff -r` comparison tests the files derived from the
-project folder.
-
-`release/test_release_builder.py` checks the builder on a project folder reconstructed from
-the committed files: a clean build reproduces `results/pm2026`, and a participant identifier
-in a retained column of the replicate table, an unexpected file (including a zip archive) in
-the checks folder, an identifier inside a compressed PDF stream, and a non-empty output
-folder each stop the build without leaving output behind. The public smoke test runs it. The expected files are
-listed in `release/expected_outputs.py`; `check_reported_values.py` stops if any is missing
-and requires all 17 groups to be evaluated.
+`release/test_release_builder.py` checks that the builder reproduces the
+published outputs and catches participant identifiers. Run
+`release/check_reported_values.py` to compare regenerated tables and figures
+with the expected values in `results/pm2026/checks/expected/`.
 
 ## Relation to v0.1.0
 
