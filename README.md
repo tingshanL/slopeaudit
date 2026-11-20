@@ -226,8 +226,8 @@ superseded for reporting by `results/pm2026/`; see `reproduction/pm2026/README.m
 The original S4 operating-study, S5 downstream-simulation and Question 1
 bootstrap-validation outputs are archived at
 [Zenodo v0.1.0](https://doi.org/10.5281/zenodo.22092591).
-The 2026 output archives are built with
-`reproduction/pm2026/release/prepare_release_files.py`. Tagged code releases
+The 2026 output archives are available at
+[Zenodo v0.2.1](https://doi.org/10.5281/zenodo.24389129). Tagged code releases
 are available on [GitHub](https://github.com/tingshanL/slopeaudit/releases).
 
 ## Validation status

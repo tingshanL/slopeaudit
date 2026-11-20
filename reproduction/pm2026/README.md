@@ -5,8 +5,9 @@ Downstream Inference." Folders follow the online supplement. Run every command f
 repository root after restoring the environments (`environment/README.md`; Python 3.9.20 with
 `environment/requirements.txt`, R with `renv.lock`).
 
-Small result files are in `results/pm2026/`. Full run archives are assembled with the
-release tools below. Original simulation inputs and bootstrap-test validation outputs
+Small result files are in `results/pm2026/`. Full run archives are available at
+[Zenodo v0.2.1](https://doi.org/10.5281/zenodo.24389129).
+Original simulation inputs and bootstrap-test validation outputs
 are archived at [Zenodo v0.1.0](https://doi.org/10.5281/zenodo.22092591).
 The v0.1.0 reproduction folders are retained; see "Relation to v0.1.0" below.
 
