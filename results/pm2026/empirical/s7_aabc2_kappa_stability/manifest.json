@@ -1,0 +1,19 @@
+{
+  "sha256": {
+    "geometry_export": "5da7200484c95781eb126d70efb45bf13318f72f04cb3c910260f3289364e7a6",
+    "profile_export": "3694db600b4d22684d2871b585369f69feac71b2dbf5bb5db6e94c590c8ef4fd",
+    "input_config": "7b3ee01cf2d602046e2f1f1b94aa29f14812a7f2583c8cc0df1b22adfee7c642",
+    "exact_reliability": "bc6b0a6082682ec0bd78594b6f5d59049f4b47162b3832e007059e607752c2cb",
+    "figure4_decomposition": "4151f300f25b9e710ceb35884c8669615fcde1c0fbd80df50c973eb22386a7e1",
+    "figure4_capacity": "03e5edde4306d6cfc822f36dc88f07120257e3acc3a12cd6b44cf11466861655",
+    "cohort_loader": "dad2cc3599c99921cc01c0ee1f46c30b4f86d816d34de4bec45d2e9cbb02b288",
+    "analysis_script": "23b40c59e612e50e6fd41290770cb2e0ace2f01b6600e1fe5007e25834a63e35"
+  },
+  "schedule_basis": "original outcome-specific cohort; midpoint time in five-year units",
+  "historical_resampling": "whole participants drawn with replacement from each outcome cohort; all visits retained; draws assigned fresh group IDs; no site stratification",
+  "primary_quantity": "median_i sqrt(kappa_i) within each fit",
+  "bootstrap_range": "central percentile range among fits with defined capacity",
+  "replay_agreement_tolerance": 1e-05,
+  "numerical_rank_tolerance_relative_to_largest_eigenvalue": 1e-10,
+  "ventricular_bootstrap_included": false
+}

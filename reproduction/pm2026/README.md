@@ -5,22 +5,28 @@ Downstream Inference." Folders follow the online supplement. Run every command f
 repository root after restoring the environments (`environment/README.md`; Python 3.9.20 with
 `environment/requirements.txt`, R with `renv.lock`).
 
-Small result files are in `results/pm2026/`; full run outputs are in a new version of the
-Zenodo output dataset (10.5281/zenodo.22092591). The code of each tagged release is archived
-separately as a Zenodo software record. The v0.1.0 reproduction folders elsewhere in
-`reproduction/` are unchanged; see "Relation to v0.1.0" below.
+Small result files are in `results/pm2026/`. Full run archives are assembled with the
+release tools below. Original simulation inputs and bootstrap-test validation outputs
+are archived at [Zenodo v0.1.0](https://doi.org/10.5281/zenodo.22092591).
+The v0.1.0 reproduction folders are retained; see "Relation to v0.1.0" below.
 
-## Results, code and inputs (Table S8.2)
+## Results, code and inputs
+
+Paths below are relative to `reproduction/pm2026/` unless they begin with
+`reproduction/` or `results/`. Unqualified filenames share the directory of the
+first script listed in their row.
 
 | Result | Code | Inputs |
 |---|---|---|
 | Figure 1 | `figures/fig1_values.py`, `figures/make_figure_01.py` | none (known parameters) |
 | S2 identities | `s2_identities/s2_numerical_checks.py` | none (random configurations) |
-| Downstream simulation: Table 1, Figure 2, Tables S3.1–S3.7 | `s3_downstream/downstream_simulation.py` (with `reml_tools.py`); `make_figure_02.py`, `make_S3_tables.py` | none (synthetic) |
-| Operating-study audit: Table 2, Figure 3, Tables S4.1–S4.6, S5.3 | `s4_operating_audit/s4_step1`–`s4_step7`, `make_S4_tables.py`, `make_figure_03.py`; generator and summarizer in `reproduction/s4_operating_study/` | original S4 outputs (Zenodo v0.1.0); restricted schedules for empirical cells |
+| Downstream simulation: Table 2, Figure 2, Tables S3.1–S3.7 | `s3_downstream/downstream_simulation.py` (with `reml_tools.py`); `make_figure_02.py`, `make_S3_tables.py` | none (synthetic) |
+| Operating-study audit: Table 3, Figure 3, Tables S4.1–S4.6, S5.3 | `s4_operating_audit/s4_step1`–`s4_step7`, `make_S4_tables.py`, `make_figure_03.py`; generator and summarizer in `reproduction/s4_operating_study/` | original S4 outputs (Zenodo v0.1.0); restricted schedules for empirical cells |
 | Attenuation study and its audit: S3.4, S5.4 | generator in `reproduction/s5_downstream_simulation/`; audit in `provenance/attenuation_audit/`; `s5_attenuation_audit/s5_partB_numbers.py` | original attenuation-study outputs (Zenodo v0.1.0); restricted source anchors |
 | sleepstudy κ: S6.2 | `s6_empirical/sleepstudy_kappa.R` | public (`lme4`) |
 | AABC2 κ: Figure 4, Table S6.2 | `s6_empirical/aabc2_kappa_aggregate.py`, `make_figure_04.py` | restricted participant-level file (data holder only) |
+| Cognition capacity bootstrap and profile: S6.4 | `s6_empirical/s7_aabc2_kappa_stability.py` | saved bootstrap covariances and profile; authorized original schedules |
+| Observed-fit corroboration: S6.3–S6.4 | `s6_empirical/s7_aabc2_observed_fit_audit.py` | saved optimizer comparisons and capacity results; authorized original schedules |
 | Design sensitivity: Figure S7.1, Table S7.1 | `s7_design/s7_core.py`, `make_S7.py` | `results/pm2026/empirical/s7_aabc2_aggregate/` |
 | AABC2 tests and decompositions, Beat the Blues: S6 | `reproduction/s7_s8_aabc2_restricted/`, `reproduction/s6_public_audits/` (v0.1.0) | as documented there |
 
@@ -30,9 +36,11 @@ separately as a Zenodo software record. The v0.1.0 reproduction folders elsewher
 python3 reproduction/pm2026/release/check_reported_values.py
 ```
 
-This regenerates Table 1, Figures 2–4, Tables S3.1–S3.7, S4.1–S4.6 and S7.1 and the S5.4 audit
+This regenerates Table 2, Figures 2–4, Tables S3.1–S3.7, S4.1–S4.6 and S7.1 and the S5.4 audit
 numbers from `results/pm2026/` and compares them with `results/pm2026/checks/expected/`, which
-were checked against the manuscript. The S2 and S7 identity checks run without inputs:
+were checked against the manuscript. The new S6.3–S6.4 bootstrap/profile and
+corroboration results are outside this 17-group check. The S2 and S7 identity
+checks run without restricted inputs:
 
 ```bash
 python3 reproduction/pm2026/s2_identities/s2_numerical_checks.py s2_numerical_checks.json
@@ -161,6 +169,38 @@ python3 reproduction/pm2026/s6_empirical/make_figure_04.py --sleep s6_sleepstudy
     --aabc2 results/pm2026/empirical/s7_aabc2_aggregate --out-dir figure_04
 python3 reproduction/pm2026/s7_design/make_S7.py --aabc2 results/pm2026/empirical/s7_aabc2_aggregate --out-dir s7_out
 ```
+
+### Cognition capacity stability and observed-fit corroboration
+
+The capacity analysis evaluates 499 saved participant-bootstrap fits and the
+cognition likelihood profile on the original schedules. Ventricles contribute
+only their original-fit reference. The corroboration analysis compares the saved
+observed-fit optimizer solutions. Neither script refits models.
+
+Set the three input paths to authorized local files. `BOOTSTRAP_GEOMETRY` is the
+full covariance export `05_full499_bootstrap_covariance_geometry.csv` from the
+reference-time replay, not the reliability-gap summary or null-test simulations.
+
+```bash
+INPUT_CONFIG=/path/to/aabc2_inputs.json
+EXACT_RELIABILITY=/path/to/04_exact_posterior_slope_reliability.csv
+BOOTSTRAP_GEOMETRY=/path/to/05_full499_bootstrap_covariance_geometry.csv
+E=reproduction/pm2026/s6_empirical
+python3 "$E/s7_aabc2_kappa_stability.py" --repo . \
+    --input-config "$INPUT_CONFIG" --exact-reliability "$EXACT_RELIABILITY" \
+    --bootstrap-geometry "$BOOTSTRAP_GEOMETRY" \
+    --profile results/frozen_summaries/aabc2/anchored_d_profile.csv \
+    --out-dir runs/s7_aabc2_kappa_stability
+python3 "$E/s7_aabc2_observed_fit_audit.py" --repo . \
+    --input-config "$INPUT_CONFIG" --exact-reliability "$EXACT_RELIABILITY" \
+    --stability-results runs/s7_aabc2_kappa_stability \
+    --out-dir runs/s7_aabc2_observed_fit_audit
+```
+
+Use new output directories. Public tables and figures are in the corresponding
+folders under `results/pm2026/empirical/`. The saved manifest records the original
+run; the published capacity script uses the same calculations with a revised
+profile plot.
 
 ## Release tools
 

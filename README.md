@@ -213,19 +213,22 @@ figures against the saved outputs without refitting:
 python3 reproduction/pm2026/release/check_reported_values.py
 ```
 
+Cognition capacity-bootstrap and profile results and observed-fit corroboration are
+included under `results/pm2026/empirical/`; reproduction instructions are in
+`reproduction/pm2026/README.md`.
+
 The v0.1.0 reproduction folders are unchanged. Their operating-study summaries
 predate the likelihood audit described in the manuscript's Supplement S5 and are
 superseded for reporting by `results/pm2026/`; see `reproduction/pm2026/README.md`.
 
 ## Archived simulation and validation outputs
 
-Large outputs are archived in a Zenodo output dataset
-([10.5281/zenodo.22092591](https://doi.org/10.5281/zenodo.22092591)): the v0.1.0
-S4 operating-study, S5 downstream-simulation and Question 1 bootstrap-validation
-outputs, and, in a later version of the same dataset, the full run outputs for
-the 2026 manuscript. That dataset holds outputs only; the code of each tagged
-release is archived separately as a Zenodo software record. Code, documentation,
-compact summaries and reproduction instructions are maintained in this repository.
+The original S4 operating-study, S5 downstream-simulation and Question 1
+bootstrap-validation outputs are archived at
+[Zenodo v0.1.0](https://doi.org/10.5281/zenodo.22092591).
+The 2026 output archives are built with
+`reproduction/pm2026/release/prepare_release_files.py`. Tagged code releases
+are available on [GitHub](https://github.com/tingshanL/slopeaudit/releases).
 
 ## Validation status
 

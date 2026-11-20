@@ -1,3 +1,10 @@
+# slopeaudit 0.2.1
+
+- Added AABC2 cognition capacity-bootstrap and likelihood-profile results,
+  observed-fit corroboration, and reproduction scripts.
+- Updated the release builder to include the new empirical outputs in the
+  GitHub results and Zenodo archives. Package calculations are unchanged.
+
 # slopeaudit 0.2.0
 
 ## Nuisance share
