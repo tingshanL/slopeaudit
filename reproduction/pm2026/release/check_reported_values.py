@@ -3,7 +3,7 @@
 and compare them with the stored expected outputs (results/pm2026/checks/expected), which were
 checked against the manuscript and supplement. No model fitting.
 
-Covers: Supplement S3 tables and main-text Table 1 (with Figure 2), Supplement S4 tables and
+Covers: Supplement S3 tables and main-text Table 2 (with Figure 2), Supplement S4 tables and
 Figure 3, the S5.4 attenuation-audit numbers, Table S7.1 with Figure S7.1, and Figure 4.
 Usage (from the repository root):
   python3 reproduction/pm2026/release/check_reported_values.py [--out-dir <scratch dir>]
@@ -58,7 +58,7 @@ def main():
     for name in S3_TABLES:
         results.append((f"S3 {Path(name).stem}", *same_rows(out / "s3" / name, E / "s3_tables" / name)))
     run([P / "s3_downstream/make_figure_02.py", "--out-dir", out / "fig2", *run_args, "--dose", dose, "--n600", n600])
-    results.append(("Table 1", *same_rows(out / "fig2/s5_table_main_rows.tex", E / "table1_rows.tex")))
+    results.append(("Table 2", *same_rows(out / "fig2/s5_table_main_rows.tex", E / "table1_rows.tex")))
 
     run([P / "s4_operating_audit/make_S4_tables.py", "--summary", summary, "--replicates", compact,
          "--step7", D / "operating_audit/s4_step7_reporting",

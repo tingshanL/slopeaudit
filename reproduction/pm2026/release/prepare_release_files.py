@@ -1,40 +1,21 @@
 #!/usr/bin/env python3
-"""Assemble the public result files for the 2026 manuscript from a local project folder.
+"""Build public results and Zenodo archives from selected local run outputs.
 
-Two outputs, both built only from an explicit allowlist:
-  --github-out DIR   the complete results/pm2026/ tree for the repository: small summaries,
-                     the compact replicate table, the check folder given by --checks,
-                     FILES.csv (every file with its SHA-256) and path_rewrites.csv
-  --zenodo-out DIR   zip archives with the full run outputs, archive_entry_manifest.csv,
-                     path_rewrites.csv and SHA256SUMS.txt (no FILES.csv)
+--root points to the project folder containing runs/ and inputs/.
+--github-out writes the results/pm2026 tree, including the files supplied through
+--checks, a compact simulation table and a file inventory.
+--zenodo-out writes four output archives with inventories and checksums.
 
-The project folder (--root) is the local working folder that holds runs/ and inputs/.
---checks is the folder of check outputs and expected values copied to checks/ (normally the
-committed results/pm2026/checks); it must contain every file listed in expected_outputs.py.
-
-Every output folder must be new or empty. All inputs are located and screened before
-anything is written; each output is assembled in a temporary sibling folder and moved into
-place only after it is complete, so a failed run leaves no partial output and never removes
-existing files.
-JSON manifests are copied with machine-specific absolute paths rewritten to
-repository-relative ones; every rewritten file is listed in path_rewrites.csv with its
-original and public SHA-256, so the private originals remain verifiable. The script stops
-if any selected file is a restricted input, contains an AABC2 participant identifier, or
-still contains an absolute home-directory path after rewriting. It never reads restricted
-inputs, schedule exports or notebook extracts.
-
-Screening covers every byte that is published: the text of each selected file, the
-uncompressed content of the compact replicate table (screened before it is written and
-again after), the decompressed streams of PDF figures and the compressed text chunks of
-PNG figures. Archive files (zip, 7z, rar, tar) and other gzip files are never published.
-From --checks only the listed expected files and check outputs are copied; any other file
-in that folder stops the build (macOS .DS_Store files are ignored).
+Outputs must be new or empty directories. Selected files are screened for
+participant identifiers and local paths, including compressed figure content.
+Local paths in JSON manifests are rewritten and recorded in path_rewrites.csv.
+Restricted inputs and schedule exports are excluded.
 
 Usage:
-  python3 reproduction/pm2026/release/prepare_release_files.py --root <project folder> \
-      --github-out <new dir> --checks results/pm2026/checks
-  python3 reproduction/pm2026/release/prepare_release_files.py --root <project folder> \
-      --zenodo-out <new dir>
+  python3 reproduction/pm2026/release/prepare_release_files.py --root <project> \
+      --github-out <new directory> --checks results/pm2026/checks
+  python3 reproduction/pm2026/release/prepare_release_files.py --root <project> \
+      --zenodo-out <new directory>
 """
 from __future__ import annotations
 
@@ -120,7 +101,15 @@ ATTENUATION_LARGE = ["partA_nested_check_by_task.csv", "partB_candidates.csv"]
 
 EMPIRICAL_SMALL = ["s7_aabc2_aggregate/s7_aabc2_checks.csv", "s7_aabc2_aggregate/s7_aabc2_decomposition.csv",
                    "s7_aabc2_aggregate/s7_aabc2_kappa_quantiles.csv",
-                   "s7_sleepstudy/s7_sleepstudy_per_subject.csv", "s7_sleepstudy/s7_sleepstudy_summary.csv"]
+                   "s7_sleepstudy/s7_sleepstudy_per_subject.csv", "s7_sleepstudy/s7_sleepstudy_summary.csv",
+                   *[f"s7_aabc2_kappa_stability/{f}" for f in (
+                       "aabc2_kappa_observed.csv", "aabc2_kappa_bootstrap_replicates.csv",
+                       "aabc2_kappa_bootstrap_summary.csv", "aabc2_kappa_cognition_profile.csv",
+                       "aabc2_kappa_cognition_profile_comparison.csv", "aabc2_kappa_bootstrap.pdf",
+                       "aabc2_kappa_cognition_profile.pdf", "manifest.json")],
+                   *[f"s7_aabc2_observed_fit_audit/{f}" for f in (
+                       "observed_fit_summary.csv", "observed_optimizer_candidates.csv",
+                       "observed_candidate_consequences.csv")]]
 
 
 def sha256(path: Path) -> str:
